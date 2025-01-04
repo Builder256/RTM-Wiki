@@ -1,6 +1,7 @@
 # RTM-Wiki
 RealTrainMod に関する究極の情報源
 
+wikiはここ：https://github.com/Builder256/RTM-Wiki/wiki
 
 
 
