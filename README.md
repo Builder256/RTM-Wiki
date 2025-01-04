@@ -1,5 +1,5 @@
 # RTM-Wiki
-RealTrainMod に関するの究極の情報源
+RealTrainMod に関する究極の情報源
 
 
 
