@@ -1,7 +1,8 @@
 # RTM-Wiki
 RealTrainMod に関する究極の情報源
 
-Wiki.jsに移住と共に一応多言語対応のシステム的下地を用意：https://rtmwiki.kotl.io/ja/home
+Wiki.jsに移住：https://rtmwiki.kotl.io/ja/home
+一応多言語対応のシステム的下地を用意
 
 ~~wikiはここ：https://github.com/Builder256/RTM-Wiki/wiki~~
 
