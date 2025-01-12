@@ -2,15 +2,15 @@
 title: 如何安裝Realtrainmod
 description: 千里之行，始於安裝
 published: true
-date: 2025-01-12T04:41:42.375Z
+date: 2025-01-12T04:43:07.855Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-12T04:41:42.375Z
 ---
 
-## 給那些急著要下載的人
+## 下載連結
 
-對於已經了解以下內容的人：
+給已經了解以下內容的人：
 
 | 1.7.10 | - |
 | --- | --- |
