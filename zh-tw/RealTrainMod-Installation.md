@@ -1,8 +1,8 @@
 ---
-title: 如何下載Realtrainmod
+title: 如何安裝Realtrainmod
 description: 千里之行 始於足下
 published: true
-date: 2025-01-12T04:52:06.422Z
+date: 2025-01-12T04:54:48.310Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-12T04:52:06.422Z
@@ -90,7 +90,7 @@ dateCreated: 2025-01-12T04:52:06.422Z
 
 4. 啟動 Minecraft 並確認 RealTrainMod 已新增至模組清單。
 
-### fixRTMを使用する場合（for Minecraft 1.12.2）
+### 使用fixRTMを時（for Minecraft 1.12.2）
 
 1. 下載原版RTM
 
