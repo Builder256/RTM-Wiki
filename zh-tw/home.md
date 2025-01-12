@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-01-12T03:47:27.039Z
+date: 2025-01-12T09:19:04.601Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -38,4 +38,9 @@ dateCreated: 2025-01-12T03:47:27.039Z
 
 追加包也能夠使用Javascript，因此能夠做出各種神奇的功能和動畫，這點也是其他鐵路模組沒辦法模仿的。
 
-[^1]: 根據「祝・RealTrainMod公開4周年」這個編輯紀錄，八成2017年後就沒有再繼續更新。
+
+
+[^1]: 根據「祝・RealTrainMod公開4周年」這個編輯紀錄，應該是在2017年後就沒有再繼續更新。
+
+
+
