@@ -26,6 +26,8 @@ ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、Rea
 ### リンク
 GitHub： <a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
 
+当Wikiでの解説：[ATSAssitMod](/ja/mod-usage/ATSAssitMod)
+
 ## Ha10gen's BuildingMaterial Mod
 
 ### 解説
