@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: 
 published: true
-date: 2025-01-12T18:03:42.068Z
+date: 2025-01-13T00:03:31.613Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -15,10 +15,10 @@ dateCreated: 2025-01-12T17:58:44.888Z
 こちらも参照：https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf
 
 ## ATSAssistModとは
-### 概要
-ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
+> ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
+{.is-info}
 
- 基本的な速度制限のほか、TASC（定位置停止支援装置）、ATO（自動列車運転装置）、ATACS（移動閉塞）の構築が可能となっており、他のシステムと組み合わせることで運転補佐から完全自動運転まで実現可能な高い汎用性を持っています。
+基本的な速度制限のほか、TASC（定位置停止支援装置）、ATO（自動列車運転装置）、ATACS（移動閉塞）の構築が可能となっており、他のシステムと組み合わせることで運転補佐から完全自動運転まで実現可能な高い汎用性を持っています。
  
 ### 対応バージョン
 - Minecraft 1.7.10
