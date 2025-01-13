@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: 
 published: true
-date: 2025-01-13T00:14:09.906Z
+date: 2025-01-13T14:08:57.192Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -12,7 +12,7 @@ dateCreated: 2025-01-12T17:58:44.888Z
 このページは執筆中です。今後内容が大きく変更される可能性があります。
 
 # ATSAssistMod解説
-こちらも参照：https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf
+こちらも参照：<a href="https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf</a>
 
 ## ATSAssistModとは
 > ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
@@ -25,7 +25,7 @@ dateCreated: 2025-01-12T17:58:44.888Z
 - Minecraft 1.12.2
 
 ### リンク
-GitHub：https://github.com/Kai-Z-JP/ATSAssistMod/tree/master
+GitHub：<a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
 
 ## ATSAssistModで追加されるアイテム
 > ATSAssistModでは2種類のブロック、1種類のアイテムが追加されます。
