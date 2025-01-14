@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: 
 published: true
-date: 2025-01-14T15:04:26.695Z
+date: 2025-01-14T15:14:42.140Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -17,7 +17,7 @@ dateCreated: 2025-01-12T17:58:44.888Z
 ## ATSAssistModとは
 ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
 基本的な速度制限のほか、TASC（定位置停止支援装置）、ATO（自動列車運転装置）、ATACS（移動閉塞）の構築が可能となっており、他のシステムと組み合わせることで運転補佐から完全自動運転まで実現可能な高い汎用性を持っています。
->  Cauldron系サーバー(ThermosやMohist等)の場合、tileentities.yml内のskip-tileentity-ticksをfalseに変更する必要があります。trueの場合、TASC等が作動しない・ズレることがあります。
+>  Cauldron系サーバー(ThermosやMohist等)の場合、`tileentities.yml`内の`skip-tileentity-ticks`を`false`に変更する必要があります。`true`の場合、TASC等が作動しない・ズレることがあります。
 {.is-warning}
 
 ### 対応バージョン
