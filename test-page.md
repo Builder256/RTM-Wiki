@@ -2,7 +2,7 @@
 title: 編集テストページ
 description: 編集のテストにご利用ください
 published: true
-date: 2025-01-14T13:28:37.338Z
+date: 2025-01-14T13:31:44.427Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -20,5 +20,5 @@ YouTube動画を埋め込めないか考察↓
 ダメみたいですね
 
 次なる手段で試してみる↓
-[![【シャニマス】SOS（歌：黛 冬優子） - オリジナルMV【アイドルマスター】](http://img.youtube.com/vi/EvuXIk2Bh78/0.jpg)](https://www.youtube.com/watch?v=EvuXIk2Bh78)
+[![【シャニマス】SOS（歌：黛 冬優子） - オリジナルMV【アイドルマスター】](https://i.ytimg.com/vi/EvuXIk2Bh78/maxresdefault.jpg)](https://www.youtube.com/watch?v=EvuXIk2Bh78)
 まあこれくらいが限界なんじゃないっすかね
