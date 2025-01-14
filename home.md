@@ -2,7 +2,7 @@
 title: メインページ
 description: RTM Wikiへようこそ！
 published: true
-date: 2025-01-08T04:36:34.459Z
+date: 2025-01-14T14:35:25.824Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:01:28.259Z
@@ -17,7 +17,7 @@ dateCreated: 2025-01-08T02:01:28.259Z
 
 ## 既存のRealTrainModのWikiとはどう違うの？
 
-たこたこ焼き氏によって運営されている <a href="https://gamerch.com/realtrainmod/" target="_blank">realtrainmodWiki</a> は初心者向けの側面がある一方、RTM Wikiでは中級者以上のユーザーやアドオン開発者に向けたさらにディープでマニアックな情報を掲載したいと考えています。
+たこたこ焼き氏によって運営されている <a href="https://gamerch.com/realtrainmod/" target="_blank">realtrainmodWiki</a> は初心者向けの側面がある一方、RTM Wikiでは中級者以上のユーザーやアドオン開発者に向けたマニアックで実践的な情報を掲載したいと考えています。
 
 ちなみに、検索にヒットした他のRealTrainMod関連のWikiと編集時時点での最終更新日時はこちらです。
 * <a href="https://wikiwiki.jp/rtm-sub/" target="_blank">RealTrainModサポートwiki</a> 最終更新：2024年7月22日
