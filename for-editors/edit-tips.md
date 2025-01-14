@@ -2,7 +2,7 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-01-14T14:11:37.746Z
+date: 2025-01-14T14:12:40.887Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -20,7 +20,7 @@ dateCreated: 2025-01-14T13:21:41.313Z
 
 ### 2. ページのスクリプト欄に以下のように記述
 
-```html
+```js
 <script>
   window.boot.register('page-ready', () => {
 		// ドキュメント内の全ての<div class="embed-yt-vid">を取得
