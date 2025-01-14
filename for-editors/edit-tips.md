@@ -2,13 +2,13 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-01-14T14:10:32.827Z
+date: 2025-01-14T14:11:37.746Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
 ---
 
-# 編集テストページ
+# 編集者向けTips
 
 ## YouTube動画を埋め込む方法
 
