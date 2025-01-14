@@ -2,7 +2,7 @@
 title: 関連Mod
 description: RealTrainModと同時に使用すると有用と思われるMod。
 published: true
-date: 2025-01-14T14:45:21.267Z
+date: 2025-01-14T15:01:57.516Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
@@ -15,7 +15,7 @@ RealTrainModと同時に使用すると有用と思われるMod。
 ## ATSAssistMod
 
 ### 解説
-ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
+ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようにするModです。
 
 基本的な速度制限のほか、TASC（定位置停止支援装置）、ATO（自動列車運転装置）、ATACS（移動閉塞）の構築が可能となっており、他のシステムと組み合わせることで運転補佐から完全自動運転まで実現可能な高い汎用性を持っています。
 
@@ -26,7 +26,7 @@ ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、Rea
 ### リンク
 GitHub： <a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
 
-当Wikiでの解説：[ATSAssitMod](/ja/mod-usage/ATSAssitMod)
+当Wikiでの解説：[ATSAssitMod解説](/ja/mod-usage/ATSAssitMod)
 
 ## Ha10gen's BuildingMaterial Mod
 
@@ -73,7 +73,7 @@ CurseForge：<a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-ed
 ## Minatocc_Addblocks
 
 ### 解説
-Minatocc_Addblocksは、meitetsu600V氏によって解説された、建材追加Modです。
+Minatocc_Addblocksは、meitetsu600V氏によって開発された、建材追加Modです。
 
 RealTrainModユーザーによって開発されているため、RealTrainModと相性の良い建材を多数収録しています。
 
@@ -83,10 +83,24 @@ RealTrainModユーザーによって開発されているため、RealTrainMod�
 ### リンク
 ホームページ：<a href="https://minatocc.com/archives/1920" target="_blank">https://minatocc.com/archives/1920</a>
 
+## SignalContorollerMod
+
+### 解説
+SignalControllerModは、masa300氏によって開発された、閉塞信号システムを簡単に組むことができるようにするMODです。
+
+### 対応バージョン
+* Minecraft 1.7.10
+* Minecraft 1.12.2
+
+### リンク
+GitHub：<a href="https://github.com/masa300/SignalControllerMod" target="_blank">https://github.com/masa300/SignalControllerMod</a>
+
+当Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/SignalControllerMod)
+
 ## WebCTC
 
 ### 解説
-WebCTCは、Kaiz_JP氏によって開発された、CTC（列車集中制御装置）をウェブページ上で操作できるようにしたModです。
+WebCTCは、Kaiz_JP氏によって開発された、CTC（列車集中制御装置）をウェブページ上で確認、操作できるようにするModです。
 
 RealTrainModの車両の線路の状態や、在線位置などをウェブページ上で確認、操作することができます。
 
@@ -96,3 +110,5 @@ RealTrainModの車両の線路の状態や、在線位置などをウェブペ�
 
 ### リンク
 GitHub：<a href="https://github.com/WebCTC/WebCTC" target="_blank">https://github.com/WebCTC/WebCTC</a>
+
+当Wikiでの解説：[WebCTC解説](/ja/mod-usage/WebCTC)
