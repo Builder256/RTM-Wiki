@@ -1,9 +1,9 @@
 ---
-title: 編集テストページ
-description: 編集のテストにご利用ください
+title: 編集者向けTips
+description: 編集者向けの有用な情報
 published: true
-date: 2025-01-14T14:05:02.431Z
-tags: 
+date: 2025-01-14T14:10:32.827Z
+tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
 ---
