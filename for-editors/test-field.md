@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-01-15T14:32:05.995Z
+date: 2025-01-15T14:33:45.159Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -26,8 +26,8 @@ dateCreated: 2025-01-14T14:19:06.374Z
   <a href="https://twitter.com/shinyc_official/status/1878355175469113483?ref_src=twsrc%5Etfw">January 12, 2025</a>
 </blockquote>
 
-<a class="twitter-timeline" data-lang="ja" data-dnt="true" data-theme="dark" href="https://twitter.com/imassc_official?ref_src=twsrc%5Etfw">Tweets by imassc_official</a>
+<a class="twitter-timeline" data-lang="ja" data-width="500" data-height="900" data-dnt="true" data-theme="dark" href="https://twitter.com/imassc_official?ref_src=twsrc%5Etfw">Tweets by imassc_official</a>
 
-<a href="https://x.com/imassc_official?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="ja" data-dnt="true" data-show-count="false">Follow @x</a>
+<a href="https://x.com/imassc_official?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="ja" data-dnt="true" data-show-count="false">Follow @imassc_official</a>
 
 scriptでwidgets.jsを読み込めばヨシ！
