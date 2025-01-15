@@ -2,7 +2,7 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-01-15T14:55:41.060Z
+date: 2025-01-15T15:16:21.015Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -16,7 +16,8 @@ dateCreated: 2025-01-14T13:21:41.313Z
 <div class="embed-yt-vid">YouTubeの動画ID</div>
 ```
 
-## 2. ページのスクリプト欄に以下のように記述
+## 2. ~~ページのスクリプト欄に以下のように記述~~
+当Wikiでは全てのページにデフォルトで記述されているので不要です。
 
 ```js
 <script>
@@ -25,22 +26,24 @@ dateCreated: 2025-01-14T13:21:41.313Z
 		const embedDivs = document.querySelectorAll('.embed-yt-vid');
 
     // 各<div>を<iframe>に置き換える
-    embedDivs.forEach(div => {
-        const videoId = div.textContent.trim(); // 動画IDを取得
-        if (videoId) {
-            // iframe要素を作成
-            const iframe = document.createElement('iframe');
-            iframe.width = '560';
-            iframe.height = '315';
-            iframe.src = `https://www.youtube.com/embed/${videoId}`;
-            iframe.frameBorder = '0';
-            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-            iframe.allowFullscreen = true;
+  	if(embedDivs){
+      embedDivs.forEach(div => {
+          const videoId = div.textContent.trim(); // 動画IDを取得
+          if (videoId) {
+              // iframe要素を作成
+              const iframe = document.createElement('iframe');
+              iframe.width = '560';
+              iframe.height = '315';
+              iframe.src = `https://www.youtube.com/embed/${videoId}`;
+              iframe.frameBorder = '0';
+              iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+              iframe.allowFullscreen = true;
 
-            // divタグをiframeに置き換え
-            div.parentNode.replaceChild(iframe, div);
-        }
-    });
+              // divタグをiframeに置き換え
+              div.parentNode.replaceChild(iframe, div);
+          }
+      });
+    }
   })
 </script>
 ```
@@ -51,7 +54,8 @@ dateCreated: 2025-01-14T13:21:41.313Z
 
 # Tweetを埋め込む方法
 ## 下準備
-ページのスクリプト欄に以下のように記述
+~~ページのスクリプト欄に以下のように記述~~
+当Wikiでは全てのページにデフォルトで記述されているので不要です。
 
 ```html
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
