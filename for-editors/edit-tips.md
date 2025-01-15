@@ -2,23 +2,21 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-01-14T14:12:40.887Z
+date: 2025-01-15T14:27:24.204Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
 ---
 
-# 編集者向けTips
+# YouTube動画を埋め込む方法
 
-## YouTube動画を埋め込む方法
-
-### 1. 以下のように記述
+## 1. 以下のように記述
 
 ```html
 <div class="embed-yt-vid">YouTubeの動画ID</div>
 ```
 
-### 2. ページのスクリプト欄に以下のように記述
+## 2. ページのスクリプト欄に以下のように記述
 
 ```js
 <script>
@@ -47,6 +45,11 @@ dateCreated: 2025-01-14T13:21:41.313Z
 </script>
 ```
 
-### 使用例
+## 使用例
 
 <div class="embed-yt-vid">EvuXIk2Bh78</div>
+
+# Tweetを埋め込む方法
+
+## 1. https://publish.twitter.com/ にアクセス
+
