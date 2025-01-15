@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-01-15T13:49:22.709Z
+date: 2025-01-15T14:22:24.935Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -15,23 +15,13 @@ dateCreated: 2025-01-14T14:19:06.374Z
 
 ### まずはそのままコピー
 
-<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true"><p lang="ja" dir="ltr">さっさと「シャットダウン」しなよ、こんな生活</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/1751960924234330207?ref_src=twsrc%5Etfw">January 29, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true"><p lang="ja" dir="ltr">さっさと「シャットダウン」しなよ、こんな生活</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/1751960924234330207?ref_src=twsrc%5Etfw">January 29, 2024</a></blockquote>
 
-まぁなしではないか...
-
-<div class="embed-tweet-mark">https://x.com/shinyc_official/status/1878027032317325635</div>
-
-```
-<blockquote class="twitter-tweet">
-    <p lang="ja" dir="ltr">【<a
-            href="https://twitter.com/hashtag/SC_283lme_odd2?src=hash&amp;ref_src=twsrc%5Etfw">#SC_283lme_odd2</a>】<br>緋田
-        美琴につきまして、本人の体調不良を受け、安全を最優先に判断いたしました結果、[odd;2]公演における以降の出演を急遽見送ることになりました。<br><br>皆様にはご心配とご迷惑をお掛けしますことを深くお詫び申し上げます。何卒ご了承いただけますと幸いです。…
-    </p>&mdash; アイドルマスター シャイニーカラーズ【ブランド公式】 (@shinyc_official) <a
-        href="https://twitter.com/shinyc_official/status/1878027032317325635?ref_src=twsrc%5Etfw">January 11, 2025</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-```
-
-<blockquote class="twitter-tweet" data-lang="ja">
-<p lang="en" dir="ltr"><a href="https://twitter.com/imas_columbia/status/1514891283684282368"></a></p>
+<blockquote class="twitter-tweet" data-media-max-width="560">
+  <p lang="ja" dir="ltr">283 Production LIVE Performance [liminal;marginal;eternal]
+    <a href="https://t.co/Uoj5wim0hh">https://t.co/Uoj5wim0hh</a>
+    <a href="https://t.co/pt0k0hg0CS">pic.twitter.com/pt0k0hg0CS</a>
+  </p>
+  &mdash; アイドルマスター シャイニーカラーズ【ブランド公式】(@shinyc_official) 
+  <a href="https://twitter.com/shinyc_official/status/1878355175469113483?ref_src=twsrc%5Etfw">January 12, 2025</a>
 </blockquote>
