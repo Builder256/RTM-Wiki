@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-01-15T14:22:24.935Z
+date: 2025-01-15T14:24:01.367Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -17,7 +17,7 @@ dateCreated: 2025-01-14T14:19:06.374Z
 
 <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true"><p lang="ja" dir="ltr">さっさと「シャットダウン」しなよ、こんな生活</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/1751960924234330207?ref_src=twsrc%5Etfw">January 29, 2024</a></blockquote>
 
-<blockquote class="twitter-tweet" data-media-max-width="560">
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-media-max-width="560">
   <p lang="ja" dir="ltr">283 Production LIVE Performance [liminal;marginal;eternal]
     <a href="https://t.co/Uoj5wim0hh">https://t.co/Uoj5wim0hh</a>
     <a href="https://t.co/pt0k0hg0CS">pic.twitter.com/pt0k0hg0CS</a>
