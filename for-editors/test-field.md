@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-01-15T12:10:01.125Z
+date: 2025-01-15T12:11:49.118Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -21,7 +21,7 @@ dateCreated: 2025-01-14T14:19:06.374Z
 
 <div class="embed-tweet">https://x.com/ngt5479/status/1751960924234330207</div>
 
-```html
+```
 <blockquote class="twitter-tweet">
     <p lang="ja" dir="ltr">【<a
             href="https://twitter.com/hashtag/SC_283lme_odd2?src=hash&amp;ref_src=twsrc%5Etfw">#SC_283lme_odd2</a>】<br>緋田
