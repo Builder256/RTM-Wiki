@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-01-15T12:11:49.118Z
+date: 2025-01-15T12:58:25.996Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -19,8 +19,7 @@ dateCreated: 2025-01-14T14:19:06.374Z
 
 まぁなしではないか...
 
-<div class="embed-tweet">https://x.com/ngt5479/status/1751960924234330207</div>
-
+<div class="embed-tweet-mark">https://x.com/shinyc_official/status/1878027032317325635</div>
 ```
 <blockquote class="twitter-tweet">
     <p lang="ja" dir="ltr">【<a
