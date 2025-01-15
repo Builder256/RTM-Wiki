@@ -2,11 +2,14 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-01-15T15:06:25.635Z
+date: 2025-01-15T15:12:08.304Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
 ---
+
+> このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
+{.is-warning}
 
 # さ行
 
@@ -37,10 +40,7 @@ RTMの制作者、ngt5479氏のこと。
 ## ATSA
 「ATSAssistMod」の略。
 
-## ATSAssistMod
-Kaiz_JP氏より配布されているRTMの保安装置を簡単に構築できるようにするMod。
-
-## HT
+## HT（HT車）
 宝条みちる氏より配布されているHTシリーズの車両キットのこと。  
 初代のHT1000系、直裾車体になったHT1500系/HT1600系、水音標準規格車体のHT3000系、HT3000系を20m級にしたHT1100系、水音標準A車体のHT3900系、10m級短車体のHT100系、特急型のHT8200系がある。
 
@@ -55,10 +55,9 @@ Meihan氏より配布されていたサウンドリブ「MhnElecSoundLib」の�
 RealTrainModの正式な略称。「RTMMOD」「リアルトレインMOD」「RealTrainCraft」等は誤り。  
 参考：<a href="https://x.com/ngt5479/status/646345468440502274" target="_blank">2015年9月23日のngt5479氏のツイート</a>
 
+<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">X:RTMMOD, リアルトレインMOD, RealTrainCraft<br>O:RTM, RealTrainMod<br><br>間違えちゃダメよ</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/646345468440502274?ref_src=twsrc%5Etfw">2015年9月22日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## TTK
 山城タカミ氏より配布されている車両追加アドオンの作成キット「Takami Train Kit」のこと。
-
-## WebCTC
-Kaiz_JP氏より配布されているRTMの線路や在線位置をWeb上で確認、操作できるようになるMod。
 
 
