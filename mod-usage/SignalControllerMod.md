@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:32:43.583Z
+date: 2025-01-25T03:36:00.876Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -10,7 +10,7 @@ dateCreated: 2025-01-14T12:43:40.157Z
 
 # SignalControllerMod解説
 ## SignalControllerModとは
-SignalControllerModは、masa300氏によって制作された、RTMで閉塞信号システムを簡単に組むことができるようになるmodです。
+SignalControllerMod、通称「シグコン」は、masa300氏によって開発された、RTMで閉塞信号システムを簡単に組むことができるようになるmodです。
 SignalControllerModで追加される専用ブロックとアイテムを使用することにより、信号機を簡単に制御することができます。
 回路などと組み合わせることで、閉塞信号機のような許容信号機だけでなく、出発信号機・場内信号機といった絶対信号機も構築することができます。
 
@@ -40,6 +40,7 @@ GitHub : https://github.com/masa300/SignalControllerMod
 
 おすすめのチャンクローダーはこちら : https://www.immibis.com/mcmoddl/
 ※このチャンクローダーの導入には、同ページにある「Immibis Core」の導入が必要です。
+PCスペックなどで導入が難しい場合は、スポーンチャンクに設置することも有効です。
 
 ### 設置方法
 どこでも良いです。*FREEEEDOOM*に置きましょう。
