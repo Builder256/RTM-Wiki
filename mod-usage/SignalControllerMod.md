@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:43:51.319Z
+date: 2025-01-25T03:48:45.464Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -33,11 +33,12 @@ GitHub : https://github.com/masa300/SignalControllerMod
 - 座標設定ツール(DisplayPos)
 
 ## アイテム解説
-## SignalContorollerBlock
+## SignalControllerBlock
 信号機を制御するためのブロックです。
 > 正常な動作には、このブロックが設置されているチャンクがロードされている必要があります。チャンクローダーの使用をおすすめします。
 {.is-warning}
 
+**RTM純正のチャンクローダーはかなり重いのでおすすめしません**
 おすすめのチャンクローダーはこちら : https://www.immibis.com/mcmoddl/
 ※このチャンクローダーの導入には、同ページにある「Immibis Core」の導入が必要です。
 PCスペックなどで導入が難しい場合は、スポーンチャンクに設置することも有効です。
@@ -52,6 +53,9 @@ PCスペックなどで導入が難しい場合は、スポーンチャンクに
 原則、制御している信号機は、nextsignalの信号機の現示の1レベル上の現示をします。nextsignalの設定がない場合、原則、制御している信号機は常にR現示をします。
 このブロックにRS入力をすることで、制御している信号機をR現示にすることができます。
 1つのブロックに対して、制御する信号機、次の信号機共に複数の信号機を割り当てることができます。
+> 2つ以上のSignalControllerBlockで同一の信号機を指定しないでください。信号の現示が正常にされなくなります。
+{.is-warning}
+
 
 ### 各種機能解説
 #### SignalType
