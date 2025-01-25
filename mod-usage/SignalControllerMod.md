@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T09:56:34.684Z
+date: 2025-01-25T10:01:42.991Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -129,7 +129,10 @@ SignalControllerBlockで制御する信号(displayPos)を設定するための�
 5. あとはテストしてうまく動けばﾖｼ！
 
 ### 絶対信号機(例:場内信号機)
-1～4は許容信号機と同様。ただし、2の工程は状況に応じて回路に組み込むなど、柔軟に対応。
+1～4は許容信号機と同様。ただし、2の工程は状況に応じて回路に組み込むなど、臨機応変に柔軟に対応していきましょう。
 5. SignalControllerBlockに、在線とは別で、手動でON/OFF切り替え可能なRS入力が入るようにする。
 6. 進路構成の終端にRS入力を操作するシステムを組み込むなり、ボタン等でRS入力を操作できるようにするなり、システムに応じてRS入力のON/OFF機構を製作する。
 7. あとはテストしてうまく動けばヨシ！
+
+### 従属信号機(例:中継信号機)
+許容信号機や絶対信号機のSignalControllerBlockのdisplayPosに従属信号機を登録するだけの簡単3秒クッキング！
