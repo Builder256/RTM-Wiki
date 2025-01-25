@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:50:37.817Z
+date: 2025-01-25T09:56:34.684Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -118,3 +118,18 @@ SignalControllerBlockで制御する信号(displayPos)を設定するための�
 設定したい信号機をShift+右クリックしてツールに信号機の座標情報を登録し、その後、SignalControllerBlockにShift+右クリックをすることで、SignalControllerBlockのdisplayPosに登録することができます。
 > ツールに登録できる信号機は1つのみのため、登録は1つずつ行う必要があります。
 {.is-warning}
+
+## 実践的な使用方法
+### 許容信号機(例:閉塞信号機)
+1. 信号機を設置する
+2. SignalControllerBlockを設置し、信号機を登録する
+3. 信号直下の線路(防護区間開始地点)にIFTTTやhi03Detectorなどといった、正確に車両を検知できる検知器を設置し、RSブロックの出力先をSignalControllerBlockの横に設定する。
+4. 防護区間終了地点にも同様に設置する(RSブロックを削除するように設定する)。
+※3、4はWebCTCに置き換えて行うこともできます。この場合、WebCTCで防護区間全体を検知区間として登録し、RSブロック出力先を同じように設定することで完了です。近頃のRTM指令所はこの方式が主流。
+5. あとはテストしてうまく動けばﾖｼ！
+
+### 絶対信号機(例:場内信号機)
+1～4は許容信号機と同様。ただし、2の工程は状況に応じて回路に組み込むなど、柔軟に対応。
+5. SignalControllerBlockに、在線とは別で、手動でON/OFF切り替え可能なRS入力が入るようにする。
+6. 進路構成の終端にRS入力を操作するシステムを組み込むなり、ボタン等でRS入力を操作できるようにするなり、システムに応じてRS入力のON/OFF機構を製作する。
+7. あとはテストしてうまく動けばヨシ！
