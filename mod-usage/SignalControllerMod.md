@@ -2,14 +2,11 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:29:50.789Z
+date: 2025-01-25T03:30:21.916Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
 ---
-
-> 現在執筆中です
-{.is-danger}
 
 # SignalControllerMod解説
 ## SignalControllerModとは
