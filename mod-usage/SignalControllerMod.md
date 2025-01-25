@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:30:21.916Z
+date: 2025-01-25T03:31:13.951Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -10,8 +10,8 @@ dateCreated: 2025-01-14T12:43:40.157Z
 
 # SignalControllerMod解説
 ## SignalControllerModとは
-SignalControllerMod(以降「SCM」と表記)は、masa300氏によって制作された、RTMで閉塞信号システムを簡単に組むことができるようになるmodです。
-SCMで追加される専用ブロックとアイテムを使用することにより、信号機を簡単に制御することができます。
+SignalControllerModは、masa300氏によって制作された、RTMで閉塞信号システムを簡単に組むことができるようになるmodです。
+SignalControllerModで追加される専用ブロックとアイテムを使用することにより、信号機を簡単に制御することができます。
 回路などと組み合わせることで、閉塞信号機のような許容信号機だけでなく、出発信号機・場内信号機といった絶対信号機も構築することができます。
 
 ### 対応バージョン
@@ -21,8 +21,8 @@ SCMで追加される専用ブロックとアイテムを使用することに�
 ### リンク
 GitHub : https://github.com/masa300/SignalControllerMod
 
-## SCMで追加されるアイテム
-> SCMでは1種類のブロック、2種類のアイテムが追加されます。
+## SignalControllerModで追加されるアイテム
+> SignalControllerModでは1種類のブロック、2種類のアイテムが追加されます。
 {.is-info}
 
 ### ブロック
