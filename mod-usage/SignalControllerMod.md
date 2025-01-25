@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:48:45.464Z
+date: 2025-01-25T03:50:37.817Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -113,7 +113,7 @@ SignalControllerBlockの次の信号(nextsignal)を設定するためのアイ�
 
 
 ## 座標設定ツール(DisplayPos)
-SignalControllerBlockの次の信号(displayPos)を設定するためのアイテムです。
+SignalControllerBlockで制御する信号(displayPos)を設定するためのアイテムです。
 ### 使用方法
 設定したい信号機をShift+右クリックしてツールに信号機の座標情報を登録し、その後、SignalControllerBlockにShift+右クリックをすることで、SignalControllerBlockのdisplayPosに登録することができます。
 > ツールに登録できる信号機は1つのみのため、登録は1つずつ行う必要があります。
