@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T10:01:42.991Z
+date: 2025-01-25T14:02:21.901Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -65,8 +65,8 @@ PCスペックなどで導入が難しい場合は、スポーンチャンクに
 {.is-warning}
 
 選択できる種類は以下の通りです。 ()内は灯火色
-- 2灯式A　(<font color=lime>●</font><font color=red>●</font>)
-- 2灯式B　(<font color=gold>●</font><font color=red>●</font>)
+- 2灯式A　(<font color=gold>●</font><font color=red>●</font>)
+- 2灯式B　(<font color=lime>●</font><font color=red>●</font>)
 - 3灯式　(<font color=lime>●</font><font color=gold>●</font><font color=red>●</font>)
 - 4灯式A　(<font color=gold>●<font color=red>●</font><font color=lime>●</font>●</font>)
 - 4灯式B　(<font color=gold>●<font color=red>●</font>●</font><font color=lime>●</font>)
