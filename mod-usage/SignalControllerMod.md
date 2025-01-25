@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-25T03:43:08.779Z
+date: 2025-01-25T03:43:51.319Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -43,7 +43,7 @@ GitHub : https://github.com/masa300/SignalControllerMod
 PCスペックなどで導入が難しい場合は、スポーンチャンクに設置することも有効です。
 
 ### 設置方法
-どこでも良いです。*FREEEEDOOM*に置きましょう。
+どこでも良いです。~~おかわり~~自由に置きましょう。
 
 ### 使用方法
 右クリックすると次のような画面が開きます。
