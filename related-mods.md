@@ -2,7 +2,7 @@
 title: 関連Mod
 description: RealTrainModと同時に使用すると有用と思われるMod。
 published: true
-date: 2025-01-31T19:05:07.761Z
+date: 2025-01-31T20:19:45.573Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
@@ -22,7 +22,7 @@ ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、Rea
 ## リンク
 GitHub： <a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
 
-当Wikiでの解説：[ATSAssitMod解説](/ja/mod-usage/ATSAssitMod)
+当Wikiでの解説：[ATSAssistMod解説](/ja/mod-usage/ats-assist-mod)
 
 # Ha10gen's BuildingMaterial Mod
 
@@ -91,7 +91,7 @@ SignalControllerModは、masa300氏によって開発された、閉塞信号シ
 ## リンク
 GitHub：<a href="https://github.com/masa300/SignalControllerMod" target="_blank">https://github.com/masa300/SignalControllerMod</a>
 
-当Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/SignalControllerMod)
+当Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/signal-controller-mod)
 
 # WebCTC
 
@@ -107,4 +107,4 @@ RealTrainModの車両の線路の状態や、在線位置などをウェブペ�
 ## リンク
 GitHub：<a href="https://github.com/WebCTC/WebCTC" target="_blank">https://github.com/WebCTC/WebCTC</a>
 
-当Wikiでの解説：[WebCTC解説](/ja/mod-usage/WebCTC)
+当Wikiでの解説：[WebCTC解説](/ja/mod-usage/web-ctc)
