@@ -2,11 +2,14 @@
 title: 快適なプレイ体験のために
 description: 快適なRealTrainModのプレイを目指す探求の旅
 published: true
-date: 2025-01-31T21:57:51.217Z
+date: 2025-01-31T22:10:46.504Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-31T21:57:51.217Z
 ---
+
+> このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
+{.is-warning}
 
 こちらも参考：[RealTrainModと使える軽量化Mod [1.7.10] [1.12.2] - 渡海工場事務所](https://madoha-4862.hatenablog.jp/entry/2024/09/11/231348)
 こちらも参考：[List of "Essential" 1.7.10 Mods](https://gist.github.com/makamys/7cb74cd71d93a4332d2891db2624e17c)
