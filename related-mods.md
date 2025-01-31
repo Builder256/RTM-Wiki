@@ -2,7 +2,7 @@
 title: 関連Mod
 description: RealTrainModと同時に使用すると有用と思われるMod。
 published: true
-date: 2025-01-14T15:33:56.522Z
+date: 2025-01-31T19:05:07.761Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
@@ -54,7 +54,7 @@ RealTrainModの開発者によって開発されているため、他のワー�
 > 
 > Minecraft 1.12.2や、KaizPatchXのMCTEでは、この不具合が修正されているとされていますが、サーバーとクライアント間のラグが大きい場合に、依然として類似の現象が発生することが報告されています。ラグを感じる際には、MCTEの使用を控える、こまめにワールドのバックアップをとるなどして、対策をする必要があります。
 > 
-> ![2020-03-11_14.17.02.png](/2020-03-11_14.17.02.png =750x)
+> ![0bug.png](/assets/images/screenshots/minecraft/0bug.png =750x)
 > 参考画像：ブロックを削除する際に0バグが発生し、計4800チャンクの地面が消滅した。
 {.is-danger}
 
