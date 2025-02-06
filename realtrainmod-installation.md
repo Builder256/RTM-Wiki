@@ -2,7 +2,7 @@
 title: RealTrainModのインストール
 description: RealTrainModのインストール方法
 published: true
-date: 2025-01-31T19:57:12.561Z
+date: 2025-02-06T11:12:46.713Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -12,20 +12,21 @@ dateCreated: 2025-01-08T02:13:04.103Z
 
 以下で説明する内容をすでに理解している方向け。
 
-| 1.7.10 | - |
-| --- | --- |
-| RTM1.7.10.44_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4030455" target="_blank">https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4030455</a> |
-| NGTLib1.7.10.35_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452" target="_blank">https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452</a> |
-| MCTE1.7.10.18_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456" target="_blank">https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456</a> |
-| src1.7.10_20200822+KaizPatchX-1.8.0.jar | <a href="https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.8.0" target="_blank">https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.8.0</a> |
+### 1.7.10
+| ファイル名                                | URL                                                                          |
+| --------------------------------------- | ---------------------------------------------------------------------------- |
+| RTM1.7.10.44_Forge10.13.4.1558.jar      | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4030455      |
+| NGTLib1.7.10.35_Forge10.13.4.1558.jar   | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452            |
+| MCTE1.7.10.18_Forge10.13.4.1558.jar     | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456 |
+| src1.7.10_20200822+KaizPatchX-1.9.0.jar | https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.9.0                   |
 
-
-| 1.12.2 | - |
-| --- | --- |
-| RTM2.4.24-43_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603" target="_blank">https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603</a> |
-| NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592" target="_blank">https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592</a> |
-| MCTE2.4.12-26_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597" target="_blank">https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597</a> |
-| fixRtm-2.0.28.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155" target="_blank">https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155</a> |
+### 1.12.2
+| ファイル名                                      | URL                                                                          |
+| --------------------------------------------- | ---------------------------------------------------------------------------- |
+| RTM2.4.24-43_forge-1.12.2-14.23.2.2611.jar    | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603      |
+| NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592            |
+| MCTE2.4.12-26_forge-1.12.2-14.23.2.2611.jar   | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597 |
+| fixRtm-2.0.28.jar                             | https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155            |
 
 
 # 前提条件
