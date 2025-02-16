@@ -1,0 +1,36 @@
+# とりあえずChatGPTに書かせた
+# 問題なさそうなのでcommitしとく
+
+name: Update Sitemap  # ワークフローの名前（GitHub Actions の UI で表示される）
+
+on:
+  push:
+    branches:
+      - main  # `main` ブランチに push されたら実行される
+  workflow_dispatch:  # 手動実行も可能にする
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest  # GitHub Actions の実行環境として Ubuntu を使用する
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # リポジトリの最新コードを取得
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # Node.js 18 を使用
+
+      - name: Install dependencies
+        run: npm install  # 必要なパッケージがある場合にインストール（省略可能）
+
+      - name: Generate sitemap
+        run: node sitemap-generator.js  # `sitemap-generator.js` を実行して `sitemap.xml` を生成
+
+      - name: Commit and push sitemap
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add sitemap.xml
+          git diff --staged --quiet || (git commit -m "Auto-update sitemap" && git push)
