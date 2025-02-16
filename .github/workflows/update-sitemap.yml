@@ -1,5 +1,6 @@
 # とりあえずChatGPTに書かせた
 # 問題なさそうなのでcommitしとく
+# よくわからないが、このワークフローが行った変更にこれ自身が反応することはないのだろうか
 
 name: Update Sitemap  # ワークフローの名前（GitHub Actions の UI で表示される）
 
