@@ -18,9 +18,7 @@ jobs:
 
     steps:
       - name: Check current directory items # カレントディレクトリを確認
-        run: |
-          pwd
-          ls
+        run: ls
         
       - name: Checkout repository
         uses: actions/checkout@v4  # リポジトリの最新コードを取得
