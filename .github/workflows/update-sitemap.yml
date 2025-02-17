@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest  # GitHub Actions の実行環境として Ubuntu を使用する
 
     steps:
+      - name: Check current directory items # カレントディレクトリを確認
+        run: |
+          pwd
+          ls
+        
       - name: Checkout repository
         uses: actions/checkout@v4  # リポジトリの最新コードを取得
 
