@@ -29,6 +29,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'  # Node.js 18 を使用
+      
+      - name: Move to sitemap-generator.js
+        run: cd .github/workflows/
 
       - name: Generate sitemap
         run: node sitemap-generator.js  # `sitemap-generator.js` を実行して `sitemap.xml` を生成
