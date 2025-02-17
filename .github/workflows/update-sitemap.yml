@@ -23,9 +23,6 @@ jobs:
         with:
           node-version: '18'  # Node.js 18 を使用
 
-      - name: Install dependencies
-        run: npm install  # 必要なパッケージがある場合にインストール（省略可能）
-
       - name: Generate sitemap
         run: node sitemap-generator.js  # `sitemap-generator.js` を実行して `sitemap.xml` を生成
 
