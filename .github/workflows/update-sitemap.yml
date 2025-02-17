@@ -5,9 +5,11 @@
 name: Update Sitemap  # ワークフローの名前（GitHub Actions の UI で表示される）
 
 on:
-  push:
+  push: # `main`ブランチにMarkdownファイルがpushされた時に実行する
     branches:
-      - main  # `main` ブランチに push されたら実行される
+      - main
+    paths:
+      - '**.md'
   workflow_dispatch:  # 手動実行も可能にする
 
 jobs:
