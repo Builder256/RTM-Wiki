@@ -33,6 +33,9 @@ jobs:
       - name: Move to sitemap-generator.js
         run: cd .github/workflows/
 
+      - name: Check current directory again
+        run: pwd
+
       - name: Generate sitemap
         run: node sitemap-generator.js  # `sitemap-generator.js` を実行して `sitemap.xml` を生成
 
