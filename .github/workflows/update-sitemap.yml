@@ -15,7 +15,8 @@ on:
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest  # GitHub Actions の実行環境として Ubuntu を使用する
-    permissions: write
+    permissions: 
+      contents: write
 
     steps:        
       - name: Checkout repository
