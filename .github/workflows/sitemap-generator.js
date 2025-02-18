@@ -8,7 +8,7 @@ const SCAN_DIR = './';
 const DEFAULT_LANG = 'ja';
 const USING_LANG = ['ja', 'en', 'zh-tw'];
 const NEWLINE = '\n'; // UNIXでの改行コードLFに対応
-const OUTPUT_FILE = 'sitemap1.xml'
+const OUTPUT_FILE = 'sitemap.xml'
 
 function getMarkdownFiles() {
     const result = [];
