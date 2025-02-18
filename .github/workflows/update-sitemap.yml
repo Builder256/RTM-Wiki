@@ -23,7 +23,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Node.js 18 を使用
+          node-version: 'latest'  # 最新のNode.jsを使用
+
+      - name: Check Node.js version
+        run: node --version
 
       - name: Generate sitemap
         run: node .github/workflows/sitemap-generator.js  # `sitemap-generator.js` を実行して `sitemap.xml` を生成
