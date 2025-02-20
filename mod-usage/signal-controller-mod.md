@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-01-31T20:04:42.406Z
+date: 2025-02-20T11:47:56.791Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -32,7 +32,7 @@ GitHub : https://github.com/masa300/SignalControllerMod
 - 座標設定ツール(NextSignal)
 - 座標設定ツール(DisplayPos)
 
-## アイテム解説
+# アイテム解説
 ## SignalControllerBlock
 信号機を制御するためのブロックです。
 > 正常な動作には、このブロックが設置されているチャンクがロードされている必要があります。チャンクローダーの使用をおすすめします。
