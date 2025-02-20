@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: 
 published: true
-date: 2025-02-20T11:42:15.028Z
+date: 2025-02-20T11:42:29.211Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -244,7 +244,7 @@ Train Heading：「NORTH / EAST / SOUTH / WEST」**
 始点：「X座標」「Y座標」「Z座標」
 終点：「X座標」「Y座標」「Z座標」**
 始点座標から終点座標までの立体空間の中にエンティティがいるときに条件を満たします。
-> 座標は小数点以下切り捨て(X.0に統一)されています。
+> 座標は小数点以下切り捨て(x.0に統一)されています。
 {.is-warning}
 
 
