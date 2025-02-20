@@ -1,3 +1,13 @@
+---
+title: README
+description: 
+published: false
+date: 2025-02-20T08:52:31.173Z
+tags: 
+editor: markdown
+dateCreated: 2025-01-09T22:34:58.934Z
+---
+
 # RTM-Wiki
 RealTrainMod に関する究極の情報源
 
