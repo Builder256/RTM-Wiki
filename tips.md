@@ -2,7 +2,7 @@
 title: Tips
 description: ちょっとだけ役立つかもしれない小技集
 published: true
-date: 2025-01-15T14:59:43.239Z
+date: 2025-01-15T14:59:45.755Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-14T14:44:41.009Z
