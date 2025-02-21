@@ -14,7 +14,7 @@ RealTrainMod に関する究極の情報源
 Wiki.jsに移住：https://rtmwiki.kotl.io/ja/home
 一応多言語対応のシステム的下地を用意
 
-サーバー協力：Kai-Z-JP
+サーバー協力： @Kai-Z-JP
 
 ~~wikiはここ：https://github.com/Builder256/RTM-Wiki/wiki~~
 
