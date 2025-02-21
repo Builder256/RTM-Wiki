@@ -2,7 +2,7 @@
 title: アドオン解説
 description: RealtTrainMod（RTM）のアドオンについて解説します。アドオンの導入方法のほか、アドオンとは何か、アドオンで何ができるのかなど、基礎的な内容から発展的な内容まで幅広く解説します。
 published: true
-date: 2025-02-20T11:45:17.695Z
+date: 2025-02-21T13:25:37.979Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-20T10:03:11.720Z
@@ -22,7 +22,7 @@ RealTrainMod（RTM）のアドオンでは、主にデフォルトにはない�
 ### 鉄道車両
 この京急1000形電車[^1]のように、デフォルトにはない車両を追加してプレイすることができます。
 
-![keikyu_1000.png](/assets/images/screenshots/minecraft/keikyu_1000.png =750x)
+![keikyu_1000.webp](/assets/images/screenshots/minecraft/keikyu_1000.webp =750x)
 
 ### 実用的な機能を持つアイテム
 例えば、「Super Rail Builder[^2]」は、RealTrainMod（RTM）デフォルトの線路敷設機能を大幅に上回る、非常に多機能な線路敷設インターフェイスを提供します。

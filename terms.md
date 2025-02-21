@@ -2,7 +2,7 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-01-15T15:12:08.304Z
+date: 2025-01-15T15:12:11.111Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
