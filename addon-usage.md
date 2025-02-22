@@ -2,7 +2,7 @@
 title: アドオン解説
 description: RealtTrainMod（RTM）のアドオンについて解説します。アドオンの導入方法のほか、アドオンとは何か、アドオンで何ができるのかなど、基礎的な内容から発展的な内容まで幅広く解説します。
 published: true
-date: 2025-02-22T07:23:34.084Z
+date: 2025-02-22T07:23:37.227Z
 tags: アドオン解説
 editor: markdown
 dateCreated: 2025-02-20T10:03:11.720Z
