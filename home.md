@@ -2,8 +2,8 @@
 title: メインページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したRealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-02-21T17:13:45.893Z
-tags: 
+date: 2025-02-22T07:18:46.689Z
+tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T02:01:28.259Z
 ---
