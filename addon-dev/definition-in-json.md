@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-23T18:29:10.025Z
+date: 2025-02-23T18:51:00.412Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -39,6 +39,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 | `"modelFile"`    | `string`          | モデルファイルのパス（`models` ディレクトリからの相対パス）                             |
 | `"textures"`     | `array of arrays` | `[材質名, テクスチャのパス]` のペアを格納した配列（`minecraft` ディレクトリからの相対パス） |
 | `"rendererPath"` | `string` (省略可)  | 描画スクリプトのパス（指定するとスクリプトで描画を制御可能）                              |
+{.dense}
 
 ### 使用例
 ```JSON
@@ -61,10 +62,11 @@ dateCreated: 2025-01-08T02:27:50.809Z
 ```
 
 ### キーの説明
-| キー名         | 型       | 説明 |
-|--------------|--------|--------------------------|
+| キー名        | 型       | 説明                                       |
+|--------------|----------|-------------------------------------------|
 | `frontBogie` | `object` | 前方の台車の設定（`"bogieModel2"` の値と同様） |
 | `rearBogie`  | `object` | 後方の台車の設定（`"bogieModel2"` の値と同様） |
+{.dense}
 
 ### 使用例
 ```JSON
