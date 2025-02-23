@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-23T17:35:19.769Z
+date: 2025-02-23T17:37:58.446Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -18,7 +18,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 ## 前後同じ台車を指定する場合
 `"bogieModel2"`を使用することで前後同じ台車を指定できます。
 ```
-"bogieModel2": {modelFile, textures, (rendererPath)}
+"bogieModel2": {"modelFile", "textures", ("rendererPath")}
 ```
 
 ### キー
