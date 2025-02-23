@@ -8,28 +8,15 @@ editor: markdown
 dateCreated: 2025-01-09T22:34:58.934Z
 ---
 
-# RTM-Wiki
-RealTrainMod に関する究極の情報源
+# これは、なに？
+RealTrainModの新しいWikiです
 
-Wiki.jsに移住：https://rtmwiki.kotl.io/ja/home
-一応多言語対応のシステム的下地を用意
-
+# それは、どこ？
+https://rtmwiki.kotl.io/ja/home
 サーバー協力： @Kai-Z-JP
 
-~~wikiはここ：https://github.com/Builder256/RTM-Wiki/wiki~~
-
-
-
-
-
-
-
-
-
-
-
-
-
+# おねがい
+Starつけてください（はーと）
 
 
 
