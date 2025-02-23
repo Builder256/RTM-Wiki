@@ -2,68 +2,80 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-23T17:37:58.446Z
+date: 2025-02-23T18:14:13.188Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
 ---
 
-> このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
+> ⚠ このページは執筆中であり、今後内容が大幅に追加・変更される可能性があります。
 {.is-warning}
 
-とはいってもこんなところを見に来る人は基本的な作り方は知っていそうなのでマニアックなところから。
+このページでは、主に車両モデルのJSONでの設定項目について解説します。
 
-# 台車の定義 `"bogieModel2"`/`"bogieModel3"`
+# 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
-## 前後同じ台車を指定する場合
-`"bogieModel2"`を使用することで前後同じ台車を指定できます。
+ゲーム内の車両には、台車（ボギー）を設定することができます。  
+台車の指定方法には、前後で同じ台車を使用する場合と、異なる台車を使用する場合の2種類があります。
+
+## 前後同じ台車を指定する (`"bogieModel2"`)
+
+`"bogieModel2"` を使用すると、前後で同じ台車を設定できます。
+
+```JSON
+"bogieModel2": { "modelFile": "...", "textures": [...], "rendererPath": "..." }
 ```
-"bogieModel2": {"modelFile", "textures", ("rendererPath")}
-```
 
-### キー
-- `"modelFile"`\<string>
-- `"textures"`\<array>
-- `"rendererPath"`\<string> (省略可)
-
-`"modelFile"`で指定するモデルファイル、`"textures"`でモデルファイルの材質名と割り当てるテクスチャを指定します。`"modelFile"`は`models`ディレクトリからの相対パスで指定してください。その他の項目は`minecraft`ディレクトリからの相対パスで指定してください。
-もし `"rendererPath"`に台車の描画スクリプトが指定されていれば、描画スクリプトで台車の描画を実装することができます。
+### キーの説明
+| キー名            | 型                | 説明                                                                             |
+|------------------|-------------------|---------------------------------------------------------------------------------|
+| `"modelFile"`    | `string`          | モデルファイルのパス（`models` ディレクトリからの相対パス）                             |
+| `"textures"`     | `array of arrays` | `[材質名, テクスチャのパス]` のペアを格納した配列（`minecraft` ディレクトリからの相対パス） |
+| `"rendererPath"` | `string` (省略可)  | 描画スクリプトのパス（指定するとスクリプトで描画を制御可能）                              |
 
 ### 使用例
 ```JSON
 "bogieModel2": {
     "modelFile": "bogie.mqo",
-    "textures": [["mat1", "textures/bogie.png"]],
+    "textures": [
+        ["mat1", "textures/bogie.png"]
+    ],
     "rendererPath": "scripts/bogie.js"
 }
 ```
 
-## 前後違う台車を指定する場合
 
-`"bogieModel3"`を使用することで前後別の台車を指定できます。
+## 前後で異なる台車を指定する (`"bogieModel3"`)
+
+`"bogieModel3"` を使用すると、前後で異なる台車を設定できます。
+
+```JSON
+"bogieModel3": [ frontBogie, rearBogie ]
 ```
-"bogieModel3": [frontBogie, rearBogie]
-```
 
-### キー
-- `frontBogie`\<object>
-- `rearBogie`\<object>
-
-`frontBogie`、`rearBogie`の値はそれぞれ`"bogieModel2"`の値と同様です。
+### キーの説明
+| キー名         | 型       | 説明 |
+|--------------|--------|--------------------------|
+| `frontBogie` | `object` | 前方の台車の設定（`"bogieModel2"` の値と同様） |
+| `rearBogie`  | `object` | 後方の台車の設定（`"bogieModel2"` の値と同様） |
 
 ### 使用例
-
 ```JSON
 "bogieModel3": [
     {
         "modelFile": "bogieF.mqo",
-        "textures": [["mat1", "textures/bogieF.png"]],
+        "textures": [
+          	["mat1", "textures/bogieF.png"]
+        ],
         "rendererPath": "scripts/bogieF.js"
     },
     {
         "modelFile": "bogieR.mqo",
-        "textures": [["mat1", "textures/bogieR.png"]],
+        "textures": [
+          	["mat1", "textures/bogieR.png"]
+        ],
         "rendererPath": "scripts/bogieR.js"
     }
 ]
 ```
+
