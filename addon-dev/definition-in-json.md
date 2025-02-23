@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-23T18:20:18.817Z
+date: 2025-02-23T18:29:10.025Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -17,6 +17,8 @@ dateCreated: 2025-01-08T02:27:50.809Z
 {.is-info}
 
 <blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">インデントのスペース <a href="https://t.co/SuTM2sEosJ">pic.twitter.com/SuTM2sEosJ</a></p>&mdash; arkw (@arkw0) <a href="https://twitter.com/arkw0/status/1881650240660668586?ref_src=twsrc%5Etfw">2025年1月21日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+せ、戦争じゃ......
 
 # 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
