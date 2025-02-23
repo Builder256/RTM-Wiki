@@ -2,7 +2,7 @@
 title: 【2025年最新版】RealTrainModのインストール方法を詳しく解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-02-23T14:43:46.121Z
+date: 2025-02-23T18:51:51.807Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -26,6 +26,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 | NGTLib1.7.10.35_Forge10.13.4.1558.jar   | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452            |
 | MCTE1.7.10.18_Forge10.13.4.1558.jar     | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456 |
 | src1.7.10_20200822+KaizPatchX-1.9.1.jar | https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.9.1                   |
+{.dense}
 
 ## 1.12.2
 | ファイル名                                      | URL                                                                          |
@@ -34,6 +35,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 | NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592            |
 | MCTE2.4.12-26_forge-1.12.2-14.23.2.2611.jar   | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597 |
 | fixRtm-2.0.28.jar                             | https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155            |
+{.dense}
 
 
 # 前提条件
