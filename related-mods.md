@@ -1,28 +1,21 @@
 ---
-title: 関連Mod
-description: RealTrainModと同時に使用すると有用と思われるMod。
+title: よく併用されているMod
+description: RealTrainMod（RTM）とよく併用されているModについて解説します。RealTrainModでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど
 published: true
-date: 2025-02-23T11:20:14.539Z
+date: 2025-02-23T11:52:15.184Z
 tags: realtrainmod解説, mod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
 ---
 
-# ATSAssistMod
+# RealTrainModにおいて併用すると有用なMod
+RealTrainMod（RTM）でのワールド開発に有用と思われるModについて解説します。
 
-## 解説
-ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようにするModです。
+RealTrainModはMinecraftバージョン1.7.10や1.12.2に対応していますが、これらは非常に古いバージョンであり、対応するModについての情報は不足しています。そこで、多くのRealTrainModサーバーで採用されていると考えられる、代表的なModをここで紹介します。
 
-基本的な速度制限のほか、TASC（定位置停止支援装置）、ATO（自動列車運転装置）、ATACS（移動閉塞）の構築が可能となっており、他のシステムと組み合わせることで運転補佐から完全自動運転まで実現可能な高い汎用性を持っています。
-
-## 対応バージョン
-* Minecraft 1.7.10
-* Minecraft 1.12.2
-
-## リンク
-GitHub： <a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
-
-RTM Wikiでの解説：[ATSAssistMod解説](/ja/mod-usage/ats-assist-mod)
+RealTrainModの機能を拡充したり、不具合を修正するなど、RealTrainModに直接関連しているModについては、こちらのページで解説しています。
+- [関連Mod解説 *RealTrainMod（RTM）の機能を拡充するModについて解説します。ATSAssistModやCake's RTM Addon、fixRTM、KaizPatchX、SignalControllerMod、WebCTCなど、*](/ja/mod-usage)
+{.links-list}
 
 # Ha10gen's BuildingMaterial Mod
 
@@ -78,33 +71,3 @@ RealTrainModユーザーによって開発されているため、RealTrainMod�
 
 ## リンク
 ホームページ：<a href="https://minatocc.com/archives/1920" target="_blank">https://minatocc.com/archives/1920</a>
-
-# SignalContorollerMod
-
-## 解説
-SignalControllerModは、masa300氏によって開発された、閉塞信号システムを簡単に組むことができるようにするMODです。
-
-## 対応バージョン
-* Minecraft 1.7.10
-* Minecraft 1.12.2
-
-## リンク
-GitHub：<a href="https://github.com/masa300/SignalControllerMod" target="_blank">https://github.com/masa300/SignalControllerMod</a>
-
-RTM Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/signal-controller-mod)
-
-# WebCTC
-
-## 解説
-WebCTCは、Kaiz_JP氏によって開発された、CTC（列車集中制御装置）をウェブページ上で確認、操作できるようにするModです。
-
-RealTrainModの車両の線路の状態や、在線位置などをウェブページ上で確認、操作することができます。
-
-## 対応バージョン
-* Minecraft 1.7.10 Forge 10.13.4.1614
-* KaizPatchX v1.3RC またはそれ以降が必要
-
-## リンク
-GitHub：<a href="https://github.com/WebCTC/WebCTC" target="_blank">https://github.com/WebCTC/WebCTC</a>
-
-RTM Wikiでの解説：[WebCTC解説](/ja/mod-usage/web-ctc)
