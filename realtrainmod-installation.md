@@ -2,8 +2,8 @@
 title: 【2025年最新版】RealTrainModのインストール方法を詳しく解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-02-23T14:43:01.600Z
-tags: realtrainmod解説
+date: 2025-02-23T14:43:46.121Z
+tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
 ---
@@ -37,9 +37,9 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 
 
 # 前提条件
-- [x] 正規ライセンス品のMinecraft Java Editionを所有している
-- [x] Modの危険性を理解している
-- [x] 手動でダウンロード、適用するMinecraftのModを使用したことがある  
+* 正規ライセンス品のMinecraft Java Editionを所有している
+* Modの危険性を理解している
+* 手動でダウンロード、適用するMinecraftのModを使用したことがある  
   自動でModのダウンロード、適用が行われるランチャーでのみModをプレイしたことがある方は、公式ランチャーでの手動のModのインストール方法を学んでからRealTrainModをプレイすることをおすすめします。
 
 # RealTrainModの対応環境
