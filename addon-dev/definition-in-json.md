@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-23T18:14:13.188Z
+date: 2025-02-23T18:18:12.841Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -12,6 +12,10 @@ dateCreated: 2025-01-08T02:27:50.809Z
 {.is-warning}
 
 このページでは、主に車両モデルのJSONでの設定項目について解説します。
+
+> インデントについて、様々な派閥があるかと思いますが、ここでは恐らくRealTrainMod界隈で最も主流である空白4つで1つのインデントとする作法を採用します
+{.is-info}
+
 
 # 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
