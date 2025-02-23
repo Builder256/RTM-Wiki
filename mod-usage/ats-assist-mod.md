@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: 
 published: true
-date: 2025-02-23T15:04:01.167Z
+date: 2025-02-23T16:54:23.343Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -60,6 +60,7 @@ GitHub：<a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="
 ### 使用方法
 ブロックを右クリックすると次のような画面が開きます
 ![98a419632954b683ff13b0440d74b9fc.png](/98a419632954b683ff13b0440d74b9fc.png)
+![train-protection-main.webp](/assets/images/screenshots/minecraft/atsa/train-protection-main.webp)
 
 1つのブロックに対して1つの機能を割り当てることができます。
 ### 各種機能解説
@@ -194,6 +195,7 @@ TASCや列車データ変更と組み合わせることで、いわゆる無人�
 ### 使用方法
 ブロックを右クリックすると次のような画面が出ます
 ![ifttt_option.png](/ifttt_option.png)
+![ifttt-main.webp](/assets/images/screenshots/minecraft/atsa/ifttt-main.webp)
 
 `IF` `THEN`それぞれ (+) を押すことで項目を追加することができます
 1つに対して複数の`IF`と`THEN`を割り当てることができます。
@@ -207,6 +209,7 @@ TASCや列車データ変更と組み合わせることで、いわゆる無人�
 通常、`IF`に登録された条件が全て満たされなければ`THEN`が実行されませんが、`AnyMatch`にチェックを入れると、IFに設定された条件のうち、1つでも満たせば動くようになります。
 `IF`で設定できる条件は以下の通りです。
 ![ifttt_if.png](/ifttt_if.png)
+![ifttt_if.webp](/assets/images/screenshots/minecraft/atsa/ifttt_if.webp)
 
 ##### RS信号入力
 **Input：「ON / OFF」**
@@ -266,6 +269,7 @@ Value : DataTypeによって異なる**
 より柔軟な動作をさせたいならば、JavaScriptを活用するのが良いでしょう。
 `THEN`で設定できる条件は以下の通りです。
 ![ifttt_then.png](/ifttt_then.png)
+![ifttt_then.webp](/assets/images/screenshots/minecraft/atsa/ifttt_then.webp)
 ##### RS信号出力
 **両数出力：「無効/有効」(検知した編成の両数に対応した信号レベルを出力する。1両→レベル1、2両→レベル2)
 出力レベル：「整数値」**
@@ -330,6 +334,7 @@ Script Text：「文字列」**
 ### 使用方法
 運転席に乗って右クリックすると次のような画面が出ます。
 ![kirikaesw_option.png](/kirikaesw_option.png)
+![train-protection-change-sw.webp](/assets/images/screenshots/minecraft/atsa/train-protection-change-sw.webp)
 
 ### 各種機能解説
 #### 運転切替
