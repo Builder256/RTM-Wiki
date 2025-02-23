@@ -2,7 +2,7 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-01-15T15:12:11.111Z
+date: 2025-02-23T14:51:28.400Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
@@ -27,14 +27,22 @@ RTMの制作者、ngt5479氏のこと。
 
 ## 鉄総
 日本ではあまり知られていないFacebookグループ、現在最大の台湾フォーラムコミュニティ。
-参考：<a href="https://www.facebook.com/groups/158533211228170/?notif_id=1736598322517572" target="_blank">【Minecraft】Railway Mod 鐵路總局</a>
+- [【Minecraft】Railway Mod 鐵路總局 | Facebook *歡迎加入本社團，此社團是為了Minecraft 鐵路模組和鐵道迷所創的社團。
+大家可以在此討論:
+--Minecraft 鐵路相關模組(主要)
+--Minecraft 其他交通模組
+--Minecraft 其他助於建造、裝飾交通設施及增加多樣性模組
+--其他交通類遊戲消息
+--真實世界鐵路交通(主要)...*](https://www.facebook.com/groups/158533211228170/?notif_id=1736598322517572)
+{.links-list}
 
 # は行
 
 ## 箱振
 特にRealTrainModを中心にイベント企画や映像企画などを手広く展開するサークル「箱日本観光振興局」のこと。
 主に瀬田、七島鯖等のメンバーで構成されています。競走研や咲島祭などRTMの大型イベントを主催する団体です。
-参考：<a href="https://boxjapan.info/" target="_blank">箱日本観光振興局 | RealTrainMod企画サークル</a>
+- [箱日本観光振興局 | RealTrainMod企画サークル *箱日本観光振興局はMinecraft、特にRealTrainModを中心にイベント企画や映像企画などを手広く展開するサークルです。今までの活動内容やイベント情報などを紹介しています。*](https://boxjapan.info/)
+{.links-list}
 # 英字
 
 ## ATSA
