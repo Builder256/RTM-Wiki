@@ -2,7 +2,7 @@
 title: Home Page
 description: Welcome to Realtrainmod Wiki!
 published: true
-date: 2025-02-23T15:11:40.772Z
+date: 2025-02-23T15:23:23.653Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:30:45.792Z
@@ -62,25 +62,25 @@ A series where vehicles are created from a single image of a press release.
             ">
   <div>
     
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/kintetsu_8a.webp =670x){.align-center}
+  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center}
   <p style="text-align:center">Kintetsu 8A Series<br>Addon created and released on the same day the design was announced</p>
   </div>
 
   <div>
     
-  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/osaka_metro_400.webp =670x){.align-center}
+  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center}
   <p style="text-align:center">Osaka Metro 400 Series<br>Addon created and released on the same day the design was announced</p>
   </div>
 
   <div>
     
-  ![twr_71-000.webp](/assets/images/screenshots/minecraft/twr_71-000.webp =670x){.align-center}
+  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center}
   <p style="text-align:center">Rinkai Line 71-000 Series<br>Addon created and released on the same day the design was announced</p>
   </div>
 
   <div>
     
-  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/meitetsu_9520.webp =670x){.align-center}
+  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center}
   <p style="text-align:center">Meitetsu 9520/9120 Series<br>Addon created and released within 2 days of the design being announced</p>
   </div>
 </div>
