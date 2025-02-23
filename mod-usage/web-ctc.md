@@ -1,8 +1,8 @@
 ---
 title: WebCTC解説
 description: 
-published: false
-date: 2025-02-13T12:37:18.091Z
+published: true
+date: 2025-02-23T17:03:50.202Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:46:13.825Z
