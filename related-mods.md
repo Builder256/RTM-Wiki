@@ -1,8 +1,8 @@
 ---
 title: よく併用されているMod
-description: RealTrainMod（RTM）とよく併用されているModについて解説します。RealTrainModでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど
+description: RealTrainMod（RTM）とよく併用されているModについて解説します。1.7.10や1.12.2のMinecraftでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど
 published: true
-date: 2025-02-23T11:52:15.184Z
+date: 2025-02-23T14:44:45.419Z
 tags: realtrainmod解説, mod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
