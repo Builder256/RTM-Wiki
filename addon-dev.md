@@ -2,7 +2,7 @@
 title: アドオン制作
 description: アドオン制作方法の解説
 published: true
-date: 2025-02-25T07:47:41.194Z
+date: 2025-02-25T15:51:58.734Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-11T18:12:24.688Z
@@ -131,7 +131,11 @@ RealTrainModのアドオンの根幹となるのがJSONファイルです。Real
 これらの項目を適切に設定することで、あなたの作品に泥を塗らんとする愚劣な卑怯者に引導を渡すことができます。もしこれらの項目を設定しなかった場合、RealTrainModのライセンスに基づき、RealTrainMod本体のライセンスが適用されるため、あなたの望まない結果となる可能性があります。必ず設定するようにしましょう。
 
 
-
+# 関連サイト
+- [RTM車両制作向け役立ち(そうな)情報まとめ | RTM Addon Search *このページについて本ページは主に水音車両(meitetsu600V)が見かけた車両制作に関する情報をまとめたものになります。車両制作時の参考にお使い下さい。・あくまで個人の主観に基づくものになりますのでここに掲載しているものが正解の手法ではありません。・アップデート等により情報が古くなる場合があります。・基本的に引用してまとめたものになります。体裁は整えておりません。本ページに記載したい情報がありましたら(自薦、他薦問わず)水音車両のX(旧twitter)*](https://rtmaddon-search.com/trainproductioninformation/)
+- [アドオン製作ガイド - RTMwiki | Gamerch](https://gamerch.com/realtrainmod/677473)
+- [Static Wind - Takami Train Kit *minecraftの鉄道Mod「RealTrainMod」用の車両モデルキットの解説*](https://staticwind.soragoto.net/rtm/tkmtk/index.html)
+{.links-list}
 
 
 
