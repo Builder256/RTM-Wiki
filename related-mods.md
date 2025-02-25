@@ -2,7 +2,7 @@
 title: よく併用されているMod
 description: RealTrainMod（RTM）とよく併用されているModについて解説します。1.7.10や1.12.2のMinecraftでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど
 published: true
-date: 2025-02-25T06:47:18.034Z
+date: 2025-02-25T07:35:20.339Z
 tags: realtrainmod解説, mod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
@@ -46,8 +46,8 @@ RealTrainModの開発者によって開発されているため、他のワー�
 > MCTEにはWorldEditの`//undo`や`//redo`に対応するような操作の「取り消し」や「やり直し」を行う機能がないため、ワールドデータのバックアップからの復元以外の方法はありません。
 > 
 > Minecraft 1.12.2や、KaizPatchXのMCTEでは、この不具合が修正されているとされていますが、サーバーとクライアント間のラグが大きい場合に、依然として類似の現象が発生することが報告されています。ラグを感じる際には、MCTEの使用を控える、こまめにワールドのバックアップをとるなどして、対策をする必要があります。
-> 
-> ![0bug.png](/assets/images/screenshots/minecraft/0bug.png =750x)
+>
+> ![0bug.webp](/assets/images/screenshots/minecraft/0bug.webp =750x)
 > 参考画像：ブロックを削除する際に0バグが発生し、計4800チャンクの地面が消滅した。
 {.is-danger}
 
