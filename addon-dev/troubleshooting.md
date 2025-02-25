@@ -2,7 +2,7 @@
 title: トラブルシューティング
 description: RealTrainMod（RTM）のアドオン制作でのトラブルシューティングを掲載。ゲームがクラッシュした、選択画面に出てこない。色や形がおかしいなど様々な問題の解決方法を掲載しています
 published: true
-date: 2025-02-25T07:48:29.922Z
+date: 2025-02-25T15:55:27.478Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-02-18T18:35:49.199Z
@@ -33,9 +33,10 @@ dateCreated: 2025-02-18T18:35:49.199Z
 
 解説したいですが気力がつきたのでここで公開することにします。とりあえず下のサイトを読めば最低限はわかるでしょう。
 
-### 関連サイト
+# 関連サイト
 すでにクラッシュレポートの内容と解決法について、解説しているページが多数あります。これらも参考にするとよいでしょう。
 - [RealTrainModにおけるクラッシュレポート解説 | 箱日本観光振興局 *よくあるクラッシュレポートの例と解決策を適当に書き綴っています。*](https://boxjapan.info/archives/337)
 - [アドオン製作ガイド：動作チェック - RTMwiki | Gamerch](https://gamerch.com/realtrainmod/677484)
 - [宝条帝都：RTM系 私のRealTrainModがクラッシュした時のログ置き場 ※特にパック作成時 *最近はMinecraftをやってます。*](http://hojyoteito.blog134.fc2.com/blog-entry-241.html)
+- [Static Wind - Takami Train Kit *minecraftの鉄道Mod「RealTrainMod」用の車両モデルキットの解説*](https://staticwind.soragoto.net/rtm/tkmtk/index.html#pack)
 {.links-list}
