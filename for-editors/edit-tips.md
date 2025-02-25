@@ -2,7 +2,7 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-02-25T07:48:38.796Z
+date: 2025-02-25T10:13:53.255Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -13,7 +13,7 @@ dateCreated: 2025-01-14T13:21:41.313Z
 ## 1. 以下のように記述
 
 ```html
-<div class="embed-yt-vid">YouTubeの動画ID</div>
+YouTubeの動画ID{.embed-yt-vid}
 ```
 
 ## 2. ~~ページのスクリプト欄に以下のように記述~~
@@ -50,7 +50,7 @@ dateCreated: 2025-01-14T13:21:41.313Z
 
 ## 使用例
 
-<div class="embed-yt-vid">EvuXIk2Bh78</div>
+EvuXIk2Bh78{.embed-yt-vid}
 
 # Tweetを埋め込む方法
 ## 下準備
