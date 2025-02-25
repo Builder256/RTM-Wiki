@@ -2,7 +2,7 @@
 title: Home Page
 description: Welcome to Realtrainmod Wiki!
 published: true
-date: 2025-02-25T07:48:35.487Z
+date: 2025-02-25T15:03:42.419Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:30:45.792Z
@@ -103,6 +103,10 @@ Here are the other RealTrainMod-related wikis that were found in search results,
 
 ~~This mod and these wikis are just too many~~ 
 
+## Wiki provided by
+The RTM Wiki is provided by Kaiz_JP[^3] free of charge. Thank you very much for your great support in providing the server and setting up the wiki.
+
+
 # Request for Image Contributions
 We are requesting image contributions for the RTM Wiki. If you have any images that help showcase the appeal of RealTrainMod or can aid in explaining mods and addons, please consider contributing to the Wiki.
 
@@ -111,3 +115,5 @@ We are looking for editors for the RTM Wiki. If you’d like to help with editin
 
 [^1]: A parody of [Minecraft Wiki – The Ultimate Resource for Minecraft](https://minecraft.fandom.com/wiki/Minecraft_Wiki).
 [^2]: It seems to have last been updated around 2017, as indicated by the mention of "Celebrating the 4th Anniversary of RealTrainMod."
+[^3]: Twitter: https://x.com/Kaiz_JP
+GitHub: https://github.com/Kai-Z-JP
