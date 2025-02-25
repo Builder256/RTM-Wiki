@@ -2,7 +2,7 @@
 title: よく併用されているMod
 description: RealTrainMod（RTM）とよく併用されているModについて解説します。1.7.10や1.12.2のMinecraftでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど
 published: true
-date: 2025-02-25T06:46:58.057Z
+date: 2025-02-25T06:47:18.034Z
 tags: realtrainmod解説, mod解説
 editor: markdown
 dateCreated: 2025-01-08T04:50:19.273Z
@@ -14,7 +14,7 @@ RealTrainMod（RTM）とよく併用されているModについて解説しま�
 RealTrainModはMinecraftバージョン1.7.10や1.12.2に対応していますが、これらは非常に古いバージョンであり、対応するModについての情報は不足しています。そこで、多くのRealTrainModサーバーで採用されていると考えられる、代表的なModをここで紹介します。
 
 RealTrainModの機能を拡充したり、不具合を修正するなど、RealTrainModに直接関連しているModについては、こちらのページで解説しています。
-- [RealTrainMod拡張Mod解説 | RTM Wiki *RealTrainMod（RTM）の機能を拡張するModについて解説します。ATSAssistModやCake's RTM Addon、fixRTM、KaizPatchX、SignalControllerMod、WebCTCなど*](/ja/mod-usage)
+- [RealTrainMod拡張Mod解説 *RealTrainMod（RTM）の機能を拡張するModについて解説します。ATSAssistModやCake's RTM Addon、fixRTM、KaizPatchX、SignalControllerMod、WebCTCなど*](/ja/mod-usage)
 {.links-list}
 
 # Ha10gen's BuildingMaterial Mod
