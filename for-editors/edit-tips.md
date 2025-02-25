@@ -2,7 +2,7 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-02-25T10:13:53.255Z
+date: 2025-02-25T10:24:03.237Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -19,32 +19,32 @@ YouTubeの動画ID{.embed-yt-vid}
 ## 2. ~~ページのスクリプト欄に以下のように記述~~
 当Wikiでは全てのページにデフォルトで記述されているので不要です。
 
-```js
+```html
 <script>
-  window.boot.register('page-ready', () => {
-		// ドキュメント内の全ての<div class="embed-yt-vid">を取得
-		const embedDivs = document.querySelectorAll('.embed-yt-vid');
+     window.boot.register('page-ready', () => {
+        replaceWithYouTubeEmbeddedPlayer();
+    });
 
-    // 各<div>を<iframe>に置き換える
-  	if(embedDivs){
-      embedDivs.forEach(div => {
-          const videoId = div.textContent.trim(); // 動画IDを取得
-          if (videoId) {
-              // iframe要素を作成
-              const iframe = document.createElement('iframe');
-              iframe.width = '560';
-              iframe.height = '315';
-              iframe.src = `https://www.youtube.com/embed/${videoId}`;
-              iframe.frameBorder = '0';
-              iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-              iframe.allowFullscreen = true;
+    function replaceWithYouTubeEmbeddedPlayer() {
+        const embedYtVideos = document.querySelectorAll('p.embed-yt-vid');
+        if (!embedYtVideos) return;
 
-              // divタグをiframeに置き換え
-              div.parentNode.replaceChild(iframe, div);
-          }
-      });
+        // それぞれのpタグについて置き換え
+        embedYtVideos.forEach(embedYtVideo => {
+            const videoId = embedYtVideo.textContent.trim();
+            if (!videoId) return;
+
+            const iframe = document.createElement('iframe');
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+
+            embedYtVideo.parentNode.replaceChild(iframe, embedYtVideo);
+        });
     }
-  })
 </script>
 ```
 
