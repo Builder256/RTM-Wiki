@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: RealTrainMod（RTM）に速度制限や自動運転などの保安装置を構築できるようにするMod、ATSAssistModについて解説しています。このページを読めばATSAssistModの全てがわかる！
 published: true
-date: 2025-02-25T07:48:45.645Z
+date: 2025-02-25T15:58:14.830Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -407,6 +407,13 @@ A. Release 1.7.9ではJava Scriptを登録できないバグが起こってい�
 
 ### Q. なにかおかしい！！バグみたいなのが起こってる！！たすけて！！
 A. ATSAのGitHub[^2]にissueを立てましょう。ここにではなく、ATSAのGitHubにです。
+
+# 関連サイト
+- [Kai-Z-JP/ATSAssistMod: Freedom mod ATSAssist can easily build a railway signaling equipment. *Freedom mod ATSAssist can easily build a railway signaling equipment. - Kai-Z-JP/ATSAssistMod*](https://github.com/Kai-Z-JP/ATSAssistMod)
+- [ATSAssistMod/document/ATSAssistMod1.4.0_Manual.pdf at master · Kai-Z-JP/ATSAssistMod](https://github.com/Kai-Z-JP/ATSAssistMod/blob/master/document/ATSAssistMod1.4.0_Manual.pdf)
+- [【ATSassistMod解説】基本的な使い方と応用例【RealTrainMod】 - YouTube *訂正箇所は字幕・コメント欄にて記載しました。また、列車状態変更の解説が抜けています...。申し訳有りません...。⚠️今回お借りした車両にはデフォルトではATSやGPS等はありません⚠️⚠️車両制作者様への問い合わせは絶対におやめください。⚠️⚠️(主にsound)著作権の関係で、運転台やスクリプトの公開予定はあ...*](https://www.youtube.com/watch?v=51fWsNrfNTE)
+- [【1.7.10版 ATSassistMod解説】各種ブロック・アイテムの使い方【RealTrainMod】 - YouTube *訂正箇所は字幕・コメント欄にて記載しました。また、列車状態変更の解説が抜けています...。申し訳有りません...。⚠️今回お借りした車両にはデフォルトではATSやGPS等はありません⚠️⚠️車両制作者様への問い合わせは絶対におやめください。⚠️⚠️(主にsound)著作権の関係で、運転台やスクリプトの公開予定はあ...*](https://www.youtube.com/watch?v=etzGbvJYZ9Y&t=1442s)
+{.links-list}
 
 [^1]:Cauldron系サーバー(ThermosやMohist等)の場合、`tileentities.yml`内の`skip-tileentity-ticks`を`false`に変更する
 [^2]:<a href="https://github.com/Kai-Z-JP/ATSAssistMod/issues" target="_blank">ATSAssistModのissuesページはこちら</a>
