@@ -2,7 +2,7 @@
 title: 編集者向けTips
 description: 編集者向けの有用な情報
 published: true
-date: 2025-02-25T10:24:03.237Z
+date: 2025-02-25T10:24:55.898Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T13:21:41.313Z
@@ -19,7 +19,7 @@ YouTubeの動画ID{.embed-yt-vid}
 ## 2. ~~ページのスクリプト欄に以下のように記述~~
 当Wikiでは全てのページにデフォルトで記述されているので不要です。
 
-```html
+```js
 <script>
      window.boot.register('page-ready', () => {
         replaceWithYouTubeEmbeddedPlayer();
