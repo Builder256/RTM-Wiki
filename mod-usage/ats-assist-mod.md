@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: RealTrainMod（RTM）に速度制限や自動運転などの保安装置を構築できるようにするMod、ATSAssistModについて解説しています。このページを読めばATSAssistModの全てがわかる！
 published: true
-date: 2025-02-23T17:09:18.599Z
+date: 2025-02-25T07:48:45.645Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z

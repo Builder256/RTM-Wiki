@@ -2,7 +2,7 @@
 title: よくある？質問と回答
 description: 質問と回答
 published: true
-date: 2025-01-31T19:58:24.868Z
+date: 2025-02-25T07:47:47.292Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T03:54:38.120Z
