@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-25T07:48:23.971Z
+date: 2025-02-25T15:52:50.931Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -88,3 +88,6 @@ dateCreated: 2025-01-08T02:27:50.809Z
 ]
 ```
 
+# 関連サイト
+- [RealTrainModのJsonについてのドキュメント *RealTrainModのJsonで利用可能なキーについてのドキュメント。*](https://akikawaken.github.io/RTM/Docs/json.html)
+{.links-list}
