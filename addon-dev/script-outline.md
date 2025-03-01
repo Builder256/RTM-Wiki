@@ -2,7 +2,7 @@
 title: スクリプト解説【概説】
 description: 
 published: true
-date: 2025-02-25T15:53:49.305Z
+date: 2025-03-01T03:43:44.023Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
@@ -29,3 +29,7 @@ RealTrainModでは、三種類のスクリプトが用意されています。
 # 関連サイト
 - [スクリプト解説 | 城田重工](https://www.hi03s.com/blog)
 {.links-list}
+
+<iframe src="https://discord.com/widget?id=799152792518393917&theme=dark" width="350" height="500"
+    allowtransparency="true" frameborder="0"
+    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
