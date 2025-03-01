@@ -2,7 +2,7 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-03-01T17:03:24.279Z
+date: 2025-03-01T17:13:11.055Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
@@ -78,6 +78,9 @@ RealTrainModの正式な略称。「RTMMOD」「リアルトレインMOD」「Re
 ## schematic
 WorldEditで建造物などを保存したときに生成されるファイルのこと。または、そのファイル形式のこと。
 建物セットでngtoとともに配布されていることが多い。
+
+## SRB
+hi03氏より配布されているレール生成ツール「SuperRailBuilder3」のこと。
 
 ## TTK
 山城タカミ氏より配布されている車両追加アドオンの作成キット「Takami Train Kit」のこと。
