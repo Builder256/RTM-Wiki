@@ -20,6 +20,316 @@ dateCreated: 2025-01-08T02:27:50.809Z
 
 せ、戦争じゃ......
 
+# 目次
+## 共通
+- `useCustomColor`
+- `tags`
+- `defaultData`
+- `scale`
+- `offset`
+- `smoothing`
+- `doCulling`
+- `accuracy`
+- `serverScriptPath`
+- `guiScriptPath`
+- `guiTexture`
+- `customIconTexture`
+- `renderAABB`
+
+## 列車
+- パーツ動作設定
+- 座標変換設定
+- 台車設定
+- `trainName`
+- `trainType`
+- ~~`trainModel`~~
+- ~~`bogieModel`~~
+- ~~`trainTexture`~~
+- ~~`bogieTexture`~~
+- `trainModel2`
+    - `modelFile`
+    - `textures`
+    - `rendererPath`
+    - `vertexShaderPath`
+    - `fragmentShaderPath`
+
+- `bogieModel2`
+    - `modelFile`
+    - `textures`
+    - `rendererPath`
+- `bogieModel3`
+    - 台車設定（前）
+    - 台車設定（後）
+- `buttonTexture`
+- `rollsignTexture`
+- `rollsignNames`
+- `rollsigns`
+    - 方向幕設定
+    - `uv`
+    - `pos`
+    - `doAnimation`
+    - `disableLighting`
+- `door_left`
+    - パーツ動作設定の配列
+        - `objects`
+        - `pos`
+        - `transform`
+            - 座標変換設定の配列
+- `door_right`
+    - パーツ動作設定の配列
+        - `objects`
+        - `pos`
+        - `transform`
+            - 座標変換設定の配列
+- `pantograph_front`
+- `pantograph_back`
+- `sound_Stop`
+- `sound_S_A`
+- `sound_S_M`
+- `sound_Medium`
+- `sound_M_H`
+- `sound_High`
+- `sound_H_M`
+- `sound_M_S`
+- `sound_Acceleration`
+- `sound_Deceleration`
+- `sound_D_S`
+- `sound_Horn`
+- `sound_BrakeRelease`
+- `sound_BrakeRelease2`
+- `sound_Announcement`
+- `sound_DoorOpen`
+- `sound_DoorClose`
+- `soundScriptPath`
+- `muteJointSound`
+- `seatPos`
+- `slotPos`
+- `seatPosF`
+- `playerPos`
+- `bogiePos`
+- `pantoPos`
+- `jointDelay`
+- `maxSpeed`
+- ~~`renderLight`~~
+- `rolling`
+- `rollSpeedCoefficient`
+- `rollVariationCoefficient`
+- `rollWidthCoefficient`
+- `accelerateion`
+- `trainDistance`
+- `doCulling`
+- `isSingleTrain`
+- `notDisplayCab`
+- `headLights`
+    - 配列
+        - `type`
+        - `color`
+        - `pos`
+        - `r`
+- `tailLights`
+    - 配列
+        - `type`
+        - `color`
+        - `pos`
+        - `r`
+- `interiorLights`
+    - 配列
+        - `pos`
+
+- `smoke`
+- `size`
+- `wheelRotationSpeed`
+
+## 乗り物
+- `name`
+- `model`
+- `vehicleType`
+- `friction`
+- `acceleration`
+- `maxSpeed`
+- `maxYaw`
+- `yawCoefficient`
+- `pitchCoefficient`
+- `rollCoefficient`
+- `hoveringSpeed`
+- `changeYawOnStopping`
+- `vibration`
+- `collisionParts`
+- `connectionDistance`
+- `customButtons`
+- `customButtonTips`
+
+## リフト
+- `name`
+- `model`
+- `vehicleType`
+- `vibration`
+- `gripPos`
+- `collisionParts`
+
+
+## レール
+- `railName`
+- `railModel`
+- `railTexture`
+- `model`
+- `buttonTexture`
+- `polygonType`
+- `ballastWidth`
+- `allowCrossing`
+- `defaultBallast` 
+    - 配列
+        - `blockName`
+        - `blockMetadata`
+        - `height`
+
+## コンテナ
+- `containerName`
+- `containerModel`
+- `containerTexture`
+- `model`
+- `buttonTexture`
+- `containerWidth`
+- `containerHeight`
+- `containerLength`
+
+## 火器
+- `firearmName`
+- `firearmModel`
+- `firearmTexture`
+- `model`
+- `buttonTexture`
+- `modelPartsN`
+    - `objects`
+    - `pos`
+- `modelPartsY`
+    - `objects`
+    - `pos`
+- `modelPartsX`
+    - `objects`
+    - `pos`
+- `modelPartsBarrel`
+    - `objects`
+    - `pos`
+- `muzzlePos`
+- `playerPos`
+- `yaw`
+- `pitch`
+- `rotationSpeedY`
+- `rotationSpeedX`
+- `recoil`
+- `ammoType`
+- `rateOfFire`
+- `magazineSize`
+- `fpvMode`
+
+## 信号機
+- `signalName`
+- `signalModel`
+- `signalTexture`
+- `lightTexture`
+- `buttonTexture`
+- `modelPartsFixture`
+    - `objects`
+    - `pos`
+- `modelPartsBody`
+    - `objects`
+    - `pos`
+- `lights`
+- `rotateBody`
+
+## NPC
+- `name`
+- `model`
+- `texture`
+- `lightTexture`
+- `buttonTexture`
+- `role`
+- `health`
+- `speed`
+- `damage`
+- `useCustomColor`
+- `duCulling`
+- `smoothing`
+
+## 看板
+- `texture`
+- `backTexture`
+- `height`
+- `width`
+- `depth`
+- `frame`
+- `animationCycle`
+- `color`
+- `lightValue`
+
+## 機械（ModelMachine）
+- `name`
+- `model`
+    - `modelFile`
+    - `textures`
+    - `rendererPath`
+- `buttonTexture`
+- `machineType`
+- `followRailAngle`
+- `rotateByMetadata`
+- `brightness`
+- `sound_OnActivate`
+- `sound_Running`
+- `defaultValues`
+    - `type`
+    - `key`
+    - `value`
+    - `suggestions`
+    - `pattern`
+    - `minmax`
+- `defaultData`
+
+
+## 機械（ModelOrnament）
+- `name`
+- `model`
+- `buttonTexture`
+- `ornamentType`
+- `minRandomScale`
+- `conveyorSpeed`
+
+## 機械（ModelMechanism）
+- `name`
+- `model`
+- `buttonTexture`
+- `type`
+- `transmissionRatioON`
+- `transmissionRatioOFF`
+- `maxSpeed`
+- `acceleration`
+- `radius`
+- `teethCount`
+
+## 旗
+- `texture`
+- `height`
+- `width`
+- `resolutionU`
+- `resolutionV`
+- `poleLength`
+
+## コネクタ
+- `name`
+- `model`
+- `connectorType`
+- `wirePos`
+
+## ワイヤ
+- `name`
+- `model`
+- `deflectionCoefficient`
+- `lengthCoefficient`
+- `sectionLength`
+- `yOffset`
+
+
+
 # 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
 ゲーム内の車両には、台車（ボギー）を設定することができます。  
