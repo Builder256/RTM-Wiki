@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-02-25T15:52:50.931Z
+date: 2025-03-14T11:42:05.424Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -22,7 +22,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 
 # 目次
 ## 共通
-- [`useCustomColor`](#useCustomColor)
+- [`useCustomColor`](#usecustomcolor)
 - `tags`
 - `defaultData`
 - `scale`
