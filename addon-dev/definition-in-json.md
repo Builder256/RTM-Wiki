@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-03-14T11:42:05.424Z
+date: 2025-03-14T12:50:31.752Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -343,6 +343,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 | RTM2 | RTM | KaizPatchX |
 | ---- | --- | ---------- |
 | YES  | NO  | YES        |
+{.dense}
 <!-- </details> -->
 
 ### `tags`
@@ -358,6 +359,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 | RTM2 | RTM | KaizPatchX |
 | ---- | --- | ---------- |
 | YES  | YES | YES        |
+{.dense}
 
 ### `defaultData`
 DataMapのデフォルト値
@@ -373,6 +375,7 @@ DataMapのデフォルト値
 | RTM2 | RTM | KaizPatchX |
 | ---- | --- | ---------- |
 | YES  | YES | YES        |
+{.dense}
 
 ### `scale`
 縮尺（NGTOモデル使用時のみ）
@@ -382,6 +385,7 @@ DataMapのデフォルト値
 | RTM2 | RTM       | KaizPatchX |
 | ---- | --------- | ---------- |
 | YES  | Maybe YES | YES        |
+{.dense}
 
 ### `offset`
 モデルの描画位置（Entityの中心からの相対座標）
@@ -399,11 +403,14 @@ DataMapのデフォルト値
 | RTM2 | RTM | KaizPatchX |
 | ---- | --- | ---------- |
 | YES  | YES | YES        |
-
-
-
+{.dense}
 
 ### `smoothing`
+スムージングを使用するか
+
+
+
+
 ### `doCulling`
 ### `accuracy`
 ### `serverScriptPath`
