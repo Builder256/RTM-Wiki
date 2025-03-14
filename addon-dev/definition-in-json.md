@@ -16,13 +16,13 @@ dateCreated: 2025-01-08T02:27:50.809Z
 > インデントについて、様々な派閥があるかと思いますが、ここでは恐らくRealTrainMod界隈で最も主流である空白4つで1つのインデントとする作法を採用します
 {.is-info}
 
-<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">インデントのスペース <a href="https://t.co/SuTM2sEosJ">pic.twitter.com/SuTM2sEosJ</a></p>&mdash; arkw (@arkw0) <a href="https://twitter.com/arkw0/status/1881650240660668586?ref_src=twsrc%5Etfw">2025年1月21日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">インデントのスペース <a href="https://t.co/SuTM2sEosJ">pic.twitter.com/SuTM2sEosJ</a></p>&mdash; arkw (@arkw0) <a href="https://twitter.com/arkw0/status/1881650240660668586?ref_src=twsrc%5Etfw">2025年1月21日</a></blockquote>
 
 せ、戦争じゃ......
 
 # 目次
 ## 共通
-- `useCustomColor`
+- [`useCustomColor`](#useCustomColor)
 - `tags`
 - `defaultData`
 - `scale`
@@ -328,7 +328,89 @@ dateCreated: 2025-01-08T02:27:50.809Z
 - `sectionLength`
 - `yOffset`
 
+# 解説
 
+## 共通
+### `useCustomColor`
+カスタムカラーを使用するか
+- \<boolean>
+- 省略：可
+- `default`：`false`
+
+<!-- <details>
+<summary>対応表</summary> -->
+
+| RTM2 | RTM | KaizPatchX |
+| ---- | --- | ---------- |
+| YES  | NO  | YES        |
+<!-- </details> -->
+
+### `tags`
+モデル選択画面での検索キーワード
+
+- \<string> 
+- 省略：可
+
+```json
+"tags": "ngt 223 JRW"
+```
+
+| RTM2 | RTM | KaizPatchX |
+| ---- | --- | ---------- |
+| YES  | YES | YES        |
+
+### `defaultData`
+DataMapのデフォルト値
+
+- \<string>
+- 省略：可
+- `default`：`null`
+
+```json
+"defaultData": "scale=(Double)1.0,type=(String)Normal"
+```
+
+| RTM2 | RTM | KaizPatchX |
+| ---- | --- | ---------- |
+| YES  | YES | YES        |
+
+### `scale`
+縮尺（NGTOモデル使用時のみ）
+- \<float>
+- 省略：不明
+
+| RTM2 | RTM       | KaizPatchX |
+| ---- | --------- | ---------- |
+| YES  | Maybe YES | YES        |
+
+### `offset`
+モデルの描画位置（Entityの中心からの相対座標）
+
+- \<Array>
+    - \<float>
+    - \<float>
+    - \<float>
+- 省略：可
+
+```json
+"offset": [0.0, 0.0, 0.0]
+```
+
+| RTM2 | RTM | KaizPatchX |
+| ---- | --- | ---------- |
+| YES  | YES | YES        |
+
+
+
+
+### `smoothing`
+### `doCulling`
+### `accuracy`
+### `serverScriptPath`
+### `guiScriptPath`
+### `guiTexture`
+### `customIconTexture`
+### `renderAABB`
 
 # 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
