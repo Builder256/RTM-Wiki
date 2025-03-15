@@ -332,7 +332,7 @@ RealTrainMod（RTM）のアドオン制作をするさいに必要なJSONでの�
 
 ## 共通
 ### `useCustomColor`
-カスタムカラーを使用するか
+カスタムカラーを有効化するか
 - \<boolean>
 - 省略：可
 - default：`false`
@@ -387,13 +387,15 @@ DataMapのデフォルト値
 {.dense}
 
 ### `offset`
-モデルの描画位置（Entityの中心からの相対座標）
+モデルの描画位置
 
 - \<Array>
     - \<float>
     - \<float>
     - \<float>
 - 省略：可
+
+モデルの描画位置を設定します。Entityの中心からの相対座標で記述してください。
 
 ```json
 "offset": [0.0, 0.0, 0.0]
@@ -405,18 +407,20 @@ DataMapのデフォルト値
 {.dense}
 
 ### `smoothing`
-スムージングを使用するか
+スムージングを有効化するか
 
 - \<boolean>
 - 省略：可
 - default：`false`
 
 ### `doCulling`
-面の片面表示を有効化するか（MQOとOBJでは有効化した方が負荷が少ない）
+面の片面表示を有効化するか
 
 - \<boolean>
 - 省略：可
 - default：`false`
+
+有効化すると、ポリゴンの表面のみが描画されます。MQOとOBJでは有効化した方が負荷が少ないです。
 
 ### `accuracy`
 頂点座標の精度
@@ -432,7 +436,7 @@ DataMapのデフォルト値
 {.grid-list}
 
 ### `serverScriptPath`
-サーバースクリプトのパス
+サーバースクリプトのファイルパス
 
 - \<string>
 - 省略：可
@@ -442,7 +446,7 @@ DataMapのデフォルト値
 ```
 
 ### `guiScriptPath`
-GUIスクリプトのパス
+GUIスクリプトのファイルパス
 
 - \<string>
 - 省略：可
@@ -452,7 +456,7 @@ GUIスクリプトのパス
 ```
 
 ### `guiTexture`
-乗り物GUIのカスタムテクスチャ
+乗り物GUIのカスタムテクスチャのファイルパス
 
 - \<string>
 - 省略：可
@@ -462,7 +466,7 @@ GUIスクリプトのパス
 ```
 
 ### `customIconTexture`
-カスタムアイコンのテクスチャ
+カスタムアイコンのテクスチャのファイルパス
 
 - \<string>
 - 省略：可
