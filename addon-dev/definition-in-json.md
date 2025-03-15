@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-03-14T12:50:31.752Z
+date: 2025-03-15T05:00:11.090Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -429,11 +429,12 @@ DataMapのデフォルト値
 - 省略：可
 - default：`"MEDIUM"`
 
-<br>
-
+<div>
+  
 - `"LOW"` - ±16.000の範囲を持ちます。この範囲に収まり、かつそれほど細かくないモデルであれば、こちらを選択したほうがメモリ使用量を削減できます。
 - `"MEDIUM"` - 通常通り。
 {.grid-list}
+</div>
 
 ### `serverScriptPath`
 サーバースクリプトのファイルパス
@@ -513,14 +514,14 @@ GUIスクリプトのファイルパス
 - \<string>
 - 省略：不可
 
-<br>
+<div>
 
 - `"EC"` - 電車
 - `"DC"` - 気動車
 - `"CC"` - 貨車
 - `"TC"` - タンク車
 {.grid-list}
-
+</div>
 
 ```json
 "trainType": "EC"
