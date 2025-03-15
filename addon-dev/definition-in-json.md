@@ -8,10 +8,10 @@ editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
 ---
 
-> ⚠ このページは執筆中であり、今後内容が大幅に追加・変更される可能性があります。
+> このページは執筆中であり、今後内容が大幅に追加・変更される可能性があります。
 {.is-warning}
 
-このページでは、主に車両モデルのJSONでの設定項目について解説します。
+RealTrainMod（RTM）のアドオン制作をするさいに必要なJSONでの設定項目と内容について解説します。
 
 > インデントについて、様々な派閥があるかと思いますが、ここでは恐らくRealTrainMod界隈で最も主流である空白4つで1つのインデントとする作法を採用します
 {.is-info}
@@ -23,18 +23,18 @@ dateCreated: 2025-01-08T02:27:50.809Z
 # 目次
 ## 共通
 - [`useCustomColor`](#usecustomcolor)
-- `tags`
-- `defaultData`
-- `scale`
-- `offset`
-- `smoothing`
-- `doCulling`
-- `accuracy`
-- `serverScriptPath`
-- `guiScriptPath`
-- `guiTexture`
-- `customIconTexture`
-- `renderAABB`
+- [`tags`](#tags)
+- [`defaultData`](#defaultdata)
+- [`scale`](#scale)
+- [`offset`](#offset)
+- [`smoothing`](#smoothing)
+- [`doCulling`](#doculling)
+- [`accuracy`](#accuracy)
+- [`serverScriptPath`](#serverscriptpath)
+- [`guiScriptPath`](#guiscriptpath)
+- [`guiTexture`](#guitexture)
+- [`customIconTexture`](#customicontexture)
+- [`renderAABB`](#renderaabb)
 
 ## 列車
 - パーツ動作設定
@@ -335,7 +335,7 @@ dateCreated: 2025-01-08T02:27:50.809Z
 カスタムカラーを使用するか
 - \<boolean>
 - 省略：可
-- `default`：`false`
+- default：`false`
 
 <!-- <details>
 <summary>対応表</summary> -->
@@ -366,7 +366,6 @@ DataMapのデフォルト値
 
 - \<string>
 - 省略：可
-- `default`：`null`
 
 ```json
 "defaultData": "scale=(Double)1.0,type=(String)Normal"
@@ -408,16 +407,253 @@ DataMapのデフォルト値
 ### `smoothing`
 スムージングを使用するか
 
-
-
+- \<boolean>
+- 省略：可
+- default：`false`
 
 ### `doCulling`
+面の片面表示を有効化するか（MQOとOBJでは有効化した方が負荷が少ない）
+
+- \<boolean>
+- 省略：可
+- default：`false`
+
 ### `accuracy`
+頂点座標の精度
+
+- \<string>
+- 省略：可
+- default：`"MEDIUM"`
+
+- `"LOW"` - ±16.000の範囲を持ちます。この範囲に収まり、かつそれほど細かくないモデルであれば、こちらを選択したほうがメモリ使用量を削減できます。
+- `"MEDIUM"` - 通常通り。
+{.grid-list}
+
 ### `serverScriptPath`
+サーバースクリプトのパス
+
+- \<string>
+- 省略：可
+
+```json
+"serverScriptPath": "scripts/server/serverscript.js"
+```
+
 ### `guiScriptPath`
+GUIスクリプトのパス
+
+- \<string>
+- 省略：可
+
+```json
+"guiScriptPath": "scripts/gui/guiscript.js"
+```
+
 ### `guiTexture`
+乗り物GUIのカスタムテクスチャ
+
+- \<string>
+- 省略：可
+
+```json
+"guiTexture": "textures/gui/gui.png",
+```
+
 ### `customIconTexture`
+カスタムアイコンのテクスチャ
+
+- \<string>
+- 省略：可
+
+```json
+"customIconTexture": "textures/icon/icon.png"
+```
+
 ### `renderAABB`
+描画有無判定用BOXのサイズ
+
+- \<array>
+    - \<float>
+    - \<float>
+    - \<float>
+    - \<float>
+    - \<float>
+    - \<float>
+- 省略：可
+
+```json
+"renderAABB": [-0.5, 0.0, -0.5, 0.5, 1.0, 0.5]
+```
+
+## 列車
+
+- パーツ動作設定
+- 座標変換設定
+- 台車設定
+### `trainName`
+車両のID
+ユニークなものでなければならない。車両キットを使用した場合や、既にアドオンがある形式など、競合することがないように工夫して命名することが望ましい。
+
+- \<string>
+- 省略：不可
+
+```json
+"trainName": "train_name"
+```
+
+### `trainType`
+サブタイプ
+
+- \<string>
+- 省略：不可
+
+- `"EC"` - 電車
+- `"DC"` - 気動車
+- `"CC"` - 貨車
+- `"TC"` - タンク車
+{.grid-list}
+
+
+```json
+"trainType": "EC"
+```
+
+### ~~`trainModel`~~
+削除
+```json
+"trainModel": "train.class",
+```
+### ~~`bogieModel`~~
+削除
+```json
+"bogieModel": "bogie.class",
+```
+### ~~`trainTexture`~~
+削除
+```json
+"trainTexture": "textures/train/train.png",
+```
+### ~~`bogieTexture`~~
+削除
+```json
+"bogieTexture": "textures/train/bogie.png",
+```
+
+### `trainModel2`
+モデルファイルとテクスチャファイルの設定
+- `modelFile` \<string> モデルファイルへの相対パス
+- `textures` \<array> 材質設定の配列
+    - 材質設定
+        - 材質名 \<string> モデルファイルで作成した材質の名前
+        - ファイルパス \<string> テクスチャのファイルパス
+        - オプション \<string> オプションの設定
+- `rendererPath` \<string> 描画スクリプトのファイルパス
+- `vertexShaderPath` \<string> 詳細不明
+- `fragmentShaderPath` \<string> 詳細不明
+
+#### オプションの設定の内容
+文字列に`AlphaBlend`が含まれていれば透過、`Light`が含まれていれば発光が有効化されます
+{.grid-list}
+
+```json
+"trainModel2": {
+    "modelFile": "train.mqo",
+    "textures": [
+        ["mat1", "textures/train/train1.png", "AlphaBlend"],
+        ["mat2", "textures/train/train2.png", "Light"],
+        ["mat3", "textures/train/train3.png"]
+    ],
+    "rendererPath": "scripts/script.js"
+},
+```
+
+
+<!-- ### `bogieModel2`
+- `modelFile`
+- `textures`
+- `rendererPath`
+- `bogieModel3`
+    - 台車設定（前）
+    - 台車設定（後）
+- `buttonTexture`
+- `rollsignTexture`
+- `rollsignNames`
+- `rollsigns`
+    - 方向幕設定
+    - `uv`
+    - `pos`
+    - `doAnimation`
+    - `disableLighting`
+- `door_left`
+    - パーツ動作設定の配列
+        - `objects`
+        - `pos`
+        - `transform`
+            - 座標変換設定の配列
+- `door_right`
+    - パーツ動作設定の配列
+        - `objects`
+        - `pos`
+        - `transform`
+            - 座標変換設定の配列
+- `pantograph_front`
+- `pantograph_back`
+- `sound_Stop`
+- `sound_S_A`
+- `sound_S_M`
+- `sound_Medium`
+- `sound_M_H`
+- `sound_High`
+- `sound_H_M`
+- `sound_M_S`
+- `sound_Acceleration`
+- `sound_Deceleration`
+- `sound_D_S`
+- `sound_Horn`
+- `sound_BrakeRelease`
+- `sound_BrakeRelease2`
+- `sound_Announcement`
+- `sound_DoorOpen`
+- `sound_DoorClose`
+- `soundScriptPath`
+- `muteJointSound`
+- `seatPos`
+- `slotPos`
+- `seatPosF`
+- `playerPos`
+- `bogiePos`
+- `pantoPos`
+- `jointDelay`
+- `maxSpeed`
+- ~~`renderLight`~~
+- `rolling`
+- `rollSpeedCoefficient`
+- `rollVariationCoefficient`
+- `rollWidthCoefficient`
+- `accelerateion`
+- `trainDistance`
+- `doCulling`
+- `isSingleTrain`
+- `notDisplayCab`
+- `headLights`
+    - 配列
+        - `type`
+        - `color`
+        - `pos`
+        - `r`
+- `tailLights`
+    - 配列
+        - `type`
+        - `color`
+        - `pos`
+        - `r`
+- `interiorLights`
+    - 配列
+        - `pos`
+
+- `smoke`
+- `size`
+- `wheelRotationSpeed` -->
 
 # 台車の定義 `"bogieModel2"` / `"bogieModel3"`
 
