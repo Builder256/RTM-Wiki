@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-02-25T07:48:58.202Z
+date: 2025-03-18T15:11:40.235Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -10,6 +10,12 @@ dateCreated: 2025-01-12T03:47:27.039Z
 
 <h1 style="text-align:center">歡迎來到RTM wiki!</h1>
 
+<h2 style="text-align:center">㊗ RealTrainMod 誕生11周年</h2>
+
+<p style="text-align:center">
+  RealTrainMod在2024年7月13日迎來了它的11歲大壽。
+<p style="text-align:center">
+  雖然現在有點遲，但還是衷心祝福這個老模組能繼續活躍下去ヽ(✿ﾟ▽ﾟ)ノ
 
 ## 關於RTM Wiki
 
