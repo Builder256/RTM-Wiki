@@ -39,3 +39,13 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add sitemap.xml
           git diff --staged --quiet || (git commit -m "Auto-update sitemap" && git push)
+
+      # 終了後に discordのwebhookで通知を行う
+      - name: Notify Discord
+        run: |
+            curl -H "Content-Type: application/json" \
+            -X POST \
+            -d '{
+              "content": "あいうえお"
+            }' \
+            ${{ secrets.DISCORD_WEBHOOK_URL }}
