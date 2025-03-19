@@ -16,10 +16,15 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
-          if [ -z "$FILES" ]; then
-            FILES=$(git ls-files --others --exclude-standard)  # 新規ファイルを取得
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # 初回コミット時、すべてのファイルを取得
+            FILES=$(git ls-files)
+          else
+            # 変更されたファイルを取得
+            FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
           fi
+
+          # ファイルリストを環境変数に保存
           echo "FILES<<EOF" >> $GITHUB_ENV
           echo "$FILES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
