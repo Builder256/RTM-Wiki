@@ -1,0 +1,27 @@
+name: Notify Discord on File Push
+
+on:
+  push:
+    branches:
+      - main  # 監視するブランチを指定
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed_files
+        run: |
+          echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_ENV
+
+      - name: Send notification to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.WIKI_UPDATE_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d "{\"content\":\"New files pushed: \n$(echo $files | jq -r '.[] | \"- \" + .')\"}" \
+          $DISCORD_WEBHOOK_URL
