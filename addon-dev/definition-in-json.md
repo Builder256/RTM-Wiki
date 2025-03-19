@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-03-19T08:15:02.084Z
+date: 2025-03-19T08:44:10.852Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -40,7 +40,7 @@ RealTrainMod（RTM）のアドオン制作をする際に必要なJSONでの設�
 - パーツ動作設定
 - 座標変換設定
 - 台車設定
-- `trainName`
+- [`trainName`](#trainname)
 - `trainType`
 - ~~`trainModel`~~
 - ~~`bogieModel`~~
