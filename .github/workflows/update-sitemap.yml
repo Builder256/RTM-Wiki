@@ -46,6 +46,6 @@ jobs:
             curl -H "Content-Type: application/json" \
             -X POST \
             -d '{
-              "content": "あいうえお"
+              "content": "Updated Sitemap"
             }' \
             ${{ secrets.WIKI_UPDATE_WEBHOOK_URL }}
