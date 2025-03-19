@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # 監視するブランチを指定
+    paths: '**.md'
 
 jobs:
   notify:
@@ -15,13 +16,25 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_ENV
+          FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          if [ -z "$FILES" ]; then
+            FILES=$(git ls-files --others --exclude-standard)  # 新規ファイルを取得
+          fi
+          echo "FILES<<EOF" >> $GITHUB_ENV
+          echo "$FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Send notification to Discord
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.WIKI_UPDATE_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
+          if [ -z "$FILES" ]; then
+            FILE_LIST="(No files found)"
+          else
+            FILE_LIST=$(echo "$FILES" | sed 's/^/- /' | paste -sd "\n" -)
+          fi
+
           curl -H "Content-Type: application/json" \
           -X POST \
-          -d "{\"content\":\"New files pushed: \n$(echo $files | jq -r '.[] | \"- \" + .')\"}" \
+          -d "{\"content\":\"New files pushed:\n$FILE_LIST\"}" \
           $DISCORD_WEBHOOK_URL
