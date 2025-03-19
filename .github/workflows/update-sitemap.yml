@@ -48,4 +48,4 @@ jobs:
             -d '{
               "content": "あいうえお"
             }' \
-            ${{ secrets.DISCORD_WEBHOOK_URL }}
+            ${{ secrets.WIKI_UPDATE_WEBHOOK_URL }}
