@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-03-19T12:37:50.473Z
+date: 2025-03-22T14:14:02.717Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -92,7 +92,7 @@ RealTrainMod（RTM）和其他模組最大的不同是、RTM可以導入1:1的�
 
 ## 關於RTM Wiki
 
-本wiki旨在為由Ngt5479製作的RealTrainMod（通稱 RTM）各種功能和追加包資訊的究極知識庫。
+本wiki旨在為由Ngt5479製作的RealTrainMod（通稱 RTM）各種功能和追加包資訊的究極知識庫。[^1]
 
 ## 這和既存的Realtrainmod wiki差在哪裡？
 
@@ -112,23 +112,24 @@ RTM Wiki目前有開設外國語(指日文以外的語言)的頁面。目前主�
 https://discord.com/invite/HpN6gb4muG
 
 ## Wiki 主機
-RTM Wiki 是由 Kaiz_JP氏[^3]無償提供的伺服器運營的。感謝。
+RTM Wiki 是由 Kaiz_JP氏[^3]無償提供的伺服器運營的，感謝。
 
-## 管理人連絡先
-当Wikiに関しまして、ご相談やご連絡等ございましたら、以下の連絡先までご連絡ください。
+## 聯絡管理員
+如果有與該wiki的任何問題請聯絡管理員builder桑。
 - Twitter: https://x.com/7_speed_PDK
 
-# 画像提供のお願い
-RTM Wikiでは、画像提供をお願いしています。
-RealTrainModの魅力を伝えられる画像、Modやアドオンの解説に役立つ画像など、Wikiに有用な画像をお持ちの方は、是非提供をお願いいたします。
+# 圖片徵求
+RTM Wiki目前希望能徵求圖片。
+請協助我們徵求不管是展現RealTrainMod魅力、能清楚解說模組和追加包、或是對Wiki資料集合有幫助的圖片。
 
-# 編集者募集
-RTM Wikiでは、編集者を募集しています。
-編集にご協力いただける方は、右上のログインボタンからアカウントを作成するか、[RTM WikiのGitHubリポジトリ](https://github.com/Builder256/RTM-Wiki) から貢献をお願いいたします。
+# 編輯者募集中
+RTM Wiki目前正在募集編輯者。
+您可以在右上方的按鈕註冊並開始編輯與增加條目
+[RTM WikiのGitHub專案頁面](https://github.com/Builder256/RTM-Wiki) 
 
-[Minecraft Wiki–Minecraftに関する究極の情報源](https://ja.minecraft.wiki/)のパクリである。
-[ 根據「祝・RealTrainMod公開4周年」這個編輯紀錄，應該是在2017年後就沒有再繼續更新。
-Twitter：https://x.com/Kaiz_JP
+[^1]:我們參照了一部分的[Minecraft Wiki–Minecraftに関する究極の情報源](https://ja.minecraft.wiki/)
+[^2]:根據「祝・RealTrainMod公開4周年」這個編輯紀錄，應該是在2017年後就沒有再繼續更新。
+[^3]:Twitter：https://x.com/Kaiz_JP
 GitHub：https://github.com/Kai-Z-JP
 
 
