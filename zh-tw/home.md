@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-03-22T14:14:14.106Z
+date: 2025-03-23T06:03:16.537Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -109,7 +109,7 @@ RealTrainMod（RTM）和其他模組最大的不同是、RTM可以導入1:1的�
 
 ## 多語言協力
 RTM Wiki目前有開設外國語(指日文以外的語言)的頁面。目前主要負責翻譯的hsiangba有開設提供志願翻譯者的交流Discord群。
-https://discord.com/invite/HpN6gb4muG
+https://discord.gg/jVJMzCdvVc
 
 ## Wiki 主機
 RTM Wiki 是由 Kaiz_JP氏[^3]無償提供的伺服器運營的，感謝。
