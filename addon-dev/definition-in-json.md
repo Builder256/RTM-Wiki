@@ -2,7 +2,7 @@
 title: JSONファイルの設定項目
 description: 
 published: true
-date: 2025-03-24T11:02:14.461Z
+date: 2025-03-24T11:13:14.558Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:27:50.809Z
@@ -11,7 +11,8 @@ dateCreated: 2025-01-08T02:27:50.809Z
 > このページは執筆中であり、今後内容が大幅に追加・変更される可能性があります。
 {.is-warning}
 
-RealTrainMod（RTM）のアドオン制作をする際に必要なJSONでの設定項目と内容について解説します。
+RealTrainMod（RTM）のアドオン制作をする際のJSONの設定項目について解説します。
+バージョンによって使用できる内容が異なりますが、このページでは最新版のRealTrainModに準拠しています。
 
 > インデントについて、様々な派閥があるかと思いますが、ここでは恐らくRealTrainMod界隈で最も主流である空白4つで1つのインデントとする作法を採用します
 {.is-info}
