@@ -13,26 +13,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # リポジトリ全体を取得するために0を指定
 
-      - name: Get changed files
-        id: changed_files
-        run: |
-            echo ${{ github.event.before }}
-            echo ${{ github.sha }}
-            git diff --name-only ${{ github.event.before }} ${{ github.sha }}
-
-#       - name: Send notification to Discord
-#         env:
-#           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
-#         run: |
-#           if [ -z "$FILES" ]; then
-#             FILE_LIST="(No files found)"
-#           else
-#             FILE_LIST=$(echo "$FILES" | sed 's/^/- /' | paste -sd "\n" -)
-#           fi
-
-#           curl -H "Content-Type: application/json" \
-#           -X POST \
-#           -d "{\"content\":\"New files pushed:\n$FILE_LIST\"}" \
-#           $DISCORD_WEBHOOK_URL
+    #   - name: Get changed files
+    #     id: changed_files
+    #     run: |
+    #         echo ${{ github.event.before }}
+    #         echo ${{ github.sha }}
+    #         git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+    
+      - name: Run script
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: node .github.workflow/notify_discord.js
