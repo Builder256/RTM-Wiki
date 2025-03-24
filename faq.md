@@ -2,7 +2,7 @@
 title: よくある？質問と回答
 description: 質問と回答
 published: true
-date: 2025-02-25T07:47:47.292Z
+date: 2025-03-24T10:17:02.263Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T03:54:38.120Z
@@ -19,4 +19,4 @@ dateCreated: 2025-01-08T03:54:38.120Z
 # アドオン制作関連
 
 ## 台車の定義で材質名が`"default"`ってなってるアドオンがあるけどどういうこと？
-わかりません。誰か教えて。
+全ての材質に同じテクスチャを使用する場合に`"default"`キーワードを指定します。
