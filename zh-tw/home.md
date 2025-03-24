@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-03-23T06:03:16.537Z
+date: 2025-03-24T10:27:30.578Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -66,25 +66,25 @@ RealTrainMod（RTM）和其他模組最大的不同是、RTM可以導入1:1的�
   <div>
     
   ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center}
-  <p style="text-align:center">近畿日本鐵道8A系-水音車輛<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  <p style="text-align:center">近畿日本鐵道8A系<br>車輛設計一發表當日就馬上做出來的車輛</p>
   </div>
 
   <div>
     
   ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center}
-  <p style="text-align:center">大阪Metro400系-水音車輛<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  <p style="text-align:center">大阪Metro400系<br>車輛設計一發表當日就馬上做出來的車輛</p>
   </div>
 
   <div>
     
   ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center}
-  <p style="text-align:center">東京臨海高速鐵道71-100系-水音車輛<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  <p style="text-align:center">東京臨海高速鐵道71-100系<br>車輛設計一發表當日就馬上做出來的車輛</p>
   </div>
 
   <div>
     
   ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center}
-  <p style="text-align:center">名古屋鐵道9520/9120系-水音車輛<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  <p style="text-align:center">名古屋鐵道9520/9120系<br>車輛設計一發表當日就馬上做出來的車輛</p>
     
     
   </div>
