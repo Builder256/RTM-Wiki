@@ -16,30 +16,21 @@ jobs:
       - name: Get changed files
         id: changed_files
         run: |
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            # 初回コミット時、すべてのファイルを取得
-            FILES=$(git ls-files)
-          else
-            # 変更されたファイルを取得
-            FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
-          fi
+            echo ${{ github.event.before }}
+            echo ${{ github.sha }}
+            git diff --name-only ${{ github.event.before }} ${{ github.sha }}
 
-          # ファイルリストを環境変数に保存
-          echo "FILES<<EOF" >> $GITHUB_ENV
-          echo "$FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+#       - name: Send notification to Discord
+#         env:
+#           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
+#         run: |
+#           if [ -z "$FILES" ]; then
+#             FILE_LIST="(No files found)"
+#           else
+#             FILE_LIST=$(echo "$FILES" | sed 's/^/- /' | paste -sd "\n" -)
+#           fi
 
-      - name: Send notification to Discord
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
-        run: |
-          if [ -z "$FILES" ]; then
-            FILE_LIST="(No files found)"
-          else
-            FILE_LIST=$(echo "$FILES" | sed 's/^/- /' | paste -sd "\n" -)
-          fi
-
-          curl -H "Content-Type: application/json" \
-          -X POST \
-          -d "{\"content\":\"New files pushed:\n$FILE_LIST\"}" \
-          $DISCORD_WEBHOOK_URL
+#           curl -H "Content-Type: application/json" \
+#           -X POST \
+#           -d "{\"content\":\"New files pushed:\n$FILE_LIST\"}" \
+#           $DISCORD_WEBHOOK_URL
