@@ -27,4 +27,4 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
-        run: node .github\workflows\notify_discord.js
+        run: node .github/workflows/notify_discord.js
