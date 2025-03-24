@@ -2,11 +2,13 @@
 title: メインページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したMinecraft Java Editionの鉄道Mod、RealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-03-23T06:01:44.926Z
+date: 2025-03-24T10:46:01.836Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T02:01:28.259Z
 ---
+
+[日本語](/ja/home) / [繁體中文](/zh-tw/home) / [English](/en/home)
 
 <h1 style="text-align:center">RTM Wikiへようこそ</h1>
 
