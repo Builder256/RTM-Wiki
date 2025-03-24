@@ -31,7 +31,7 @@ function getPageData(filePaths, filePath) {
         return;
     }
     const content = fs.readFileSync(filePath, 'utf-8');
-    const lines = content.split('\n').map(line => line.trim());
+    const lines = content.split('\n');
 
     let header = [];
     const headerEndIndex = lines.indexOf('---', 1);
