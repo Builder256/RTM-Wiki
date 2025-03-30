@@ -2,7 +2,7 @@
 title: スクリプト解説【概説】
 description: 
 published: true
-date: 2025-03-01T03:49:30.223Z
+date: 2025-03-30T14:14:23.513Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
@@ -28,4 +28,7 @@ RealTrainModでは、三種類のスクリプトが用意されています。
 
 # 関連サイト
 - [スクリプト解説 | 城田重工](https://www.hi03s.com/blog)
+- [RenderScript用チートシート *RenderScript用チートシート. GitHub Gist: instantly share code, notes, and snippets.*](https://gist.github.com/Kai-Z-JP/2edadce21011125d6465ed6401ac4842)
+- [1.7.10向け *1.7.10向け. GitHub Gist: instantly share code, notes, and snippets.*](https://gist.github.com/Kai-Z-JP/0dd0cba11592305cdbf859311718f43f)
+- [Xユーザーのひー@hi03さん: 「スクリプトで使えそうな、RTMの説明書に載ってない関数とか一部書いてみたよ https://t.co/EGGN6ztr9K」 / X](https://x.com/hi03_s/status/1044613004644376577)
 {.links-list}
