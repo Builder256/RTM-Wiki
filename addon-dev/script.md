@@ -2,7 +2,7 @@
 title: スクリプト概説
 description: 
 published: true
-date: 2025-03-30T15:13:35.078Z
+date: 2025-03-30T15:17:53.158Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
@@ -12,7 +12,7 @@ dateCreated: 2025-01-08T02:30:49.841Z
 {.is-warning}
 
 # スクリプトとは
-RealTrainMod（RTM）でのスクリプトとは、デフォルトでは不可能な機能を実装するためのJavaScript形式のプログラムです。スクリプトを使用することで、JSONで設定されるRealTrainModデフォルトの処理を行わず、代わりにユーザーによって定義された機能が実装できるようになります。また、本格的なオブジェクト指向言語であるJavaを使用することなく、比較的平易なJavaScriptを使用してRealTrainModやMinecraft、Forge、Javaの機能を利用したデフォルトでは不可能な非常に高度な機能を実装できます。RealTrainModでは、Java内蔵のJavaScriptエンジン「Nashorn」を使用することで、ECMAScript 5.1までに定義されたJavaScriptの文法を使用して、オリジナルの機能を実装することができます。
+RealTrainMod（RTM）でのスクリプトとは、デフォルトでは不可能な機能を実装するためのJavaScript形式のプログラムです。スクリプトを使用することで、JSONで設定されるRealTrainModデフォルトの処理を行わず、代わりにユーザーによって定義された機能が実装できるようになります。また、本格的なオブジェクト指向言語であるJavaを使用することなく、比較的平易なJavaScriptを使用してRealTrainModやOpenGL、Minecraft、Forge、Javaの機能を利用したデフォルトでは不可能な非常に高度な機能を実装できます。RealTrainModでは、Java内蔵のJavaScriptエンジン「Nashorn」を使用することで、ECMAScript 5.1までに定義されたJavaScriptの文法を使用して、オリジナルの機能を実装することができます。
 
 # スクリプトの種類
 RealTrainModでは、三種類のスクリプトが用意されています。
