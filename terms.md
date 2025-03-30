@@ -2,7 +2,7 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-03-01T17:13:11.055Z
+date: 2025-03-30T14:33:18.384Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
@@ -19,6 +19,10 @@ RTMで使用する音声ファイルやそれの再生設定をまとめたJavaS
 
 ## 坐パ
 RTMのフォーク、KaizPatchXのこと。
+
+## 周年
+RealTrainModのRealTrainModの初公開日から一年ごとに行われる祭事のこと。
+毎年7月13日にTwitter（現X）で行われ、近年は後述の鉄道の日と並び多数のアドオンが一挙にリリースされる行事として有名である。
 
 ## 総統
 RTMの制作者、ngt5479氏のこと。
@@ -40,6 +44,10 @@ ngto形式やschematic形式での配布がされている。
 --其他交通類遊戲消息
 --真實世界鐵路交通(主要)...*](https://www.facebook.com/groups/158533211228170/?notif_id=1736598322517572)
 {.links-list}
+
+## 鉄道の日
+毎年10月14日のこと。日本初の鉄道が開業した1872年10月14日を記念して制定された記念日である。
+RealTrainModにおいては、2022年ごろからこの日に集中して多数のアドオンがリリースされるようになった。
 
 # は行
 
