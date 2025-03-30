@@ -2,7 +2,7 @@
 title: RealTrainMod拡張Mod解説
 description: RealTrainMod（RTM）の機能を拡張するModについて解説します。ATSAssistModやCake's RTM Addon、fixRTM、KaizPatchX、SignalControllerMod、WebCTCなど
 published: true
-date: 2025-02-25T07:50:24.960Z
+date: 2025-03-30T14:42:00.978Z
 tags: realtrainmod解説, mod解説
 editor: markdown
 dateCreated: 2025-02-20T12:00:24.020Z
@@ -12,10 +12,7 @@ dateCreated: 2025-02-20T12:00:24.020Z
 長い歴史を持つRealTrainModには、その機能を拡充したり不具合を修正する様々なModが開発されています。
 このページでは、それらのRealTrainModに直接的に関連するModについて解説します。
 
-RealTrainModに直接的には関連しない、あくまでも一緒に使うと便利、というModについては、こちらのページで解説しています。
-
-- [よく併用されているMod *RealTrainMod（RTM）とよく併用されているModについて解説します。RealTrainModでのワールド開発に便利なModを紹介。Ha10gen's Building Material Mod、MCTE、Minatocc_Addblocksなど。*](/ja/related-mods)
-{.links-list}
+RealTrainModに直接的には関連しない、あくまでも一緒に使うと便利、というModについては、このページではなく、[よく併用されているMod](/ja/related-mods) のページで解説しています。
 
 # ATSAssistMod
 
