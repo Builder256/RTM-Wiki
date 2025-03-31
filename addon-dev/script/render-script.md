@@ -2,7 +2,7 @@
 title: 描画スクリプト解説
 description: 
 published: false
-date: 2025-03-31T14:09:07.890Z
+date: 2025-03-31T15:53:29.177Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-03-30T15:17:27.248Z
@@ -455,7 +455,7 @@ renderClassに設定する文字列によって、モデルの描画方式を設
 </table>
 
 ほかにも多数の使用可能なメソッドがあります。
-詳細は配布されているソースコードやmodのデコンパイルを行い確認してください。
+詳細はmodをデコンパイルして確認してください。
 
 
 [^1]: RealTrainModモデルパック作成マニュアル-RTM2.4.8対応版-
