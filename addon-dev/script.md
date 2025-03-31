@@ -2,7 +2,7 @@
 title: スクリプト概説
 description: 
 published: true
-date: 2025-03-30T15:17:53.158Z
+date: 2025-03-31T15:54:11.647Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
@@ -25,7 +25,7 @@ RealTrainModでは、三種類のスクリプトが用意されています。
 実装したい処理の内容に応じて、これらのスクリプトを適切に使い分け、併用する必要があります。
 
 # スクリプト解説
-- [描画スクリプト解説]()
+- [描画スクリプト解説](/ja/addon-dev/script/render-script)
 - [サウンドスクリプト解説]()
 - [サーバースクリプト解説]()
 {.links-list}
