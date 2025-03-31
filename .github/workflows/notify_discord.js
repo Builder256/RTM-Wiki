@@ -89,7 +89,7 @@ function sendWebhook(title, description, url, published, date) {
                 fields: [
                     {
                         name: 'published',
-                        value: published,
+                        value: published ? 'Yes' : 'No',
                         inline: true
                     }
                 ],
