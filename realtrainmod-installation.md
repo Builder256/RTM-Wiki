@@ -2,7 +2,7 @@
 title: 【2025年最新版】RealTrainModのインストール方法を詳しく解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-04-01T09:26:11.724Z
+date: 2025-04-28T13:38:32.038Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -58,7 +58,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 
 ## KaizPatchX
 
-* KaizPatchXは、Kaiz_JP氏によって開発されたRealTrainModのフォーク版です
+* KaizPatchXは、Kaiz_JP氏によって開発されたRealTrainModのフォークです
 * 1.7.10版のRTM、NGTLib、MCTEを内包しており、不具合修正に加え、後のバージョンで追加された機能の移植、独自の新機能の実装もされています
 * 移植された機能や独自機能を必要とするアドオンもあるため、純正ではなくこちらを使用することを推奨します
 
