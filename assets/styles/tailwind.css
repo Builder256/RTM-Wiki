@@ -106,19 +106,18 @@
   --tw-contain-style:  
 }
 
-.flex {
-  display: flex
-}
-
-.flex-wrap {
-  flex-wrap: wrap
-}
-
-.text-center {
-  text-align: center
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1))
+.contents {
+  .flex {
+    display: flex
+  }
+  .flex-wrap {
+    flex-wrap: wrap
+  }
+  .text-center {
+    text-align: center
+  }
+  .text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity, 1))
+  }
 }
