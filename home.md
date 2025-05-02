@@ -2,7 +2,7 @@
 title: メインページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したMinecraft Java Editionの鉄道Mod、RealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-05-02T07:24:23.992Z
+date: 2025-05-02T07:25:03.149Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-04-05T02:10:59.385Z
@@ -64,19 +64,19 @@ RealTrainMod（RTM）を支える非常に豊富なアドオンを少しだけ�
             ">
   <div>
     
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center}
+  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .is-16_9}
   <p style="text-align:center">近鉄8A系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
   <div>
     
-  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center}
+  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center .is-16_9}
   <p style="text-align:center">大阪メトロ400系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
   <div>
     
-  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center}
+  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center .is-16_9}
   <p style="text-align:center">りんかい線71-000形<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
