@@ -2,7 +2,7 @@
 title: メインページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したMinecraft Java Editionの鉄道Mod、RealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-05-02T07:20:58.202Z
+date: 2025-05-02T07:24:23.992Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-04-05T02:10:59.385Z
@@ -82,7 +82,7 @@ RealTrainMod（RTM）を支える非常に豊富なアドオンを少しだけ�
 
   <div>
     
-  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center}
+  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center .is-16_9}
   <p style="text-align:center">名鉄9520/9120系<br>デザインが発表されてから2日のうちにアドオンが制作されリリースされた</p>
   </div>
 </div>
