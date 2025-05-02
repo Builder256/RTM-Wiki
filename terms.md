@@ -2,7 +2,7 @@
 title: 用語集
 description: RTM界隈で使用されている用語と意味
 published: true
-date: 2025-03-30T14:37:05.743Z
+date: 2025-05-02T11:37:26.585Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
@@ -77,10 +77,7 @@ MCTEで建造物などを保存したときに生成されるファイル、ま�
 ngtoファイルを詰め合わせた建物セットや、ngtoファイルをRealTrainModの車両アドオン化したものもある。
 
 ## RTM
-RealTrainModの正式な略称である。「RTMMOD」「リアルトレインMOD」「RealTrainCraft」等は誤り。  
-参考：<a href="https://x.com/ngt5479/status/646345468440502274" target="_blank">2015年9月23日のngt5479氏のツイート</a>
-
-<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">X:RTMMOD, リアルトレインMOD, RealTrainCraft<br>O:RTM, RealTrainMod<br><br>間違えちゃダメよ</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/646345468440502274?ref_src=twsrc%5Etfw">2015年9月22日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+RealTrainModの正式な略称である。「RTMMOD」「リアルトレインMOD」「RealTrainCraft」等は誤り[^1]。
 
 ## schematic
 WorldEditで建造物などを保存したときに生成されるファイルのこと。または、そのファイル形式のこと。
@@ -92,4 +89,5 @@ hi03氏より配布されているレール生成ツール「SuperRailBuilder3�
 ## TTK
 山城タカミ氏より配布されている車両追加アドオンの作成キット「Takami Train Kit」のこと。
 
-
+[^1]:参考：[ngt5479氏のツイート](https://x.com/ngt5479/status/646345468440502274)
+	<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">X:RTMMOD, リアルトレインMOD, RealTrainCraft<br>O:RTM, RealTrainMod<br><br>間違えちゃダメよ</p>&mdash; ngt5479 (@ngt5479) <a href="https://twitter.com/ngt5479/status/646345468440502274?ref_src=twsrc%5Etfw">2015年9月22日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
