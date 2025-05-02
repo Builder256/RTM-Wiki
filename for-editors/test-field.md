@@ -98,6 +98,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 ```
 
+## tailwindCSSの導入のテスト
+
+あいうえお{.text-center}
+
+かきくけこ
+{.text-red-500}
 
 
 
