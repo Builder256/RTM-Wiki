@@ -28,7 +28,7 @@ RealTrainModユーザーによって開発されているため、RealTrainMod�
 * Minecraft 1.7.10
 
 ## リンク
-ホームページ：<a href="https://sites.google.com/view/h10bm/top" target="_blank">https://sites.google.com/view/h10bm/top</a>
+ホームページ：[https://sites.google.com/view/h10bm/top](https://sites.google.com/view/h10bm/top)
 
 # MC Terrain Editor
 
@@ -58,7 +58,7 @@ RealTrainModの開発者によって開発されているため、他の地形�
 * その他多数のバージョン
 
 ## リンク
-CurseForge：<a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor" target="_blank">https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor</a>
+CurseForge：[https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor](https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor)
 
 # Minatocc_Addblocks
 
@@ -71,7 +71,7 @@ RealTrainModユーザーによって開発されているため、RealTrainMod�
 * Minecraft 1.12.2
 
 ## リンク
-ホームページ：<a href="https://minatocc.com/archives/1920" target="_blank">https://minatocc.com/archives/1920</a>
+ホームページ：[https://minatocc.com/archives/1920](https://minatocc.com/archives/1920)
 
 # 関連サイト
 - [H10BM](https://sites.google.com/view/h10bm/top)

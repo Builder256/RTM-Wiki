@@ -13,7 +13,7 @@ dateCreated: 2025-01-12T17:58:44.888Z
 
 
 # ATSAssistMod解説
-こちらも参照：<a href="https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf</a>
+こちらも参照：[https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf](https://github.com/Kai-Z-JP/ATSAssistMod/blob/1.7.9/document/ATSAssistMod1.4.0_Manual.pdf)</a>
 
 ## ATSAssistModとは
 ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、RealTrainModの保安装置を簡単に構築できるようになるModです。
@@ -26,7 +26,7 @@ ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、Rea
 - Minecraft 1.12.2
 
 ### リンク
-GitHub：<a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
+GitHub：[https://github.com/Kai-Z-JP/ATSAssistMod/tree/master](https://github.com/Kai-Z-JP/ATSAssistMod/tree/master)
 
 ## ATSAssistModで追加されるアイテム
 > ATSAssistModでは2種類のブロック、1種類のアイテムが追加されます。
@@ -325,7 +325,7 @@ Script Text：「文字列」**
 
 
 **〈お役立ちLink〉**
-<a href="https://github.com/Kai-Z-JP/ATSAssistMod/releases/tag/1.7.0" target="_blank">放送パーツを組み合わせて流すスクリプトの例</a>
+[放送パーツを組み合わせて流すスクリプトの例](https://github.com/Kai-Z-JP/ATSAssistMod/releases/tag/1.7.0)
 
 
 ## 車上保安装置切り替えSW
@@ -418,4 +418,4 @@ A. ATSAのGitHub[^2]にissueを立てましょう。ここにではなく、ATSA
 {.links-list}
 
 [^1]:Cauldron系サーバー(ThermosやMohist等)の場合、`tileentities.yml`内の`skip-tileentity-ticks`を`false`に変更する
-[^2]:<a href="https://github.com/Kai-Z-JP/ATSAssistMod/issues" target="_blank">ATSAssistModのissuesページはこちら</a>
+[^2]:[ATSAssistModのissuesページはこちら](https://github.com/Kai-Z-JP/ATSAssistMod/issues)

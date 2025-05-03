@@ -11,7 +11,7 @@ dateCreated: 2025-01-08T03:44:48.366Z
 > このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
 {.is-warning}
 
-こちらも参照：<a href="https://ux.getuploader.com/HashimotoSesaku_download/download/8" target="_blank">ライパックマニュアル.pdf</a>（初期のバージョンのLipackSに同梱されているマニュアル）
+こちらも参照：[ライパックマニュアル.pdf](https://ux.getuploader.com/HashimotoSesaku_download/download/8)（初期のバージョンのLipackSに同梱されているマニュアル）
 
 # ライパックとは
 ぬらぬこ氏によって制作されたRealTrainModの架線や信号機関連アイテムを追加するアドオンです。追加される内容は非常に豊富であり、またW51規格にも対応しているため多くのサーバーで採用されているアドオンとなっています。

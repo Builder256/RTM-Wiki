@@ -12,25 +12,27 @@ dateCreated: 2025-01-12T04:52:06.422Z
 
 給已經了解以下內容的人：
 
-| 1.7.10 | - |
-| --- | --- |
-| RTM1.7.10.44_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4030455" target="_blank">https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4030455</a> |
-| NGTLib1.7.10.35_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452" target="_blank">https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452</a> |
-| MCTE1.7.10.18_Forge10.13.4.1558.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456" target="_blank">https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456</a> |
-| src1.7.10_20200822+KaizPatchX-1.8.0.jar | <a href="https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.8.0" target="_blank">https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.8.0</a> |
+## 1.7.10
+| ファイル名                                | URL                                                                          |
+| --------------------------------------- | ---------------------------------------------------------------------------- |
+| RTM1.7.10.45_Forge10.13.4.1558.jar      | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/6221539      |
+| NGTLib1.7.10.35_Forge10.13.4.1558.jar   | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452            |
+| MCTE1.7.10.18_Forge10.13.4.1558.jar     | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456 |
+| src1.7.10_20200822+KaizPatchX-1.9.1.jar | https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.9.1                   |
+{.dense}
 
-
-| 1.12.2 | - |
-| --- | --- |
-| RTM2.4.24-43_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603" target="_blank">https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603</a> |
-| NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592" target="_blank">https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592</a> |
-| MCTE2.4.12-26_forge-1.12.2-14.23.2.2611.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597" target="_blank">https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597</a> |
-| fixRtm-2.0.28.jar | <a href="https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155" target="_blank">https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155</a> |
+## 1.12.2
+| ファイル名                                      | URL                                                                          |
+| --------------------------------------------- | ---------------------------------------------------------------------------- |
+| RTM2.4.24-43_forge-1.12.2-14.23.2.2611.jar    | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603      |
+| NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592            |
+| MCTE2.4.12-26_forge-1.12.2-14.23.2.2611.jar   | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4641597 |
+| fixRtm-2.0.28.jar                             | https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155            |
+{.dense}
 
 # 如何導入Realtrainmod
 
-你可以參考 <a href="https://www.youtube.com/watch?v=Hjt7WTLnjic" target="_blank">從forge開始裝模組! 2020年版 以RTM模組為例 - Minecraft X Real Train Mod教學篇 宇宙初心者教學【拉斯特】</a> 
-
+你可以參考 [從forge開始裝模組! 2020年版 以RTM模組為例 - Minecraft X Real Train Mod教學篇 宇宙初心者教學【拉斯特】](https://www.youtube.com/watch?v=Hjt7WTLnjic)
 
 ## 前提條件
 * 請使用正版的 Minecraft Java Edition
@@ -75,16 +77,17 @@ dateCreated: 2025-01-12T04:52:06.422Z
 
 ### 使用原版RealTrainMod時
 
-1. 從 <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib" target="_blank">CurseForge的NGTLib下載頁</a> 下載NGTLib
+1. 從 [CurseForge的NGTLib下載頁](https://www.curseforge.com/minecraft/mc-mods/ngtlib) 下載NGTLib
 
-2. 從 <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod" target="_blank">CurseForge的Realtrainmod下載頁</a> 下載Realtrainmod
+2. 從 [CurseForge的Realtrainmod下載頁](https://www.curseforge.com/minecraft/mc-mods/realtrainmod) 下載Realtrainmod
+
 3. 把下載到的`.jar`檔案移動到mods資料夾
 
 4. 啟動 Minecraft 並確認 RealTrainMod 已新增至模組清單。
 
 ### 使用KaizPatchX時（for Minecraft 1.7.10）
 
-1. 從 <a href="https://github.com/Kai-Z-JP/KaizPatchX" target="_blank">Github的KaizPatchX下載頁</a> 下載KaizPatchX
+1. 從 [Github的KaizPatchX下載頁](https://github.com/Kai-Z-JP/KaizPatchX) 下載KaizPatchX
 
 3. 把下載到的`.jar`檔案移動到mods資料夾
 
@@ -94,7 +97,7 @@ dateCreated: 2025-01-12T04:52:06.422Z
 
 1. 下載原版RTM
 
-2. 從 <a href="https://www.curseforge.com/minecraft/mc-mods/fixrtm" target="_blank">CurseForge的fixRTM下載頁</a> 下載安定版的fixRTM（沒有beta或rc的符號）
+2. 從 [CurseForge的fixRTM下載頁](https://www.curseforge.com/minecraft/mc-mods/fixrtm) 下載安定版的fixRTM（沒有beta或rc的符號）
 
 3. 把下載到的`.jar`檔案移動到mods資料夾
 
