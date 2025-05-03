@@ -96,14 +96,16 @@ RealTrainMod（RTM）和其他模組最大的不同是、RTM可以導入1:1的�
 
 ## 這和既存的Realtrainmod wiki差在哪裡？
 
-由章魚燒(たこたこ焼き)運營的 <a href="https://gamerch.com/realtrainmod/" target="_blank">realtrainmodWiki</a> 是面向新手入門的wiki，但我們的目標是為了中高級玩家、追加包創作者以及海外玩家提供更深入、更技術性的資訊。
+由章魚燒(たこたこ焼き)運營的 [realtrainmodWiki](https://gamerch.com/realtrainmod/) 是面向新手入門的wiki，但我們的目標是為了中高級玩家、追加包創作者以及海外玩家提供更深入、更技術性的資訊。
 
 順帶一提、我們找到了一些其他的RTMwiki和他們的最終更新時間。
 
-* <a href="https://wikiwiki.jp/rtm-sub/" target="_blank">RealTrainMod Support wiki</a> 最終更新時間：2024年7月22日
-* <a href="https://w.atwiki.jp/ngtmods/" target="_blank">RTM@wiki</a> 最終更新時間：2015年03月25日
-* <a href="http://rtm-uo-monet.wikidot.com/" target="_blank">RTM Uo MoNet</a> 最終更新時間：不明[^2]
-* <a href="https://namu.wiki/w/Real%20Train%20Mod" target="_blank">Real Train Mod（ナムウィキ）</a> 最終更新時間：2024年10月27日
+* [RealTrainModサポートwiki](https://wikiwiki.jp/rtm-sub/) 最終更新：2024年7月22日
+* [RTM@wiki](https://w.atwiki.jp/ngtmods/) 最終更新：2015年03月25日
+* [RTM Uo MoNet](http://rtm-uo-monet.wikidot.com/) 最終更新：不明[^2]
+* [Real Train Mod（ナムウィキ）](https://namu.wiki/w/Real%20Train%20Mod) 最終更新：2024年10月27日
+* [RealTrainModPack Wiki*](https://wikiwiki.jp/rtm-addon/) 最終更新：2025年2月3日
+* [RealTrainMod完全網羅 Wiki*](https://wikiwiki.jp/maikurartm/) 最終更新：2016年4月2日
 
 ~~太多wiki了吧~~
 

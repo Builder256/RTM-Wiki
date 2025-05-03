@@ -71,7 +71,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 # 導入方法
 
 他のMinecraft Forgeが前提のModと同様です。
-<a href="https://rtmaddon-search.com/how_to_rtm/" target="_blank">はじめてのRTM【初期導入編】 【RealTrainMod】| RTM Addon Search</a> も参考にしてください。
+[はじめてのRTM【初期導入編】 【RealTrainMod】| RTM Addon Search](https://rtmaddon-search.com/how_to_rtm/) も参考にしてください。
 
 ## 共通
 
@@ -82,9 +82,9 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 
 ## 純正のRealTrainModを使用する場合
 
-1. <a href="https://www.curseforge.com/minecraft/mc-mods/ngtlib" target="_blank">CurseForgeのNGTLibのページ</a> から使用したいバージョンのNGTLibをダウンロード
+1. [CurseForgeのNGTLibのページ](https://www.curseforge.com/minecraft/mc-mods/ngtlib) から使用したいバージョンのNGTLibをダウンロード
 
-2. <a href="https://www.curseforge.com/minecraft/mc-mods/realtrainmod" target="_blank">CurseForgeのRealTrainModのページ</a> から使用したいバージョンのRealTrainModをダウンロード
+2. [CurseForgeのRealTrainModのページ](https://www.curseforge.com/minecraft/mc-mods/realtrainmod) から使用したいバージョンのRealTrainModをダウンロード
 
 3. ダウンロードした`.jar`ファイルをmodsフォルダに移動
 
@@ -92,7 +92,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 
 ## KaizPatchXを使用する場合（for Minecraft 1.7.10）
 
-1. <a href="https://github.com/Kai-Z-JP/KaizPatchX" target="_blank">GitHubのKaizPatchXのページ</a> から最新版のKaizPatchXをダウンロード
+1. [GitHubのKaizPatchXのページ](https://github.com/Kai-Z-JP/KaizPatchX) から最新版のKaizPatchXをダウンロード
 
 2. ダウンロードした`.jar`ファイルをmodsフォルダに移動
 
@@ -102,7 +102,7 @@ RealTrainModがどんなものかよくわからないという人は、こち�
 
 1. 純正と同様にRealTrainModを追加
 
-2. <a href="https://www.curseforge.com/minecraft/mc-mods/fixrtm" target="_blank">CurseForgeのfixRTMのページ</a> から安定版のfixRTMをダウンロード（betaやrcの表記のないもの）
+2. [CurseForgeのfixRTMのページ](https://www.curseforge.com/minecraft/mc-mods/fixrtm) から安定版のfixRTMをダウンロード（betaやrcの表記のないもの）
 
 3. ダウンロードした`.jar`ファイルをmodsフォルダに移動
 
