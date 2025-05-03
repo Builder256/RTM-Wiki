@@ -26,7 +26,7 @@ ATSAssistMod、通称「ATSA」は、Kaiz_JP氏によって開発された、Rea
 * Minecraft 1.12.2
 
 ## リンク
-GitHub： <a href="https://github.com/Kai-Z-JP/ATSAssistMod/tree/master" target="_blank">https://github.com/Kai-Z-JP/ATSAssistMod/tree/master</a>
+GitHub: [https://github.com/Kai-Z-JP/ATSAssistMod/tree/master](https://github.com/Kai-Z-JP/ATSAssistMod/tree/master)
 
 RTM Wikiでの解説：[ATSAssistMod解説](/ja/mod-usage/ats-assist-mod)
 # Cake's RTM Addon
@@ -49,7 +49,7 @@ SignalControllerModは、masa300氏によって開発された、閉塞信号シ
 * Minecraft 1.12.2
 
 ## リンク
-GitHub：<a href="https://github.com/masa300/SignalControllerMod" target="_blank">https://github.com/masa300/SignalControllerMod</a>
+GitHub: [https://github.com/masa300/SignalControllerMod](https://github.com/masa300/SignalControllerMod)
 
 RTM Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/signal-controller-mod)
 
@@ -65,6 +65,6 @@ RealTrainModの車両の線路の状態や、在線位置などをウェブペ�
 * KaizPatchX v1.3RC またはそれ以降が必要
 
 ## リンク
-GitHub：<a href="https://github.com/WebCTC/WebCTC" target="_blank">https://github.com/WebCTC/WebCTC</a>
+GitHub: [https://github.com/WebCTC/WebCTC](https://github.com/WebCTC/WebCTC)
 
 RTM Wikiでの解説：[WebCTC解説](/ja/mod-usage/web-ctc)
