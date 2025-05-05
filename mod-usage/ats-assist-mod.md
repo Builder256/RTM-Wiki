@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: RealTrainMod（RTM）に速度制限や自動運転などの保安装置を構築できるようにするMod、ATSAssistModについて解説しています。このページを読めばATSAssistModの全てがわかる！
 published: true
-date: 2025-02-27T11:37:20.993Z
+date: 2025-05-03T08:50:13.929Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -74,7 +74,82 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJiYWNrZ3JvdW5kOiB0
 ```
 
 
+```mermaid
 
+graph LR
+    %% 状態の定義: 制限の追加過程
+    subgraph 開始
+        A["25km/h<br>1番目の制限"] 
+        ANote["適用速度: 25km/h"]
+        A --- ANote
+    end
+    
+    subgraph 70km/h制限追加後
+        B["25km/h<br>1番目の制限"] 
+        C["70km/h<br>2番目の制限"]
+        BNote["適用速度: 25km/h<br>(最小値が適用)"]
+        B --- C
+        C --- BNote
+
+    end
+    
+    subgraph 45km/h制限追加後
+        D["25km/h<br>1番目の制限"]
+        E["70km/h<br>2番目の制限"]
+        F["45km/h<br>3番目の制限"]
+        DNote["適用速度: 25km/h<br>(最小値が適用)"]
+        D --- E
+        E --- F
+        F --- DNote
+    end
+
+    開始 -->|"70km/hの<br>制限を追加"| 70km/h制限追加後
+    70km/h制限追加後 -->|"45km/hの<br>制限を追加"| 45km/h制限追加後
+
+    linkStyle 0,1,2,3,4,5 display:none
+
+    %% A --- B
+    %% B --- D
+    %% C --- E
+
+    %% 状態の定義: 制限の解除過程
+    %% subgraph "1回目の解除後（1番目を削除）"
+    %%     G["70km/h<br>1番目の制限"]
+    %%     H["45km/h<br>2番目の制限"]
+    %%     GNote["適用速度: 45km/h<br>(最小値が適用)"]
+    %% end
+
+    %% subgraph "2回目の解除後（新1番目を削除）"
+    %%     I["45km/h<br>1番目の制限"]
+    %%     INote["適用速度: 45km/h"]
+    %% end
+
+    %% subgraph "3回目の解除後（全て削除）"
+    %%     J["制限なし<br><br>適用速度: 無制限"]
+    %% end
+    
+    %% 解除の矢印と説明
+    %% D & E & F -->|"1回目の解除<br>(最古の25km/hを削除)"| G & H
+    %% G & H --> GNote
+    %% G & H -->|"2回目の解除<br>(最古の70km/hを削除)"| I
+    %% I --> INote
+    %% I -->|"3回目の解除<br>(最後の45km/hを削除)"| J
+    
+    %% スタイル設定
+    classDef original fill:#f9e79f,stroke:#333,stroke-width:2px
+    classDef added1 fill:#abebc6,stroke:#333,stroke-width:2px
+    classDef added2 fill:#d2b4de,stroke:#333,stroke-width:2px
+    classDef result fill:#f8c471,stroke:#333,stroke-width:2px,font-weight:bold
+    classDef removal fill:#fadbd8,stroke:#333,stroke-width:2px
+    classDef final fill:#d5dbdb,stroke:#333,stroke-width:2px
+    classDef none fill: transparent
+    
+    class A,B,D original
+    class C,E,G added1
+    class F,H,I added2
+    class ANote,BNote,DNote,GNote,INote result
+    class J final
+```
 
 - レッドストーン連動：チェックを入れると、動作にレッドストーン信号入力が必要になります。
 - 速度制限(km/h)：制限速度を指定します。車両はこの速度まで減速します。
