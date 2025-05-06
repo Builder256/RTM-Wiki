@@ -2,7 +2,7 @@
 title: ATSAssistMod解説
 description: RealTrainMod（RTM）に速度制限や自動運転などの保安装置を構築できるようにするMod、ATSAssistModについて解説しています。このページを読めばATSAssistModの全てがわかる！
 published: true
-date: 2025-05-06T04:40:24.426Z
+date: 2025-05-06T04:52:57.903Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-12T17:58:44.888Z
@@ -84,28 +84,27 @@ graph TB
         E["70km/h<br>2番目の制限"]
         F["45km/h<br>3番目の制限"]
         DNote["&emsp;適用速度：25km/h&emsp;<br>(最小値が適用)"]
-         E --- D
-         F --- E
-         DNote --- F
+        E --- D
+        F --- E
+        DNote --- F
     end
     
     subgraph "②70km/h制限追加後"
         C["70km/h<br>2番目の制限"]
         B["25km/h<br>1番目の制限"] 
         BNote["&emsp;適用速度：25km/h&emsp;<br>(最小値が適用)"]
-         C --- B
-         BNote ---- C
-
+        C --- B
+        BNote ---- C
     end
     
     subgraph "①開始"
         ANote["&emsp;適用速度：25km/h&emsp;<br>(最小値が適用)"]
         A["25km/h<br>1番目の制限"] 
-         ANote ----- A
+        ANote ----- A
     end
     
-     linkStyle 0,1,2,3,4,5 display:none
-     
+    linkStyle 2,4,5 display:none
+          
     %% スタイル設定
     classDef original fill:#f9e79f,stroke:#ada171,stroke-width:2px, color:#333
     classDef added1 fill:#abebc6,stroke:#658a74,stroke-width:2px, color:#222
