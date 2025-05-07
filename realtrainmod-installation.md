@@ -2,7 +2,7 @@
 title: 【2025年最新版】RealTrainModのインストール方法を詳しく解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-04-28T13:38:32.038Z
+date: 2025-05-07T14:48:23.072Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -20,7 +20,7 @@ RealTrainModがどのようなModなのか知りたい方は、以下のペー�
 ## 1.7.10
 | ファイル名                              | URL                                                                          |
 | --------------------------------------- | ---------------------------------------------------------------------------- |
-| RTM1.7.10.45_Forge10.13.4.1558.jar      | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/6221539      |
+| RTM1.7.10.46_Forge10.13.4.1558.jar      | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/6505479      |
 | NGTLib1.7.10.35_Forge10.13.4.1558.jar   | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4030452            |
 | MCTE1.7.10.18_Forge10.13.4.1558.jar     | https://www.curseforge.com/minecraft/mc-mods/mc-terrain-editor/files/4030456 |
 | src1.7.10_20200822+KaizPatchX-1.9.1.jar | https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.9.1                   |
