@@ -1,8 +1,8 @@
 ---
 title: 逆引きリファレンス
 description: RealTrainMod（RTM）のアドオンの目的別リファレンス。ドアの開閉や車内放送の追加、運転台の動かし方など、やり方のわからない機能の実装方法をまとめて掲載！これを見れば好きな機能が付け放題！
-published: false
-date: 2025-05-06T00:45:54.109Z
+published: true
+date: 2025-05-17T07:18:32.476Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-03-08T06:42:14.384Z
