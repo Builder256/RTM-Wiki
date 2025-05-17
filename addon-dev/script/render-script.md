@@ -1,8 +1,8 @@
 ---
 title: 描画スクリプト解説
 description: 
-published: false
-date: 2025-03-31T15:53:29.177Z
+published: true
+date: 2025-05-17T07:23:17.511Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-03-30T15:17:27.248Z
