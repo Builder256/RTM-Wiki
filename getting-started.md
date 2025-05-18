@@ -2,7 +2,7 @@
 title: getting-started
 description: 
 published: false
-date: 2025-05-18T17:21:46.691Z
+date: 2025-05-18T17:22:01.779Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T17:19:27.333Z
@@ -13,4 +13,5 @@ dateCreated: 2025-05-18T17:19:27.333Z
 このカテゴリーでは、RealTrainModの初心者向けの情報をまとめて掲載しています。
 
 - [RealTrainModの導入方法](/getting-started/installing.md)
-- []
+- 
+{.links-list}
