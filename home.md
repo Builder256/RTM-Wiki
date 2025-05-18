@@ -12,26 +12,30 @@ dateCreated: 2025-04-05T02:10:59.385Z
 
 # RTM Wikiへようこそ{.text-center}
 
+RTM Wikiはngt5479氏によって開発されたMinecraft Java EditionのMod、RealTrainMod（RTM）のWikiです。
+初心者向けの情報だけでなく、アドオン開発者にも役立つ高度な情報を提供します。
+
+# はじめに
+
+- [RealTrainModとは？](#realtrainmodとは)
+- [初心者向け情報](/getting-started/)
+- [使い方・アドオンガイド](./addon-usage)
+- [よくある質問](./faq)
+- [コミュニティ参加方法](./community)
+{.links-list}
+
 ## ㊗ RealTrainMod 誕生11周年{.text-center}
 
 RealTrainModは2024年7月13日に誕生11周年を迎えました。
 遅ればせながらこの場を借りてお慶び申し上げます。
 {.text-center}
-
-
-
-<!--
-メモ：この辺にRealTrainMod（RTM）を象徴するような画像を一枚
--->
-
-<!--
-<blockquote class="twitter-tweet" data-media-max-width="800" data-lang="ja" data-dnt="true"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/RealTrainMod?src=hash&amp;ref_src=twsrc%5Etfw">#RealTrainMod</a> <a href="https://twitter.com/hashtag/Minecraft?src=hash&amp;ref_src=twsrc%5Etfw">#Minecraft</a> <br><br>あなたの街にも<br>自動車、走らせませんか？<br><br>レイアウトデータをUploadしました。<br>HojyoLayoutPack_『NPCCars_HTDemo』 <a href="https://t.co/Ya1LQQHKsP">https://t.co/Ya1LQQHKsP</a><br><br>RTM/H10BM/NPCCarsほか、<br>いくつかの前提Modが必要です。<br><br>（リプライで続く） <a href="https://t.co/QVpI5hywtz">pic.twitter.com/QVpI5hywtz</a></p>&mdash; 宝条みちる@Minecraft (@hojyo_minecraft) <a href="https://twitter.com/hojyo_minecraft/status/1789626066098942406?ref_src=twsrc%5Etfw">2024年5月12日</a></blockquote>
--->
           
 # RealTrainModとは
+
 「RealTrainMod」通称「RTM」は、日本人のngt5479氏によって開発されたMinecraft Java Editionの鉄道Modです。
 
 ## ここがすごい RealTrainMod
+
 - 3Dモデルをロードし、細部まで作りこまれた**完全に実寸大**の鉄道車両を運転できる
 - 鉄道関連にとどまらず、建築や装飾にも役立つありとあらゆる様々な物品を総合的に追加
 - ユーザーがアドオンを制作することができ、コンテンツを自由に追加できる
@@ -39,6 +43,7 @@ RealTrainModは2024年7月13日に誕生11周年を迎えました。
 - アドオンを使用すれば、自由度は完全に無限に！
 
 ### 真面目な説明
+
 RealTrainMod（RTM）がこれまでの鉄道Modと最も異なる点は、完全に実寸大の鉄道車両が追加される点です。一般のゲームや映像作品などに使われているobj形式やmqo形式の3Dモデルをロードすることが可能であるため、実在する鉄道車両をミリメートル単位の細部まで忠実に再現することが可能となっています。
 
 また、ユーザーが車両や線路、その他のアイテムなどのコンテンツを追加できる[アドオン](/ja/addon-usage)を作成することができます。前述のとおり3Dモデルをロードすることができるため、ユーザーによる追加コンテンツの作成も盛んであり、主に日本国内の非常に豊富な種類の鉄道車両や鉄道関連の様々な物品の追加アドオンが作成されています。
@@ -46,15 +51,16 @@ RealTrainMod（RTM）がこれまでの鉄道Modと最も異なる点は、完�
 追加アドオンでは、JavaScriptを使用して非常に高度な機能を実装することができ、他の鉄道Modの追随を許さない圧倒的なカスタマイズ機能を実現しています。
 
 ## 豊富なアドオン
+
 RealTrainMod（RTM）を支える非常に豊富なアドオンを少しだけ紹介します。
-<!--
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja" data-dnt="true" data-theme="dark"><p lang="ja" dir="ltr">こちらのほうはソリオと比べて、なんだか少しいかめしい見た目になったような気がします……姉妹車なので、そう大きくは変わらないのですが。エンブレム効果でしょうか？ <a href="https://t.co/0AiJqQtqsy">pic.twitter.com/0AiJqQtqsy</a></p>&mdash; 宝条みちる@Minecraft (@hojyo_minecraft) <a href="https://twitter.com/hojyo_minecraft/status/1868287778649485411?ref_src=twsrc%5Etfw">2024年12月15日</a></blockquote>
--->
 
 ### プレスリリース芸
-プレスリリースの一枚のみの画像から車両を制作するシリーズ
+
+鉄道会社が新型車両を発表する際には、一般にプレスリリースが発表され、その中では数枚程度のイメージ画像が公開されます。そのごくわずかな情報のみを元に、まだ影も形もない実物の車両に思いを馳せ、車両アドオンを制作するRTMの伝統芸です。
+
 > 他のプレスリリース芸のアドオンがあれば、お知らせください。
 {.is-info}
+
 <div style="
             display: flex;
             flex-wrap: wrap;
@@ -87,31 +93,12 @@ RealTrainMod（RTM）を支える非常に豊富なアドオンを少しだけ�
   </div>
 </div>
 
-
-# このRTM Wikiについて
-このRTM Wikiはngt5479氏によって開発されたMinecraft Java EditionのMod、RealTrainMod（RTM）のWikiです。RTM Wikiでは、RealTrainModの様々な機能やアドオンについての究極の情報源を目指しています。[^1]
-
-## 既存のRealTrainModのWikiとの違い
-RealTrainMod（RTM）にはすでに多数のWikiがあり、この [RTM Wiki](/ja/home) もその多数のWikiの中の一つにすぎません。
-
-最大手のWikiとして、たこたこ焼き氏によって運営されている [realtrainmodWiki](https://gamerch.com/realtrainmod/) があります。これは初心者向けの情報を多く掲載している一方、RTM Wikiでは中級者以上のユーザーやアドオン開発者に向けたマニアックで実践的な情報も含めて掲載したいと考えています。また、より正確でより新しい情報の掲載を目指します。
-
-ちなみに、検索にヒットした他のRealTrainMod関連のWikiと編集時時点での最終更新日時はこちらです。
-* [RealTrainModサポートwiki](https://wikiwiki.jp/rtm-sub/) 最終更新：2024年7月22日
-* [RTM@wiki](https://w.atwiki.jp/ngtmods/) 最終更新：2015年03月25日
-* [RTM Uo MoNet](http://rtm-uo-monet.wikidot.com/) 最終更新：不明[^2]
-* [Real Train Mod（ナムウィキ）](https://namu.wiki/w/Real%20Train%20Mod) 最終更新：2024年10月27日
-* [RealTrainModPack Wiki*](https://wikiwiki.jp/rtm-addon/) 最終更新：2025年2月3日
-* [RealTrainMod完全網羅 Wiki*](https://wikiwiki.jp/maikurartm/) 最終更新：2016年4月2日
-
-~~このMod、Wiki多すぎ~~
-
 ## 多言語対応の協力
 RTM Wikiでは、日本語以外の言語への対応を行っております。翻訳に協力していただける方の情報交換のコミュニティとして、hsiangba氏により以下のDiscordが開設されました。
 https://discord.gg/jVJMzCdvVc
 
 ## Wiki提供
-RTM WikiはKaiz_JP氏[^3]よりサーバーを無償で提供していただいております。サーバーの提供、ならびにWikiの設定などで多大なるご支援を頂き、大変ありがとうございます。
+RTM WikiはKaiz_JP氏[^1]よりサーバーを無償で提供していただいております。サーバーの提供、ならびにWikiの設定などで多大なるご支援を頂き、大変ありがとうございます。
 
 ## 管理人連絡先
 当Wikiに関しまして、ご相談やご連絡等ございましたら、以下の連絡先までご連絡ください。
@@ -126,7 +113,5 @@ RTM Wikiでは、編集者を募集しています。
 編集にご協力いただける方は、右上のログインボタンからアカウントを作成するか、[RTM WikiのGitHubリポジトリ](https://github.com/Builder256/RTM-Wiki) から貢献をお願いいたします。
 
 
-[^1]: [Minecraft Wiki – Minecraft に関する究極の情報源](https://ja.minecraft.wiki/)のパクリである。
-[^2]: 「祝・RealTrainMod公開4周年」との表記があるので2017年頃と思われる。
-[^3]: Twitter：https://x.com/Kaiz_JP
+[^1]: Twitter：https://x.com/Kaiz_JP
 GitHub：https://github.com/Kai-Z-JP
