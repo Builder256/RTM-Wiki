@@ -2,7 +2,7 @@
 title: 高度なRealTrainModのインストール方法
 description: Modに慣れている方や、高度な情報が必要な方に向けたインストール方法を解説。
 published: true
-date: 2025-05-20T05:45:01.631Z
+date: 2025-05-20T05:53:09.832Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T21:05:27.182Z
@@ -54,20 +54,20 @@ RTMをインストールするためには、以下の条件を満たしてい�
 また、ソースコードが現在入手できない[^2]ため、他のModとの競合が発生した際に、修正・対応される可能性が限りなく低いです。
 特に理由がない限り、これらのModを使用・併用することを推奨します。
 
-## KaizPatchX
+## [KaizPatchX](https://github.com/Kai-Z-JP/KaizPatchX)
 * KaizPatchXは、Kaiz_JP氏によって開発されたRTMのフォークです。
 * 1.7.10版のRTM、NGTLib、MCTEを内包しており、不具合修正に加え、後のバージョンで追加された機能の移植や独自の新機能が実装されています。
 * 移植された機能や独自機能を必要とするアドオンもあるため、公式のRTMではなくこちらを使用することを推奨します。
 
-## fixRTM
+## [fixRTM](https://www.curseforge.com/minecraft/mc-mods/fixrtm)
 * fixRTMは、anatawa12氏によって開発されたRTMの不具合修正Modです。
-* 1.12.2版のRealTrainModに対応しており、通常のRealTrainModの不具合を修正することを目的としています。
+* 1.12.2版のRTMに対応しており、通常のRTMの不具合を修正することを目的としています。
 * 多くの不具合が修正されているため、公式のRTMに加えこちらを併用することを推奨します。
 
 # 導入方法
 他のMinecraft Forgeが前提のModと同様の手順です。  
 
-## 公式のRealTrainModを使用する場合
+## 公式のRTMを使用する場合
 1. Minecraft Forgeをインストール
    推奨されているバージョンは以下の通りです。
    - 1.7.10: `1.7.10 - 10.13.4.1558`
