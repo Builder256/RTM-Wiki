@@ -2,7 +2,7 @@
 title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: false
-date: 2025-05-20T08:40:56.208Z
+date: 2025-05-20T09:04:05.213Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -62,38 +62,21 @@ MinecraftにModを入れるには、以下の準備が必要です。
 > ※ スマホ版やSwitch版、Windowsストア版（Bedrock版）ではModは使えません。どのプラットフォームを遊んでいるか、事前に確認しましょう。
 {.is-warning}
 
-### 遊んでいるプラットフォームの見分け方
+### 遊んでいるMinecraftのプラットフォームの見分け方
 よく、「パソコンで遊んでいるから、うちはJava Editionのはずだ」と判断する親御さんが多いですが、この判断は正しくない場合があります。
 なぜならば、統合版の中にも、Windows PC向けのもの（かつてWindow 10 Editionと呼ばれていたもの）があるからです。
-この初心者向けページが必要なあなたは、確実に確認してください。
-<div>
-  
-### tabs{.tabset}
-#### Minecraft Java Edition
-- WindowsやMacOS、あるいはLinux系OSのパソコンで遊んでいる
-- ゲームを起動する前に、灰色と黒色、あるいは緑色と黒色のアイコンの、よくわからないソフト（Minecraft Launcher）を起動している → 絶対にJava Edition
-- そのソフトの画面が以下のような感じ
-  - 全体として黒色の画面で、真ん中にイラストと、緑色の「プレイ」というボタンがある
-  - そのソフトの名前が「Minecraft Launcher」
-- Windowsのアプリ一覧の中に、「Minecraft Launcher」というアプリがあり、それを起動している → 絶対にJava Edition
-- ゲームを起動したときに、「MINECRAFT」というロゴの下に「JAVA EDITION」という表示がある → 絶対にJava Edition
+この初心者向けページが必要なあなたは、確実に確認してください。  
+| **判別ポイント** | **Java Edition** | **統合版（Bedrock Edition）** |
+| --- | --- | --- |
+| **使用しているデバイス** | Windows / Mac / Linux のパソコン | ゲーム機 / スマートフォン / タブレット / Windowsパソコン |
+| **ランチャーの有無（Windowsの場合）** | 「Minecraft Launcher」というアプリを起動してからゲームを始める | ランチャーは使わず、「Minecraft」という名前のアプリを直接起動 |
+| **ランチャーの画面（Windowsの場合）** | 黒い背景に緑の「プレイ」ボタン、イラストあり、「Minecraft Launcher」と表示 | ランチャーなし |
+| **ゲームのロゴ表示** | 「MINECRAFT」の下に「JAVA EDITION」と表示（古いバージョンではMINECRAFTのみの場合も） | 「MINECRAFT」のみ表示 |
+| **最初に起動するアプリ名（Windowsの場合）** | 「Minecraft Launcher」 | 「Minecraft」 |
+| **ゲーム画面の特徴** | PC向けの独自のメニュー画面 | ゲーム機やスマートフォンと似たメニュー画面。メニューに「マーケットプレイス（MarketPlace）」がある |
+| **確実に判断できるポイント** | 「JAVA EDITION」と表示あり | ・ゲーム機でプレイしている<br>・「Minecraft」という名前だけのアプリ<br>・マーケットプレイスがある |
+{.dense}
 
-#### 統合版
-- ゲーム機（Nintendo SwitchやPlayStation、Xboxなど）でプレイしている → 絶対に統合版
-- スマートフォン（iPhoneも含む）やタブレット（iPadも含む）でプレイしている → ほぼ確実に統合版[^1]
-- パソコンで遊んでいる画面のメニューやアイテム一覧などの見た目が、スマートフォンやゲーム機での見た目とよく似ている
-- パソコンで起動したときの画面に、「マーケットプレイス（MarketPlace）」がある
-- Windowsのアプリ一覧の中に、「Minecraft」（Minecraftとだけ書いてある）というアプリがあり、それを起動している
-</div>
-  
-<details><summary>アプリの確認の仕方（Windows 10）</summary>
-  
-1. 設定を開く
-2. 「アプリ」をクリック
-3. 「アプリと機能」の中の「このリストを検索」をクリック
-4. 「Minecraft」と入力
-5. 結果を確認
-</details>
 
 ## 2. Java（ジャバ）をインストールしている
 
