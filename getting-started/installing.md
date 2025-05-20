@@ -2,7 +2,7 @@
 title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: false
-date: 2025-05-20T08:31:49.938Z
+date: 2025-05-20T08:40:17.048Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -63,12 +63,13 @@ MinecraftにModを入れるには、以下の準備が必要です。
 > ※ スマホ版やSwitch版、Windowsストア版（Bedrock版）ではModは使えません。どのプラットフォームを遊んでいるか、事前に確認しましょう。
 {.is-warning}
 
-### 遊んでいるプラットフォームの見分け方{.tabset}
-
+遊んでいるプラットフォームの見分け方
 よく、「パソコンで遊んでいるから、うちはJava Editionのはずだ」と判断する親御さんが多いですが、この判断は正しくない場合があります。
 なぜならば、統合版の中にも、Windows PC向けのもの（かつてWindow 10 Editionと呼ばれていたもの）があるからです。
 この初心者向けページが必要なあなたは、確実に確認してください。
-
+<div>
+  
+### tabs{.tabset}
 #### Minecraft Java Edition
 - WindowsやMacOS、あるいはLinux系OSのパソコンで遊んでいる
 - ゲームを起動する前に、灰色と黒色、あるいは緑色と黒色のアイコンの、よくわからないソフト（Minecraft Launcher）を起動している → 絶対にJava Edition
@@ -84,9 +85,8 @@ MinecraftにModを入れるには、以下の準備が必要です。
 - パソコンで遊んでいる画面のメニューやアイテム一覧などの見た目が、スマートフォンやゲーム機での見た目とよく似ている
 - パソコンで起動したときの画面に、「マーケットプレイス（MarketPlace）」がある
 - Windowsのアプリ一覧の中に、「Minecraft」（Minecraftとだけ書いてある）というアプリがあり、それを起動している
-
-
-
+</div>
+  
 <details><summary>アプリの確認の仕方（Windows 10）</summary>
   
 1. 設定を開く
