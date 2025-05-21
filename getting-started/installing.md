@@ -1,12 +1,15 @@
 ---
 title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
-published: false
-date: 2025-05-20T09:04:05.213Z
+published: true
+date: 2025-05-21T12:47:22.090Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
 ---
+
+> このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
+{.is-warning}
 
 # 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！{.text-center}
 
