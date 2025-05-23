@@ -18,7 +18,7 @@ dateCreated: 2025-05-18T21:05:27.182Z
 各Modのダウンロードページへの直通リンクです。遷移してもすぐにダウンロードは始まりません。
 
 ## 1.7.10
-| ファイル名                               | URL                                                                          |
+| ファイル名                              | URL                                                                          |
 | --------------------------------------- | ---------------------------------------------------------------------------- |
 | RTM1.7.10.46_Forge10.13.4.1558.jar      | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/6505479      |
 | NGTLib1.7.10.36_Forge10.13.4.1558.jar   | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/6505474            |
@@ -27,7 +27,7 @@ dateCreated: 2025-05-18T21:05:27.182Z
 {.dense}
 
 ## 1.12.2
-| ファイル名                                     | URL                                                                          |
+| ファイル名                                    | URL                                                                          |
 | --------------------------------------------- | ---------------------------------------------------------------------------- |
 | RTM2.4.24-43_forge-1.12.2-14.23.2.2611.jar    | https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/4641603      |
 | NGTLib2.4.21-38_forge-1.12.2-14.23.2.2611.jar | https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/4641592            |
