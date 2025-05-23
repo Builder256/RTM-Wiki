@@ -12,7 +12,7 @@ dateCreated: 2025-02-20T12:00:24.020Z
 長い歴史を持つRealTrainModには、その機能を拡充したり不具合を修正する様々なModが開発されています。
 このページでは、それらのRealTrainModに直接的に関連するModについて解説します。
 
-RealTrainModに直接的には関連しない、あくまでも一緒に使うと便利、というModについては、このページではなく、[よく併用されているMod](/ja/related-mods) のページで解説しています。
+RealTrainModに直接的には関連しない、あくまでも一緒に使うと便利、というModについては、このページではなく、[よく併用されているMod](/ja/usage/related-mods) のページで解説しています。
 
 # ATSAssistMod
 
@@ -43,7 +43,7 @@ GUIを使用して保安装置を直感的に設定できます。
 
 ## リンク
 GitHub: [https://github.com/Kai-Z-JP/ATSAssistMod/tree/master](https://github.com/Kai-Z-JP/ATSAssistMod/tree/master)
-RTM Wikiでの解説：[ATSAssistMod解説](/ja/mod-usage/ats-assist-mod)
+RTM Wikiでの解説：[ATSAssistMod解説](/mods/compatible/ats-assist-mod)
 
 ## 注意点
 - 対応するバージョンのMinecraft・RealTrainModを使用していることを確認してください。
@@ -82,7 +82,7 @@ SignalControllerMod、通称「シグコン」は、masa300氏によって開発
 
 ## リンク
 - GitHub: [https://github.com/masa300/SignalControllerMod](https://github.com/masa300/SignalControllerMod)
-- RTM Wikiでの解説：[SignalControllerMod解説](/ja/mod-usage/signal-controller-mod)
+- RTM Wikiでの解説：[SignalControllerMod解説](/ja/mods/compatible/signal-controller-mod)
 
 ## 注意点
 - 対応するバージョンのMinecraft・RealTrainModを使用していることを確認してください。
@@ -109,7 +109,7 @@ WebCTCは、Kaiz_JP氏によって開発された、CTC（列車集中制御装�
 
 ## リンク
 - GitHub：[https://github.com/WebCTC/WebCTC](https://github.com/WebCTC/WebCTC)
-- RTM Wikiでの解説：[WebCTC解説](/ja/mod-usage/web-ctc)
+- RTM Wikiでの解説：[WebCTC解説](/ja/mods/compatible/web-ctc)
 
 ## 注意点
 - 対応するバージョンのMinecraft・KaizPatchXを使用していることを確認してください。

@@ -13,7 +13,7 @@ RealTrainMod（RTM）とよく併用されているModについて解説しま�
 
 RealTrainModはMinecraftバージョン1.7.10や1.12.2に対応していますが、これらは非常に古いバージョンであり、対応するModについての情報は不足しています。そこで、多くのRealTrainModサーバーで採用されていると考えられる、代表的なModをここで紹介します。
 
-RealTrainModの機能を拡充したり、不具合を修正するなど、RealTrainModに直接関連しているModについては、このページではなく、[RealTrainMod拡張Mod解説](/ja/mod-usage) のページで解説しています。
+RealTrainModの機能を拡充したり、不具合を修正するなど、RealTrainModに直接関連しているModについては、このページではなく、[RealTrainMod拡張Mod解説](/ja/mods) のページで解説しています。
 
 
 # Ha10gen's BuildingMaterial Mod
