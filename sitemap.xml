@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev</loc>
-		<lastmod>2025-02-25T15:51:58.734Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/addons</loc>
+		<lastmod>2025-02-25T07:47:44.279Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-usage</loc>
-		<lastmod>2025-02-25T07:47:44.279Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/dev</loc>
+		<lastmod>2025-02-25T15:51:58.734Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/faq</loc>
@@ -17,43 +17,23 @@
 		<lastmod>2025-05-18T19:13:30.009Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/links</loc>
-		<lastmod>2025-02-25T07:47:57.959Z</lastmod>
-	</url>
-	<url>
-		<loc>https://rtmwiki.kotl.io/ja/mod-usage</loc>
+		<loc>https://rtmwiki.kotl.io/ja/mods</loc>
 		<lastmod>2025-03-30T14:42:00.978Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/related-mods</loc>
-		<lastmod>2025-05-05T07:35:02.572Z</lastmod>
-	</url>
-	<url>
-		<loc>https://rtmwiki.kotl.io/ja/request</loc>
-		<lastmod>2025-02-25T07:48:10.438Z</lastmod>
-	</url>
-	<url>
-		<loc>https://rtmwiki.kotl.io/ja/terms</loc>
-		<lastmod>2025-05-02T11:37:26.585Z</lastmod>
-	</url>
-	<url>
-		<loc>https://rtmwiki.kotl.io/ja/tips</loc>
-		<lastmod>2025-03-24T10:10:27.952Z</lastmod>
-	</url>
-	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev/definition-in-json</loc>
+		<loc>https://rtmwiki.kotl.io/ja/dev/definition-in-json</loc>
 		<lastmod>2025-03-24T11:13:14.558Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev/reverse-reference</loc>
+		<loc>https://rtmwiki.kotl.io/ja/dev/reverse-reference</loc>
 		<lastmod>2025-05-17T07:18:32.476Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev/script</loc>
+		<loc>https://rtmwiki.kotl.io/ja/dev/script</loc>
 		<lastmod>2025-05-22T02:57:29.561Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev/troubleshooting</loc>
+		<loc>https://rtmwiki.kotl.io/ja/dev/troubleshooting</loc>
 		<lastmod>2025-03-05T11:16:02.569Z</lastmod>
 	</url>
 	<url>
@@ -77,20 +57,28 @@
 		<lastmod>2025-05-21T12:47:22.090Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/mod-usage/ats-assist-mod</loc>
-		<lastmod>2025-05-06T04:52:57.903Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/meta/links</loc>
+		<lastmod>2025-02-25T07:47:57.959Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/mod-usage/signal-controller-mod</loc>
-		<lastmod>2025-02-25T07:48:48.835Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/meta/request</loc>
+		<lastmod>2025-02-25T07:48:10.438Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/mod-usage/web-ctc</loc>
-		<lastmod>2025-03-20T03:26:21.729Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/usage/glossary</loc>
+		<lastmod>2025-05-02T11:37:26.585Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/usage/installing-advanced</loc>
 		<lastmod>2025-05-20T06:10:16.979Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/usage/related-mods</loc>
+		<lastmod>2025-05-05T07:35:02.572Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/usage/tips</loc>
+		<lastmod>2025-03-24T10:10:27.952Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/zh-tw/faq</loc>
@@ -113,12 +101,24 @@
 		<lastmod>2025-03-19T11:20:13.345Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-dev/script/render-script</loc>
+		<loc>https://rtmwiki.kotl.io/ja/addons/lipack/lipack-wire</loc>
+		<lastmod>2025-02-25T07:49:12.047Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/dev/script/render-script</loc>
 		<lastmod>2025-05-17T07:23:17.511Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/addon-usage/lipack/lipack-wire</loc>
-		<lastmod>2025-02-25T07:49:12.047Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/mods/compatible/ats-assist-mod</loc>
+		<lastmod>2025-05-06T04:52:57.903Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/mods/compatible/signal-controller-mod</loc>
+		<lastmod>2025-02-25T07:48:48.835Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/mods/compatible/web-ctc</loc>
+		<lastmod>2025-03-20T03:26:21.729Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/zh-tw/addon-usage/lipack/lipack-wire</loc>
