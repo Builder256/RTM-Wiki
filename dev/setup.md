@@ -9,40 +9,43 @@ dateCreated: 2025-05-25T09:40:22.820Z
 ---
 
 # はじめに
-RealTrainMod（RTM）のアドオンを作るには、いくつかのツールや基礎知識が必要です。このページでは、**開発環境のセットアップ**や**最低限必要なフォルダ構成**について解説します。
+RealTrainMod（RTM）のアドオンを作るには、いくつかのツールや基礎知識が必要です。このページでは、開発環境のセットアップや最低限必要なフォルダ構成について解説します。
 
 # 必要なソフトウエア
-
 この解説では、以下のソフトウエアを使用します。
 
 | 用途           | ソフトウエア                                         | 説明・補足                             |
 | -------------- | ---------------------------------------------------- | -------------------------------------- |
 | モデリング     | [Metasequoia 4](https://www.metaseq.net/)            | MQO形式で保存可能な3DCGソフトウエア    |
-| テクスチャ作成 | [GIMP](https://www.gimp.org/)                        | PNG形式で保存可能なペイントソフト      |
+| テクスチャ作成 | [GIMP 3](https://www.gimp.org/)                      | PNG形式で保存可能なペイントソフト      |
 | テキスト編集   | [Visual Studio Code](https://code.visualstudio.com/) | エンコードを指定可能なテキストエディタ |
 | 動作確認       | Minecraft Java Edition + KaizPatchX                  | アドオンの動作確認を行うゲーム         |
 
 
-# フォルダ構成の基本
+# ディレクトリ（フォルダ）構成
+アドオンの一般的なディレクトリ構成は以下のようなものです。
+JSONで正しく指定することができればどのような配置でも問題ありませんが、予期しない不具合や問題を防ぐため、これを順守することを推奨します。
 
-アドオンは `mods/` フォルダ以下に配置します。
-
+## 基本の構成
 ```plaintext
 [RTM]foo_bar_pack.zip
-├─ LICENSE.txt
-├─ README.txt
-├─ pack.png
+├─ LICENSE.txt // 適用するライセンス
+├─ README.txt // 使い方の説明や確認事項など
+├─ pack.json // アップデート通知機能の設定ファイル
 ├─ assets/
 │   └─ minecraft/
-│       ├─ json/ JSON配置場所1
-│       │   └─ ModelTrain_*.json // 設定ファイル（.json）
+│       ├─ json/ // JSON配置場所1
+│       │   └─ Model*_*.json // 設定ファイル（.json）
 │       ├─ models/
 │       │   ├─ *.mqo // 3Dモデルファイル（.mqo）
 │       │   ├─ *.mqoz // 3Dモデルファイル（.mqoz）
-│       │   ├─ *.ngto // 3Dモデルファイル（.ngto）
-│       │   ├─ *.ngtz // 3Dモデルファイル（.ngtz）
+│       │   ├─ *.obj // 3Dモデルファイル（.obj）
+│       │   ├─ *.ngto // MCTEブロックデータ（.ngto）
+│       │   ├─ *.ngtz // MCTEブロックデータ（.ngtz）
 │       │   └─ json/ JSON配置場所2
-│       │       └─ ModelTrain_*.json // 設定ファイル（.json）
+│       │       ├─ ModelTrain_*.json // 列車用設定ファイル（.json）
+│       │       ├─ ModelMachine_*.json // 機械用設定ファイル（.json）
+│       │       └─ Model*_*.json // 機械用設定ファイル（.json）
 │       ├─ scripts/
 │       │   └─ *.js // スクリプトファイル（.js）
 │       └─ textures/
@@ -53,66 +56,45 @@ RealTrainMod（RTM）のアドオンを作るには、いくつかのツール�
 └─ mods/
     └─ RTM/
         └─ json/ //  JSON配置場所3
-            └─ ModelTrain_*.json // 設定ファイル（.json）
-        
-        
-        
-        
+            └─ Model*_*.json // 設定ファイル（.json）
 ```
 
-> ファイル名 `[RTM]foo_bar_pack.zip`には任意の名前を使用できますが、RTMのバージョンによって起動しない可能性があるため、半角英数字のみを使用することを推奨します。
-{.is-info}
+# アドオンに使用するファイル名
+Minecraft Java Edition及びRTMはWindowsやLinux、MacOSなどの様々な環境で実行されるため、そのアドオンも可能な限り多くの環境で正常に動作するために、適切なファイル名を指定する必要があります。
 
----
+## アドオンのファイル名
+アドオンのファイル名 `[RTM]foo_bar_pack.zip`には半角英数字と一部の記号[^1]のみを使用することを推奨します。
 
-# 最小構成のサンプル
+他の記号や[マルチバイト文字](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%82%A4%E3%83%88%E6%96%87%E5%AD%97#%E6%96%87%E5%AD%97%E9%9B%86%E5%90%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%82%A4%E3%83%88%E6%96%87%E5%AD%97)を含む名前も使用できますが、RTMのバージョンやOS、リリースに使用するファイルアップロードサービスなどによって、意図した動作をしない可能性があるため、使用しないことを推奨します。
 
-```plaintext
-[RTM]minimal_sample.zip
-├─ readme.txt
-├─ assets/
-│  └─ minecraft/
-│     ├─ textures/
-│     │  └─ train/
-│     │     └─ minimal.png
-│     └─ models/
-│        └─ minimal.mqo
-└─ mods/
-   └─ RTM/
-      └─ train/
-         └─ ModelTrain_minimal.json
-```
+ファイル名先頭の`[RTM]`は、ファイルがRTMのアドオンであることを明示する記号として使用されています。これを利用する機能もあるため、変更しないことを推奨します。
 
-必要に応じて `script.js`（JavaScript）や `bogie.mqo`（台車モデル）などを追加できます。
+ファイル名末尾の`.zip`は[拡張子](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E5%AD%90)であり、RTMのアドオンの可能性があるZIP形式のデータ圧縮されたファイルであることを示しているため、変更しないでください。
 
-# ModelTrain_*.json の最低限の構成例
+## アドオン内のファイル名やディレクトリ名
+アドオン内のファイル名やディレクトリ名には、マルチバイト文字は使用できません。
 
-```json
-{
-    
-}
-```
+一部のRTMバージョンでは使用できる場合もありますが、多くの場合使用できないため、使用しないでください。
 
-> 詳細は [`config.json` のリファレンス](../reference/config-json.md) を参照してください。
-
+<!-- 
 # 動作確認の手順
-
-1. `.minecraft/RealTrainMod/addons/` に自作アドオンのフォルダを配置
+1. `mods/` に自作アドオンのフォルダを配置
 2. Minecraft（RTM導入済）を起動
 3. クリエイティブモードでアドオンが表示されるか確認
 4. 配置して動作確認
 
 # 次に読むべきページ
-
 * [車両アドオンの構造](../targets/vehicle/overview.md)
 * [MQOモデルのルール](../common/model.md)
 * [config.json リファレンス](../reference/config-json.md)
 
 # 補足
-
 * JavaやForgeの知識は基本的に不要です
 * ファイル名・拡張子は正確に（大文字小文字の違いに注意）
 * ゲーム内で読み込まれない場合、`config.json` の書式ミスをチェック！
+  -->
+
+[^1]: ハイフン`-`（U+002D）やアンダーバー`_`（U+005F）など
 
 *[RTM]: RealTrainMod
 *[MCTE]: MC Terrain Editor
