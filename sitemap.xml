@@ -21,10 +21,6 @@
 		<lastmod>2025-03-30T14:42:00.978Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/dev/definition-in-json</loc>
-		<lastmod>2025-03-24T11:13:14.558Z</lastmod>
-	</url>
-	<url>
 		<loc>https://rtmwiki.kotl.io/ja/dev/reverse-reference</loc>
 		<lastmod>2025-05-17T07:18:32.476Z</lastmod>
 	</url>
@@ -103,6 +99,10 @@
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/addons/lipack/lipack-wire</loc>
 		<lastmod>2025-02-25T07:49:12.047Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/dev/reference/json</loc>
+		<lastmod>2025-06-12T06:51:49.634Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/dev/script/render-script</loc>
