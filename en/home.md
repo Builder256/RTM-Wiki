@@ -2,7 +2,7 @@
 title: Home Page
 description: Welcome to Realtrainmod Wiki!
 published: true
-date: 2025-02-25T15:03:42.419Z
+date: 2025-06-21T08:51:28.561Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:30:45.792Z
@@ -39,7 +39,7 @@ Note: Consider placing an image here that symbolizes RealTrainMod (RTM).
 ### A Serious Explanation
 The main distinction of RealTrainMod (RTM) from other railway mods is the addition of **full-scale railway vehicles**. By supporting 3D models in formats like obj and mqo, it is possible to faithfully recreate real-world railway vehicles down to the millimeter details.
 
-Additionally, users can create their own content, such as vehicles, tracks, and other items, through the creation of [addons](/ja/addon-usage). Since RTM supports loading 3D models, content creation by users has been quite active, and many addons for various types of Japanese railway vehicles and related items have been created.
+Additionally, users can create their own content, such as vehicles, tracks, and other items, through the creation of [addons](/ja/addons). Since RTM supports loading 3D models, content creation by users has been quite active, and many addons for various types of Japanese railway vehicles and related items have been created.
 
 The addon system also supports advanced features using JavaScript, providing overwhelming customization options that other railway mods cannot match.
 
@@ -89,7 +89,7 @@ A series where vehicles are created from a single image of a press release.
 This RTM Wiki is a wiki dedicated to RealTrainMod (RTM), a mod for Minecraft Java Edition developed by ngt5479. The goal of this RTM Wiki is to be the ultimate resource for all information related to RealTrainMod, including its features, addons, and more. [^1]
 
 ## Differences from Existing RealTrainMod Wikis
-There are already many wikis for RealTrainMod (RTM), and this [RTM Wiki](/ja/home) is just one of them.
+There are already many wikis for RealTrainMod (RTM), and this [RTM Wiki](/en/home) is just one of them.
 
 The largest wiki is the [realtrainmodWiki](https://gamerch.com/realtrainmod/), run by takotakoyaki. It primarily focuses on beginner-friendly information, while the RTM Wiki aims to provide more detailed, practical information for intermediate users and addon developers. Our goal is to provide more accurate and up-to-date content.
 
