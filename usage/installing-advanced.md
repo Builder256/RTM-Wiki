@@ -2,7 +2,7 @@
 title: 高度なRealTrainModのインストール方法
 description: Modに慣れている方や、高度な情報が必要な方に向けたインストール方法を解説。
 published: true
-date: 2025-05-20T06:10:16.979Z
+date: 2025-06-21T08:12:57.310Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T21:05:27.182Z
@@ -69,10 +69,8 @@ RTMをインストールするためには、以下の条件を満たしてい�
 
 ## 公式のRTMを使用する場合
 1. [Minecraft Forge](https://files.minecraftforge.net/net/minecraftforge/forge/)をインストール
-   推奨されているバージョンは以下の通りです。
-   - 1.7.10: `1.7.10 - 10.13.4.1558`
-   - 1.12.2: `1.12.2 - 14.23.2.2621`
-   {.grid-list}
+ForgeのバージョンはRecommendのものを使用してください。
+
 2. NGTLib、RTMをインストール
 3. Minecraftを起動し、Mod一覧にRTM、NGTLibが追加されていることを確認
 
