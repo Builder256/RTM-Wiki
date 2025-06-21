@@ -2,7 +2,7 @@
 title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-05-21T12:47:22.090Z
+date: 2025-06-21T07:59:56.791Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -123,7 +123,7 @@ Java Editionをまだ買っていない人は、[Minecraft公式サイト](https
 以下のページから、自分の使いたいバージョンのForgeをダウンロードします。
 
 * Minecraft 1.7.10 → Forge 10.13.4.1558
-* Minecraft 1.12.2 → Forge 14.23.2.2611
+* Minecraft 1.12.2 → Forge 14.23.5.2859
 
 [Forge公式ダウンロードページ](https://files.minecraftforge.net/)
 
