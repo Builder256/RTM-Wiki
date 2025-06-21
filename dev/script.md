@@ -2,7 +2,7 @@
 title: スクリプト概説
 description: 
 published: true
-date: 2025-05-22T02:57:29.561Z
+date: 2025-06-21T08:26:13.125Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
@@ -63,13 +63,13 @@ RTMのスクリプトで利用できるJavaScriptは、ECMAScript 5.1（KaizPatc
 
 より具体的な各スクリプトの説明については、以下のページで解説しています。
 
-- [描画スクリプト解説](/ja/addon-dev/script/render-script)
+- [描画スクリプト解説](/ja/dev/script/render-script)
 - [サウンドスクリプト解説]
 - [サーバースクリプト解説]
 {.links-list}
 
 # 関連サイト
-- [スクリプト解説 | 城田重工](https://www.hi03s.com/blog)
+- [スクリプト解説 | 城田重工](https://hi03sub.wixsite.com/shirota-industries/blog)
 - [RenderScript用チートシート *RenderScript用チートシート. GitHub Gist: instantly share code, notes, and snippets.*](https://gist.github.com/Kai-Z-JP/2edadce21011125d6465ed6401ac4842)
 - [1.7.10向け *1.7.10向け. GitHub Gist: instantly share code, notes, and snippets.*](https://gist.github.com/Kai-Z-JP/0dd0cba11592305cdbf859311718f43f)
 - [Xユーザーのひー@hi03さん: 「スクリプトで使えそうな、RTMの説明書に載ってない関数とか一部書いてみたよ https://t.co/EGGN6ztr9K」 / X](https://x.com/hi03_s/status/1044613004644376577)
