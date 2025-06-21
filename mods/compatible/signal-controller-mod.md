@@ -2,7 +2,7 @@
 title: SignalControllerMod解説
 description: 
 published: true
-date: 2025-02-25T07:48:48.835Z
+date: 2025-06-21T08:53:27.800Z
 tags: mod解説
 editor: markdown
 dateCreated: 2025-01-14T12:43:40.157Z
@@ -39,7 +39,7 @@ GitHub : https://github.com/masa300/SignalControllerMod
 {.is-warning}
 
 **RTM純正のチャンクローダーはかなり重いのでおすすめしません**
-おすすめのチャンクローダーはこちら : https://www.immibis.com/mcmoddl/
+おすすめのチャンクローダーはこちら : https://www.immibis.com/minecraft/series1/i-understand-the-license-has-probably-changed/
 ※このチャンクローダーの導入には、同ページにある「Immibis Core」の導入が必要です。
 PCスペックなどで導入が難しい場合は、スポーンチャンクに設置することも有効です。
 
