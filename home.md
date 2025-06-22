@@ -52,10 +52,10 @@ RealTrainModを支える非常に豊富なアドオンを少しだけ紹介し�
 > 他のプレスリリース芸のアドオンがあれば、お知らせください。
 {.is-info}
 
-<div class="flex gap-4">
+<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
   <div>
     
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video .object-cover .object-cover}
+  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video .object-cover}
   <p class="text-center">近鉄8A系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
