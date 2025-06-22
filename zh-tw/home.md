@@ -2,7 +2,7 @@
 title: 首頁
 description: 歡迎來到RTM wiki!
 published: true
-date: 2025-03-24T10:27:30.578Z
+date: 2025-06-22T03:32:56.501Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-12T03:47:27.039Z
@@ -24,7 +24,14 @@ memo：到時候日文頁面會多一張相關圖片在這裡
 <!--
 <blockquote class="twitter-tweet" data-media-max-width="800" data-lang="ja" data-dnt="true"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/RealTrainMod?src=hash&amp;ref_src=twsrc%5Etfw">#RealTrainMod</a> <a href="https://twitter.com/hashtag/Minecraft?src=hash&amp;ref_src=twsrc%5Etfw">#Minecraft</a> <br><br>あなたの街にも<br>自動車、走らせませんか？<br><br>レイアウトデータをUploadしました。<br>HojyoLayoutPack_『NPCCars_HTDemo』 <a href="https://t.co/Ya1LQQHKsP">https://t.co/Ya1LQQHKsP</a><br><br>RTM/H10BM/NPCCarsほか、<br>いくつかの前提Modが必要です。<br><br>（リプライで続く） <a href="https://t.co/QVpI5hywtz">pic.twitter.com/QVpI5hywtz</a></p>&mdash; 宝条みちる@Minecraft (@hojyo_minecraft) <a href="https://twitter.com/hojyo_minecraft/status/1789626066098942406?ref_src=twsrc%5Etfw">2024年5月12日</a></blockquote>
 -->
-          
+
+# 目錄          
+- [RealTrainMod是蝦毀?](#RealTrainMod是蝦毀?)
+- [新手情報](/ja/getting-started/)
+- [Addon指導](/ja/addons)
+- [問題集](/ja/faq)
+{.links-list}
+
 # RealTrainMod是蝦毀?
 
 「RealTrainMod」通稱「RTM」、是由日本模組創作者Ngt5479開發的Minecraft Java Edition 鐵路模組。
@@ -55,40 +62,33 @@ RealTrainMod（RTM）和其他模組最大的不同是、RTM可以導入1:1的�
 ### 只靠新聞稿通靈做出來的車子
 只靠新聞稿通靈做出來的車子特輯
 > 歡迎提供任何通靈大神作品。
-{.is-info}
-<div style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            ">
+
+<div class="flex gap-4">
   <div>
     
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center}
-  <p style="text-align:center">近畿日本鐵道8A系<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video}
+  <p class="text-center">近畿日本鐵道8A系<br>設計發表當天完成的作品</p>
   </div>
 
   <div>
     
-  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center}
-  <p style="text-align:center">大阪Metro400系<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center .aspect-video}
+  <p  class="text-center">大阪Metro400系<br>設計發表當天完成的作品</p>
   </div>
 
   <div>
     
-  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center}
-  <p style="text-align:center">東京臨海高速鐵道71-100系<br>車輛設計一發表當日就馬上做出來的車輛</p>
+  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center .aspect-video}
+  <p class="text-center">東京臨海高速鐵道臨海線71-000形<br>設計發表當天完成的作品</p>
   </div>
 
   <div>
     
-  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center}
-  <p style="text-align:center">名古屋鐵道9520/9120系<br>車輛設計一發表當日就馬上做出來的車輛</p>
-    
-    
+  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center .aspect-video}
+  <p class="text-center">名古屋鐵道9520/9120系<br>設計發表當天完成的作品</p>
   </div>
 </div>
+
 
 ## 關於RTM Wiki
 
