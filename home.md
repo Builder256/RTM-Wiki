@@ -55,25 +55,25 @@ RealTrainModを支える非常に豊富なアドオンを少しだけ紹介し�
 <div class="flex gap-4">
   <div>
     
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video}
+  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video .object-cover .object-cover}
   <p class="text-center">近鉄8A系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
   <div>
     
-  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center .aspect-video}
+  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center .aspect-video .object-cover}
   <p  class="text-center">大阪メトロ400系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
   <div>
     
-  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center .aspect-video}
+  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center .aspect-video .object-cover}
   <p class="text-center">りんかい線71-000形<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
   </div>
 
   <div>
     
-  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center .aspect-video}
+  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center .aspect-video .object-cover}
   <p class="text-center">名鉄9520/9120系<br>デザインが発表されてから2日のうちにアドオンが制作されリリースされた</p>
   </div>
 </div>
