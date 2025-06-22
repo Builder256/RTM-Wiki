@@ -110,14 +110,17 @@
   .flex {
     display: flex
   }
-  .flex-wrap {
-    flex-wrap: wrap
+  .aspect-video {
+    aspect-ratio: 16 / 9
+  }
+  .gap-4 {
+    gap: 1rem
+  }
+  .object-cover {
+    -o-object-fit: cover;
+       object-fit: cover
   }
   .text-center {
     text-align: center
-  }
-  .text-red-500 {
-    --tw-text-opacity: 1;
-    color: rgb(239 68 68 / var(--tw-text-opacity, 1))
   }
 }
