@@ -100,4 +100,11 @@ RTM Wikiでは、編集者を募集しています。
 [^1]: Twitter：https://x.com/Kaiz_JP
 GitHub：https://github.com/Kai-Z-JP
 
+
+
+
+
+
+
+
 *[RTM]: RealTrainMod
