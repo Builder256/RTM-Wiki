@@ -2,13 +2,13 @@
 title: メインページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したMinecraft Java Editionの鉄道Mod、RealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-06-23T15:06:13.264Z
+date: 2025-06-24T08:39:50.675Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-04-05T02:10:59.385Z
 ---
 
-[日本語](/ja/home) / [English](/en/home) / [繁體中文](../../zh-tw/home)
+-[日本語](/ja/home) / [English](/en/home) / [繁體中文](../../zh-tw/home)
 
 # RTM Wikiへようこそ{.text-center}
 RTM Wikiはngt5479氏によって開発されたMinecraft Java EditionのMod、RealTrainMod（RTM）のWikiです。
@@ -19,11 +19,15 @@ RealTrainModは2024年7月13日に誕生11周年を迎えました。
 遅ればせながらこの場を借りてお慶び申し上げます。
 {.text-center}
 
-# はじめに
-- [RealTrainModとは？](#rtmrealtrainmodとは)
-- [初心者向け情報](/ja/getting-started/)
-- [アドオンガイド](/ja/addons)
-- [よくある質問](/ja/faq)
+# メニュー
+- [RealTrainModとは？ *RealTrainModについての解説*](#rtmrealtrainmodとは)
+- [初心者向け *初心者のためのチュートリアルやお役立ち情報*](/ja/getting-started)
+- [RTM解説 *RTMの基本的な機能や使い方*](/ja/usage)
+- [アドオン制作 *RTMのアドオンの制作方法や技術的情報*](/ja/dev)
+- [アドオン解説 *RTMのアドオンについての情報*](/ja/addons)
+- [Mod解説 *RTMに関連するModについての情報*](/ja/mods)
+- [RTM Wikiについて *RTM Wikiへの要望や関連サイトの紹介*](/ja/meta)
+- [編集者向け *RTM Wikiの編集方法やスタイルガイド*](/ja/editors)
 {.links-list}
 
 # RTM（RealTrainMod）とは
