@@ -9,6 +9,10 @@
 		<lastmod>2025-02-25T15:51:58.734Z</lastmod>
 	</url>
 	<url>
+		<loc>https://rtmwiki.kotl.io/ja/editors</loc>
+		<lastmod>2025-06-24T09:00:57.331Z</lastmod>
+	</url>
+	<url>
 		<loc>https://rtmwiki.kotl.io/ja/faq</loc>
 		<lastmod>2025-03-24T10:17:02.263Z</lastmod>
 	</url>
@@ -18,11 +22,19 @@
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/home</loc>
-		<lastmod>2025-06-23T15:06:13.264Z</lastmod>
+		<lastmod>2025-06-24T09:16:17.808Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/meta</loc>
+		<lastmod>2025-06-24T08:55:46.577Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/mods</loc>
 		<lastmod>2025-03-30T14:42:00.978Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/usage</loc>
+		<lastmod>2025-06-24T08:49:01.120Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/dev/reverse-reference</loc>
@@ -37,16 +49,16 @@
 		<lastmod>2025-03-05T11:16:02.569Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/editors/edit-tips</loc>
-		<lastmod>2025-03-24T07:41:26.588Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/editors/sandbox</loc>
+		<lastmod>2025-06-24T09:02:46.160Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/editors/style-guide</loc>
 		<lastmod>2025-05-18T19:08:49.297Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/editors/test-field</loc>
-		<lastmod>2025-05-02T09:58:49.886Z</lastmod>
+		<loc>https://rtmwiki.kotl.io/ja/editors/tips</loc>
+		<lastmod>2025-03-24T07:41:26.588Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/en/home</loc>
