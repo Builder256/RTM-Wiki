@@ -1,8 +1,8 @@
 ---
-title: メインページ
+title: トップページ
 description: RTM Wikiへようこそ！RTM Wikiは2025年に新しく発足したMinecraft Java Editionの鉄道Mod、RealTrainMod（RTM）のWikiです。このサイトを見ればRealTrainModがわかる！
 published: true
-date: 2025-06-23T15:06:13.264Z
+date: 2025-06-24T09:16:17.808Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-04-05T02:10:59.385Z
@@ -19,11 +19,15 @@ RealTrainModは2024年7月13日に誕生11周年を迎えました。
 遅ればせながらこの場を借りてお慶び申し上げます。
 {.text-center}
 
-# はじめに
-- [RealTrainModとは？](#rtmrealtrainmodとは)
-- [初心者向け情報](/ja/getting-started/)
-- [アドオンガイド](/ja/addons)
-- [よくある質問](/ja/faq)
+# メニュー
+- [RealTrainModとは？ *RealTrainModについての解説*](#rtmrealtrainmodとは)
+- [初心者向け *初心者のためのチュートリアルやお役立ち情報*](/ja/getting-started)
+- [RTM解説 *RTMの基本的な機能や使い方*](/ja/usage)
+- [アドオン制作 *RTMのアドオンの制作方法や技術的情報*](/ja/dev)
+- [アドオン解説 *RTMのアドオンについての情報*](/ja/addons)
+- [Mod解説 *RTMに関連するModについての情報*](/ja/mods)
+- [RTM Wikiについて *RTM Wikiへの要望や関連サイトの紹介*](/ja/meta)
+- [編集者向け *RTM Wikiの編集方法やスタイルガイド*](/ja/editors)
 {.links-list}
 
 # RTM（RealTrainMod）とは
@@ -77,34 +81,5 @@ RealTrainModを支える非常に豊富なアドオンを少しだけ紹介し�
   <p class="text-center">名鉄9520/9120系<br>デザインが発表されてから2日のうちにアドオンが制作されリリースされた</p>
   </div>
 </div>
-
-## 多言語対応の協力
-RTM Wikiでは、日本語以外の言語への対応を行っております。翻訳に協力していただける方の情報交換のコミュニティとして、hsiangba氏により以下のDiscordが開設されました。（非公式）
-https://discord.gg/jVJMzCdvVc
-
-## Wiki提供
-RTM WikiはKaiz_JP氏[^1]よりサーバーを無償で提供していただいております。サーバーの提供、ならびにWikiの設定などで多大なるご支援を頂き、大変ありがとうございます。
-
-## 管理人連絡先
-当Wikiに関しまして、ご相談やご連絡等ございましたら、以下の連絡先までご連絡ください。
-- Twitter: https://x.com/7_speed_PDK
-
-# 画像提供のお願い
-RTM Wikiでは、画像提供をお願いしています。
-RealTrainModの魅力を伝えられる画像、Modやアドオンの解説に役立つ画像など、Wikiに有用な画像をお持ちの方は、是非提供をお願いいたします。
-
-# 編集者募集
-RTM Wikiでは、編集者を募集しています。
-編集にご協力いただける方は、右上のログインボタンからアカウントを作成するか、[RTM WikiのGitHubリポジトリ](https://github.com/Builder256/RTM-Wiki) から貢献をお願いいたします。
-
-[^1]: Twitter：https://x.com/Kaiz_JP
-GitHub：https://github.com/Kai-Z-JP
-
-
-
-
-
-
-
 
 *[RTM]: RealTrainMod
