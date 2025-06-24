@@ -2,7 +2,7 @@
 title: リンク集
 description: RealTrainModの関連サイトへのリンク
 published: true
-date: 2025-02-25T07:47:57.959Z
+date: 2025-06-24T11:53:39.642Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T20:16:56.123Z
@@ -10,9 +10,6 @@ dateCreated: 2025-01-31T20:16:56.123Z
 
 # リンク集
 RealTrainModに関連する様々なサイトへのリンク
-> 個人的なリンクを掲載するとただの宣伝になってしまうので公益性の高いもののみ記載するように
-{.is-warning}
-
 
 - [箱日本観光振興局 | RealTrainMod企画サークル *箱日本観光振興局はMinecraft、特にRealTrainModを中心にイベント企画や映像企画などを手広く展開するサークルです。今までの活動内容やイベント情報などを紹介しています。*](https://boxjapan.info/)
 - [ngt5479（@ngt5479）さん / X ](https://x.com/ngt5479)
