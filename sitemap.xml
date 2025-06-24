@@ -13,10 +13,6 @@
 		<lastmod>2025-06-24T09:00:57.331Z</lastmod>
 	</url>
 	<url>
-		<loc>https://rtmwiki.kotl.io/ja/faq</loc>
-		<lastmod>2025-03-24T10:17:02.263Z</lastmod>
-	</url>
-	<url>
 		<loc>https://rtmwiki.kotl.io/ja/getting-started</loc>
 		<lastmod>2025-06-19T02:34:21.292Z</lastmod>
 	</url>
@@ -34,7 +30,7 @@
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/usage</loc>
-		<lastmod>2025-06-24T08:49:01.120Z</lastmod>
+		<lastmod>2025-06-24T11:07:32.555Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/dev/reverse-reference</loc>
@@ -75,6 +71,10 @@
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/meta/request</loc>
 		<lastmod>2025-02-25T07:48:10.438Z</lastmod>
+	</url>
+	<url>
+		<loc>https://rtmwiki.kotl.io/ja/usage/faq</loc>
+		<lastmod>2025-06-24T11:05:01.052Z</lastmod>
 	</url>
 	<url>
 		<loc>https://rtmwiki.kotl.io/ja/usage/glossary</loc>
