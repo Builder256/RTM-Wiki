@@ -40,7 +40,7 @@ RealTrainModの線路や架線を使用してワールドの開発をすると�
 # 描画距離が短くて少し離れると車両が消える！
 現実世界の鉄道では、10両編成や15両編成、16両編成などの長編成は珍しくありません。しかし、RealTrainModでこのような長編成を組成しようとすると、離れた車両がすぐ描画されなくなり、連結も解除されてしまい運転するのは非常に難しいです。
 
-テッテレー（ひみつ道具を取り出す音）　***Entiry Render Distance Extender***
+テッテレー（ひみつ道具を取り出す音）　***Entity Render Distance Extender***
 
 [Entity Render Distance Extender - Minecraft Mod](https://modrinth.com/mod/erde/versions)
 
