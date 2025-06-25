@@ -45,4 +45,27 @@ jobs:
                       \"urlList\": $URL_LIST_JSON
                   }")
 
-                  echo "Response: $response"
+                  # ステータスコードを確認
+                  status_code=$(echo "$response" | head -n 1)
+
+                  # ステータスコードに基づいてレスポンスを出力
+                  case "$status_code" in
+                  200)
+                      echo "Response: URL submitted successfully"
+                      ;;
+                  400)
+                      echo "Response: Invalid format"
+                      ;;
+                  403)
+                      echo "Response: In case of key not valid (e.g. key not found, file found but key not in the file)"
+                      ;;
+                  422)
+                      echo "Response: In case of URLs don’t belong to the host or the key is not matching the schema in the protocol"
+                      ;;
+                  429)
+                      echo "Response: Too Many Requests (potential Spam)"
+                      ;;
+                  *)
+                      echo "Response: Unknown error - $response"
+                      ;;
+                  esac
