@@ -1,8 +1,8 @@
 ---
 title: RTM初心者向け情報 - トップ
-description: RealTrainMod（RTM）の初心者向け情報トップ。初心者の人がまず見るページはここ！RTMの導入方法からアイテムの使い方、レールの敷き方など詳しく解説！
+description: RealTrainMod（RTM）の初心者向け情報トップ。初心者の人がまず見るページはここ！RTMの導入方法から運転方法、アイテムの使い方、レールの敷き方など詳しく解説！
 published: true
-date: 2025-06-25T10:48:36.015Z
+date: 2025-06-25T10:56:23.540Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T17:19:27.333Z
