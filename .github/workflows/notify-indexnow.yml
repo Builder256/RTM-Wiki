@@ -25,7 +25,9 @@ jobs:
 
                   echo "Notifying IndexNow..."
                   while read -r url; do
-                    echo "Sending: $url"
-                    response=$(curl -s -X POST "https://api.indexnow.org/indexnow?url=$url&key=$API_KEY")
-                    echo "Response: $response"
+                  echo "Sending: $url"
+                  response=$(curl -s -X POST "https://api.indexnow.org/indexnow" \
+                      -H "Content-Type: application/json" \
+                      -d "{\"host\": \"$SITE_HOST\", \"key\": \"$API_KEY\", \"urlList\": [\"$url\"]}")
+                  echo "Response: $response"
                   done < urls.txt
