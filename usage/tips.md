@@ -1,8 +1,8 @@
 ---
-title: Tips
-description: ちょっとだけ役立つかもしれない小技集
+title: RTM解説 - Tips
+description: RealTrainMod（RTM）のプレイ中にちょっとだけ役立つかもしれない小技まとめ。意外と知らない便利機能や操作方法、「困った」を解決する情報が満載！
 published: true
-date: 2025-03-24T10:10:27.952Z
+date: 2025-06-25T11:05:45.080Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-14T14:44:41.009Z
