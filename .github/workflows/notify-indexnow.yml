@@ -18,16 +18,31 @@ jobs:
             - name: Extract URLs from sitemap.xml and notify IndexNow
               run: |
                   API_KEY="9c871a252ea34ff48cdbb80f9f9b095e"
-                  SITE_URL="https://rtmwiki.kotl.io"
+                  SITE_HOST="https://rtmwiki.kotl.io"
+                  KEY_LOCATION="https://rtmwiki.kotl.io/9c871a252ea34ff48cdbb80f9f9b095e.txt"  # APIキーのURL
 
-                  # sitemap.xmlからURLを抽出
+                  # sitemap.xml から URL を抽出
                   grep -oP '(?<=<loc>).*?(?=</loc>)' sitemap.xml > urls.txt
 
                   echo "Notifying IndexNow..."
+
+                  # URLリストを作成
+                  URL_LIST=()
                   while read -r url; do
-                  echo "Sending: $url"
-                  response=$(curl -s -X POST "https://api.indexnow.org/indexnow" \
-                      -H "Content-Type: application/json" \
-                      -d "{\"host\": \"$SITE_HOST\", \"key\": \"$API_KEY\", \"urlList\": [\"$url\"]}")
-                  echo "Response: $response"
+                  URL_LIST+=("\"$url\"")
                   done < urls.txt
+
+                  # URLリストをカンマ区切りで結合
+                  URL_LIST_JSON=$(IFS=,; echo "[${URL_LIST[*]}]")
+
+                  # IndexNowに通知
+                  response=$(curl -s -X POST "https://api.indexnow.org/IndexNow" \
+                  -H "Content-Type: application/json; charset=utf-8" \
+                  -d "{
+                      \"host\": \"$SITE_HOST\",
+                      \"key\": \"$API_KEY\",
+                      \"keyLocation\": \"$KEY_LOCATION\",
+                      \"urlList\": $URL_LIST_JSON
+                  }")
+
+                  echo "Response: $response"
