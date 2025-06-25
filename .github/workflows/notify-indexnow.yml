@@ -36,7 +36,7 @@ jobs:
                   URL_LIST_JSON=$(IFS=,; echo "[${URL_LIST[*]}]")
 
                   # IndexNowに通知
-                  response=$(curl -X POST "https://api.indexnow.org/IndexNow" \
+                  response=$(curl -v -X POST "https://api.indexnow.org/IndexNow" \
                   -H "Content-Type: application/json; charset=utf-8" \
                   -d "{
                       \"host\": \"$SITE_HOST\",
