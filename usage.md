@@ -1,8 +1,8 @@
 ---
-title: RealTrainMod解説
-description: RealTrainMod（RTM）の解説のメニューページ
+title: RTM解説 - トップ
+description: RealTrainMod（RTM）の機能や使い方を詳しく解説。
 published: true
-date: 2025-06-24T11:07:32.555Z
+date: 2025-06-26T09:32:08.927Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-24T08:42:50.459Z
