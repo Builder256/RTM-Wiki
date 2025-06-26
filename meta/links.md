@@ -1,8 +1,8 @@
 ---
-title: リンク集
-description: RealTrainModの関連サイトへのリンク
+title: RTM Wiki - リンク集
+description: RealTrainMod（RTM）の関連サイトへのリンク集。様々な団体やRTM開発者、他にも有用な情報が多数掲載されたサイトなどあなたの知らないサイトにきっと出会えるはず。
 published: true
-date: 2025-06-26T09:27:46.797Z
+date: 2025-06-26T09:29:43.592Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-31T20:16:56.123Z
