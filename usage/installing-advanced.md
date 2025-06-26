@@ -1,8 +1,8 @@
 ---
-title: RTMのインストール方法（Mod経験者向け）
-description: Modに慣れている方や、高度な情報が必要な方に向けたインストール方法を解説。
+title: RTM解説 - Mod経験者向けインストール方法
+description: RealTrainMod（RTM）の導入方法を解説。冗長な説明は極力省き、必要な情報とダウンロードページへの直行リンクを掲載。またKaizPatchXやfixRTMの導入方法も解説。
 published: true
-date: 2025-06-24T11:59:24.056Z
+date: 2025-06-26T09:26:27.570Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T21:05:27.182Z
