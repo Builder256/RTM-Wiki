@@ -1,8 +1,8 @@
 ---
-title: アドオン制作
-description: アドオン制作方法の解説
+title: RTMアドオン制作 - トップ
+description: RealTrainMod（RTM）のアドオン制作情報トップ。アドオン制作に必要なソフトウエアや必要なファイル、制作手順まで細かく解説。
 published: true
-date: 2025-02-25T15:51:58.734Z
+date: 2025-06-26T09:20:04.357Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-11T18:12:24.688Z
