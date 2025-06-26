@@ -1,8 +1,8 @@
 ---
-title: 用語集
-description: RTM界隈で使用されている用語と意味
+title: RTM解説 - 用語集
+description: RealTrainMod（RTM）の界隈や文脈で使用される様々な専門用語を一挙解説。検索してもわからなかったあの言葉や誰も教えてくれない言葉も納得の説明。
 published: true
-date: 2025-06-24T12:20:47.817Z
+date: 2025-06-26T09:23:26.196Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-15T15:06:25.635Z
