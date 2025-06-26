@@ -1,8 +1,8 @@
 ---
-title: よくある質問と回答
-description: 質問と回答
+title: RTM解説 - よくある質問と回答
+description: RealTrainMod（RTM）のプレイで困ったこと、わからないことなど質問とその回答、解説ページへのナビゲーションを多数掲載。あなたの困りごともきっと解決
 published: true
-date: 2025-06-24T11:05:01.052Z
+date: 2025-06-26T09:33:31.176Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T03:54:38.120Z
