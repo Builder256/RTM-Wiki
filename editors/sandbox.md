@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-06-27T08:48:49.511Z
+date: 2025-06-27T08:49:30.267Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -86,4 +86,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## attributeの追加
 
-[/ja/home](/ja/home){target=_blank}{.hoge}
+[/ja/home](/ja/home){target=_blank}{.hoge}{piyopiyo}
