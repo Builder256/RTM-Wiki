@@ -2,7 +2,7 @@
 title: RTM解説 - よくある質問と回答
 description: RealTrainMod（RTM）のプレイで困ったこと、わからないことなど質問とその回答、解説ページへのナビゲーションを多数掲載。あなたの困りごともきっと解決
 published: true
-date: 2025-07-05T13:53:54.444Z
+date: 2025-07-05T13:55:46.435Z
 tags: realtrainmod解説
 editor: markdown
 dateCreated: 2025-01-08T03:54:38.120Z
@@ -23,16 +23,16 @@ Minecraftを起動している最中に、RTMのアドオン（モデルパッ�
 
 また、KaizPatchXを使用している場合には、RTMのコンフィグファイル（`./config/RTM.cfg`）内の`"ModelPack load speed`の値を小さい値にすることで、改善するという意見があります。
 
-`RTM.cfg`の該当部分
-
-<div class="next-codeblock-no-line-numbers"></div>
-
-```properties
-load {
-    # 1:Slow 2:Default 3:Fast [range: 1 ~ 3, default: 2]
-    I:"ModelPack load speed"=2
-}
-```
+> **`RTM.cfg`の該当部分**
+> 
+> <div class="next-codeblock-no-line-numbers"></div>
+> 
+> ```properties
+> load {
+>     # 1:Slow 2:Default 3:Fast [range: 1 ~ 3, default: 2]
+>     I:"ModelPack load speed"=2
+> }
+> ```
 
 しかし、この方法の有効性は確認されておらず、プレイする環境によって改善しない可能性があります。
 コンフィグファイルの編集に不安がある場合には、必ずバックアップを取ってから、自己責任で行ってください。
