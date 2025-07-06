@@ -2,6 +2,10 @@
 title: RTMアドオン制作 - JSON設定項目 共通1
 description: ResourceConfigクラス
 published: false
+date: 2025-07-06T07:20:00.245Z
+tags: 
+editor: markdown
+dateCreated: 2025-07-06T07:12:47.412Z
 ---
 
 <nav>
