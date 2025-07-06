@@ -2,7 +2,7 @@
 title: 編集練習場
 description: 試したい表現とかの練習場所
 published: true
-date: 2025-07-06T08:03:22.961Z
+date: 2025-07-06T08:04:20.286Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-01-14T14:19:06.374Z
@@ -90,4 +90,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## iframe
 
+<div>
+  
 <iframe width="300" height="200" src="https://builder256.github.io/es5-checker/"></iframe>
+</div>
