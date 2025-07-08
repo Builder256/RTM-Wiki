@@ -1,8 +1,8 @@
 ---
-title: スクリプト概説
+title: RTMアドオン制作 - スクリプト概説
 description: 
 published: true
-date: 2025-06-21T08:26:13.125Z
+date: 2025-07-08T01:11:04.017Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-01-08T02:30:49.841Z
