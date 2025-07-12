@@ -2,16 +2,18 @@
 title: RTM初心者向け情報 - トップ
 description: RealTrainMod（RTM）の初心者向け情報トップページ。Minecraftで本格的な鉄道運転を楽しむための導入方法、遊び方、アドオンの使い方、よくある質問まで網羅。初めての人もこれで完璧！
 published: true
-date: 2025-06-25T10:56:23.540Z
+date: 2025-07-12T15:03:11.692Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-18T17:19:27.333Z
 ---
+
 > このページは執筆中であり、今後内容が大幅に追加、変更される可能性があります。
 {.is-warning}
 
 # 概要
-**RealTrainMod（RTM）**は、Minecraft Java Edition専用の鉄道MODで、ゲーム内にリアルな鉄道システムを追加することができます。初心者でも楽しめるよう、導入方法や遊び方、よくある質問をまとめた情報ページです。これを読めば、鉄道の世界をMinecraftで存分に楽しめます！
+RealTrainMod（RTM）は、Minecraft Java Edition専用の鉄道MODで、ゲーム内にリアルな鉄道システムを追加することができます。  
+初心者でも楽しめるよう、導入方法や遊び方、よくある質問をまとめた情報ページです。これを読めば、鉄道の世界をMinecraftで存分に楽しめます！
 
 # 目次
 - [概要](#概要)
