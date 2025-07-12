@@ -2,7 +2,7 @@
 title: 利用規約の書き方
 description: Mod、Addonには必須な利用規約の書き方を解説します。
 published: false
-date: 2025-07-12T14:46:19.299Z
+date: 2025-07-12T14:49:12.180Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-12T14:42:26.810Z
