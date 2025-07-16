@@ -2,7 +2,7 @@
 title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-07-11T15:49:45.915Z
+date: 2025-07-16T00:47:54.786Z
 tags: 初心者向け
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
@@ -542,8 +542,5 @@ RealTrainModは、Minecraftで本格的な鉄道体験ができるすごいMod�
 - [fixRTM - Minecraft Mods - CurseForge *fixes some bugs of RTM and make RTM more useful!*](https://www.curseforge.com/minecraft/mc-mods/fixrtm)
 - [fixrtm/fixRTM: Fixes some bugs of RTM and make RTM more useful! *Fixes some bugs of RTM and make RTM more useful! Contribute to fixrtm/fixRTM development by creating an account on GitHub.*](https://github.com/fixrtm/fixRTM)
 {.links-list}
-
-[^1]: ここで断定できないのは、スマートフォンでもMinecraft Java Editionを起動する方法が存在するからです。  
-  しかしながら、特殊なアプリや高度な設定が必要となるため、あなたのお子さんには関係ないでしょう。
 
 *[RTM]: RealTrainMod
