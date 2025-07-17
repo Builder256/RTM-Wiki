@@ -1,8 +1,8 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通1
-description: ResourceConfigクラス
+title: RTMアドオン制作 - JSON設定項目 共通1 ResourceConfigクラス
+description: ResourceConfigクラスで定義されているJSON設定項目の一覧
 published: false
-date: 2025-07-06T07:20:00.245Z
+date: 2025-07-17T12:24:12.403Z
 tags: 
 editor: markdown
 dateCreated: 2025-07-06T07:12:47.412Z
