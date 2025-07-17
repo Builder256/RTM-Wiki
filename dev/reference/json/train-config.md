@@ -1,9 +1,11 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通3 
-description: TrainConfigクラス
+title: RTMアドオン制作 - JSON設定項目 列車 TrainConfigクラス
+description: TrainConfigクラスで定義されているJSON設定項目の一覧
 published: false
+date: 2025-07-17T12:34:46.346Z
 tags: 
 editor: markdown
+dateCreated: 2025-07-17T12:07:18.448Z
 ---
 
 <nav>
