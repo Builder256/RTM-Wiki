@@ -1,9 +1,11 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通4
-description: ModelConfig.Partsクラス
+title: RTMアドオン制作 - JSON設定項目 共通4 ModelConfig.Partsクラス
+description: ModelConfig.Partsクラスで定義されているJSON設定項目の一覧
 published: false
+date: 2025-07-17T12:29:59.339Z
 tags: 
 editor: markdown
+dateCreated: 2025-07-17T12:07:05.431Z
 ---
 
 <nav>
