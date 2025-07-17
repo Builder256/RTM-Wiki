@@ -1,9 +1,11 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 車両
-description: VehicleConfigクラス
+title: RTMアドオン制作 - JSON設定項目 車両 VehicleConfigクラス
+description: VehicleConfigクラスで定義されているJSON設定項目の一覧
 published: false
+date: 2025-07-17T12:33:35.244Z
 tags: 
 editor: markdown
+dateCreated: 2025-07-17T12:07:30.994Z
 ---
 
 <nav>
