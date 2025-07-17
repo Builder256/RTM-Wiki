@@ -1,59 +1,66 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通1
-description: ResourceConfigクラス
+title: RTMアドオン制作 - JSON設定項目 共通3 
+description: ModelConfig.ModelSourceクラス
 published: false
-date: 2025-07-06T07:20:00.245Z
 tags: 
 editor: markdown
-dateCreated: 2025-07-06T07:12:47.412Z
 ---
 
 <nav>
 
 - [解説](#解説)
-  - [`version`](#version)
-  - [`useCustomColor`](#usecustomcolor)
-  - [`tags`](#tags)
-  - [`defaultValues`](#defaultvalues)
-  - [~~`defaultData`~~](#defaultdata)
+  - [`modelFile`](#modelfile)
+  - [`textures`](#textures)
+  - [`rendererPath`](#rendererpath)
 - [関連サイト](#関連サイト)
 </nav>
 
 # 解説
 <section>
 
-## `version`
-name重複時の優先度決定     
+## `modelFile`
+モデルファイルのパス
 <dl>
 <dt>データ型</dt>
 <dd>
 
-数値 `<short>`
+文字列 `<String>`
 </dd>
 <dt>省略</dt>
-<dd>不明（おそらく可）</dd>
+<dd>不明（おそらく不可）</dd>
 </dl>
 </section>
 
 <section>
 
-## `useCustomColor`       
-カスタムカラーの有効化     
+## `textures`
+マテリアル名と、それに対応するテクスチャファイルのパス
 <dl>
 <dt>データ型</dt>
 <dd>
 
-真偽値 `<boolean>`
+文字列の配列の配列 `<String[][]>`
 </dd>
 <dt>省略</dt>
-<dd>不明（おそらく可）</dd>
+<dd>不明（おそらく不可）</dd>
 </dl>
+
+**マテリアルとテクスチャ、オプションの設定方法**      
+```json
+["materialName", "texturePath", "option"]
+```
+- `"materialName"`: 3Dモデルファイルで設定したマテリアル名 <String>
+- `"texturePath"`: その材質に使用するテクスチャのパス <String>
+- `"option"`: 透過、発光を有効化するか <String>
+  `AlphaBlend`が含まれていれば透過, `Light`が含まれていれば発光が有効化される
+{.grid-list}
+
 </section>
 
 <section>
 
-## `tags`
-モデル選択画面での検索キーワード
+## `rendererPath`
+描画スクリプトのパス
 <dl>
 <dt>データ型</dt>
 <dd>
@@ -62,41 +69,6 @@ name重複時の優先度決定
 </dd>
 <dt>省略</dt>
 <dd>不明（おそらく可）</dd>
-</dl>
-
-複数のキーワードを指定する場合には、1つの半角スペース（`U+0020`）で区分します。
-</section>
-
-<section>
-
-## `defaultValues`
-DataMapのデフォルト値
-<dl>
-<dt>データ型</dt>
-<dd>
-
-DMIntValueの配列 `<DMIntValue[]>`
-</dd>
-<dt>省略</dt>
-<dd>可</dd>
-</dl>
-
-詳細不明
-</section>
-
-<section>
-
-## ~~`defaultData`~~
-**非推奨** 理由不明
-DataMapのデフォルト値
-<dl>
-<dt>データ型</dt>
-<dd>
-
-文字列 `<String>`
-</dd>
-<dt>省略</dt>
-<dd>可</dd>
 </dl>
 </section>
 

@@ -8,12 +8,16 @@ editor: markdown
 dateCreated: 2025-06-12T06:49:25.122Z
 ---
 
-# リファレンス
-- [JSON設定項目 *JSONで設定できるキーとその値*](/dev/reference/json)
-- [スクリプト *スクリプトのメソッドとかクラスとかの解説（詳細未定）*]()
+> :warning: **注意**  
+> このリファレンスの内容は、全てソースが公開されているKaizPatchXの実装を元に制作されています。
+> 他の環境では必ずしも内容が一致するとは限りません。
+
+# リファレンスマニュアル
+RTMと関連Modのリファレンスマニュアルです。
+
+- [JSON設定項目 *JSONで設定できるキーとその値*](/ja/dev/reference/json)
+- [スクリプト *スクリプトのメソッドとかクラスとかの解説（詳細未定）*]
 {.links-list}
 
 # JavaDoc
-- [RealTrainMod]()
-- [KaizPatch]()
-{.links-list}
+詳細未定
