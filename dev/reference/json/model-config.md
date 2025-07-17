@@ -1,9 +1,11 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通2
-description: ModelConfigクラス
+title: RTMアドオン制作 - JSON設定項目 共通2 ModelConfigクラス
+description: ModelConfigクラスで定義されているJSON設定項目の一覧
 published: false
+date: 2025-07-17T12:23:04.703Z
 tags: 
 editor: markdown
+dateCreated: 2025-07-17T12:07:01.244Z
 ---
 
 <nav>
