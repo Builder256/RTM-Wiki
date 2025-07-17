@@ -1,9 +1,11 @@
 ---
-title: RTMアドオン制作 - JSON設定項目 共通3 
-description: ModelConfig.ModelSourceクラス
+title: RTMアドオン制作 - JSON設定項目 共通3 ModelConfig.ModelSourceクラス
+description: ModelConfig.ModelSourceクラスで定義されているJSON設定項目の一覧
 published: false
+date: 2025-07-17T12:29:23.442Z
 tags: 
 editor: markdown
+dateCreated: 2025-07-17T12:07:11.278Z
 ---
 
 <nav>
