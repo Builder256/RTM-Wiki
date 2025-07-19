@@ -1,8 +1,8 @@
 ---
-title: アドオン制作リファレンス
+title: RTMアドオン制作 - リファレンス
 description: RealTrainMod（RTM）のアドオン制作に必要な様々な情報を掲載
 published: true
-date: 2025-07-17T12:50:29.069Z
+date: 2025-07-19T01:39:19.914Z
 tags: アドオン制作
 editor: markdown
 dateCreated: 2025-06-12T06:49:25.122Z
