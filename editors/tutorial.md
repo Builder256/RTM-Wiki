@@ -2,7 +2,7 @@
 title: 編集者向け - チュートリアル
 description: 編集の始め方。
 published: true
-date: 2025-07-20T12:12:17.927Z
+date: 2025-07-20T12:57:01.492Z
 tags: 編集者向け
 editor: markdown
 dateCreated: 2025-07-20T12:11:36.492Z
@@ -14,7 +14,7 @@ dateCreated: 2025-07-20T12:11:36.492Z
 現在のところ、編集にはアカウントの登録が必須となっております。
 
 アカウント登録のリンクはこちらです:  
-https://rtmwiki.kotl.io/register
+[https://rtmwiki.kotl.io/register](../../register)
 
 メールアドレスとパスワード、名前を入力して登録を行ってください。
 
