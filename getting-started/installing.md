@@ -1,9 +1,9 @@
 ---
-title: 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説
+title: 【初心者向け】RealTrainMod（RTM）の導入方法をわかりやすく解説
 description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入手順を紹介！このページを読めば純正版のバージョン1.7.10・1.12.2の導入方法のほか、改良版のKaizPatchX・fixRTMの導入方法もまるわかり！
 published: true
-date: 2025-07-16T00:47:54.786Z
-tags: 初心者向け
+date: 2025-08-01T13:42:25.573Z
+tags: realtrainmod解説, 初心者向け
 editor: markdown
 dateCreated: 2025-01-08T02:13:04.103Z
 ---
@@ -12,7 +12,7 @@ dateCreated: 2025-01-08T02:13:04.103Z
 
 ---
 
-# 【初心者向け】RealTrainMod（RTM）の導入方法をかんたん解説！{.text-center}
+# 【初心者向け】RealTrainMod（RTM）の導入方法をわかりやすく解説！{.text-center}
 このページでは、はじめてMinecraftにModを入れる人や、小中学生とその保護者の方でもわかるように、  
 鉄道Mod「RealTrainMod（RTM）」の導入方法をわかりやすく、詳しく解説します。  
 
@@ -25,7 +25,7 @@ dateCreated: 2025-01-08T02:13:04.103Z
 - **Minecraft Java Edition**: 「本家」「Java版」とも呼ばれる、パソコン（Windows、MacOS、Linux）用に開発された、オリジナルのMinecraft。元々は単に「Minecraft」であったが、ゲーム機やモバイル端末などのプラットフォームの拡大や、メディアミックス展開に伴い、それらと区別するため改称された。
 - **統合版**: 「Bedrock Edition」とも呼ばれる。ゲーム機向けのConsole Edition、モバイル端末向けのPocket Editionなどが統合された、もう一つのMinecraft。
 - **Mod**: ゲームの機能やコンテンツを拡張するためのデータのうち、非公式に公開されているもの。
-- **Java**: Minecraft Java EditionやそのModで使用されているプログラミング言語。Modを導入するには、このJavaを動かすためのソフトウエア（Javaランタイム）がパソコンにインストールされている必要がある。
+- **Java**: Minecraft Java EditionやそのModで使用されているプログラミング言語。Modを導入するには、このJavaを動かすためのソフトウエア（Javaランタイム）がパソコンにインストールされている必要がある。![title.webp](/assets/images/screenshots/bedrock/title.webp)
 - **RTM**: 正式名称はRealTrainMod、このWikiの主題となる鉄道Mod。読みは「アールティーエム」。
 {.grid-list}
 -->
@@ -137,6 +137,12 @@ Minecraftには、大きく分けて、Java Editionと、統合版（Bedrock Edi
 | **ゲーム画面の特徴**                        | PC向けの独自のメニュー画面                                                           | ゲーム機やスマートフォンと似たメニュー画面。メニューに「マーケットプレイス（MarketPlace）」がある |
 | **確実に判断できるポイント**                | 「JAVA EDITION」と表示あり                                                           | ・ゲーム機でプレイしている<br>・「Minecraft」という名前だけのアプリ<br>・マーケットプレイスがある |
 {.dense}
+
+![Minecraftのロゴと、プレイ、設定、Realms、マーケットプレイスのボタン](/assets/images/screenshots/bedrock/title.webp)
+Minecraft統合版のタイトル画面例
+
+![Minecraftのロゴと、JAVA EDITIONの表示、シングルプレイ、マルチプレイ、Minecraft Realms、設定…、終了のボタン](/assets/images/screenshots/minecraft/title.webp)
+Minecraft Java Editionのタイトル画面例
 
 ## 2. パソコンにJava（ジャバ）をインストールしている
 Modを導入するには、「Java」という無料のソフトウエアが必要です。
