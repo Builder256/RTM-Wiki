@@ -71,10 +71,12 @@ function correctOgUrl(url) {
     }
 }
 
-// Faviconを修正
-correctFavicon();
-// Canonical URLを生成し、リンクを追加
-const canonicalURL = generateCanonicalUrl();
-addCanonicalLink(canonicalURL, true);
-// og:urlを修正
-correctOgUrl(canonicalURL);
+function main() {
+    // Faviconを修正
+    correctFavicon();
+    // Canonical URLを生成し、リンクを追加
+    const canonicalURL = generateCanonicalUrl();
+    addCanonicalLink(canonicalURL, true);
+    // og:urlを修正
+    correctOgUrl(canonicalURL);
+}
