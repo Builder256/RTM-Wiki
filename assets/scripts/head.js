@@ -80,3 +80,5 @@ function main() {
     // og:urlを修正
     correctOgUrl(canonicalURL);
 }
+
+main();
