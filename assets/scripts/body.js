@@ -52,7 +52,10 @@ function adjustDescriptionAreaHeight() {
  */
 function replaceWithYouTubeEmbeddedPlayer() {
     const embedYtVideos = document.querySelectorAll('p.embed-yt-vid'); // <p class="embed-yt-vid">動画ID</p> を想定
-    if (!embedYtVideos.length) return; // 空のNodeListはtruthy
+    const amount = embedYtVideos.length;
+    console.info(
+        `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'an' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found. Embedding players...`
+    );
 
     // それぞれのpタグについて置き換え
     for (const embedYtVideo of embedYtVideos) {
@@ -89,7 +92,8 @@ function replaceWithYouTubeEmbeddedPlayer() {
  */
 function openExternalLinkInNewTab() {
     const externalLinkTags = document.querySelectorAll('a.is-external-link');
-    if (!externalLinkTags) return;
+    const amount = externalLinkTags.length;
+    console.info(`[openExternalLinkInNewTab] ${amount === 1 ? 'an' : amount} external link${amount === 1 ? ' was' : 's were'} found. Setting attributes...`);
 
     for (const externalLinkTag of externalLinkTags) {
         externalLinkTag.setAttribute('target', '_blank');
@@ -106,6 +110,8 @@ function changeHeadingLinkIcons() {
      * @type {NodeListOf<HTMLAnchorElement>}
      */
     const anchors = document.querySelectorAll('a.toc-anchor');
+    const amount = anchors.length;
+    console.info(`[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found. Changing Icons...`);
 
     for (const anchor of anchors) {
         if (anchor.querySelector('.v-icon')) continue; // アイコンが変更済みの場合は何もしない
