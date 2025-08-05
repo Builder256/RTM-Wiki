@@ -54,7 +54,7 @@ function replaceWithYouTubeEmbeddedPlayer() {
     const amount = embedYtVideos.length;
     console.info(
         `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'an' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found.${
-            amount !== 0 && ' Embedding players...'
+            amount !== 0 ? ' Embedding players...' : ''
         }`
     );
 
@@ -96,7 +96,7 @@ function openExternalLinkInNewTab() {
     const amount = externalLinkTags.length;
     console.info(
         `[openExternalLinkInNewTab] ${amount === 1 ? 'an' : amount} external link${amount === 1 ? ' was' : 's were'} found.${
-            amount !== 0 && ' Setting attributes...'
+            amount !== 0 ? ' Setting attributes...' : ''
         }`
     );
 
@@ -117,7 +117,7 @@ function changeHeadingLinkIcons() {
     const anchors = document.querySelectorAll('a.toc-anchor');
     const amount = anchors.length;
     console.info(
-        `[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found.${amount !== 0 && ' Changing icons...'}`
+        `[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found.${amount !== 0 ? ' Changing icons...' : ''}`
     );
 
     for (const anchor of anchors) {
