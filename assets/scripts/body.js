@@ -5,6 +5,7 @@ window.addEventListener('resize', adjustDescriptionAreaHeight); //画面サイ�
 window.boot.register('page-ready', () => {
     // ページの構成が完了したときに実行
     adjustDescriptionAreaHeight();
+    // 以下機能追加
     replaceWithYouTubeEmbeddedPlayer();
     openExternalLinkInNewTab();
     changeHeadingLinkIcons();
@@ -44,8 +45,6 @@ function adjustDescriptionAreaHeight() {
     }
 }
 
-// 以下機能追加
-
 /**
  * YouTube動画を埋め込めるようにする
  * @returns {void}
@@ -54,7 +53,9 @@ function replaceWithYouTubeEmbeddedPlayer() {
     const embedYtVideos = document.querySelectorAll('p.embed-yt-vid'); // <p class="embed-yt-vid">動画ID</p> を想定
     const amount = embedYtVideos.length;
     console.info(
-        `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'an' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found. Embedding players...`
+        `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'an' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found.${
+            amount !== 0 && ' Embedding players...'
+        }`
     );
 
     // それぞれのpタグについて置き換え
@@ -93,7 +94,11 @@ function replaceWithYouTubeEmbeddedPlayer() {
 function openExternalLinkInNewTab() {
     const externalLinkTags = document.querySelectorAll('a.is-external-link');
     const amount = externalLinkTags.length;
-    console.info(`[openExternalLinkInNewTab] ${amount === 1 ? 'an' : amount} external link${amount === 1 ? ' was' : 's were'} found. Setting attributes...`);
+    console.info(
+        `[openExternalLinkInNewTab] ${amount === 1 ? 'an' : amount} external link${amount === 1 ? ' was' : 's were'} found.${
+            amount !== 0 && ' Setting attributes...'
+        }`
+    );
 
     for (const externalLinkTag of externalLinkTags) {
         externalLinkTag.setAttribute('target', '_blank');
@@ -111,7 +116,9 @@ function changeHeadingLinkIcons() {
      */
     const anchors = document.querySelectorAll('a.toc-anchor');
     const amount = anchors.length;
-    console.info(`[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found. Changing Icons...`);
+    console.info(
+        `[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found.${amount !== 0 && ' Changing icons...'}`
+    );
 
     for (const anchor of anchors) {
         if (anchor.querySelector('.v-icon')) continue; // アイコンが変更済みの場合は何もしない
