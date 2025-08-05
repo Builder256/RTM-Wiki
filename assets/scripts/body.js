@@ -53,7 +53,7 @@ function replaceWithYouTubeEmbeddedPlayer() {
     const embedYtVideos = document.querySelectorAll('p.embed-yt-vid'); // <p class="embed-yt-vid">動画ID</p> を想定
     const amount = embedYtVideos.length;
     console.info(
-        `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'an' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found.${
+        `[replaceWithYouTubeEmbeddedPlayer] ${amount === 1 ? 'a' : amount} YouTube Video ID${amount === 1 ? ' was' : 's were'} found.${
             amount !== 0 ? ' Embedding players...' : ''
         }`
     );
@@ -117,7 +117,7 @@ function changeHeadingLinkIcons() {
     const anchors = document.querySelectorAll('a.toc-anchor');
     const amount = anchors.length;
     console.info(
-        `[changeHeadingLinkIcons] ${amount === 1 ? 'an' : amount} header${amount === 1 ? ' was' : 's were'} found.${amount !== 0 ? ' Changing icons...' : ''}`
+        `[changeHeadingLinkIcons] ${amount === 1 ? 'a' : amount} header${amount === 1 ? ' was' : 's were'} found.${amount !== 0 ? ' Changing icons...' : ''}`
     );
 
     for (const anchor of anchors) {
