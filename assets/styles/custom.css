@@ -1,0 +1,33 @@
+/* YouTube動画の埋め込みにスタイルを適用 */
+.contents .embedded-youtube-video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    aspect-ratio: 16/9;
+    max-width: 756px;
+    padding-top: 1rem;
+}
+/* タイトルのある画像を中央揃え */
+.contents p:has(> img:first-child):has(> br):has(> img + br) {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 756px;
+}
+/* ページ説明のテキストを見やすく */
+.v-application .page-header-headings > .caption {
+    color: #aaa !important;
+}
+/* モバイルでページ説明が程よく折り返されるように */
+.v-application .page-col-content.is-page-header {
+    padding-right: 16px;
+}
+/* .links-listの説明テキストを見やすく */
+.v-main .contents ol.links-list li > a > em,
+.v-main .contents ul:not(.tabset-tabs).links-list li > a > em {
+    color: #b3d0e8;
+}
+/* h3をそれ以下の見出しと差別化 */
+.theme--dark .v-main .contents h3 {
+    color: #aaa;
+}
