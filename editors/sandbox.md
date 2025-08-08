@@ -88,8 +88,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 [/ja/home](/ja/home){target=_blank}{.hoge}{piyopiyo}
 
-## iframe
+## 画像行
+
+![600x400](https://placehold.co/600x400)
+テキスト
+![600x400](https://placehold.co/600x400)
+テキスト
+![600x400](https://placehold.co/600x400)
+テキスト
+![600x400](https://placehold.co/600x400)
+テキスト
+![600x400](https://placehold.co/600x400)
+テキスト
+
+![600x400](https://placehold.co/600x400)
+テキスト
+![600x400](https://placehold.co/600x400)
+テキスト
 
 
-  
-<iframe width="300" height="200" src="https://builder256.github.io/es5-checker/"></iframe>
+![600x400](https://placehold.co/600x400)
+テキスト
