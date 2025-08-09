@@ -312,4 +312,3 @@ function convertImagesToFigures() {
         filteredParagraph.replaceWith(div);
     }
 }
-convertImagesToFigures();
