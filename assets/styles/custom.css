@@ -56,3 +56,37 @@
     text-align: center;
     padding-block-start: 4px;
 }
+/* 画像の拡大プレビュー機能 */
+dialog {
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: white;
+}
+dialog img {
+    max-width: 90vw;
+    max-height: 90svh;
+}
+dialog menu {
+    display: flex;
+    flex-direction: row;
+}
+dialog menu li {
+    list-style: none;
+}
+dialog menu li button {
+    padding: 4px;
+    outline: none;
+}
+dialog menu li button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+::backdrop {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+}
