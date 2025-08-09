@@ -140,7 +140,6 @@ Minecraftには、大きく分けて、Java Editionと、統合版（Bedrock Edi
 
 ![Minecraftのロゴと、プレイ、設定、Realms、マーケットプレイスのボタン](/assets/images/screenshots/bedrock/title.webp)
 Minecraft統合版のタイトル画面例
-
 ![Minecraftのロゴと、JAVA EDITIONの表示、シングルプレイ、マルチプレイ、Minecraft Realms、設定…、終了のボタン](/assets/images/screenshots/minecraft/title.webp)
 Minecraft Java Editionのタイトル画面例
 
