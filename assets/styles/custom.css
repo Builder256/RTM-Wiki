@@ -31,3 +31,28 @@
 .theme--dark .v-main .contents h3 {
     color: #aaa;
 }
+/* figcaptionに折り返し可の横並びのスタイルを設定 */
+.contents .images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-evenly;
+    padding-block-start: 1rem;
+}
+.contents .images-row figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.contents .images-row img {
+    width: 100%;
+    height: auto;
+    max-height: 425px;
+    object-fit: contain;
+}
+.contents .images-row figcaption {
+    text-align: center;
+    padding-block-start: 4px;
+}

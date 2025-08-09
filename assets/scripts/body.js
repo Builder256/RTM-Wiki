@@ -9,6 +9,7 @@ window.boot.register('page-ready', () => {
     replaceWithYouTubeEmbeddedPlayer();
     openExternalLinkInNewTab();
     changeHeadingLinkIcons();
+    convertImagesToFigures();
 });
 
 /**
@@ -162,3 +163,153 @@ function copyToClipboard(anchor) {
             alert('URLのコピーに失敗しました。手動でコピーしてください。');
         });
 }
+
+/**
+ * 画像とキャプションのみからなる段落が画像を横並びにするようにする
+ * @returns {void}
+ */
+function convertImagesToFigures() {
+    // 予期される段落の例 <img>のimageと#text, <br>, <em>, <strong>, <a>からなるcaptionが交互にある必要がある
+    /*
+    <p>
+        <img /><br />
+        キャプション<br />
+        <img /><br />
+        <strong>キャプション</strong><br />
+        キャプション<br />
+        <img /><br />
+        <a>キャプション</a>
+    </p>
+    */
+    // この場合に予期されるp.childNodesの例
+    /*
+    NodeList [<img>, <br>, #text "\nキャプション", <br>, #text " ", <img>, <br>, <strong>, <br>, #text "\nキャプション", <br>, #text " ", <img>, <br>, <a>]
+    */
+    // 変換すべき構造
+    /*
+    <div class="images-row">
+        <figure class="images-column">
+            <img />
+            <figcaption>キャプション</figcaption>
+        </figure>
+        <figure class="images-column">
+            <img />
+            <figcaption>
+                <strong>キャプション</strong><br />
+                キャプション<br />
+            </figcaption>
+        </figure>
+        <figure class="images-column">
+            <img />
+            <figcaption>
+                <a>キャプション</a>
+            </figcaption>
+        </figure>
+    </div>
+    */
+
+    /**
+     * @type {Array<HTMLParagraphElement>}
+     */
+    const paragraphs = Array.from(document.querySelectorAll('.contents > div > p'));
+
+    const expectedNodeNames = ['#text', 'img', 'br', 'em', 'strong', 'a'];
+    const expectedTextNodeNames = expectedNodeNames.filter((nodeName) => nodeName !== 'img');
+
+    /**
+     * 適格なpのみを選別する
+     * @param {Array<HTMLParagraphElement>} paragraphs - 検証するp
+     * @param {Array<string>} allowedNodeNames - pの中にあることが認められるすべてのNode
+     * @param {Array<string>} allowedTextNodeNames - pの中にあることが認められるテキストのNode
+     * @returns {Array<HTMLParagraphElement>} - 合格したp
+     */
+    const filterImagesParagraph = (paragraphs, allowedNodeNames, allowedTextNodeNames) => {
+        return paragraphs.filter((p) => {
+            const childNodes = Array.from(p.childNodes);
+            // allowedNodeNamesのみを含んでいること
+            if (!childNodes.every((childNode) => allowedNodeNames.includes(childNode.nodeName.toLowerCase()))) return false;
+            const firstChild = p.firstChild;
+            // imgで始まること
+            if (firstChild?.nodeName.toLowerCase() !== 'img') return false;
+            const lastChild = p.lastChild;
+            if (!lastChild) return false;
+            // allowedTextNodeNamesで終わること
+            if (!allowedTextNodeNames.includes(lastChild?.nodeName.toLowerCase())) return false;
+            return true;
+        });
+    };
+
+    // imgで始まりtextで終わるpを選別
+    const filteredParagraphs = filterImagesParagraph(paragraphs, expectedNodeNames, expectedTextNodeNames);
+
+    /**
+     * @typedef {Text | HTMLBRElement | HTMLElement | HTMLAnchorElement} ExpectedTextNode
+     */
+    /**
+     * @typedef {Object} ImageColumn
+     * @property {HTMLImageElement} image
+     * @property {Array<ExpectedTextNode>} caption
+     */
+
+    /**
+     * pを解析する
+     * @param {HTMLParagraphElement} paragraph - 解析するp
+     * @param {Array<string>} expectedNodeNames - pの中にあることが予期されるすべてのNode
+     * @param {Array<string>} expectedTextNodeNames - pの中にあることが予期されるテキストのNode
+     * @returns {Array<ImageColumn>}
+     */
+    const parseParagraph = (paragraph, expectedNodeNames, expectedTextNodeNames) => {
+        const result = [];
+        let currentGroup = null;
+
+        const childNodes = paragraph.childNodes;
+
+        for (const childNode of childNodes) {
+            if (childNode.nodeName.toLowerCase() === 'img') {
+                if (currentGroup) {
+                    result.push(currentGroup);
+                }
+                currentGroup = { image: childNode, caption: [] };
+            } else {
+                // @ts-ignore 型 'ChildNode' の引数を型 'never' のパラメーターに割り当てることはできません。ts(2345)
+                currentGroup?.caption.push(childNode);
+            }
+        }
+
+        if (currentGroup) {
+            result.push(currentGroup);
+        }
+        /*
+        型 '{ image: ChildNode; caption: never[]; }[]' を型 'ImageColumn[]' に割り当てることはできません。
+            型 '{ image: ChildNode; caption: never[]; }' を型 'ImageColumn' に割り当てることはできません。
+                プロパティ 'image' の型に互換性がありません。
+                型 'ChildNode' には 型 'HTMLImageElement' からの次のプロパティがありません: align, alt, border, complete、287 など。ts(2322)
+        */
+        // @ts-ignore
+        return result;
+    };
+
+    for (const filteredParagraph of filteredParagraphs) {
+        const parsedParagraph = parseParagraph(filteredParagraph, expectedNodeNames, expectedTextNodeNames);
+        // console.log(parsedParagraph);
+
+        const div = document.createElement('div');
+        div.classList.add('images-row');
+
+        for (const paragraphNodes of parsedParagraph) {
+            const figure = document.createElement('figure');
+            figure.appendChild(paragraphNodes.image);
+            const figcaption = document.createElement('figcaption');
+            const trimmedCaptionNodes = [...paragraphNodes.caption];
+            while (trimmedCaptionNodes[0].nodeName === 'BR') trimmedCaptionNodes.shift();
+            while (trimmedCaptionNodes.at(-1)?.nodeName === 'BR') trimmedCaptionNodes.pop();
+            for (const captionNode of trimmedCaptionNodes) {
+                figcaption.appendChild(captionNode);
+            }
+            figure.appendChild(figcaption);
+            div.appendChild(figure);
+        }
+        filteredParagraph.replaceWith(div);
+    }
+}
+convertImagesToFigures();
