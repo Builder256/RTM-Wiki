@@ -56,31 +56,17 @@ RealTrainModを支える非常に豊富なアドオンを少しだけ紹介し�
 鉄道会社が新型車両を発表する際には、一般にプレスリリースが発表され、その中では数枚程度のイメージ画像が公開されます。  
 そのごくわずかな情報のみを元に、まだ影も形もない実物の車両に思いを馳せ、車両アドオンを制作するRTMの伝統芸です。
 
-
-<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4">
-  <div>
-    
-  ![kintetsu_8a.webp](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp =670x){.align-center .aspect-video .object-cover}
-  <p class="text-center">近鉄8A系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
-  </div>
-
-  <div>
-    
-  ![osaka_metro_400.webp](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp =670x){.align-center .aspect-video .object-cover}
-  <p  class="text-center">大阪メトロ400系<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
-  </div>
-
-  <div>
-    
-  ![twr_71-000.webp](/assets/images/screenshots/minecraft/train/twr_71-000.webp =670x){.align-center .aspect-video .object-cover}
-  <p class="text-center">りんかい線71-000形<br>デザインが発表された当日のうちにアドオンが制作されリリースされた</p>
-  </div>
-
-  <div>
-    
-  ![meitetsu_9520.webp](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp =670x){.align-center .aspect-video .object-cover}
-  <p class="text-center">名鉄9520/9120系<br>デザインが発表されてから2日のうちにアドオンが制作されリリースされた</p>
-  </div>
-</div>
+![RTMの近鉄8A系のスクリーンショット](/assets/images/screenshots/minecraft/train/kintetsu_8a.webp)
+近鉄8A系
+デザインが発表された当日のうちにアドオンが制作されリリースされた
+![RTMの大阪メトロ400系のスクリーンショット](/assets/images/screenshots/minecraft/train/osaka_metro_400.webp)
+大阪メトロ400系
+デザインが発表された当日のうちにアドオンが制作されリリースされた
+![RTMのりんかい線71-000形のスクリーンショット](/assets/images/screenshots/minecraft/train/twr_71-000.webp)
+りんかい線71-000形
+デザインが発表された当日のうちにアドオンが制作されリリースされた
+![RTMの名鉄9520/9120系のスクリーンショット](/assets/images/screenshots/minecraft/train/meitetsu_9520.webp)
+名鉄9520/9120系
+デザインが発表されてから2日のうちにアドオンが制作されリリースされた
 
 *[RTM]: RealTrainMod
