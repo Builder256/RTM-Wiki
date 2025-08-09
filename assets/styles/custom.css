@@ -49,7 +49,7 @@
 .contents .images-row img {
     width: 100%;
     height: auto;
-    max-height: 425px;
+    max-height: 300px;
     object-fit: contain;
 }
 .contents .images-row figcaption {
