@@ -167,6 +167,9 @@ RealTrainMod（RTM）を始め多くのModは、Forgeの機能を利用してつ
 ## 1. Minecraft Java版をインストール
 Java Editionをまだ買っていない人は、[Minecraft公式サイト](https://www.minecraft.net/ja-jp)から購入できます。
 
+![Minecraft公式サイトのスクリーンショット 大きいアイキャッチのイラストと「Minecraftを購入」のボタン](/assets/images/screenshots/browser/www.minecraft.net/www.minecraft.net_ja-jp.png)
+Minecraft公式サイト
+
 **保護者の方へ**        
 - Minecraft Java Editionの購入には、Microsoftアカウントが必要です。
   - 親のMicrosoftアカウントで購入したMinecraftを、子どものアカウントに譲渡することはできません。
@@ -191,6 +194,9 @@ Minecraft Java Editionは、統合版ではできない何年も前のMinecraft�
 ## 2. Javaをインストール
 多くの場合、パソコンにJavaがインストールされていないので、Javaをインストールする必要があります。
 
+![Java公式サイトのスクリーンショット「デスクトップ用Javaのダウンロード」のボタン](/assets/images/screenshots/browser/www.java.com/www.java.com_ja_download_.png)
+Java公式サイト
+
 **インストール手順**
 1. [Java公式サイト](https://www.java.com/ja/download/)にアクセス
 2. 「デスクトップ用のJavaのダウンロード」をクリック
@@ -205,11 +211,10 @@ Minecraft Java Editionは、統合版ではできない何年も前のMinecraft�
 > **インストールするJavaについて**  
 > この手順でインストールできるJavaは、Oracle版のJRE 8（Java Runtime Environment）になります。  
 > 
-> もし、あなたがYouTuberで、Modを使った動画を投稿して広告収入を得たいなど**商用目的での利用**を考えている場合、Oracleから商用ライセンスを購入する必要がある場合があります。  
+> もし、あなたが**商用目的での利用**を考えている場合、Oracleから商用ライセンスを購入する必要がある場合があります。  
 > それを望まない場合には、無償で商用利用ができる他のJavaをインストールしましょう。
 > 
 > また、この後の解説も、Oracle JRE 8の使用を前提としています。  
-> もし他のJava用の解説が欲しいと思うのであれば、コメントを残していただければ検討します。
 {.is-info}
 
 <!-- 
@@ -221,6 +226,9 @@ Javaが確実にインストールされているか、確認する必要があ�
 ## 3. Minecraft Forgeをインストール
 [Forge公式ダウンロードページ](https://files.minecraftforge.net/net/minecraftforge/forge/)から、自分の使いたいバージョンのForgeのインストーラーをダウンロードします。
 
+![Forge公式サイトのスクリーンショット 「Minecraft Version」と記された各Minecraftバージョンのリストと、「Downloads for Minecraft Forge - MC 1.21.8」と記されたMinecraft 1.21.8対応Forgeのダウンロードエリア](/assets/images/screenshots/browser/files.minecraftforge.net/files.minecraftforge.net_net_minecraftforge_forge_.png)
+Forge公式サイト
+
 RealTrainModは、主にMinecraft 1.7.10とMinecraft 1.12.2で遊ぶことができます。  
 他のバージョンもないわけではありませんが、修正されていない不具合（バグ）がある、機能が更新されない（古い）などの問題があるので、オススメできません。
 
@@ -230,16 +238,22 @@ RealTrainModは、主にMinecraft 1.7.10とMinecraft 1.12.2で遊ぶことがで
 
 **インストール手順**
 1. 上記のダウンロードページにアクセス  
-2. 「Download Recommended」の「Installer」のボタンを確認
-3. ボタンをクリックしたら、AdFoc.usという広告ページが開くので、5秒待つ  
+2. ダウンロードしたいバージョンのページか確認
+3. 「Download Recommended」の「Installer」のボタンを確認
+4. ボタンをクリックしたら、AdFoc.usという広告ページが開くので、5秒待つ  
    **このページにある内容はすべて広告です。**
-4. 画面の一番右上にある、「Skip」をクリック
-5. ダウンロードが始まったら、すぐにサイトを閉じる
-6. ダウンロードされた`forge-XXX-installer.jar`をダブルクリックで起動する（`XXX`はバージョン番号の数字）  
-   起動しない場合（「このファイルを開く方法を選んでください」などと表示される場合）は後述します。
-7. 「Install Client」にチェックを入れ、「OK」をクリック 
-8. 緑色の進捗バーが表示されたら、しばらく待機
-9. 「Complete」というウィンドウが表示されたら、OKをクリック
+5. 画面の一番右上にある、「SKIP」をクリック
+6. ダウンロードが始まったら、すぐにサイトを閉じる
+7. ダウンロードされた`forge-XXX-installer.jar`をダブルクリックで起動する（`XXX`はバージョン番号の数字）  
+   [起動しない場合（「このファイルを開く方法を選んでください」などと表示される場合）](#forgeが起動しない場合)
+8. 「Install Client」にチェックを入れ、「OK」をクリック 
+9. 緑色の進捗バーが表示されたら、しばらく待機
+10. 「Complete」というウィンドウが表示されたら、OKをクリック
+
+![AdFoc.usのサイトのスクリーンショット 大部分を占める広告と、右上に「Please wait 3 seconds…」の文字](/assets/images/screenshots/browser/adfoc.us/adfoc.us_please-wait-n-seconds.png)
+AdFoc.usのサイト まだダウンロードができない状態の例
+![AdFoc.usのサイトのスクリーンショット 同じ広告と、右上に「SKIP」と記されたボタン](/assets/images/screenshots/browser/adfoc.us/adfoc.us_skip.png)
+AdFoc.usのサイト ダウンロードが可能になった状態の例
 
 > :warning: **注意**  
 > ダウンロードページには、たくさんの広告があります。  
@@ -268,8 +282,11 @@ Windowsのパソコンの場合、Forgeのインストーラーをダブルク�
 
 これを解決するには、はっきりとJavaをつかって開くことを指示する必要があります。
 
-#### Javaがインストールされているか確認する
+![Windowsの画面のスクリーンショット 「このファイルを開く方法を選んでください。」と記されたタイトル](/assets/images/screenshots/desktop/unknown-extension-open.png)
+WindowsでForgeのインストーラーが起動しない場合の表示の例
+（画像は拡張子が`.unknownextension`のファイルを開いた場合）
 
+#### Javaがインストールされているか確認する
 まず、正しくJavaがインストールされていることを確認する必要があります。
 
 **手順**
@@ -279,11 +296,16 @@ Windowsのパソコンの場合、Forgeのインストーラーをダブルク�
 4. 「Javaについて」というウィンドウが表示され、「バージョン8の更新XXX」（XXXはバージョン番号の数字）と書かれていた場合、Javaが正しくインストールできています。  
    そうでない場合、Javaがインストールされていない可能性があるので、もう一度Javaのインストール手順を確認してください。
 
----
+![Windowsのスタートメニューのスクリーンショット 検索欄に「java」と入力されており、「最も一致する検索結果」として「Javaについて」が表示されている。「アプリ」の項目には「Javaの構成」と「構成の確認」が表示されている](/assets/images/screenshots/desktop/java-ni-tsuite.png)
+検索欄に「java」と入力し、「Javaについて」というアプリが表示されている例
+「アプリ」の項目にも「Javaについて」がない場合、Javaがインストールされていない可能性がある。
+![「Javaについて」のスクリーンショット 「バージョン8の更新431」と表示されている](/assets/images/screenshots/javacpl/about-java.png)
+「Javaについて」の内容の例 バージョン8の更新431がインストールされていることがわかる
 
+#### Forgeを起動する
 Javaが正しくインストールされていた場合は、次の手順に従ってForgeを起動してください。
 
-**Forgeを起動する手順**
+**手順**
 1. <kbd>Windows</kbd>キー（4つの四角のアイコンのあるキー）を押し、スタートメニューを開く
 2. メニューが開いたら、検索欄に「cmd」と入力し、<kbd>Enter</kbd>キーを押す
 3. 黒色の画面（コマンドプロンプト）が開いたら、開いたそのままの状態で、以下の内容を入力してください  
@@ -309,6 +331,10 @@ java -jar
 ```
 C:\Users\[あなたのWindowsユーザー名]>java -jar "C:\Users\[あなたのWindowsユーザー名]\Downloads\forge-[あなたのダウンロードしたForgeのバージョン名]-installer.jar"
 ```
+
+![コマンドプロンプトのスクリーンショット コマンドが入力されている](/assets/images/screenshots/cmd/forge-installer-execute.png)
+コマンドプロンプトの入力例
+
 8.  Forgeが正常に起動します。そうでなければ、もう一度手順を確認してください。
 
 もし、7.で実行するコマンドが不安な場合は、以下に内容を説明するので、大丈夫なコマンドであることを確認してください。
@@ -370,7 +396,7 @@ NGTLibをRealTrainModと同時に導入することで、初めてRTMが動作�
 
 ### ダウンロードの手順
 #### Minecraft 1.7.10で遊ぶ場合
-1. [最新のKaizPatchのリリースページ](https://github.com/Kai-Z-JP/KaizPatchX/releases/latest)にアクセス
+1. [最新のKaizPatchXのリリースページ](https://github.com/Kai-Z-JP/KaizPatchX/releases/latest)にアクセス
 2. 「Assets」から「`src1.7.10_20200822+KaizPatchX-[バージョン名].jar`」をクリックしてダウンロード
 
 #### Minecraft 1.12.2で遊ぶ場合
@@ -383,6 +409,10 @@ NGTLibをRealTrainModと同時に導入することで、初めてRTMが動作�
 7. [最新の1.12.2対応版fixRTMのダウンロードページ](https://www.curseforge.com/minecraft/mc-mods/fixrtm/files/4654155)にアクセス
 8. 「Download」をクリック
 9.  しばらく待ったらダウンロードが開始されます。
+
+![CurseForgeのRealTrainModのダウンロードページ 中央付近と右側に異なる2つの「Download」ボタンがある](/assets/images/screenshots/browser/www.curseforge.com/www.curseforge.com_minecraft_mc-mods_realtrainmod_files_4641603.png)
+CurseForgeのダウンロードページの例
+中央付近にある方の「Download」をクリックする必要がある
 
 ## 5. modsフォルダにダウンロードしたModを入れる
 ダウンロードしたModのファイルを、`mods`フォルダに入れることで、Modを導入することができます。
@@ -398,7 +428,7 @@ MinecraftのModの導入は、パソコンの操作の極めて実践的な練�
 ### 1. RTM用のゲームディレクトリを作る
 まず、RTMのセーブデータや、いろいろな設定、Modやリソースパックを保存する場所（ゲームディレクトリ）を作ります。  
 Minecraftをインストールしたままの状態だと、このゲームディレクトリが全部同じものになっています。  
-ゲームディレクトリを、使っているバージョンや、Modごとに分けておかないと、他のModで遊んでいるワールドを開いてしまって、  
+ゲームディレクトリを、使っているバージョンやModごとに分けておかないと、他のModで遊んでいるワールドを開いてしまって、  
 データが壊れたり、使わないModが混ざってしまって、ゲームが重くなったりします。
 
 #### ゲームディレクトリをまとめるフォルダを作る  
@@ -414,11 +444,18 @@ Modをやっていると、ゲームディレクトリをたくさん作るこ�
 4. 「新しいフォルダー」ができたので、それを右クリック
 5. 「名前の変更」をクリック
 6. 文字の周りが青くなっている状態で、「Minecraft」と入力し、<kbd>Enter</kbd>キーを押す（名前の変更）
+
+![右クリックメニューのスクリーンショット 「フォルダー」がハイライトされている](/assets/images/screenshots/explorer/context-menu-new-folder.png)
+右クリックメニューを使用してフォルダーを作成する例
+![名前の変更中のスクリーンショット](/assets/images/screenshots/explorer/folder-rename.png)
+文字の周りが青くなっている状態
+この状態でキーボードを操作し、文字を入力する必要がある
+
 #### ゲームディレクトリを作る
 実際にデータを入れるゲームディレクトリを作ります。  
 先ほど作ったフォルダの中に、さらにフォルダを作り、他のゲームディレクトリと区別できる名前を付けます
 
-ここでは、「`1.7.10 RTM`」というフォルダを作ることにします。  
+ここでは、Minecraft 1.7.10のプレイを想定し、「`1.7.10 RTM`」というフォルダを作ることにします。  
 
 1. 「Minecraft」フォルダをダブルクリックして開く
 2. 開いたら、「新しいフォルダー」をクリックして、フォルダを作る
@@ -432,6 +469,8 @@ Modをやっていると、ゲームディレクトリをたくさん作るこ�
 C:\Users\[あなたのWindowsユーザー名]\Desktop\Minecraft\1.7.10 RTM
 ```
 
+![「1.7.10 RTM」フォルダのスクリーンショット](/assets/images/screenshots/explorer/Desktop_Minecraft_1.7.10-RTM_empty.png)
+`1.7.10 RTM`フォルダの内容
 
 ### 2. ランチャーで起動構成を作成する
 ゲームディレクトリを作ることはできたので、次はそれを使う起動構成を作成します。
@@ -465,6 +504,26 @@ Minecraft Java Editionでは、この起動構成をたくさん作成し、選�
 17. 「保存」をクリックし、起動構成を作成する
 
 これで、RTM用のゲームディレクトリと、ForgeバージョンのMinecraftを指定した起動構成が作成できました。
+
+![Minecraft Launcher 「Minecraft: Java Edition」に3、「起動構成」に4のマーキングが付けられている](/assets/images/screenshots/launcher/java-edition/navigation-to-installation-tab.png)
+「起動構成」タブの開き方の図示
+手順の3と4に相当
+![「起動構成」タブ 「新規作成」に5のマーキングが付けられている](/assets/images/screenshots/launcher/java-edition/navigation-to-create-new-installation-modal.png)
+新規作成ボタンの図示
+手順の5に相当
+![「起動構成の作成」画面 バージョンに1.7.10と入力している](/assets/images/screenshots/launcher/java-edition/new-installation-modal-version-entry.png)
+バージョンの入力中の例
+途中まで入力すると候補が表示されるので、目当てのバージョンを選択する
+手順の8に相当
+![「1.7.10 RTM」の右クリックメニュー 「パスのコピー」がハイライトされている](/assets/images/screenshots/explorer/context-menu-copy-as-path.png)
+「パスのコピー」をクリックする例
+手順の12に相当
+![ゲームディレクトリの入力欄の右クリックメニュー 「Paste」がハイライトされている](/assets/images/screenshots/launcher/java-edition/new-installation-modal-context-menu.png)
+ゲームディレクトリの入力欄を右クリックし、「Paste」をクリックする例
+手順の15に相当
+![「起動構成の作成」画面 入力すべき全ての項目が入力されている](/assets/images/screenshots/launcher/java-edition/new-installation-modal-complete.png)
+ゲームディレクトリの内容から「"」の文字を取り除き、指定が終了した例
+手順の16に相当
 
 ### 3. 作成した起動構成でMinecraftを起動する
 作成した起動構成でMinecraftを起動し、問題がないか確認します。
