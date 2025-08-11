@@ -214,7 +214,7 @@ function convertImagesToFigures() {
      */
     const paragraphs = Array.from(document.querySelectorAll('.contents > div > p'));
 
-    const expectedNodeNames = ['#text', 'img', 'br', 'em', 'strong', 'a'];
+    const expectedNodeNames = ['#text', 'img', 'br', 'em', 'strong', 'code', 'a'];
     const expectedTextNodeNames = expectedNodeNames.filter((nodeName) => nodeName !== 'img');
 
     /**
