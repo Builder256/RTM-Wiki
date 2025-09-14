@@ -7,7 +7,7 @@ import '@astrojs/starlight/style/markdown.css';
 <script >
   const anchors: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.sl-markdown-content a');
     console.log(anchors)
-  const externalLinks: HTMLAnchorElement[] = [...anchors].filter(anchor => !(anchor.hostname === 'localhost') && !anchor.href.includes('rtmwiki'))
+  const externalLinks: HTMLAnchorElement[] = [...anchors].filter(anchor => !(anchor.hostname === 'localhost') && !anchor.href.includes('rtmwiki') && !anchor.origin.includes('github.io'));
   for (const link of externalLinks) {
     link.classList.add('is-external-link');
     link.target = "_blank";
