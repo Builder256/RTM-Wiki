@@ -8,7 +8,7 @@ import starlightThemeGalaxy from 'starlight-theme-galaxy';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://builder256.github.io',
-  base: 'rtm-wiki',
+  base: 'RTM-Wiki',
   integrations: [
     starlight({
       title: 'RTM Wiki',
