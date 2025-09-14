@@ -1,7 +1,19 @@
 {
-    "cSpell.words": ["Fractureiser", "Kaiz", "MCTE", "Mojang", "realtrainmod"],
-    "editor.tabSize": 2,
-    "[mjs]": {
-        "editor.formatOnSave": false
-    }
+  "cSpell.words": [
+    "%3C",
+    "astrojs",
+    "darkreader",
+    "fractureiser",
+    "kaiz",
+    "mcte",
+    "mojang",
+    "noto",
+    "realtrainmod",
+    "rtmwiki",
+    "Wikijs"
+  ],
+  "editor.tabSize": 2,
+  "[mjs]": {
+    "editor.formatOnSave": false
+  }
 }
