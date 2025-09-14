@@ -35,7 +35,40 @@
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
   }
+
+  .sidebar-content {
+    & [aria-current='page'],
+    & [aria-current='page']:hover,
+    & [aria-current='page']:focus {
+      &::before {
+        bottom: 0;
+        height: auto;
+      }
+    }
+  }
+  .right-sidebar {
+    & starlight-toc li {
+      & > a {
+        &:not([aria-current='true']):is(:hover, :focus-visible) {
+          &::after {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-content {
+    details {
+      margin-bottom: 0;
+    }
+  }
+  .sidebar-content {
+    summary + ul {
+      margin: 0;
+    }
+  }
 }
+
 /* Dark mode colors. */
 /* :root {
   --sl-color-accent-low: #0e204f;
