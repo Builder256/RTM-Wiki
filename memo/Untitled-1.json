@@ -1,0 +1,96 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#article",
+            "isPartOf": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/" },
+            "author": { "name": "牧野健人", "@id": "https://rilaks.jp/#/schema/person/64e6459fa7a96cccdf9f81c9de7ba306" },
+            "headline": "強調スニペットを非表示にする方法【デメリットを回避】",
+            "datePublished": "2022-09-29T07:46:24+00:00",
+            "dateModified": "2023-10-05T06:05:30+00:00",
+            "mainEntityOfPage": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/" },
+            "wordCount": 11,
+            "publisher": { "@id": "https://rilaks.jp/#organization" },
+            "image": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#primaryimage" },
+            "thumbnailUrl": "https://rilaks.jp/wp-content/uploads/2022/09/eyecatch_opt-out-of-featured-snippets.png",
+            "keywords": ["技術系"],
+            "articleSection": ["ブログ"],
+            "inLanguage": "ja"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/",
+            "url": "https://rilaks.jp/blog/opt-out-of-featured-snippets/",
+            "name": "強調スニペットを非表示にする方法【デメリットを回避】 | 株式会社リラクス",
+            "isPartOf": { "@id": "https://rilaks.jp/#website" },
+            "primaryImageOfPage": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#primaryimage" },
+            "image": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#primaryimage" },
+            "thumbnailUrl": "https://rilaks.jp/wp-content/uploads/2022/09/eyecatch_opt-out-of-featured-snippets.png",
+            "datePublished": "2022-09-29T07:46:24+00:00",
+            "dateModified": "2023-10-05T06:05:30+00:00",
+            "description": "強調スニペットを非表示にする方法をGoogleの公式アナウンスに基づいて解説します。",
+            "breadcrumb": { "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#breadcrumb" },
+            "inLanguage": "ja",
+            "potentialAction": [{ "@type": "ReadAction", "target": ["https://rilaks.jp/blog/opt-out-of-featured-snippets/"] }]
+        },
+        {
+            "@type": "ImageObject",
+            "inLanguage": "ja",
+            "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#primaryimage",
+            "url": "https://rilaks.jp/wp-content/uploads/2022/09/eyecatch_opt-out-of-featured-snippets.png",
+            "contentUrl": "https://rilaks.jp/wp-content/uploads/2022/09/eyecatch_opt-out-of-featured-snippets.png",
+            "width": 1200,
+            "height": 628,
+            "caption": "強調スニペットをGoogle公式の手法で非表示にする"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://rilaks.jp/blog/opt-out-of-featured-snippets/#breadcrumb",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://rilaks.jp/" },
+                { "@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://rilaks.jp/blog/" },
+                { "@type": "ListItem", "position": 3, "name": "強調スニペットを非表示にする方法【デメリットを回避】" }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://rilaks.jp/#website",
+            "url": "https://rilaks.jp/",
+            "name": "株式会社リラクス",
+            "description": "リラクスは「Webサイトからのコンバージョンを増加させるサイト改善」を専門とするWebコンサルティング会社です。",
+            "publisher": { "@id": "https://rilaks.jp/#organization" },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": { "@type": "EntryPoint", "urlTemplate": "https://rilaks.jp/?s={search_term_string}" },
+                    "query-input": { "@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string" }
+                }
+            ],
+            "inLanguage": "ja"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://rilaks.jp/#organization",
+            "name": "株式会社リラクス",
+            "url": "https://rilaks.jp/",
+            "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "ja",
+                "@id": "https://rilaks.jp/#/schema/logo/image/",
+                "url": "https://rilaks.jp/wp-content/uploads/2021/09/rilaks-logo.png",
+                "contentUrl": "https://rilaks.jp/wp-content/uploads/2021/09/rilaks-logo.png",
+                "width": 1560,
+                "height": 418,
+                "caption": "株式会社リラクス"
+            },
+            "image": { "@id": "https://rilaks.jp/#/schema/logo/image/" }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://rilaks.jp/#/schema/person/64e6459fa7a96cccdf9f81c9de7ba306",
+            "name": "牧野健人",
+            "sameAs": ["https://rilaks.jp/kento-makino/", "https://x.com/momo214000"]
+        }
+    ]
+}
