@@ -1,0 +1,5 @@
+---
+aliases:
+  - KaizPatchX
+title: KaizPatchX
+---

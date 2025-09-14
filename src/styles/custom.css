@@ -1,0 +1,115 @@
+@layer my-overrides {
+  :root {
+    text-spacing-trim: space-all;
+  }
+  /* @media (min-width: 96rem) {
+    :root {
+      --sl-content-width: 72rem;
+    }
+  }
+  @media (min-width: 96rem) {
+    :root {
+      --sl-content-width: 72rem;
+    }
+  } */
+  @media (min-width: 72rem) {
+    :root {
+      --sl-content-width: min(calc(100vw - 32rem), 72rem);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  a.is-external-link::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+/* Dark mode colors. */
+/* :root {
+  --sl-color-accent-low: #0e204f;
+  --sl-color-accent: #1b4cff;
+  --sl-color-accent-high: #afc8ff;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #eeeeee;
+  --sl-color-gray-2: #c2c2c2;
+  --sl-color-gray-3: #8b8b8b;
+  --sl-color-gray-4: #585858;
+  --sl-color-gray-5: #383838;
+  --sl-color-gray-6: #272727;
+  --sl-color-black: #181818;
+} */
+/* Light mode colors. */
+/* :root[data-theme='light'] {
+  --sl-color-accent-low: #c4d7ff;
+  --sl-color-accent: #1e50ff;
+  --sl-color-accent-high: #0f2975;
+  --sl-color-white: #181818;
+  --sl-color-gray-1: #272727;
+  --sl-color-gray-2: #383838;
+  --sl-color-gray-3: #585858;
+  --sl-color-gray-4: #8b8b8b;
+  --sl-color-gray-5: #c2c2c2;
+  --sl-color-gray-6: #eeeeee;
+  --sl-color-gray-7: #f6f6f6;
+  --sl-color-black: #ffffff;
+} */
+
+/*
+Wikijs .links-listのフォールバック
+
+---------無理！！！！！！！！！----------
+すべての条件：
+1. ulの直下にはli以外の要素が存在してはいけない
+2. すべてのliの直下にaが存在していなければならない
+3. liの直下にa以外の要素が存在してはいけない
+4. aの中にはemのみが存在してよい（emはなくてもよい）
+*/
+
+/* main ul:not(:has(> :not(li))) { */
+/* background-color: red; */
+/* padding-top: 60px; */
+/* } */
+
+/* main li:not(:has(> a)) { */
+/* text-decoration: line-through; */
+/* } */
+
+/* main ul:not(:has(> :not(li))):not(:has(> li:not(:has(> a)))) { */
+/* text-decoration: overline; */
+/* display: none; */
+/* } */
+/* main ul > li:not(has()) { */
+/* background-color: blue; */
+/* } */
+/* ul要素のセレクタ - 4つの条件すべてに合致する場合のみ */
+/* ul:not(:has(> :not(li))):not(:has(> li:not(:has(> a)))):not(:has(> li:has(> :not(a)))):not(:has(> li > a:has(:not(em)))) { */
+/* ulのスタイル */
+/* background-color: red; */
+/* } */
+
+/* li要素のセレクタ - 4つの条件すべてに合致する場合のみ */
+/* ul:not(:has(> :not(li))):not(:has(> li:not(:has(> a)))):not(:has(> li:has(> :not(a)))):not(:has(> li > a:has(:not(em)))) > li { */
+/* liのスタイル */
+/* } */
+
+/* a要素のセレクタ - 4つの条件すべてに合致する場合のみ */
+/* ul:not(:has(> :not(li))):not(:has(> li:not(:has(> a)))):not(:has(> li:has(> :not(a)))):not(:has(> li > a:has(:not(em)))) > li > a { */
+/* aのスタイル */
+/* } */
+
+/* em要素のセレクタ - 4つの条件すべてに合致する場合のみ */
+/* ul:not(:has(> :not(li))):not(:has(> li:not(:has(> a)))):not(:has(> li:has(> :not(a)))):not(:has(> li > a:has(:not(em)))) > li > a > em { */
+/* emのスタイル */
+/* } */

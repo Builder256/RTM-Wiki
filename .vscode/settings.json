@@ -1,0 +1,7 @@
+{
+    "cSpell.words": ["Fractureiser", "Kaiz", "MCTE", "Mojang", "realtrainmod"],
+    "editor.tabSize": 2,
+    "[mjs]": {
+        "editor.formatOnSave": false
+    }
+}

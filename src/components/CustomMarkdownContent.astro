@@ -1,0 +1,16 @@
+---
+import '@astrojs/starlight/style/markdown.css';
+---
+
+<div class="sl-markdown-content"><slot /></div>
+
+<script >
+  const anchors: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.sl-markdown-content a');
+    console.log(anchors)
+  const externalLinks: HTMLAnchorElement[] = [...anchors].filter(anchor => !(anchor.hostname === 'localhost') && !anchor.href.includes('rtmwiki'))
+  for (const link of externalLinks) {
+    link.classList.add('is-external-link');
+    link.target = "_blank";
+    link.rel = "noopener"
+  }
+</script>
