@@ -9,7 +9,7 @@ title: 競合Mod
 ### LWJGL3ify
 互換性：非常に悪い
 
-LWGJL3ifyは、Minecraft 1.7.10のModを、最新のJavaバージョン（Java 17など）で動作させることを可能にするModです。  
+LWJGL3ifyは、Minecraft 1.7.10のModを、最新のJavaバージョン（Java 17など）で動作させることを可能にするModです。  
 起動時間の短縮や、パフォーマンスの向上が見込め、これからのMinecraft 1.7.10の標準となっていくと考えられます。
 
 しかしながら、RTMは、最新のJavaバージョンでは削除された機能（Nashornエンジン）を使用しているため、将来的にGraalJSなどへの更新が行われない限り、これらとの両立は完全に不可能です。
