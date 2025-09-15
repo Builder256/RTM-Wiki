@@ -23,8 +23,8 @@ export default defineConfig({
       sidebar: [
         { label: 'トップ', link: '/' },
         {
-          label: '初心者向け',
-          link: 'getting-started/overview',
+          label: 'RealTrainMod入門',
+          items: [{ label: 'はじめに', link: 'getting-started/overview' }],
         },
         {
           label: 'RealTrainModの使い方',
