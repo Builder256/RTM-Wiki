@@ -22,3 +22,4 @@ pnpm-debug.log*
 
 # obsidian
 src/content/docs/ja/.obsidian/
+/.obsidian/
