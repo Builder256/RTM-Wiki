@@ -154,6 +154,14 @@ export default defineConfig({
             name: 'darkreader-lock',
           },
         },
+        {
+          // <meta name="robots" content="noindex">
+          tag: 'meta',
+          attrs: {
+            name: 'robots',
+            content: 'noindex',
+          },
+        },
       ],
       // lastUpdated
       pagination: false,
