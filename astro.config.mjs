@@ -28,16 +28,19 @@ export default defineConfig({
         },
         {
           label: 'RealTrainModの使い方',
-          items: [
-            { label: '基本情報・魅力', link: 'usage/basic' },
-            {
-              label: 'RealTrainModのインストール方法 Mod経験者向け',
-              link: 'usage/installing',
-            },
-            { label: '用語集', link: 'usage/glossary' },
-            { label: 'Tips', link: 'usage/tips' },
-            { label: 'よくある質問と回答', link: 'usage/faq' },
-          ],
+          // items: [
+          //   { label: '基本情報・魅力', link: 'usage/basic' },
+          //   {
+          //     label: 'RealTrainModのインストール方法 Mod経験者向け',
+          //     link: 'usage/installing',
+          //   },
+          //   { label: '用語集', link: 'usage/glossary' },
+          //   { label: 'Tips', link: 'usage/tips' },
+          //   { label: 'よくある質問と回答', link: 'usage/faq' },
+          // ],
+          autogenerate: {
+            directory: 'usage/',
+          },
         },
         {
           label: 'アドオン制作',

@@ -2,6 +2,8 @@
 aliases:
   - Tips
 title: Tips
+sidebar:
+  order: 4
 ---
 このページでは、RealTrainMod (RTM)のプレイにちょっとだけ役立つかもしれない小技について説明します。
 ## 碍子を壊さずに張ったワイヤーだけを取り除く方法
