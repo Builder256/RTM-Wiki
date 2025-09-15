@@ -20,6 +20,9 @@ export default defineConfig({
       },
       // tableOfContents
       // editLink
+      editLink: {
+        baseUrl: 'https://github.com/Builder256/RTM-Wiki/tree/starlight',
+      },
       sidebar: [
         { label: 'トップ', link: '/' },
         {
@@ -48,6 +51,7 @@ export default defineConfig({
             { label: 'アドオン制作概要', link: 'dev/overview' },
             {
               label: 'ファイルとディレクトリ',
+              collapsed: true,
               items: [
                 {
                   label: 'ディレクトリ構成とファイル名',
@@ -118,6 +122,13 @@ export default defineConfig({
               },
             },
           ],
+        },
+        {
+          label: 'RTM Wikiを編集する',
+          collapsed: true,
+          autogenerate: {
+            directory: 'edit/',
+          },
         },
       ],
       defaultLocale: 'ja',
