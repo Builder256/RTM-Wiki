@@ -79,9 +79,15 @@ export default defineConfig({
           ],
         },
         {
-          label: '関連Mod',
+          label: '拡張Mod',
           autogenerate: {
-            directory: 'mods/',
+            directory: 'mods/integrated',
+          },
+        },
+        {
+          label: '外部Mod',
+          autogenerate: {
+            directory: 'mods/external',
           },
         },
         {
