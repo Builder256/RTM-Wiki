@@ -2,7 +2,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeGalaxy from 'starlight-theme-galaxy';
-
+import remarkBreaks from 'remark-breaks';
+// import remarkDirective from 'remark-directive';
+// import remarkEmbedYouTubePlugin from './src/remarkEmbedYouTubePlugin/remarkEmbedYouTube/index.ts';
 // import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -190,6 +192,13 @@ export default defineConfig({
       // credits: true,
     }),
   ],
+  markdown: {
+    remarkPlugins: [
+      remarkBreaks, // 改行をbrにする
+      // remarkDirective,
+      // remarkEmbedYouTubePlugin,
+    ],
+  },
 
   //   vite: {
   //     plugins: [tailwindcss()],

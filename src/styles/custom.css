@@ -36,7 +36,7 @@
     mask-size: 100% 100%;
   }
 
-  .sidebar-content {
+  /* .sidebar-content {
     & [aria-current='page'],
     & [aria-current='page']:hover,
     & [aria-current='page']:focus {
@@ -56,7 +56,7 @@
         }
       }
     }
-  }
+  } */
   .sidebar-content {
     details {
       margin-bottom: 0;
