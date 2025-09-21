@@ -66,6 +66,12 @@
     mask-size: 100% 100%;
   }
 
+  .starlight-aside blockquote a {
+    color: var(--sl-color-text-accent);
+  }
+  .starlight-aside blockquote {
+    background-color: var(--sl-color-bg);
+  }
   /* .sidebar-content {
     & [aria-current='page'],
     & [aria-current='page']:hover,
