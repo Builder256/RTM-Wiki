@@ -4,13 +4,106 @@ import '@astrojs/starlight/style/markdown.css';
 
 <div class="sl-markdown-content"><slot /></div>
 
-<script >
-  const anchors: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.sl-markdown-content a');
-    // console.log(anchors)
-  const externalLinks: HTMLAnchorElement[] = [...anchors].filter(anchor => !(anchor.hostname === 'localhost') && !anchor.href.includes('rtmwiki') && !anchor.origin.includes('github.io'));
-  for (const link of externalLinks) {
-    link.classList.add('is-external-link');
-    link.target = "_blank";
-    link.rel = "noopener"
+<script>
+  const CONFIG = {
+    containerSelector: '.sl-markdown-content a',
+    externalLinkClass: 'is-external-link',
+    // inPageLinkClass: 'is-in-page-link',
+    anchorLinkUp: 'is-anchor-up',
+    anchorLinkDown: 'is-anchor-down',
+    headlineLinkClass: 'sl-anchor-link',
+
+    internalHostPatterns: ['localhost', 'rtmwiki', 'github.io'],
+  };
+
+  /**
+   * a要素のリンク先がサイト内かどうか
+   * @param anchor リンク先を判定するa要素
+   * @param currentHost リンクがあるページのlocation.hostname
+   */
+  function isInternalLink(anchor: HTMLAnchorElement, currentHost: string): boolean {
+    // ドメイン名がない場合（？）にサイト内リンクと判定
+    if (!anchor.hostname) return true;
+    // ドメイン名が同じ場合にサイト内リンクと判定
+    if (anchor.hostname === currentHost) return true;
+    // リンク先に特定のキーワードが含まれていた場合サイト内リンクと判定
+    return CONFIG.internalHostPatterns.some((pattern) => anchor.href.includes(pattern));
   }
+
+  /**
+   * ページ内リンクかどうかを判定
+   */
+  function isInPageLink(anchor: HTMLAnchorElement, currentPath: string): boolean {
+    // ハッシュがない場合は問答無用
+    if (!anchor.hash) return false;
+    // 現在のパスと指定先のパスが等しい場合はページ内リンクと判定
+    if (anchor.pathname === currentPath) return true;
+    // パスがない場合（ルート）の場合もページ内リンクと判定
+    if (!anchor.pathname) return true;
+    // それ以外（ハッシュがあって、パスが等しくない場合？）を外部ページリンクと判定
+    return false;
+  }
+
+  function isHeadlineLink(anchor: HTMLAnchorElement): boolean {
+    if (anchor.classList.contains(CONFIG.headlineLinkClass)) return true;
+    return false;
+  }
+
+  function targetElement(anchor: HTMLAnchorElement): HTMLElement | null {
+    const decodedHash = decodeURIComponent(anchor.hash).slice(1);
+    const targetElement = document.getElementById(decodedHash);
+    return targetElement;
+  }
+
+  function processLink(): void {
+    try {
+      const currentUrl: Location = window.location;
+      const currentHost: string = currentUrl.hostname;
+      const currentPath: string = currentUrl.pathname;
+
+      const anchors = Array.from(document.querySelectorAll(CONFIG.containerSelector)).filter(
+        (element): element is HTMLAnchorElement => element instanceof HTMLAnchorElement && !!element.href
+      );
+
+      if (anchors.length === 0) {
+        console.info('no Anchors found');
+        return;
+      }
+
+      let externalCount = 0;
+      let inPageCount = 0;
+
+      for (const anchor of anchors) {
+        try {
+          if (isInPageLink(anchor, currentPath) && !isHeadlineLink(anchor)) {
+            inPageCount++;
+            const linkTarget = targetElement(anchor);
+            if (linkTarget) {
+              const compareResult = anchor.compareDocumentPosition(linkTarget);
+              if (compareResult & Node.DOCUMENT_POSITION_FOLLOWING) {
+                // リンク相手が下にある
+                anchor.classList.add(CONFIG.anchorLinkDown);
+              } else if (compareResult & Node.DOCUMENT_POSITION_PRECEDING) {
+                // リンク相手が上にある
+                anchor.classList.add(CONFIG.anchorLinkUp);
+              }
+            }
+          } else if (!isInternalLink(anchor, currentHost)) {
+            anchor.classList.add(CONFIG.externalLinkClass);
+            anchor.target = '_blank';
+            anchor.rel = 'noopener';
+            externalCount++;
+          }
+        } catch (error) {
+          console.warn('an error occurred durning processing links: ', anchor.href, error);
+        }
+      }
+
+      console.info(`Processing link finished. ${externalCount} external links, ${inPageCount} in page links.`);
+    } catch (error) {
+      console.error('An error occurred durning processing links:', error);
+    }
+  }
+
+  processLink();
 </script>
