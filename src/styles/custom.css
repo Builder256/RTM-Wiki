@@ -1,26 +1,25 @@
 @layer my-overrides {
+  /* Yu Gothic UIで括弧が貫通する不具合に対応 */
+  /* Chromium 141で修正らしいのでそのうち外すかも */
+  /* https://issues.chromium.org/issues/331123676 */
+  /* https://forest.watch.impress.co.jp/docs/serial/yajiuma/2009377.html */
   :root {
     text-spacing-trim: space-all;
   }
-  /* @media (min-width: 96rem) {
-    :root {
-      --sl-content-width: 72rem;
-    }
-  }
-  @media (min-width: 96rem) {
-    :root {
-      --sl-content-width: 72rem;
-    }
-  } */
+
+  /* メインコンテンツ部分の幅を拡大する */
   @media (min-width: 72rem) {
     :root {
       --sl-content-width: min(calc(100vw - 32rem), 72rem);
     }
   }
 
+  /* ページ内リンクのスクロールがスムーズに移行するようにする */
   html {
     scroll-behavior: smooth;
   }
+
+  /* 外部リンクにアイコンを追加 */
   a.is-external-link::after {
     content: '';
     display: inline-block;
@@ -36,6 +35,7 @@
     mask-size: 100% 100%;
   }
 
+  /* ページ内リンクのリンク先が上下どちらにあるかをわかりやすくするアイコンを追加 */
   a.is-anchor-up::before {
     content: '';
     display: inline-block;
@@ -66,12 +66,16 @@
     mask-size: 100% 100%;
   }
 
+  /* aside中のblockquoteのスタイルがasideのスタイルに引きずられて変な色になる問題を修正 */
   .starlight-aside blockquote a {
     color: var(--sl-color-text-accent);
   }
   .starlight-aside blockquote {
     background-color: var(--sl-color-bg);
   }
+
+  /* 複数行ナビゲーションでハイライトが一行分しか覆わない問題を修正 */
+  /* 本体プラグインアップデートにより現状不要だが、プラグイン側の実装が怪しいので保存 */
   /* .sidebar-content {
     & [aria-current='page'],
     & [aria-current='page']:hover,
@@ -93,6 +97,9 @@
       }
     }
   } */
+
+  /* 多階層サイドバーで縦線が途切れる問題を修正 */
+  /* ちょっと不格好に見えるので要再修正 */
   .sidebar-content {
     details {
       margin-bottom: 0;
@@ -103,7 +110,28 @@
       margin: 0;
     }
   }
+
+  /* FireFoxで見出しが折り返されるとき下線がおかしくなる問題を修正 */
+  /* https://bugzilla.mozilla.org/show_bug.cgi?id=489100 */
+  .sl-markdown-content h2 {
+    display: block;
+  }
+
+  /* heroが画面幅が小さい端末で幅を貫通する問題を修正 */
+  .hero {
+    padding: clamp(0.5rem, 2vw, 1rem) min(6vw, 4rem);
+    @media (max-width: 48rem) {
+      padding-inline: 0;
+    }
+  }
+
+  /* 画像の角が見切れる問題を修正 */
+  [data-has-hero] .hero > img,
+  .hero img {
+    border-radius: 0;
+  }
 }
+/* 以下要らん */
 
 /* Dark mode colors. */
 /* :root {
