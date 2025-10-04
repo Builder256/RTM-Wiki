@@ -117,6 +117,18 @@
     display: block;
   }
 
+  /* ↑でdisplay: blockを設定したせいでアンカーリンクのアイコンの場所がおかしくなる問題を修正 */
+  .sl-markdown-content .sl-heading-wrapper.level-h2 {
+    display: flex;
+    align-items: flex-end;
+  }
+  .sl-markdown-content .sl-anchor-link {
+    margin-block-end: var(--sl-spacing-lg);
+  }
+  .sl-markdown-content h2 {
+    margin-block-start: var(--sl-spacing-lg);
+  }
+
   /* heroが画面幅が小さい端末で幅を貫通する問題を修正 */
   .hero {
     padding: clamp(0.5rem, 2vw, 1rem) min(6vw, 4rem);
