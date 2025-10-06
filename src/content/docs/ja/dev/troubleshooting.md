@@ -1,6 +1,8 @@
 ---
 aliases: [トラブルシューティング]
 title: トラブルシューティング
+tableOfContents:
+  maxHeadingLevel: 5
 ---
 このページでは、RealTrainMod (RTM)のアドオン制作の際に陥ることの多いトラブルについて、そのミスの内容と対処法について説明します。
 ## 簡易トラブル診断
