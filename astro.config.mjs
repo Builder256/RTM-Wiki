@@ -80,7 +80,7 @@ export default defineConfig({
           ],
         },
         {
-          label: '拡張Mod',
+          label: '関連Mod',
           autogenerate: {
             directory: 'mods/integrated',
           },
