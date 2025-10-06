@@ -46,7 +46,6 @@ export default defineConfig({
             { label: 'アドオン制作概要', link: 'dev/overview' },
             {
               label: 'ファイルとディレクトリ',
-              collapsed: true,
               items: [
                 {
                   label: 'ディレクトリ構成とファイル名',
