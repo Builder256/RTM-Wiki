@@ -14,7 +14,7 @@ RTMの導入方法は、他の一般的なMinecraftのModと同じです。
 ただし、RealTrainModは前提ModとしてNGTLibが必要なため、同時に導入する必要があります。
 
 より詳しい説明が必要な場合は、以下のページを参照してください。
-- [[【初心者向け】 RealTrainMod（RTM）の導入方法をわかりやすく解説]]
+- [【初心者向け】 RealTrainMod（RTM）の導入方法をわかりやすく解説](installing)
 ## RTMの遊び方
 ## アドオンを導入する
 ## ナビゲーション

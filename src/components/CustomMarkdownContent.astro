@@ -1,8 +1,29 @@
 ---
 import '@astrojs/starlight/style/markdown.css';
+
+import { Icon } from '@astrojs/starlight/components';
 ---
 
 <div class="sl-markdown-content"><slot /></div>
+
+<dialog id="preview-dialog" class="preview-dialog" closedby="any">
+  <button type="button" id="preview-close-btn" class="preview-close-btn" autofocus>
+    <Icon name="close" size="24px" label="画像プレビューを閉じる" />
+  </button>
+  <div class="preview-image-wrapper">
+    <img src="" alt="" class="preview-image" />
+  </div>
+  <div class="preview-menu-wrapper">
+    <button type="button" id="open-preview-image-in-new-tab" class="preview-context-btn" aria-label="画像を新しいタブで開く">
+      <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24" viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"
+        ></path></svg
+      >
+    </button>
+  </div>
+</dialog>
 
 <script>
   const CONFIG = {
@@ -32,6 +53,9 @@ import '@astrojs/starlight/style/markdown.css';
 
   /**
    * ページ内リンクかどうかを判定
+   * @param anchor リンク先を判定するa要素
+   * @param currentPath リンクがあるページのlocation.pathname
+   * @return ページ内リンクならtrue
    */
   function isInPageLink(anchor: HTMLAnchorElement, currentPath: string): boolean {
     // ハッシュがない場合は問答無用
@@ -44,17 +68,30 @@ import '@astrojs/starlight/style/markdown.css';
     return false;
   }
 
+  /**
+   * 見出しのリンクかどうかを判定
+   * @param anchor リンク先を判定するa要素
+   * @return 見出しリンクならtrue
+   */
   function isHeadlineLink(anchor: HTMLAnchorElement): boolean {
     if (anchor.classList.contains(CONFIG.headlineLinkClass)) return true;
     return false;
   }
 
+  /**
+   * a要素のリンク先の要素を取得
+   * @param anchor リンク先を取得するa要素
+   * @return リンク先の要素、なければnull
+   */
   function targetElement(anchor: HTMLAnchorElement): HTMLElement | null {
     const decodedHash = decodeURIComponent(anchor.hash).slice(1);
     const targetElement = document.getElementById(decodedHash);
     return targetElement;
   }
 
+  /**
+   * リンクの処理を実行
+   */
   function processLink(): void {
     try {
       const currentUrl: Location = window.location;
@@ -105,5 +142,156 @@ import '@astrojs/starlight/style/markdown.css';
     }
   }
 
+  /**
+   * p要素内のimg要素とそのキャプションをfigure要素に変換する
+   * @param container - 変換対象のコンテナ要素
+   */
+  function transformImagesToFigures(container: HTMLElement): void {
+    const pElements = container.querySelectorAll('p');
+
+    pElements.forEach((p) => {
+      // p要素内のすべての子ノードを取得
+      const childNodes = Array.from(p.childNodes);
+
+      // img要素が含まれているか確認
+      const hasImg = childNodes.some((node) => node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName === 'IMG');
+
+      if (!hasImg) return;
+
+      // 各img要素とそのキャプションをグループ化
+      const groups: { img: HTMLImageElement; caption: Node[] }[] = [];
+      let currentImg: HTMLImageElement | null = null;
+      let currentCaption: Node[] = [];
+
+      for (let i = 0; i < childNodes.length; i++) {
+        const node = childNodes[i];
+
+        if (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName === 'IMG') {
+          // 前のグループを保存
+          if (currentImg) {
+            groups.push({ img: currentImg, caption: currentCaption });
+            currentCaption = [];
+          }
+
+          currentImg = node as HTMLImageElement;
+
+          // img直後のbrをスキップ
+          if (i + 1 < childNodes.length) {
+            const nextNode = childNodes[i + 1];
+            if (nextNode.nodeType === Node.ELEMENT_NODE && (nextNode as Element).tagName === 'BR') {
+              i++; // brをスキップ
+            }
+          }
+        } else if (currentImg) {
+          // img要素が見つかった後のノードをキャプションとして追加
+          currentCaption.push(node);
+        }
+      }
+
+      // 最後のグループを保存
+      if (currentImg) {
+        groups.push({ img: currentImg, caption: currentCaption });
+      }
+
+      // figure要素を作成してp要素の前に挿入
+      groups.forEach((group) => {
+        const figure = document.createElement('figure');
+        figure.className = 'image-column';
+
+        // img要素を移動（属性とイベントリスナーを維持）
+        figure.appendChild(group.img);
+
+        // figcaption要素を作成
+        const figcaption = document.createElement('figcaption');
+
+        // キャプションノードを移動
+        group.caption.forEach((node) => {
+          figcaption.appendChild(node);
+        });
+
+        figure.appendChild(figcaption);
+
+        // p要素の前にfigure要素を挿入
+        p.parentNode?.insertBefore(figure, p);
+      });
+
+      // p要素を削除
+      p.remove();
+    });
+  }
+
+  /**
+   * 画像のモーダルプレビューを実装
+   */
+  function addImagePreview(): void {
+    const images: NodeListOf<HTMLImageElement> = document.querySelectorAll<HTMLImageElement>('.sl-markdown-content img');
+
+    const dialog: HTMLElement | null = document.getElementById('preview-dialog');
+    if (!(dialog instanceof HTMLDialogElement)) return;
+
+    const closeBtn: HTMLButtonElement | null = dialog.querySelector<HTMLButtonElement>('#preview-close-btn');
+    const newTabBtn: HTMLButtonElement | null = dialog.querySelector<HTMLButtonElement>('#open-preview-image-in-new-tab');
+    const dialogImage: HTMLImageElement | null = dialog.querySelector<HTMLImageElement>('img.preview-image');
+    if (!dialogImage) return;
+
+    for (const image of images) {
+      image.addEventListener('click', () => {
+        console.log('clicked'); // コンソールには表示される
+        const { src, alt } = image;
+        dialogImage.src = src;
+        dialogImage.alt = alt;
+
+        dialog.showModal();
+      });
+    }
+
+    closeBtn?.addEventListener('click', () => dialog.close());
+    newTabBtn?.addEventListener('click', () => window.open(dialogImage.src));
+
+    // const insertDialogElement = () => {
+    //   const dialog = document.createElement('dialog');
+    //   const menu = document.createElement('menu');
+    //   const closeLi = document.createElement('li');
+    //   const newTabLi = document.createElement('li');
+    //   const closeButton = document.createElement('button');
+    //   const newTabButton = document.createElement('button');
+    //   const previewImage = document.createElement('img');
+
+    //   closeButton.textContent = '閉じる';
+    //   closeButton.setAttribute('autofocus', '');
+    //   closeButton.addEventListener('click', () => {
+    //     dialog.close();
+    //   });
+    //   closeLi.appendChild(closeButton);
+
+    //   newTabButton.textContent = '画像を新しいタブで開く';
+    //   newTabButton.addEventListener('click', () => {
+    //     window.open(previewImage.src);
+    //   });
+    //   newTabLi.appendChild(newTabButton);
+    //   menu.append(closeLi, newTabLi);
+    //   dialog.append(menu, previewImage);
+    //   document.body.appendChild(dialog);
+    //   return dialog;
+    // };
+
+    // const dialog = insertDialogElement();
+    // for (const image of images) {
+    //   image.addEventListener('click', () => {
+    //     const { src, alt } = image;
+    //     const targetImage = dialog.querySelector('img');
+    //     if (!targetImage) return;
+    //     targetImage.src = src;
+    //     targetImage.alt = alt;
+
+    //     dialog.showModal();
+    //   });
+    // }
+  }
   processLink();
+  const containers: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('div.pictures');
+  if (containers.length) {
+    containers.forEach((container) => transformImagesToFigures(container));
+  }
+  addImagePreview();
 </script>

@@ -1,0 +1,33 @@
+---
+aliases: #Obsidian用
+  - トップページ
+  - グローバルトップページ
+title: Global Top Page
+template: splash
+hero:
+  title: RTM Wiki<br>Global Top Page
+  tagline: Welcome to RTM Wiki.<br>A new RealTrainMod wiki launched in January 2025.
+  image:
+    alt: RTM Wiki logo shaped like the RealTrainMod wrench item.
+    file: ../../assets/images/logos/wiki-logo.svg
+  actions:
+    - text: 日本語ページを見る / Visit Japanese Page
+      link: ja/
+      variant: primary
+      icon: right-arrow
+    - text: Explore other language pages
+      link: ./#supported-languages #直接`#`で始めるとコメントにされる
+      variant: secondary
+      icon: magnifier
+---
+import { LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+
+## Supported languages
+RTM Wiki is available in multiple languages.
+
+<CardGrid>
+<LinkCard title="日本語" href="ja/" description='View RTM Wiki in Japanese' />
+<LinkCard title="English" href="en/" description='View RTM Wiki in English' />
+<LinkCard title="繁體中文" href="zh-tw/" description='View RTM Wiki in Traditional Chinese' />
+</CardGrid>

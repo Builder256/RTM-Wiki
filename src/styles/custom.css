@@ -114,19 +114,112 @@
   /* FireFoxで見出しが折り返されるとき下線がおかしくなる問題を修正 */
   /* https://bugzilla.mozilla.org/show_bug.cgi?id=489100 */
   .sl-markdown-content h2 {
-    display: block;
+    display: inline-block;
   }
 
-  /* ↑でdisplay: blockを設定したせいでアンカーリンクのアイコンの場所がおかしくなる問題を修正 */
-  .sl-markdown-content .sl-heading-wrapper.level-h2 {
-    display: flex;
-    align-items: flex-end;
-  }
-  .sl-markdown-content .sl-anchor-link {
-    margin-block-end: var(--sl-spacing-lg);
-  }
+  /* ↑でdisplay: inline-blockを設定したせいでh2の謎のmarginが発生するのをキャンセル*/
   .sl-markdown-content h2 {
-    margin-block-start: var(--sl-spacing-lg);
+    margin-block: 0;
+  }
+
+  /* 表の幅が大きくなった時にスクロールできるようにする */
+  .sl-markdown-content table {
+    overflow: scroll;
+  }
+
+  /* 画像のキャプション化のスタイル */
+  .sl-markdown-content > div.pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-evenly;
+    padding-block-start: 1rem;
+  }
+  .sl-markdown-content > div.pictures > figure.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .sl-markdown-content > div.pictures > figure.image-column > img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .sl-markdown-content > div.pictures > figure.image-column > figcaption {
+    text-align: center;
+    padding-block-start: 4px;
+  }
+
+  :root:has(.preview-dialog[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+  .preview-dialog::backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgb(0 0 0 / 0.9);
+    backdrop-filter: blur(4px);
+  }
+  .preview-dialog {
+    margin: auto;
+    position: fixed;
+    /* max-width: 64rem; */
+    /* width: auto; */
+    /* max-height: 90vh; */
+    background-color: rgb(255 255 255 / 0.05);
+    padding: 1.5rem;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 1rem;
+    overflow: visible;
+  }
+  .preview-close-btn {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    z-index: 10;
+    color: white;
+    background: rgb(255 255 255 / 0.1);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 0.75rem;
+  }
+  .preview-close-btn:hover {
+    background-color: rgb(255 255 255 / 0.2);
+  }
+  .preview-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .preview-image {
+    max-width: 90vw;
+    max-height: 85svh;
+    object-fit: contain;
+  }
+  .preview-menu-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-block-start: 1.5rem;
+  }
+  .preview-context-btn {
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: rgb(255 255 255 / 0.1);
+    border-radius: 50%;
+    padding: 0.625rem;
+  }
+  .preview-context-btn:hover {
+    background-color: rgb(255 255 255 / 0.2);
   }
 
   /* heroが画面幅が小さい端末で幅を貫通する問題を修正 */

@@ -108,14 +108,14 @@ Minecraftには、大きく分けて、Java Editionと、統合版（Bedrock Edi
 | **最初に起動するアプリ名（Windowsの場合）** | 「Minecraft Launcher」                                                               | 「Minecraft」                                                                                     |
 | **ゲーム画面の特徴**                        | PC向けの独自のメニュー画面                                                           | ゲーム機やスマートフォンと似たメニュー画面。メニューに「マーケットプレイス（MarketPlace）」がある |
 | **確実に判断できるポイント**                | 「JAVA EDITION」と表示あり                                                           | ・ゲーム機でプレイしている<br>・「Minecraft」という名前だけのアプリ<br>・マーケットプレイスがある |
-{.dense}
 
-:::pictures
-![Minecraftのロゴと、プレイ、設定、Realms、マーケットプレイスのボタン](../../../../assets/images/screenshots/bedrock/title.webp)
+<div class="pictures">
+
+![Minecraftのロゴと、プレイ、設定、Realms、マーケットプレイスのボタン](../../../images/screenshots/bedrock/title.webp)
 Minecraft統合版のタイトル画面例
-![Minecraftのロゴと、JAVA EDITIONの表示、シングルプレイ、マルチプレイ、Minecraft Realms、設定…、終了のボタン](../../../../assets/images/screenshots/minecraft/title.webp)
+![Minecraftのロゴと、JAVA EDITIONの表示、シングルプレイ、マルチプレイ、Minecraft Realms、設定…、終了のボタン](../../../images/screenshots/minecraft/title.webp)
 Minecraft Java Editionのタイトル画面例
-:::
+</div>
 
 ### 2. パソコンにJava（ジャバ）をインストールしている
 Modを導入するには、「Java」という無料のソフトウエアが必要です。
@@ -141,10 +141,11 @@ RealTrainMod（RTM）を始め多くのModは、Forgeの機能を利用してつ
 ### 1. Minecraft Java版をインストール
 Java Editionをまだ買っていない人は、[Minecraft公式サイト](https://www.minecraft.net/ja-jp)から購入できます。
 
-:::pictures
-![Minecraft公式サイトのスクリーンショット 大きいアイキャッチのイラストと「Minecraftを購入」のボタン](/assets/images/screenshots/browser/www.minecraft.net/www.minecraft.net_ja-jp.png)
+<div class="pictures">
+
+![Minecraft公式サイトのスクリーンショット 大きいアイキャッチのイラストと「Minecraftを購入」のボタン](../../../images/screenshots/browser/www.minecraft.net/www.minecraft.net_ja-jp.png)
 Minecraft公式サイト
-:::pictures
+</div>
 
 :::tip[保護者の方へ]
 - Minecraft Java Editionの購入には、Microsoftアカウントが必要です。
@@ -154,7 +155,6 @@ Minecraft公式サイト
 - Minecraft Java Editionの購入には、必ずしもクレジットカードが必要なわけではありません。  
   家電量販店やコンビニエンスストア、ゲームショップなどでプリペイドカードとして販売されています。
 :::
-z
 購入、インストールができたら、動作確認のために一度起動して遊んでみましょう。
 
 統合版とは違う操作方法や、Minecraftの起動の仕方などに慣れておくとよいでしょう。
@@ -168,10 +168,11 @@ Minecraft Java Editionは、統合版ではできない何年も前のMinecraft�
 ### 2. Javaをインストール
 多くの場合、パソコンにJavaがインストールされていないので、Javaをインストールする必要があります。
 
-:::pictures
-![Java公式サイトのスクリーンショット「デスクトップ用Javaのダウンロード」のボタン](/assets/images/screenshots/browser/www.java.com/www.java.com_ja_download_.png)
+<div class="pictures">
+
+![Java公式サイトのスクリーンショット「デスクトップ用Javaのダウンロード」のボタン](../../../images/screenshots/browser/www.java.com/www.java.com_ja_download_.png)
 Java公式サイト
-:::pictures
+</div>
 
 **インストール手順**
 1. [Java公式サイト](https://www.java.com/ja/download/)にアクセス
@@ -196,10 +197,11 @@ Java公式サイト
 ### 3. Minecraft Forgeをインストール
 [Forge公式ダウンロードページ](https://files.minecraftforge.net/net/minecraftforge/forge/)から、自分の使いたいバージョンのForgeのインストーラーをダウンロードします。
 
-:::pictures
-![Forge公式サイトのスクリーンショット 「Minecraft Version」と記された各Minecraftバージョンのリストと、「Downloads for Minecraft Forge - MC 1.21.8」と記されたMinecraft 1.21.8対応Forgeのダウンロードエリア](/assets/images/screenshots/browser/files.minecraftforge.net/files.minecraftforge.net_net_minecraftforge_forge_.png)
+<div class="pictures">
+
+![Forge公式サイトのスクリーンショット 「Minecraft Version」と記された各Minecraftバージョンのリストと、「Downloads for Minecraft Forge - MC 1.21.8」と記されたMinecraft 1.21.8対応Forgeのダウンロードエリア](../../../images/screenshots/browser/files.minecraftforge.net/files.minecraftforge.net_net_minecraftforge_forge_.png)
 Forge公式サイト
-:::
+</div>
 
 RealTrainModは、主にMinecraft 1.7.10とMinecraft 1.12.2で遊ぶことができます。  
 他のバージョンもないわけではありませんが、修正されていない不具合（バグ）がある、機能が更新されない（古い）などの問題があるので、オススメできません。
@@ -222,12 +224,13 @@ RealTrainModは、主にMinecraft 1.7.10とMinecraft 1.12.2で遊ぶことがで
 9. 緑色の進捗バーが表示されたら、しばらく待機
 10. 「Complete」というウィンドウが表示されたら、OKをクリック
 
-:::pictures
-![AdFoc.usのサイトのスクリーンショット 大部分を占める広告と、右上に「Please wait 3 seconds…」の文字](/assets/images/screenshots/browser/adfoc.us/adfoc.us_please-wait-n-seconds.png)
+<div class="pictures">
+
+![AdFoc.usのサイトのスクリーンショット 大部分を占める広告と、右上に「Please wait 3 seconds…」の文字](../../../images/screenshots/browser/adfoc.us/adfoc.us_please-wait-n-seconds.png)
 AdFoc.usのサイト まだダウンロードができない状態の例
-![AdFoc.usのサイトのスクリーンショット 同じ広告と、右上に「SKIP」と記されたボタン](/assets/images/screenshots/browser/adfoc.us/adfoc.us_skip.png)
+![AdFoc.usのサイトのスクリーンショット 同じ広告と、右上に「SKIP」と記されたボタン](../../../images/screenshots/browser/adfoc.us/adfoc.us_skip.png)
 AdFoc.usのサイト ダウンロードが可能になった状態の例
-:::
+</div>
 
 :::caution
 ダウンロードページには、たくさんの広告があります。  
@@ -256,11 +259,12 @@ Windowsのパソコンの場合、Forgeのインストーラーをダブルク�
 
 これを解決するには、はっきりとJavaをつかって開くことを指示する必要があります。
 
-:::pictures
-![Windowsの画面のスクリーンショット 「このファイルを開く方法を選んでください。」と記されたタイトル](/assets/images/screenshots/desktop/unknown-extension-open.png)
+<div class="pictures">
+
+![Windowsの画面のスクリーンショット 「このファイルを開く方法を選んでください。」と記されたタイトル](../../../images/screenshots/desktop/unknown-extension-open.png)
 WindowsでForgeのインストーラーが起動しない場合の表示の例
 （画像は拡張子が`.unknownextension`のファイルを開いた場合）
-:::
+</div>
 
 ##### Javaがインストールされているか確認する
 まず、正しくJavaがインストールされていることを確認する必要があります。
@@ -272,13 +276,14 @@ WindowsでForgeのインストーラーが起動しない場合の表示の例
 4. 「Javaについて」というウィンドウが表示され、「バージョン8の更新XXX」（XXXはバージョン番号の数字）と書かれていた場合、Javaが正しくインストールできています。  
    そうでない場合、Javaがインストールされていない可能性があるので、もう一度Javaのインストール手順を確認してください。
 
-:::pictures
-![Windowsのスタートメニューのスクリーンショット 検索欄に「java」と入力されており、「最も一致する検索結果」として「Javaについて」が表示されている。「アプリ」の項目には「Javaの構成」と「構成の確認」が表示されている](/assets/images/screenshots/desktop/java-ni-tsuite.png)
+<div class="pictures">
+
+![Windowsのスタートメニューのスクリーンショット 検索欄に「java」と入力されており、「最も一致する検索結果」として「Javaについて」が表示されている。「アプリ」の項目には「Javaの構成」と「構成の確認」が表示されている](../../../images/screenshots/desktop/java-ni-tsuite.png)
 検索欄に「java」と入力し、「Javaについて」というアプリが表示されている例
 「アプリ」の項目にも「Javaについて」がない場合、Javaがインストールされていない可能性がある。
-![「Javaについて」のスクリーンショット 「バージョン8の更新431」と表示されている](/assets/images/screenshots/javacpl/about-java.png)
+![「Javaについて」のスクリーンショット 「バージョン8の更新431」と表示されている](../../../images/screenshots/javacpl/about-java.png)
 「Javaについて」の内容の例 バージョン8の更新431がインストールされていることがわかる
-:::
+</div>
 
 ##### Forgeを起動する
 Javaが正しくインストールされていた場合は、次の手順に従ってForgeを起動してください。
@@ -310,12 +315,13 @@ java -jar
 C:\Users\[あなたのWindowsユーザー名]>java -jar "C:\Users\[あなたのWindowsユーザー名]\Downloads\forge-[あなたのダウンロードしたForgeのバージョン名]-installer.jar"
 ```
 
-:::pictures
-![コマンドプロンプトのスクリーンショット コマンドが入力されている](/assets/images/screenshots/cmd/forge-installer-execute.png)
-コマンドプロンプトの入力例
-:::
+<div class="pictures">
 
-8.  Forgeが正常に起動します。そうでなければ、もう一度手順を確認してください。
+![コマンドプロンプトのスクリーンショット コマンドが入力されている](../../../images/screenshots/cmd/forge-installer-execute.png)
+コマンドプロンプトの入力例
+</div>
+
+1.  Forgeが正常に起動します。そうでなければ、もう一度手順を確認してください。
 
 もし、7.で実行するコマンドが不安な場合は、以下に内容を説明するので、大丈夫なコマンドであることを確認してください。
 
@@ -390,11 +396,12 @@ NGTLibをRealTrainModと同時に導入することで、初めてRTMが動作�
 8. 「Download」をクリック
 9.  しばらく待ったらダウンロードが開始されます。
 
-:::pictures
-![CurseForgeのRealTrainModのダウンロードページ 中央付近と右側に異なる2つの「Download」ボタンがある](/assets/images/screenshots/browser/www.curseforge.com/www.curseforge.com_minecraft_mc-mods_realtrainmod_files_4641603.png)
+<div class="pictures">
+
+![CurseForgeのRealTrainModのダウンロードページ 中央付近と右側に異なる2つの「Download」ボタンがある](../../../images/screenshots/browser/www.curseforge.com/www.curseforge.com_minecraft_mc-mods_realtrainmod_files_4641603.png)
 CurseForgeのダウンロードページの例
 中央付近にある方の「Download」をクリックする必要がある
-:::
+</div>
 
 ### 5. modsフォルダにダウンロードしたModを入れる
 ダウンロードしたModのファイルを、`mods`フォルダに入れることで、Modを導入することができます。
@@ -427,11 +434,14 @@ Modをやっていると、ゲームディレクトリをたくさん作るこ�
 5. 「名前の変更」をクリック
 6. 文字の周りが青くなっている状態で、「Minecraft」と入力し、<kbd>Enter</kbd>キーを押す（名前の変更）
 
-![右クリックメニューのスクリーンショット 「フォルダー」がハイライトされている](/assets/images/screenshots/explorer/context-menu-new-folder.png)
+<div class="pictures">
+
+![右クリックメニューのスクリーンショット 「フォルダー」がハイライトされている](../../../images/screenshots/explorer/context-menu-new-folder.png)
 右クリックメニューを使用してフォルダーを作成する例
-![名前の変更中のスクリーンショット](/assets/images/screenshots/explorer/folder-rename.png)
+![名前の変更中のスクリーンショット](../../../images/screenshots/explorer/folder-rename.png)
 文字の周りが青くなっている状態
 この状態でキーボードを操作し、文字を入力する必要がある
+</div>
 
 ##### ゲームディレクトリを作る
 実際にデータを入れるゲームディレクトリを作ります。  
@@ -451,8 +461,11 @@ Modをやっていると、ゲームディレクトリをたくさん作るこ�
 C:\Users\[あなたのWindowsユーザー名]\Desktop\Minecraft\1.7.10 RTM
 ```
 
-![「1.7.10 RTM」フォルダのスクリーンショット](/assets/images/screenshots/explorer/Desktop_Minecraft_1.7.10-RTM_empty.png)
+<div class="pictures">
+
+![「1.7.10 RTM」フォルダのスクリーンショット](../../../images/screenshots/explorer/Desktop_Minecraft_1.7.10-RTM_empty.png)
 `1.7.10 RTM`フォルダの内容
+</div>
 
 #### 2. ランチャーで起動構成を作成する
 ゲームディレクトリを作ることはできたので、次はそれを使う起動構成を作成します。
@@ -487,27 +500,28 @@ Minecraft Java Editionでは、この起動構成をたくさん作成し、選�
 
 これで、RTM用のゲームディレクトリと、ForgeバージョンのMinecraftを指定した起動構成が作成できました。
 
-:::pictures
-![Minecraft Launcher 「Minecraft: Java Edition」に3、「起動構成」に4のマーキングが付けられている](/assets/images/screenshots/launcher/java-edition/navigation-to-installation-tab.png)
+<div class="pictures">
+
+![Minecraft Launcher 「Minecraft: Java Edition」に3、「起動構成」に4のマーキングが付けられている](../../../images/screenshots/launcher/java-edition/navigation-to-installation-tab.png)
 「起動構成」タブの開き方の図示
 手順の3と4に相当
-![「起動構成」タブ 「新規作成」に5のマーキングが付けられている](/assets/images/screenshots/launcher/java-edition/navigation-to-create-new-installation-modal.png)
+![「起動構成」タブ 「新規作成」に5のマーキングが付けられている](../../../images/screenshots/launcher/java-edition/navigation-to-create-new-installation-modal.png)
 新規作成ボタンの図示
 手順の5に相当
-![「起動構成の作成」画面 バージョンに1.7.10と入力している](/assets/images/screenshots/launcher/java-edition/new-installation-modal-version-entry.png)
+![「起動構成の作成」画面 バージョンに1.7.10と入力している](../../../images/screenshots/launcher/java-edition/new-installation-modal-version-entry.png)
 バージョンの入力中の例
 途中まで入力すると候補が表示されるので、目当てのバージョンを選択する
 手順の8に相当
-![「1.7.10 RTM」の右クリックメニュー 「パスのコピー」がハイライトされている](/assets/images/screenshots/explorer/context-menu-copy-as-path.png)
+![「1.7.10 RTM」の右クリックメニュー 「パスのコピー」がハイライトされている](../../../images/screenshots/explorer/context-menu-copy-as-path.png)
 「パスのコピー」をクリックする例
 手順の12に相当
-![ゲームディレクトリの入力欄の右クリックメニュー 「Paste」がハイライトされている](/assets/images/screenshots/launcher/java-edition/new-installation-modal-context-menu.png)
+![ゲームディレクトリの入力欄の右クリックメニュー 「Paste」がハイライトされている](../../../images/screenshots/launcher/java-edition/new-installation-modal-context-menu.png)
 ゲームディレクトリの入力欄を右クリックし、「Paste」をクリックする例
 手順の15に相当
-![「起動構成の作成」画面 入力すべき全ての項目が入力されている](/assets/images/screenshots/launcher/java-edition/new-installation-modal-complete.png)
+![「起動構成の作成」画面 入力すべき全ての項目が入力されている](../../../images/screenshots/launcher/java-edition/new-installation-modal-complete.png)
 ゲームディレクトリの内容から「"」の文字を取り除き、指定が終了した例
 手順の16に相当
-:::
+</div>
 
 #### 3. 作成した起動構成でMinecraftを起動する
 作成した起動構成でMinecraftを起動し、問題がないか確認します。
