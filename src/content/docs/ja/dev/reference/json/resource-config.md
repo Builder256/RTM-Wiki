@@ -1,0 +1,85 @@
+---
+aliases:
+  - ResourceConfigクラス JSONリファレンス
+title: ResourceConfigクラス JSONリファレンス
+---
+
+<section>
+
+## `version`
+name重複時の優先度決定     
+<dl>
+<dt>データ型</dt>
+<dd>
+
+数値 `<short>`
+</dd>
+<dt>省略</dt>
+<dd>不明（おそらく可）</dd>
+</dl>
+</section>
+
+<section>
+
+## `useCustomColor`       
+カスタムカラーの有効化     
+<dl>
+<dt>データ型</dt>
+<dd>
+
+真偽値 `<boolean>`
+</dd>
+<dt>省略</dt>
+<dd>不明（おそらく可）</dd>
+</dl>
+</section>
+
+<section>
+
+## `tags`
+モデル選択画面での検索キーワード
+<dl>
+<dt>データ型</dt>
+<dd>
+
+文字列 `<String>`
+</dd>
+<dt>省略</dt>
+<dd>不明（おそらく可）</dd>
+</dl>
+
+複数のキーワードを指定する場合には、1つの半角スペース（`U+0020`）で区分します。
+</section>
+
+<section>
+
+## `defaultValues`
+DataMapのデフォルト値
+<dl>
+<dt>データ型</dt>
+<dd>
+
+DMIntValueの配列 `<DMIntValue[]>`
+</dd>
+<dt>省略</dt>
+<dd>可</dd>
+</dl>
+
+詳細不明
+</section>
+
+<section>
+
+## ~~`defaultData`~~
+**非推奨** 理由不明
+DataMapのデフォルト値
+<dl>
+<dt>データ型</dt>
+<dd>
+
+文字列 `<String>`
+</dd>
+<dt>省略</dt>
+<dd>可</dd>
+</dl>
+</section>

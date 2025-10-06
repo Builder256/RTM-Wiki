@@ -77,6 +77,15 @@ export default defineConfig({
             },
             { label: '逆引きリファレンス', link: 'dev/reverse-reference' },
             { label: 'トラブルシューティング', link: 'dev/troubleshooting' },
+            {
+              label: 'リファレンス',
+              items: [
+                {
+                  label: 'JSON',
+                  autogenerate: { directory: 'dev/reference/json' },
+                },
+              ],
+            },
           ],
         },
         {
