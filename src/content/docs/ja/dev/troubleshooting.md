@@ -83,7 +83,7 @@ RTMに限らず、多くのModやソフトウェアでは、エラーの内容�
 #### クラッシュレポートの内容
 クラッシュレポートの内容について、実際の例を挙げて説明します。
 ##### 冒頭
-```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt"
+```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt" {4, 5} "25/07/22 22:18" "Loading RTM ModelPack"
 ---- Minecraft Crash Report ----
 // Shall we play a game?
 
@@ -108,7 +108,7 @@ Description: Loading RTM ModelPack
 :::
 
 ##### エラーメッセージ
-```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt"
+```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt" "On construct ModelSet (exampleTrain)"
 jp.ngt.rtm.modelpack.ModelPackException: On construct ModelSet (exampleTrain)
 ```
 冒頭の次に続くこのような部分は、Minecraftが検知したクラッシュ原因です。  
@@ -130,25 +130,32 @@ jp.ngt.rtm.modelpack.ModelPackException: On construct ModelSet (exampleTrain)
 
 実際にRTMのプログラムを確認し、スタックトレースと見比べながら処理の流れを追うことで、より詳細に内容を知ることもできます。  
 ですが、そのような対処が必要な場合は稀なので、多くの場合この部分は無視できます。
+
 ##### 連鎖するエラー
-```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt"
+<!-- [編集者へ] Caused by: java.lang.reflect.InvocationTargetExceptionの上の行に点字スペースU+2800を挿入しています。 -->
+<!-- 削除するとその行が消えてラベルとクラレポがかぶるので消さないでください -->
+```plaintext title="crash-YYYY-MM-DD_HH.MM.SS.txt" {"2番目のエラー": 1-2} {"3番目のエラー": 8-9} {"4番目のエラー": 15-16} {"5番目のエラー": 21-22} "InvocationTargetException" "ModelFormatException: Can't load model : example.mqo" "ModelFormatException: Failed to load model : minecraft:models/example.mqo" "FileNotFoundException: minecraft:models/example.mqo"
+⠀ 
 Caused by: java.lang.reflect.InvocationTargetException
 	at sun.reflect.GeneratedConstructorAccessor70.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
 	at jp.ngt.rtm.modelpack.ModelPackManager.getNewModelSet(ModelPackManager.java:135)
 	... 4 more
+  
 Caused by: net.minecraftforge.client.model.ModelFormatException: Can't load model : example.mqo
 	at jp.ngt.rtm.modelpack.ModelPackManager.loadModel(ModelPackManager.java:223)
 	at jp.ngt.rtm.render.ModelObject.<init>(ModelObject.java:44)
 	at jp.ngt.rtm.modelpack.modelset.ModelSetTrainClient.registerBogieModel(ModelSetTrainClient.java:50)
 	at jp.ngt.rtm.modelpack.modelset.ModelSetTrainClient.<init>(ModelSetTrainClient.java:38)
 	... 8 more
+
 Caused by: net.minecraftforge.client.model.ModelFormatException: Failed to load model : minecraft:models/example.mqo
 	at jp.ngt.ngtlib.renderer.model.ModelLoader.loadModel(ModelLoader.java:57)
 	at jp.ngt.ngtlib.renderer.model.ModelLoader.loadModel(ModelLoader.java:24)
 	at jp.ngt.rtm.modelpack.ModelPackManager.loadModel(ModelPackManager.java:218)
 	... 11 more
+
 Caused by: java.io.FileNotFoundException: minecraft:models/example.mqo
 	at net.minecraft.client.resources.FallbackResourceManager.func_110536_a(SourceFile:51)
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:67)
@@ -160,18 +167,15 @@ Caused by: java.io.FileNotFoundException: minecraft:models/example.mqo
 
 これは、エラーが連鎖していることを示しており、下に記載されるものほどより細かいレベルで発生したエラーを記録しています。
 
-この例では、まず、2番目のエラーとして`InvocationTargetException` と記載されています。  
-これはエラーのラッパーです。  
-原因の特定にはあまり重要ではないので無視できます。
-
-次に、3番目のエラーとして、`ModelFormatException: Can't load model : [エラーが発生したファイル名]`と記載されています。  
-これによって、そのファイルの解析でエラーが起きたことがわかります。
-
-4番目のエラーとして、`ModelFormatException: Failed to load model : minecraft:models/[エラーが発生したファイル名]`と記載されています。  
-これによって、そのファイルの取得に失敗したことがわかります。
-
-最後に、5番目のエラーとして、`FileNotFoundException: minecraft:models/[エラーが発生したファイル名]`と記載されています。  
-これによって、そのファイルが存在しなかったことがわかります。
+- この例では、まず、2番目のエラーとして`InvocationTargetException` と記載されています。  
+  これはエラーのラッパーです。  
+  原因の特定にはあまり重要ではないので無視できます。
+- 次に、3番目のエラーとして、`ModelFormatException: Can't load model : [エラーが発生したファイル名]`と記載されています。  
+  これによって、そのファイルの解析でエラーが起きたことがわかります。
+- 4番目のエラーとして、`ModelFormatException: Failed to load model : minecraft:models/[エラーが発生したファイル名]`と記載されています。  
+  これによって、そのファイルの取得に失敗したことがわかります。
+- 最後に、5番目のエラーとして、`FileNotFoundException: minecraft:models/[エラーが発生したファイル名]`と記載されています。  
+  これによって、そのファイルが存在しなかったことがわかります。
 
 このようにして、クラッシュレポートの内容から、クラッシュした原因を特定することができます。
 #### 発生するエラーの一覧
@@ -193,7 +197,7 @@ Minecraftがクラッシュしない場合は、その原因が明らかでな�
 RTMのアドオンのJSONファイルは、アンダーバー`_`(`U+005F`)で区切られたモデル名を含むファイル名である必要があります。  
 これに準ずる名前でない場合には、アドオンとして認識されません。
 
-正当なJSONファイル名については、[アドオンを構成するファイルとディレクトリ#モデル設定用JSONファイル](file/directory-structure-and-file-name#モデル設定用jsonファイル)を参照してください。
+正当なJSONファイル名については、[ディレクトリ構成とファイル名#モデル設定用JSONファイル](file/directory-structure-and-file-name#モデル設定用jsonファイル)を参照してください。
 
 :::note[加筆希望]
 RTMがアドオンを認識できない可能性がほかにもあるはずなのでご存じの方教えてください。
@@ -256,4 +260,5 @@ Javaでは、*Error*と*Exception*を明確に区別しますが、RTMのアド�
 - [Static Wind - Takami Train Kit *minecraftの鉄道Mod「RealTrainMod」用の車両モデルキットの解説*](https://staticwind.soragoto.net/rtm/tkmtk/index.html#pack)
 
 [^1]:主に、クラッシュが発生した際にエラーが投げられるクラスが異なっている場合があります。まれに、似ても似つかないエラーが出ることもあります。
-[^2]:Javaでは、終了コードは0が正常な終了であり、それ以外のステータスは異常終了を表します。[参考](https://codegym.cc/ja/groups/posts/ja.384.java-no-system-exit-)
+[^2]:Javaでは、終了コードは0が正常な終了であり、それ以外のステータスは異常終了を表します。
+     参考：[Java の System.exit()](https://codegym.cc/ja/groups/posts/ja.384.java-no-system-exit-)
