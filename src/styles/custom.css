@@ -123,8 +123,15 @@
   }
 
   /* 表の幅が大きくなった時にスクロールできるようにする */
+  .sl-markdown-content .table-wrapper {
+    overflow-x: scroll;
+    margin: 0;
+  }
   .sl-markdown-content table {
-    overflow: scroll;
+    overflow-x: auto;
+  }
+  .sl-markdown-content table * {
+    word-break: keep-all;
   }
 
   /* 画像のキャプション化のスタイル */
