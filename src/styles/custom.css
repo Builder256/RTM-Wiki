@@ -123,10 +123,6 @@
   }
 
   /* 表の幅が大きくなった時にスクロールできるようにする */
-  .sl-markdown-content .table-wrapper {
-    overflow-x: scroll;
-    margin: 0;
-  }
   .sl-markdown-content table {
     overflow-x: auto;
   }
