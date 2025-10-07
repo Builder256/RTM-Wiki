@@ -26,8 +26,6 @@ import { Icon } from '@astrojs/starlight/components';
 </dialog>
 
 <script>
-  import { internalSpreadAttributes } from 'astro/runtime/server/render/util.js';
-
   const CONFIG = {
     containerSelector: '.sl-markdown-content a',
     externalLinkClass: 'is-external-link',
@@ -250,28 +248,10 @@ import { Icon } from '@astrojs/starlight/components';
     closeBtn?.addEventListener('click', () => dialog.close());
     newTabBtn?.addEventListener('click', () => window.open(dialogImage.src));
   }
-
-  function wrapTable(): void {
-    const tables: NodeListOf<HTMLTableElement> = document.querySelectorAll<HTMLTableElement>('.sl-markdown-content table');
-    if (!tables.length) return;
-
-    for (const table of tables) {
-      const parentNode: ParentNode | null = table.parentNode;
-      // null避け ついでにElement.classListが使えることを確認
-      if (!(parentNode instanceof HTMLElement)) continue;
-      const hasWrapper: boolean = parentNode.classList.contains('table-wrapper');
-      if (hasWrapper) continue;
-      const wrapper: HTMLDivElement = document.createElement<'div'>('div');
-      wrapper.className = 'table-wrapper';
-      parentNode.insertBefore(wrapper, table);
-      wrapper.appendChild(table);
-    }
-  }
   processLink();
   const containers: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('div.pictures');
   if (containers.length) {
     containers.forEach((container) => transformImagesToFigures(container));
   }
   addImagePreview();
-  // wrapTable();
 </script>
