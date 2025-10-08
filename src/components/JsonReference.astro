@@ -1,0 +1,268 @@
+---
+import { Badge } from '@astrojs/starlight/components';
+
+interface Props {
+  file: string;
+}
+
+type Optional = boolean | 'probably' | null;
+
+interface Reference {
+  // インデックス型と言うらしい
+  [key: string]: {
+    deprecatedReason?: string;
+    description: string;
+    type: string;
+    optional: Optional;
+    note?: string;
+  };
+}
+
+const { file } = Astro.props;
+const path = '../content/docs/ja/dev/reference/json/';
+const source = path + file;
+
+// 多言語対応のためにja/以外のディレクトリも確認しないといけないが
+// メソッドがstring literal以外受け付けてくれない どーしたらいいの
+const matches = import.meta.glob('../content/docs/ja/dev/reference/json/*.yaml', { eager: true });
+
+const reference = Object.entries(matches[source] as Reference);
+
+// Javaの型とJSON型の対応
+const typeMap = {
+  // プリミティブ型
+  byte: '数値',
+  short: '数値',
+  int: '数値',
+  long: '数値',
+  float: '数値',
+  double: '数値',
+  boolean: '真偽値',
+  char: '文字列',
+
+  // 文字列型
+  String: '文字列',
+};
+// RTMで定義されたコンフィグクラスの参照型
+const referenceTypes = [];
+
+/**
+ * データ型表記の文字列から配列の次元の数を取得する
+ * @param string データ型表記の文字列 例: 「`string[]`」
+ * @returns 配列でない場合は0 そうでないときは次元の数
+ */
+function getArrayDimensionsCount(type: string): number {
+  return type.split('[]').length - 1;
+}
+
+function getTypeName(type: string): string {
+  const dimensions = getArrayDimensionsCount(type);
+  const baseType = type.split('[]')[0];
+  let result = '';
+  if (baseType in typeMap) result += typeMap[baseType as keyof typeof typeMap];
+  else result += baseType + '型';
+
+  for (let i = 0; i < dimensions; i++) result += 'の配列';
+
+  return result;
+}
+
+function getTypeNotation(type: string): string {
+  return '<' + type + '>';
+}
+
+function getAbleToOmitText(optional: Optional): string {
+  if (optional === 'probably') return '不明（おそらく可）';
+  if (optional === null) return '不明（おそらく不可）';
+  if (optional) return '可';
+  if (!optional) return '不可';
+  return 'エラーだぞ<span class="heart"></span>';
+}
+
+const testData = [
+  {
+    name: 'version',
+    deprecated: 'reason',
+    description: 'name重複時の優先度決定',
+    type: 'short',
+    optional: 'probably',
+  },
+  {
+    name: 'useCustomColor',
+    deprecated: null,
+    description: 'カスタムカラーの有効化',
+    type: 'boolean',
+    optional: false,
+  },
+];
+---
+
+{
+  // reference.slice(1).map((config) => (
+  //   <section class="json-reference">
+  //     <h2 class="key-name">
+  //       <code>{config[0]}</code>
+  //     </h2>
+  //     {config[1].deprecatedReason && (
+  //       <p class="key-is-deprecated">
+  //         <Badge text="非推奨" variant="caution" size="medium" />
+  //         &nbsp;{config[1].deprecatedReason}
+  //       </p>
+  //     )}
+  //     <p>{config[1].description}</p>
+  //     <dl>
+  //       <dt>データ型</dt>
+  //       <dd>
+  //         {getTypeName(config[1].type)}: <code>{getTypeNotation(config[1].type)}</code>
+  //       </dd>
+  //       <dt>省略</dt>
+  //       <dd set:html={getAbleToOmitText(config[1].optional)} />
+  //     </dl>
+  //     {config[1].note && <p class="reference-note" set:html={config[1].note} />}
+  //   </section>
+  // ))
+}
+<div class="data-container">
+  <ul class="data-list">
+    {
+      testData.map((key) => (
+        <li class="data-item">
+          <summary class="data-header">
+            <span class="data-cell name">
+              <span>{key.name}</span>
+            </span>
+            <span class="data-cell type">
+              <span>&lt;{key.type}&gt;</span>
+            </span>
+            <span class="data-cell optional">
+              <span>{String(key.optional)}</span>
+            </span>
+            <span class="data-cell description">
+              <span>{key.description}</span>
+            </span>
+            <span class="data-cell detail">
+              <Badge text="詳細" variant="success" />
+            </span>
+            <span class="data-cell arrow">
+              <span class="material-symbols--play-arrow" />
+            </span>
+          </summary>
+          <details class="data-collapsible">
+            <div class="data-details">ほげほげぎえぴああああああ！！！！！</div>
+          </details>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  /* デフォルトのスタイルを削除 */
+  *:not(.sl-badge) {
+    all: unset;
+  }
+  *::before {
+    all: unset;
+  }
+
+  /* 全体リスト */
+  .data-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr auto auto;
+    gap: 0.125rem 0.5rem; /* gap-y-0.5, gap-x-2 */
+    list-style: none;
+  }
+
+  /* 各リスト項目 */
+  .data-item {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+  }
+
+  .data-collapsible {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  /* 各行 */
+  .data-header {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    background-color: #262626; /* bg-neutral-800 */
+    border-left: 4px solid #404040; /* border-s-4 border-neutral-700 */
+    transition: border-color 0.2s ease;
+  }
+
+  .data-header:hover {
+    border-left-color: var(--sl-color-accent-high, #00bcd4);
+  }
+
+  /* 各セル共通 */
+  .data-cell {
+    display: flex;
+    align-items: center;
+  }
+
+  /* name列 */
+  .data-cell.name span {
+    color: #9cdcfe;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  /* type列 */
+  .data-cell.type span {
+    color: #4ec9b0;
+    background-color: #171717; /* bg-neutral-900 */
+    border-radius: 2px;
+    font-size: 0.875rem;
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+  }
+
+  /* optional列 */
+  .data-cell.optional span {
+    color: #737373;
+    background-color: #171717;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    padding: 0.125rem 0.375rem;
+  }
+
+  /* description列 */
+  .data-cell.description span {
+    font-size: 0.875rem;
+    color: #e5e5e5;
+  }
+
+  .data-cell.detail {
+    grid-column-start: 6;
+  }
+
+  .data-cell.arrow span {
+    margin-inline-start: auto;
+  }
+
+  .data-details {
+    grid-column: 1 / -1;
+    background-color: red;
+  }
+
+  .material-symbols--play-arrow {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M8 19V5l11 7z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+</style>

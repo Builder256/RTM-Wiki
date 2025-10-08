@@ -2,10 +2,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeGalaxy from 'starlight-theme-galaxy';
+import yaml from '@rollup/plugin-yaml';
+
 import remarkBreaks from 'remark-breaks';
 // import remarkDirective from 'remark-directive';
 // import remarkEmbedYouTubePlugin from './src/remarkEmbedYouTubePlugin/remarkEmbedYouTube/index.ts';
-// import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -201,7 +202,7 @@ export default defineConfig({
     ],
   },
 
-  //   vite: {
-  //     plugins: [tailwindcss()],
-  //   },
+  vite: {
+    plugins: [yaml()],
+  },
 });
