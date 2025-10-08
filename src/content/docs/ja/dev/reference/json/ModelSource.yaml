@@ -1,0 +1,31 @@
+# KeyName:
+#     deprecatedReason: # 非推奨の理由（文字列） null: 不明, undefined: 非推奨ではない
+#     description: キーの説明
+#     type: String[] # データ型
+#     optional: false # 省略の可否 true: 可, false: 不可, "probably": 不明（おそらく可）, その他: 不明（おそらく不可）
+#     note: 'テクスチャは16x16ピクセルの画像を推奨' # 追加の説明
+
+modelFile:
+    description: モデルファイルのパス
+    type: String
+    optional: null
+
+textures:
+    description: マテリアル名と、それに対応するテクスチャファイルのパス
+    type: String[][]
+    optional: null
+    note: |
+        **マテリアルとテクスチャ、オプションの設定方法**
+        ```json
+        ["materialName", "texturePath", "option"]
+        ```
+        - `"materialName"`: 3Dモデルファイルで設定したマテリアル名 <String>
+        - `"texturePath"`: その材質に使用するテクスチャのパス <String>
+        - `"option"`: 透過、発光を有効化するか <String>
+          `AlphaBlend`が含まれていれば透過, `Light`が含まれていれば発光が有効化される
+        {.grid-list}
+
+rendererPath:
+    description: 描画スクリプトのパス
+    type: String
+    optional: probably

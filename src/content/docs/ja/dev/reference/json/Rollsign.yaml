@@ -1,0 +1,32 @@
+# KeyName:
+#     deprecatedReason: # 非推奨の理由（文字列） null: 不明, undefined: 非推奨ではない
+#     description: キーの説明
+#     type: String[] # データ型
+#     optional: false # 省略の可否 true: 可, false: 不可, "probably": 不明（おそらく可）, その他: 不明（おそらく不可）
+#     note: 'テクスチャは16x16ピクセルの画像を推奨' # 追加の説明
+
+uv:
+    description: 方向幕に使用するテクスチャの範囲
+    type: float[]
+    optional: null
+    note: '`[uMin, uMax, vMin, vMax]`'
+
+pos:
+    description: 方向幕の位置
+    type: float[][][]
+    optional: null
+    note: |
+        方向幕の4頂点それぞれの座標を指定
+        方向幕1箇所分の設定: '`[[x, y, z], [x, y, z], [x, y, z], [x, y, z]]'
+        頂点の順番は、右上、右下、左下、左上
+        方向幕を配置したい箇所分の4頂点の配列を設定
+
+doAnimation:
+    description: 幕回しを有効化
+    type: boolean
+    optional: null
+
+disableLighting:
+    description: 発光を無効化
+    type: boolean
+    optional: null

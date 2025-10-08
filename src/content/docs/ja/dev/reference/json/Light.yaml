@@ -1,0 +1,37 @@
+# KeyName:
+#     deprecatedReason: # 非推奨の理由（文字列） null: 不明, undefined: 非推奨ではない
+#     description: キーの説明
+#     type: String[] # データ型
+#     optional: false # 省略の可否 true: 可, false: 不可, "probably": 不明（おそらく可）, その他: 不明（おそらく不可）
+#     note: 'テクスチャは16x16ピクセルの画像を推奨' # 追加の説明
+
+type:
+    description: エフェクトの形
+    type: byte
+    optional: null
+    note: |
+        - `0`: フレア
+        - `1`: ボリュームライト
+        {.grid-list}
+
+color:
+    description: 色
+    type: int
+    optional: null
+    note: 16進数表記のRGBカラーコードの値を10進数に変換した値
+
+pos:
+    description: 中心座標
+    type: float[]
+    optional: null
+    note: '`[x, y, z]`'
+
+r:
+    description: 半径
+    type: null
+    optional: probably
+
+reverse:
+    description: 不明
+    type: boolean
+    optional: probably

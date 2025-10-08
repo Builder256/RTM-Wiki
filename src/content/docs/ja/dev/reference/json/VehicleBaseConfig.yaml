@@ -1,0 +1,188 @@
+# KeyName:
+#     deprecatedReason: # 非推奨の理由（文字列） null: 不明, undefined: 非推奨ではない
+#     description: キーの説明
+#     type: String[] # データ型
+#     optional: false # 省略の可否 true: 可, false: 不可, "probably": 不明（おそらく可）, その他: 不明（おそらく不可）
+#     note: 'テクスチャは16x16ピクセルの画像を推奨' # 追加の説明
+
+size:
+    description: 当たり判定サイズ `[width, height]`
+    type: float[]
+    optional: true
+
+rollsignTexture:
+    description: 方向幕テクスチャのパス
+    type: String
+    optional: probably
+
+rollsignNames:
+    description: 方向幕の名前
+    type: String[]
+    optional: probably
+
+rollsigns:
+    description: 方向幕
+    type: Rollsign[]
+    optional: probably
+
+customButtons:
+    description: カスタムボタン
+    type: String[][]
+    optional: true
+    note: '`[ボタン, ボタンの状態名]`'
+
+customButtonTips:
+    description: 各ボタンの説明
+    type: String[]
+    optional: true
+
+door_left:
+    description: 左側ドアの動作
+    type: VehicleParts[]
+    optional: probably
+
+door_right:
+    description: 右側ドアの動作
+    type: VehicleParts[]
+    optional: probably
+
+pantograph_front:
+    description: 前方パンタグラフの動作
+    type: VehicleParts[]
+    optional: probably
+
+pantograph_back:
+    description: 後方パンタグラフの動作
+    type: VehicleParts[]
+    optional: probably
+
+sound_Stop:
+    description: 停車時の音声のパス
+    type: String
+    optional: probably
+
+sound_S_A:
+    description: 停車~加速時の音声のパス
+    type: String
+    optional: probably
+
+sound_Acceleration:
+    description: 加速時の音声のパス
+    type: String
+    optional: probably
+
+sound_Deceleration:
+    description: 減速時の音声のパス
+    type: String
+    optional: probably
+
+sound_D_S:
+    description: 減速~停車時の音声のパス
+    type: String
+    optional: probably
+
+sound_Horn:
+    description: 警笛の音声のパス
+    type: String
+    optional: probably
+
+sound_DoorOpen:
+    description: ドア開扉時の音声のパス
+    type: String
+    optional: probably
+
+sound_DoorClose:
+    description: ドア閉扉時の音声のパス
+    type: String
+    optional: probably
+
+sound_ATSChime:
+    description:
+    type: String
+    optional: probably
+
+sound_ATSBell:
+    description:
+    type: String
+    optional: probably
+
+sound_Announcement:
+    description: 車内放送の音声のパス
+    type: String[][]
+    optional: probably
+    note: '`[表示名, 音声]`'
+
+soundScriptPath:
+    description: 音声スクリプトのパス
+    type: String
+    optional: probably
+
+smoke:
+    description: 煙
+    type: Object[][]
+    optional: probably
+    note: '`[float x, float y, float z, String name, int min, int max, float speed]`'
+
+headLights:
+    description: 前照灯
+    type: Light[]
+    optional: probably
+
+tailLights:
+    description: 尾灯
+    type: Light[]
+    optional: probably
+
+interiorLights:
+    description: 車内灯
+    type: Light[]
+    optional: probably
+
+slotPos:
+    description: 座席
+    type: float[][]
+    optional: true
+    note: |
+        ```json
+        [x, y, z, type]
+        ```
+        単位はメートル
+        **typeの値**
+        - `0`: なし 当たり判定のみが欲しい場合
+        - `1`: クロスシート
+        - `2`: 表示なし 3Dモデルで座席を制作してある場合など
+        - `3`: 寝台 未実装
+        {.grid-list}
+
+seatPos:
+    deprecatedReason: 上位互換の`slotPos`があるため
+    description: 座席
+    type: int[][]
+    optional: probably
+    note: 単位はブロック
+
+seatPosF:
+    description: 座席（RTM2用）
+    type: 不明
+    optional: probably
+    note: |
+        1.12.2に対応するには`slotPos`に加え、こちらも使う
+        値はslotPosと同じでよい
+
+playerPos:
+    description: プレイヤーの位置
+    type: float[][]
+    optional: true
+    note: |
+        ```json
+        [x, y, z]
+        ```
+notDisplayCab:
+    description: 運転台非表示
+    type: boolean
+    optional: probably
+
+wheelRotationSpeed:
+    description: 車輪の回転速度
+    type: float
+    optional: true

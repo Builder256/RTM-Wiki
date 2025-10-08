@@ -1,0 +1,69 @@
+# KeyName:
+#     deprecatedReason: # 非推奨の理由（文字列） null: 不明, undefined: 非推奨ではない
+#     description: キーの説明
+#     type: String[] # データ型
+#     optional: false # 省略の可否 true: 可, false: 不可, "probably": 不明（おそらく可）, その他: 不明（おそらく不可）
+#     note: 'テクスチャは16x16ピクセルの画像を推奨' # 追加の説明
+
+name:
+    description: 名前
+    type: String
+    optional: null
+
+model:
+    description: モデル
+    type: ModelSource
+    optional: null
+
+vehicleType:
+    description: 乗り物の種類
+    type: String
+    optional: null
+    note: '`"Car"`, `"Plane"`, `"Ship"`が指定できます'
+
+friction:
+    description: 滑りやすさ
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+acceleration:
+    description: 加速度
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+maxSpeed:
+    description: 最大速度
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+maxYaw:
+    description: 最大Y軸回転
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+yawCoefficient:
+    description: Yaw係数
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+pitchCoefficient:
+    description: Pitch係数
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+rollCoefficient:
+    description: Roll係数
+    type: float[]
+    optional: probably
+    note: '[地上, 空中]'
+
+changeYawOnStopping:
+    description: 停車中の旋回の有効化
+    type: boolean
+    optional: probably
