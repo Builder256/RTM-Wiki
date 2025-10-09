@@ -1,24 +1,6 @@
 <script lang="ts">
   import { slide } from 'svelte/transition';
 
-  const testData = [
-    {
-      name: 'version',
-      deprecated: 'reason',
-      description: 'name重複時の優先度決定',
-      type: 'short',
-      optional: 'probably',
-      note: 'ほげほげぎえぴああああああ！！！！！',
-    },
-    {
-      name: 'useCustomColor',
-      deprecated: null,
-      description: 'カスタムカラーの有効化',
-      type: 'boolean',
-      optional: false,
-    },
-  ];
-
   type Optional =
     | boolean
     | 'probably-possible'
@@ -35,8 +17,6 @@
   }
 
   const { reference } = $props();
-  console.log(reference);
-
   let expanded: string[] = $state([]);
 
   function onclick(name: string) {
