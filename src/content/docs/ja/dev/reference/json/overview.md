@@ -1,6 +1,8 @@
 ---
 aliases: [JSONリファレンス]
 title: JSONリファレンス
+sidebar: 
+  order: 0
 ---
 このページは、RealTrainMod (RTM)のアドオン制作で使用するJSONの設定項目のリファレンスです。
 
