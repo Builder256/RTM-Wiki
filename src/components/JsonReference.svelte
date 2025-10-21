@@ -16,7 +16,7 @@
     details?: string;
   }
 
-  const { reference } = $props();
+  const { reference } = $props() as { reference: PropertyReference[] };
   let expanded: string[] = $state([]);
 
   function onclick(name: string) {
@@ -124,7 +124,10 @@
   }
   [data-theme='dark'] .container {
   } */
-
+  .container {
+    container-type: inline-size;
+    container-name: reference-container;
+  }
   .props__list {
     display: grid;
     grid-template-columns: auto auto auto auto 1fr auto auto;
@@ -217,5 +220,55 @@
   .detail__label {
     font-size: 0.875rem;
     color: oklch(0.6 0 0);
+  }
+
+  @container reference-container (max-width: 48rem) {
+    .props__list {
+      grid-template-columns: 1fr auto auto;
+    }
+
+    .prop__header {
+      padding: 0.75rem;
+      row-gap: 0.5rem;
+    }
+
+    .prop__name-wrapper:has(.prop__name--name) {
+      grid-column: 1 / 2;
+    }
+    .prop__name-wrapper:has(.prop__name--type) {
+      grid-column: 2/3;
+    }
+    .prop__name-wrapper:has(.prop__name--omit) {
+      grid-column: 3/4;
+    }
+    .prop__name-wrapper:has(.prop__name--desc) {
+      grid-column: 1/3;
+    }
+    .prop__name-wrapper:has(.prop__name--detail) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
+    .prop__name-wrapper:has(.prop__name--expand-icon) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      justify-self: end;
+    }
+  }
+  @container reference-container (max-width: 32rem) {
+    .props__list {
+      grid-template-columns: 1fr auto;
+    }
+    .prop__name-wrapper:has(.prop__name--name) {
+      grid-column: 1/-1;
+    }
+    .prop__name-wrapper:has(.prop__name--type) {
+      grid-column: 1/2;
+    }
+    .prop__name-wrapper:has(.prop__name--detail) {
+      grid-row: 4/5;
+    }
+    .prop__name-wrapper:has(.prop__name--expand-icon) {
+      grid-row: 4/5;
+    }
   }
 </style>
