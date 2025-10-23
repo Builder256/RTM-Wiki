@@ -1,0 +1,18 @@
+---
+
+---
+
+<div class="reference-container">
+  <slot />
+</div>
+
+<style>
+  .reference-container {
+    container-type: inline-size;
+    container-name: reference-container;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr auto;
+    gap: 0.125rem 0.5rem;
+  }
+</style>

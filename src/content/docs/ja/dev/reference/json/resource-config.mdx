@@ -5,13 +5,16 @@ title: JSONリファレンス ResourceConfigクラス
 sidebar:
   order: 1
 ---
-import JsonReference from '../../../../../../components/JsonReference.svelte';
-import reference from './ResourceConfig.yaml';
+{/* {import JsonReference from '../../../../../../components/JsonReference.svelte';} */}
+{/* {import reference from './ResourceConfig.yaml';} */}
+import ReferenceContainer from '../../../../../../components/ReferenceContainer.astro';
 import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 
 {/* <JsonReference reference={reference} client:visible/> */}
 
+<ReferenceContainer>
 <ReferenceItem name="hoge" type="hogehoge[][]" omit="probably-possible" desc="ほげほげぎえぴああああああ！！！！" client:visible>
+以下のように使いまほげほげぎえぴああああああ！！！！！！！！！！！！！！！！！！！！！！！
 ```json
 {
   "foo": "bar",
@@ -22,3 +25,5 @@ import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 }
 ```
 </ReferenceItem>
+<ReferenceItem name="hogehogegiepy" type="fugafuga" omit="false" desc="ほげほげ" deprecated="ほげほげぎえぴああああああ" client:visible />
+</ReferenceContainer>
