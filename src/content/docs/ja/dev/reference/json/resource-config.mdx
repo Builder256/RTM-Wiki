@@ -5,25 +5,17 @@ title: JSONリファレンス ResourceConfigクラス
 sidebar:
   order: 1
 ---
-{/* {import JsonReference from '../../../../../../components/JsonReference.svelte';} */}
-{/* {import reference from './ResourceConfig.yaml';} */}
 import ReferenceContainer from '../../../../../../components/ReferenceContainer.astro';
 import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 
-{/* <JsonReference reference={reference} client:visible/> */}
-
 <ReferenceContainer>
-<ReferenceItem name="hoge" type="hogehoge[][]" omit="probably-possible" desc="ほげほげぎえぴああああああ！！！！" client:visible>
-以下のように使いまほげほげぎえぴああああああ！！！！！！！！！！！！！！！！！！！！！！！
-```json
-{
-  "foo": "bar",
-  "foobar": [
-    "baz",
-    "qux"
-  ]
-}
-```
+<ReferenceItem name="version" type="short" omit="probably-possible" desc="name重複時の優先度決定" client:visible />
+<ReferenceItem name="useCustomColor" type="boolean" omit="probably-possible" desc="カスタムカラーの有効化" client:visible />
+<ReferenceItem name="tags" type="String"  omit="probably-possible" desc="モデル選択画面での検索キーワード" client:visible>
+複数のキーワードを指定する場合には、1つの半角スペース（`U+0020`）で区分します。
 </ReferenceItem>
-<ReferenceItem name="hogehogegiepy" type="fugafuga" omit="false" desc="ほげほげ" deprecated="ほげほげぎえぴああああああ" client:visible />
+<ReferenceItem name="defaultValues" type="DMInitValue[]" omit="true" desc="DataMapのデフォルト値" client:visible>
+詳細不明
+</ReferenceItem>
+<ReferenceItem name="defaultData" type="String"  omit="true" desc="DataMapのデフォルト値" deprecated="不明" client:visible />
 </ReferenceContainer>

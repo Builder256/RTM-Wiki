@@ -9,7 +9,6 @@
   type: short
   optional: probably-possible
   description: name重複時の優先度決定
-  deprecated: false
 - name: useCustomColor
   type: boolean
   optional: probably-possible
