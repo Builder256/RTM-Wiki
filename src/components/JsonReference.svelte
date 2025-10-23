@@ -90,7 +90,7 @@
               <div class="detail__section">
                 <span class="detail__label">非推奨</span>
                 <div class="detail__content">
-                  {prop.deprecated}
+                  {@html prop.deprecated}
                 </div>
               </div>
             {/if}

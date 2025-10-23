@@ -7,5 +7,18 @@ sidebar:
 ---
 import JsonReference from '../../../../../../components/JsonReference.svelte';
 import reference from './ResourceConfig.yaml';
+import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 
-<JsonReference reference={reference} client:visible/>
+{/* <JsonReference reference={reference} client:visible/> */}
+
+<ReferenceItem name="hoge" type="hogehoge[][]" omit="probably-possible" desc="ほげほげぎえぴああああああ！！！！" client:visible>
+```json
+{
+  "foo": "bar",
+  "foobar": [
+    "baz",
+    "qux"
+  ]
+}
+```
+</ReferenceItem>
