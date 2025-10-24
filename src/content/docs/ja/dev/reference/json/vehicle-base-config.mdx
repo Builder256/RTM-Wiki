@@ -5,7 +5,63 @@ title: JSONリファレンス VehicleBaseConfigクラス
 sidebar:
   order: 3
 ---
-import JsonReference from '../../../../../../components/JsonReference.svelte';
-import reference from './VehicleBaseConfig.yaml';
+import ReferenceContainer from '../../../../../../components/ReferenceContainer.astro';
+import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 
-<JsonReference reference={reference} client:visible/>
+<ReferenceContainer>
+<ReferenceItem name="size" type="float[]" omit="true" desc="当たり判定サイズ" client:visible>
+`[width, height]`
+</ReferenceItem>
+<ReferenceItem name="rollsignTexture" type="String" omit="probably-possible" desc="方向幕テクスチャのパス" client:visible />
+<ReferenceItem name="rollsignNames" type="String[]" omit="probably-possible" desc="方向幕の名前" client:visible />
+<ReferenceItem name="rollsigns" type="Rollsign[]" omit="probably-possible" desc="方向幕" client:visible />
+<ReferenceItem name="customButtons" type="String[][]" omit="true" desc="カスタムボタン" client:visible>
+`[ボタン, ボタンの状態名]`
+</ReferenceItem>
+<ReferenceItem name="customButtonTips" type="String[]" omit="true" desc="各ボタンの説明" client:visible />
+<ReferenceItem name="door_left" type="VehicleParts[]" omit="probably-possible" desc="左側ドアの動作" client:visible />
+<ReferenceItem name="door_right" type="VehicleParts[]" omit="probably-possible" desc="右側ドアの動作" client:visible />
+<ReferenceItem name="pantograph_front" type="VehicleParts[]" omit="probably-possible" desc="前方パンタグラフの動作" client:visible />
+<ReferenceItem name="pantograph_back" type="VehicleParts[]" omit="probably-possible" desc="後方パンタグラフの動作" client:visible />
+<ReferenceItem name="sound_Stop" type="String" omit="probably-possible" desc="停車時の音声のパス" client:visible />
+<ReferenceItem name="sound_S_A" type="String" omit="probably-possible" desc="停車~加速時の音声のパス" client:visible />
+<ReferenceItem name="sound_Acceleration" type="String" omit="probably-possible" desc="加速時の音声のパス" client:visible />
+<ReferenceItem name="sound_Deceleration" type="String" omit="probably-possible" desc="減速時の音声のパス" client:visible />
+<ReferenceItem name="sound_D_S" type="String" omit="probably-possible" desc="減速~停車時の音声のパス" client:visible />
+<ReferenceItem name="sound_Horn" type="String" omit="probably-possible" desc="警笛の音声のパス" client:visible />
+<ReferenceItem name="sound_DoorOpen" type="String" omit="probably-possible" desc="ドア開扉時の音声のパス" client:visible />
+<ReferenceItem name="sound_DoorClose" type="String" omit="probably-possible" desc="ドア閉扉時の音声のパス" client:visible />
+<ReferenceItem name="sound_ATSChime" type="String" omit="probably-possible" desc="詳細不明" client:visible />
+<ReferenceItem name="sound_ATSBell" type="String" omit="probably-possible" desc="詳細不明" client:visible />
+<ReferenceItem name="sound_Announcement" type="String[][]" omit="probably-possible" desc="車内放送の音声のパス" client:visible>
+`[表示名, 音声]`
+</ReferenceItem>
+<ReferenceItem name="soundScriptPath" type="String" omit="probably-possible" desc="音声スクリプトのパス" client:visible />
+<ReferenceItem name="smoke" type="Object[][]" omit="probably-possible" desc="煙" client:visible>
+`[float x, float y, float z, String name, int min, int max, float speed]`
+</ReferenceItem>
+<ReferenceItem name="headLights" type="Light[]" omit="probably-possible" desc="前照灯" client:visible />
+<ReferenceItem name="tailLights" type="Light[]" omit="probably-possible" desc="尾灯" client:visible />
+<ReferenceItem name="interiorLights" type="Light[]" omit="probably-possible" desc="車内灯" client:visible />
+<ReferenceItem name="slotPos" type="float[][]" omit="true" desc="座席" client:visible>
+`[x, y, z, type]`
+単位はメートル
+**typeの値**
+- `0`：なし（当たり判定のみ）
+- `1`：クロスシート
+- `2`：表示なし（3Dモデルで座席を制作してある場合など）
+- `3`：寝台（未実装）
+</ReferenceItem>
+<ReferenceItem name="seatPos" type="int[][]" omit="probably-possible" desc="座席" deprecated="上位互換の <code>slotPos</code> があるため" client:visible>
+単位はブロック
+</ReferenceItem>
+<ReferenceItem name="seatPosF" type="float[][]" omit="probably-possible" desc="座席（RTM2用）" client:visible>
+1.12.2に対応するには `slotPos` に加え、こちらも使う  
+値は `slotPos` と同じでよい
+</ReferenceItem>
+<ReferenceItem name="playerPos" type="float[][]" omit="true" desc="プレイヤーの位置" client:visible>
+`[x, y, z]`
+</ReferenceItem>
+<ReferenceItem name="notDisplayCab" type="boolean" omit="probably-possible" desc="運転台非表示" client:visible />
+<ReferenceItem name="wheelRotationSpeed" type="float" omit="true" desc="車輪の回転速度" client:visible />
+</ReferenceContainer>

@@ -5,7 +5,28 @@ title: JSONリファレンス ModelConfigクラス
 sidebar:
   order: 2
 ---
-import JsonReference from '../../../../../../components/JsonReference.svelte';
-import reference from './ModelConfig.yaml';
+import ReferenceContainer from '../../../../../../components/ReferenceContainer.astro';
+import ReferenceItem from '../../../../../../components/ReferenceItem.svelte';
 
-<JsonReference reference={reference} client:visible/>
+<ReferenceContainer>
+<ReferenceItem name="buttonTexture" type="String" omit="probably-possible" desc="モデル選択画面で表示されるボタンテクスチャのパス" client:visible />
+<ReferenceItem name="scale" type="float" omit="true" desc="モデルの縮尺" client:visible>
+NGTO形式のファイルの使用時のみ利用可能
+</ReferenceItem>
+<ReferenceItem name="offset" type="float[]" omit="true" desc="モデルの描画位置" client:visible>
+NGTO形式のファイルの使用時のみ利用可能
+</ReferenceItem>
+<ReferenceItem name="smoothing" type="boolean" omit="probably-possible" desc="スムージングを有効化するか" client:visible />
+<ReferenceItem name="doCulling" type="boolean" omit="probably-possible" desc="片面表示を行うか" client:visible>
+MQO, OBJ形式では使用したほうが負荷が軽減されます。
+</ReferenceItem>
+<ReferenceItem name="accuracy" type="String" omit="probably-possible" desc="ポリゴンの精度" client:visible>
+- `"LOW"`: ±16.000の範囲のみ正常に描画
+- `"MEDIUM"`: 通常
+</ReferenceItem>
+<ReferenceItem name="serverScriptPath" type="String" omit="probably-possible" desc="サーバースクリプトのパス" client:visible />
+<ReferenceItem name="guiScriptPath" type="String" omit="probably-possible" desc="GUIスクリプトのパス" client:visible />
+<ReferenceItem name="guiTexture" type="String" omit="probably-possible" desc="GUIテクスチャのパス" client:visible />
+<ReferenceItem name="renderAABB" type="float[]" omit="true" desc="描画判定範囲の大きさ" client:visible />
+<ReferenceItem name="customIconTexture" type="String" omit="probably-possible" desc="カスタムアイコンのテクスチャ" client:visible />
+</ReferenceContainer>
