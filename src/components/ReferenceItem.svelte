@@ -110,7 +110,9 @@
           <div class="panel__content">
             <div class="explain">
               <p>この項目の使用は非推奨とされています。</p>
-              <p><span class="deprecated__label">理由：</span>{deprecated}</p>
+              <p>
+                <span class="deprecated__label">理由：</span>{@html deprecated}
+              </p>
             </div>
           </div>
         </div>
