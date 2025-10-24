@@ -5,184 +5,182 @@
 #   deprecated: 非推奨の理由
 #   details: 詳細説明 （HTML）
 
-size:
-    description: 当たり判定サイズ `[width, height]`
-    type: float[]
-    optional: true
+- name: size
+  type: float[]
+  optional: true
+  description: 当たり判定サイズ
+  details: <code>[width, height]</code>
 
-rollsignTexture:
-    description: 方向幕テクスチャのパス
-    type: String
-    optional: probably
+- name: rollsignTexture
+  type: String
+  optional: probably-possible
+  description: 方向幕テクスチャのパス
 
-rollsignNames:
-    description: 方向幕の名前
-    type: String[]
-    optional: probably
+- name: rollsignNames
+  type: String[]
+  optional: probably-possible
+  description: 方向幕の名前
 
-rollsigns:
-    description: 方向幕
-    type: Rollsign[]
-    optional: probably
+- name: rollsigns
+  type: Rollsign[]
+  optional: probably-possible
+  description: 方向幕
 
-customButtons:
-    description: カスタムボタン
-    type: String[][]
-    optional: true
-    note: '`[ボタン, ボタンの状態名]`'
+- name: customButtons
+  type: String[][]
+  optional: true
+  description: カスタムボタン
+  details: <code>[ボタン, ボタンの状態名]</code>
 
-customButtonTips:
-    description: 各ボタンの説明
-    type: String[]
-    optional: true
+- name: customButtonTips
+  type: String[]
+  optional: true
+  description: 各ボタンの説明
 
-door_left:
-    description: 左側ドアの動作
-    type: VehicleParts[]
-    optional: probably
+- name: door_left
+  type: VehicleParts[]
+  optional: probably-possible
+  description: 左側ドアの動作
 
-door_right:
-    description: 右側ドアの動作
-    type: VehicleParts[]
-    optional: probably
+- name: door_right
+  type: VehicleParts[]
+  optional: probably-possible
+  description: 右側ドアの動作
 
-pantograph_front:
-    description: 前方パンタグラフの動作
-    type: VehicleParts[]
-    optional: probably
+- name: pantograph_front
+  type: VehicleParts[]
+  optional: probably-possible
+  description: 前方パンタグラフの動作
 
-pantograph_back:
-    description: 後方パンタグラフの動作
-    type: VehicleParts[]
-    optional: probably
+- name: pantograph_back
+  type: VehicleParts[]
+  optional: probably-possible
+  description: 後方パンタグラフの動作
 
-sound_Stop:
-    description: 停車時の音声のパス
-    type: String
-    optional: probably
+- name: sound_Stop
+  type: String
+  optional: probably-possible
+  description: 停車時の音声のパス
 
-sound_S_A:
-    description: 停車~加速時の音声のパス
-    type: String
-    optional: probably
+- name: sound_S_A
+  type: String
+  optional: probably-possible
+  description: 停車~加速時の音声のパス
 
-sound_Acceleration:
-    description: 加速時の音声のパス
-    type: String
-    optional: probably
+- name: sound_Acceleration
+  type: String
+  optional: probably-possible
+  description: 加速時の音声のパス
 
-sound_Deceleration:
-    description: 減速時の音声のパス
-    type: String
-    optional: probably
+- name: sound_Deceleration
+  type: String
+  optional: probably-possible
+  description: 減速時の音声のパス
 
-sound_D_S:
-    description: 減速~停車時の音声のパス
-    type: String
-    optional: probably
+- name: sound_D_S
+  type: String
+  optional: probably-possible
+  description: 減速~停車時の音声のパス
 
-sound_Horn:
-    description: 警笛の音声のパス
-    type: String
-    optional: probably
+- name: sound_Horn
+  type: String
+  optional: probably-possible
+  description: 警笛の音声のパス
 
-sound_DoorOpen:
-    description: ドア開扉時の音声のパス
-    type: String
-    optional: probably
+- name: sound_DoorOpen
+  type: String
+  optional: probably-possible
+  description: ドア開扉時の音声のパス
 
-sound_DoorClose:
-    description: ドア閉扉時の音声のパス
-    type: String
-    optional: probably
+- name: sound_DoorClose
+  type: String
+  optional: probably-possible
+  description: ドア閉扉時の音声のパス
 
-sound_ATSChime:
-    description:
-    type: String
-    optional: probably
+- name: sound_ATSChime
+  type: String
+  optional: probably-possible
+  description:
 
-sound_ATSBell:
-    description:
-    type: String
-    optional: probably
+- name: sound_ATSBell
+  type: String
+  optional: probably-possible
+  description:
 
-sound_Announcement:
-    description: 車内放送の音声のパス
-    type: String[][]
-    optional: probably
-    note: '`[表示名, 音声]`'
+- name: sound_Announcement
+  type: String[][]
+  optional: probably-possible
+  description: 車内放送の音声のパス
+  details: <code>[表示名, 音声]</code>
 
-soundScriptPath:
-    description: 音声スクリプトのパス
-    type: String
-    optional: probably
+- name: soundScriptPath
+  type: String
+  optional: probably-possible
+  description: 音声スクリプトのパス
 
-smoke:
-    description: 煙
-    type: Object[][]
-    optional: probably
-    note: '`[float x, float y, float z, String name, int min, int max, float speed]`'
+- name: smoke
+  type: Object[][]
+  optional: probably-possible
+  description: 煙
+  details: <code>[float x, float y, float z, String name, int min, int max, float speed]</code>
 
-headLights:
-    description: 前照灯
-    type: Light[]
-    optional: probably
+- name: headLights
+  type: Light[]
+  optional: probably-possible
+  description: 前照灯
 
-tailLights:
-    description: 尾灯
-    type: Light[]
-    optional: probably
+- name: tailLights
+  type: Light[]
+  optional: probably-possible
+  description: 尾灯
 
-interiorLights:
-    description: 車内灯
-    type: Light[]
-    optional: probably
+- name: interiorLights
+  type: Light[]
+  optional: probably-possible
+  description: 車内灯
 
-slotPos:
-    description: 座席
-    type: float[][]
-    optional: true
-    note: |
-        ```json
-        [x, y, z, type]
-        ```
-        単位はメートル
-        **typeの値**
-        - `0`: なし 当たり判定のみが欲しい場合
-        - `1`: クロスシート
-        - `2`: 表示なし 3Dモデルで座席を制作してある場合など
-        - `3`: 寝台 未実装
-        {.grid-list}
+- name: slotPos
+  type: float[][]
+  optional: true
+  description: 座席
+  details: |
+    <pre><code>[x, y, z, type]</code></pre>
+    単位はメートル<br>
+    <strong>typeの値</strong>  
+    <ul>
+    <li><code>0</code>: なし（当たり判定のみ）</li>
+    <li><code>1</code>: クロスシート</li>
+    <li><code>2</code>: 表示なし（3Dモデルで座席を制作してある場合など）</li>
+    <li><code>3</code>: 寝台（未実装）</li>
+    </ul>
 
-seatPos:
-    deprecatedReason: 上位互換の`slotPos`があるため
-    description: 座席
-    type: int[][]
-    optional: probably
-    note: 単位はブロック
+- name: seatPos
+  type: int[][]
+  optional: probably-possible
+  description: 座席
+  deprecated: 上位互換の <code>slotPos</code> があるため
+  details: 単位はブロック
 
-seatPosF:
-    description: 座席（RTM2用）
-    type: 不明
-    optional: probably
-    note: |
-        1.12.2に対応するには`slotPos`に加え、こちらも使う
-        値はslotPosと同じでよい
+- name: seatPosF
+  type: unknown
+  optional: probably-possible
+  description: 座席（RTM2用）
+  details: |
+    1.12.2に対応するには <code>slotPos</code> に加え、こちらも使う  
+    値は <code>slotPos</code> と同じでよい
 
-playerPos:
-    description: プレイヤーの位置
-    type: float[][]
-    optional: true
-    note: |
-        ```json
-        [x, y, z]
-        ```
-notDisplayCab:
-    description: 運転台非表示
-    type: boolean
-    optional: probably
+- name: playerPos
+  type: float[][]
+  optional: true
+  description: プレイヤーの位置
+  details: <pre><code>[x, y, z]</code></pre>
 
-wheelRotationSpeed:
-    description: 車輪の回転速度
-    type: float
-    optional: true
+- name: notDisplayCab
+  type: boolean
+  optional: probably-possible
+  description: 運転台非表示
+
+- name: wheelRotationSpeed
+  type: float
+  optional: true
+  description: 車輪の回転速度
