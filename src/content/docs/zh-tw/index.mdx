@@ -1,0 +1,31 @@
+---
+aliases:
+  - 首頁
+title: 首頁
+banner:
+  content: |
+    本網站是 <a href="https://rtmwiki.kotl.io/ja/home">RTM Wiki</a> 的系統遷移方案。  
+    本網站目前仍在製作中，部分內容可能包含示意資料，頁面也可能隨時移動或被刪除。
+---
+import { LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+
+## 歡迎來到 RTM Wiki
+RTM Wiki 是一個匯集有關 RealTrainMod（RTM）遊玩與外掛製作等資訊的維基網站。
+
+## 什麼是 RealTrainMod？
+RealTrainMod（以下簡稱 RTM）是《Minecraft: Java Edition》的鐵道模組，  
+由日本開發者 **ngt5479** 製作。  
+如需更詳細的資訊，請參考[RealTrainMod 的基本資訊與特色](usage/basic)。
+
+## ㊗ 慶祝 RealTrainMod 誕生 12 週年
+RTM 於 2025 年 7 月 13 日迎來 12 週年。  
+在此謹致上誠摯的祝賀。
+
+## 選單
+<CardGrid>
+<LinkCard title="RealTrainMod 入門" href="getting-started/overview" description='適合初學者，想開始使用 RTM' />
+<LinkCard title="基本資訊" href="usage/basic" description='想了解 RTM 的相關內容' />
+<LinkCard title="外掛製作" href="dev/overview" description='想製作 RTM 外掛' />
+<LinkCard title="RTM Wiki 編輯入門" href="edit/begin" description='想參與 RTM Wiki 的編輯貢獻' />
+</CardGrid>
