@@ -1,0 +1,17 @@
+---
+import ReferenceItemSV from './ReferenceItem.svelte';
+
+interface Props {
+  name: string;
+  type: string;
+  omit: Optional;
+  desc: string;
+  deprecated?: string;
+}
+
+type Optional = 'true' | 'false' | 'probably-possible' | 'probably-impossible' | 'unknown';
+---
+
+<p>
+  {Astro.locals.t('reference.string')}
+</p>
