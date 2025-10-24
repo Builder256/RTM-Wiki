@@ -1,0 +1,31 @@
+---
+aliases:
+  - Home
+title: Home
+banner:
+  content: |
+    This site is a proposed system migration of the <a href="https://rtmwiki.kotl.io/ja/home">RTM Wiki</a>.  
+    It is currently under development. Some pages may contain placeholder data, and pages may be moved or removed without notice.
+---
+import { LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+
+## Welcome to RTM Wiki
+RTM Wiki is a site that compiles information about playing and developing add-ons for RealTrainMod (RTM).
+
+## What is RealTrainMod?
+RealTrainMod (hereafter referred to as RTM) is a railway mod for Minecraft: Java Edition,  
+developed by the Japanese creator **ngt5479**.  
+For more detailed information about RTM, please refer to [Basic Information and Appeal of RealTrainMod](usage/basic).
+
+## Celebrating the 12th Anniversary of RealTrainMod
+RTM celebrated its 12th anniversary on July 13, 2025.  
+We would like to take this opportunity to extend our congratulations.
+
+## Menu
+<CardGrid>
+<LinkCard title="Getting Started with RealTrainMod" href="getting-started/overview" description='For beginners who want to start using RTM' />
+<LinkCard title="Basic Information" href="usage/basic" description='For those who want to learn about RTM' />
+<LinkCard title="Add-on Development" href="dev/overview" description='For those who want to create add-ons' />
+<LinkCard title="How to Start Editing RTM Wiki" href="edit/begin" description='For those who want to contribute to RTM Wiki editing' />
+</CardGrid>
