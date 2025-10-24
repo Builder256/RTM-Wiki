@@ -6,7 +6,7 @@ sidebar:
   label: 基本情報・魅力
   order: 1
 ---
-このカテゴリでは、RealTrainMod (RTM)のModとしての概要や様々な魅力について説明します。
+このカテゴリでは、RealTrainMod (RTM)のModとしての[概要](#realtrainmodの概要)や様々な[魅力](#realtrainmodの魅力)について説明します。
 ## RealTrainModの概要
 ### 開発者
 RTMの開発者は、日本人のngt5479氏です。
