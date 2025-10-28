@@ -150,6 +150,10 @@ export default defineConfig({
           label: '繁體中文',
           lang: 'zh-TW',
         },
+        'ko-kr': {
+          label: '한국어',
+          lang: 'ko-KR',
+        },
       },
       social: [
         {
