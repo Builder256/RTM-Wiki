@@ -1,0 +1,231 @@
+---
+import Image from 'astro/components/Image.astro';
+import craftingTable from '../content/images/icons/minecraft/crafting_table.png';
+import RTMWorkBench from '../content/images/icons/rtm/rtm-workbench.png';
+import RailWorkBench from '../content/images/icons/rtm/rail-workbench.png';
+
+interface Props {
+  ingredients: (string | null)[][];
+  result: string;
+}
+
+const itemMap: Record<string, ImageMetadata> = {
+  'Crafting Table': craftingTable,
+  'RTM WorkBench': RTMWorkBench,
+  'Rail WorkBench': RailWorkBench,
+};
+
+const { ingredients, result } = Astro.props;
+---
+
+<div class="container">
+  <div class="crafting-table">
+    <div class="crafting-grid__container">
+      <div class="crafting-grid__slot">
+        {ingredients[0][0] && <Image src={itemMap[ingredients[0][0]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[0][1] && <Image src={itemMap[ingredients[0][1]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[0][2] && <Image src={itemMap[ingredients[0][2]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[1][0] && <Image src={itemMap[ingredients[1][0]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[1][1] && <Image src={itemMap[ingredients[1][1]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[1][2] && <Image src={itemMap[ingredients[1][2]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[2][0] && <Image src={itemMap[ingredients[2][0]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[2][1] && <Image src={itemMap[ingredients[2][1]]} alt="" class="slot__item" />}
+      </div>
+      <div class="crafting-grid__slot">
+        {ingredients[2][2] && <Image src={itemMap[ingredients[2][2]]} alt="" class="slot__item" />}
+      </div>
+    </div>
+    <div class="arrow__container">
+      <div class="arrow__shaft"></div>
+      <div class="arrow__arrowhead">
+        <div class="arrowhead__1"></div>
+        <div class="arrowhead__2"></div>
+        <div class="arrowhead__3"></div>
+        <div class="arrowhead__4"></div>
+        <div class="arrowhead__5"></div>
+        <div class="arrowhead__6"></div>
+        <div class="arrowhead__7"></div>
+        <div class="arrowhead__8"></div>
+      </div>
+    </div>
+    <div class="result__slot">
+      {itemMap[result] && <Image src={itemMap[result]} alt="" />}
+    </div>
+  </div>
+</div>
+
+<style>
+  div {
+    margin: 0;
+  }
+  .container {
+    container-type: inline-size;
+  }
+  .crafting-table {
+    --px: clamp(0.1rem, calc(100cqw / 200), 0.2rem);
+
+    --px-2: calc(var(--px) * 2);
+    --px-3: calc(var(--px) * 3);
+    --px-5: calc(var(--px) * 5);
+    --px-7: calc(var(--px) * 7);
+    --px-8: calc(var(--px) * 8);
+    --px-9: calc(var(--px) * 9);
+    --px-11: calc(var(--px) * 11);
+    --px-13: calc(var(--px) * 13);
+    --px-14: calc(var(--px) * 14);
+    --px-15: calc(var(--px) * 15);
+    --px-16: calc(var(--px) * 16);
+    --px-18: calc(var(--px) * 18);
+    --px-22: calc(var(--px) * 22);
+    --px-26: calc(var(--px) * 26);
+    --px-58: calc(var(--px) * 58);
+    --px-120: calc(var(--px) * 120);
+
+    width: var(--px-120);
+    height: var(--px-58);
+    background-color: #c6c6c6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--px-7);
+  }
+  @media (max-width: 32rem) {
+    .container {
+      /* --px: 0.1rem; */
+    }
+  }
+  .crafting-grid__container {
+    --grid-size: calc(var(--px-18) * 3);
+
+    width: var(--grid-size);
+    height: var(--grid-size);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .crafting-grid__slot {
+    width: var(--px-18);
+    height: var(--px-18);
+    position: relative;
+    background-color: #8b8b8b;
+    border-width: var(--px);
+    border-style: solid;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+  }
+  .crafting-grid__slot::before {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    bottom: calc(var(--px) * -1);
+    left: calc(var(--px) * -1);
+  }
+  .crafting-grid__slot::after {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    top: calc(var(--px) * -1);
+    right: calc(var(--px) * -1);
+  }
+  .slot__item {
+    width: var(--px-16);
+    height: var(--px-16);
+  }
+  .arrow__container {
+    width: var(--px-22);
+    height: var(--px-15);
+    display: flex;
+    align-items: center;
+  }
+  .arrow__shaft {
+    width: var(--px-14);
+    height: var(--px-3);
+    background-color: #8b8b8b;
+  }
+  .arrow__arrowhead {
+    width: var(--px-8);
+    height: var(--px-15);
+    display: flex;
+    align-items: center;
+  }
+  .arrow__arrowhead > * {
+    width: var(--px);
+    background-color: #8b8b8b;
+  }
+  .arrowhead__1 {
+    height: var(--px-15);
+  }
+  .arrowhead__2 {
+    height: var(--px-13);
+  }
+  .arrowhead__3 {
+    height: var(--px-11);
+  }
+  .arrowhead__4 {
+    height: var(--px-9);
+  }
+  .arrowhead__5 {
+    height: var(--px-7);
+  }
+  .arrowhead__6 {
+    height: var(--px-5);
+  }
+  .arrowhead__7 {
+    height: var(--px-3);
+  }
+  .arrowhead__8 {
+    height: var(--px);
+  }
+  .result__slot {
+    width: var(--px-26);
+    height: var(--px-26);
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: #8b8b8b;
+    border-width: var(--px);
+    border-style: solid;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+  }
+  .result__slot::before {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    bottom: calc(var(--px) * -1);
+    left: calc(var(--px) * -1);
+  }
+  .result__slot::after {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    top: calc(var(--px) * -1);
+    right: calc(var(--px) * -1);
+  }
+</style>
