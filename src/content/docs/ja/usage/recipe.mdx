@@ -8,10 +8,10 @@ import RecipeCraftingTable from '../../../../components/RecipeCraftingTable.astr
 import RecipeRTMWorkbench from '../../../../components/RecipeRTMWorkbench.astro';
 
 このページでは、RealTrainMod (RTM)で追加されるすべてのアイテム・ブロックのレシピについて説明します。
-
 ### RTM専用作業台
-**必要な材料**
-- 作業台: 1
+- **使用設備：** 作業台
+- **材料：** 作業台 1個
+- **クラフト結果：** RTM専用作業台 1個
 
 <RecipeCraftingTable ingredients={[
   [null,             null, null],
@@ -19,24 +19,64 @@ import RecipeRTMWorkbench from '../../../../components/RecipeRTMWorkbench.astro'
   [null,             null, null]
 ]} result="RTM WorkBench"/>
 :::caution
-このRTM専用作業台のレシピは、不具合によって設定された、開発者が意図していないレシピ[^1]である可能性があります。
+このRTM専用作業台のレシピは、開発者が意図していないレシピ[^1]である可能性があります。
 
 本来のレシピと考えられるものは次の通りです。
 将来のアップデートで、このレシピに変更される可能性もあります。
+
+**材料：**
+- 作業台：1個
+- スチールインゴット：1個
+
 <RecipeCraftingTable ingredients={[
   ['Steel Ingot',    'Steel Ingot', 'Steel Ingot'],
   ['Steel Ingot', 'Crafting Table', 'Steel Ingot'],
   ['Steel Ingot',    'Steel Ingot', 'Steel Ingot']
 ]} result="RTM WorkBench"/>
 :::
-
 ### マーカー
+- **使用設備：** RTM専用作業台
+- **材料：**
+  - ガラス 16個
+  - 赤色の染料 3個
+- **クラフト結果：** マーカー 16個
+
 <RecipeRTMWorkbench ingredients={[
   ['Glass', 'Glass',    'Glass', 'Glass', 'Glass'],
   ['Glass',    null, 'Rose Red',    null, 'Glass'],
   ['Glass',    null, 'Rose Red',    null, 'Glass'],
-  ['Glass',    null, 'Rose Red',    'Marker', 'Glass'],
+  ['Glass',    null, 'Rose Red',    null, 'Glass'],
   ['Glass', 'Glass',    'Glass', 'Glass', 'Glass']
 ]} result={["Marker", 16]}/>
+### 分岐用マーカー
+- **使用設備：** RTM専用作業台
+- **材料：**
+  - ガラス 16個
+  - ラピスラズリ 3個
+- **クラフト結果：** マーカー 16個
+
+<RecipeRTMWorkbench ingredients={[
+  ['Glass', 'Glass',        'Glass', 'Glass', 'Glass'],
+  ['Glass',    null, 'Lapis Lazuli',    null, 'Glass'],
+  ['Glass',    null, 'Lapis Lazuli',    null, 'Glass'],
+  ['Glass',    null, 'Lapis Lazuli',    null, 'Glass'],
+  ['Glass', 'Glass',        'Glass', 'Glass', 'Glass']
+]} result={["Marker", 16]}/>
+### 直線用マーカー
+レシピは設定されていません。
+### 虚無マーカー
+レシピは設定されていません。
+### 鉄柱
+- **使用設備：** RTM専用作業台
+- **材料：** スチールインゴット 25個
+- **クラフト結果：** 鉄柱 25個
+
+<RecipeRTMWorkbench ingredients={[
+  ['Steel Ingot', 'Steel Ingot', 'Steel Ingot', 'Steel Ingot', 'Steel Ingot'],
+  ['Steel Ingot', 'Steel Ingot',          null, 'Steel Ingot', 'Steel Ingot'],
+  ['Steel Ingot',          null, 'Steel Ingot',          null, 'Steel Ingot'],
+  ['Steel Ingot', 'Steel Ingot',          null, 'Steel Ingot', 'Steel Ingot'],
+  ['Steel Ingot', 'Steel Ingot', 'Steel Ingot', 'Steel Ingot', 'Steel Ingot']
+]} result={["Iron Pillar", 25]}/>
 
 [^1]: 参考：https://github.com/Kai-Z-JP/KaizPatchX/blob/f35cbacfe202154be1c909add5335460eab1b666/src/main/java/jp/ngt/rtm/RTMRecipe.java#L117-L119
