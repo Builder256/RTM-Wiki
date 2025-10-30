@@ -4,13 +4,39 @@ title: レシピ
 sidebar:
   order: 3
 ---
-import RecipeCraftingTable from '../../../../components/RecipeCraftingTable.astro'
+import RecipeCraftingTable from '../../../../components/RecipeCraftingTable.astro';
+import RecipeRTMWorkbench from '../../../../components/RecipeRTMWorkbench.astro';
 
 このページでは、RealTrainMod (RTM)で追加されるすべてのアイテム・ブロックのレシピについて説明します。
 
 ### RTM専用作業台
+**必要な材料**
+- 作業台: 1
+
 <RecipeCraftingTable ingredients={[
   [null,             null, null],
   [null, 'Crafting Table', null],
   [null,             null, null]
 ]} result="RTM WorkBench"/>
+:::caution
+このRTM専用作業台のレシピは、不具合によって設定された、開発者が意図していないレシピ[^1]である可能性があります。
+
+本来のレシピと考えられるものは次の通りです。
+将来のアップデートで、このレシピに変更される可能性もあります。
+<RecipeCraftingTable ingredients={[
+  ['Steel Ingot',    'Steel Ingot', 'Steel Ingot'],
+  ['Steel Ingot', 'Crafting Table', 'Steel Ingot'],
+  ['Steel Ingot',    'Steel Ingot', 'Steel Ingot']
+]} result="RTM WorkBench"/>
+:::
+
+### マーカー
+<RecipeRTMWorkbench ingredients={[
+  ['Glass', 'Glass',    'Glass', 'Glass', 'Glass'],
+  ['Glass',    null, 'Rose Red',    null, 'Glass'],
+  ['Glass',    null, 'Rose Red',    null, 'Glass'],
+  ['Glass',    null, 'Rose Red',    'Marker', 'Glass'],
+  ['Glass', 'Glass',    'Glass', 'Glass', 'Glass']
+]} result={["Marker", 16]}/>
+
+[^1]: 参考：https://github.com/Kai-Z-JP/KaizPatchX/blob/f35cbacfe202154be1c909add5335460eab1b666/src/main/java/jp/ngt/rtm/RTMRecipe.java#L117-L119
