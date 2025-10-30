@@ -220,7 +220,7 @@ export default defineConfig({
           },
         },
       ],
-      // lastUpdated
+      lastUpdated: true,
       pagination: false,
       favicon: '/images/favicon.svg',
       // titleDelimiter
