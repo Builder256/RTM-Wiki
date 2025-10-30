@@ -1,8 +1,6 @@
 ---
 aliases: [ブロック一覧]
 title: ブロック一覧
-sidebar:
-  order: 5
 ---
 このページでは、RealTrainMod (RTM)で追加されるすべてのアイテムの一覧を掲載します。
 

@@ -28,9 +28,10 @@ export default defineConfig({
         baseUrl: 'https://github.com/Builder256/RTM-Wiki/tree/starlight',
       },
       sidebar: [
-        { label: 'トップ', link: '/' },
+        { label: 'トップ', translations: { en: 'Home' }, link: '/' },
         {
           label: 'RealTrainMod入門',
+          translations: { en: 'Getting Started' },
           items: [
             { label: 'はじめに', link: 'getting-started/overview' },
             { label: '初心者向け導入方法', link: 'getting-started/installing' },
@@ -38,23 +39,50 @@ export default defineConfig({
         },
         {
           label: 'RealTrainModの使い方',
-          autogenerate: {
-            directory: 'usage/',
-          },
+          translations: { en: 'How to use RealTrainMod' },
+          items: [
+            { label: '基本情報・魅力', link: 'usage/basic/' },
+            {
+              label: 'インストール方法 Mod経験者向け',
+              link: 'usage/installing/',
+            },
+            { label: 'レシピ', link: 'usage/recipe/' },
+            {
+              label: 'アイテム',
+              translations: { en: 'Items' },
+              items: [{ label: 'アイテム一覧', link: 'usage/items/list/' }],
+            },
+            {
+              label: 'ブロック',
+              translations: { en: 'Blocks' },
+              items: [
+                { label: 'ブロック一覧', link: 'usage/blocks/list/' },
+                { label: 'マーカー（ブロック）', link: 'usage/blocks/marker/' },
+              ],
+            },
+            { label: '用語集', link: 'usage/glossary/' },
+            { label: 'Tips', link: 'usage/tips/' },
+            { label: 'よくある質問と回答', link: 'usage/faq/' },
+            { label: '既知の不具合', link: 'usage/bugs/' },
+            { label: '競合Mod', link: 'usage/incompatibility/' },
+          ],
         },
         {
           label: 'アドオン制作',
+          translations: { en: 'Develop Addon' },
           items: [
             { label: 'アドオン制作概要', link: 'dev/overview' },
             {
               label: 'ファイルとディレクトリ',
+              translations: { en: 'Files and Directories' },
               items: [
                 {
                   label: 'ディレクトリ構成とファイル名',
                   link: 'dev/file/directory-structure-and-file-name',
                 },
                 {
-                  label: 'JSONファイル',
+                  label: 'JSON',
+                  translations: { en: 'JSON' },
                   items: [
                     {
                       label: 'JSONファイルの概要',
@@ -68,6 +96,7 @@ export default defineConfig({
                 },
                 {
                   label: 'スクリプト',
+                  translations: { en: 'Script' },
                   items: [
                     {
                       label: 'スクリプトの概要',
@@ -81,6 +110,7 @@ export default defineConfig({
             { label: 'トラブルシューティング', link: 'dev/troubleshooting' },
             {
               label: 'リファレンス',
+              translations: { en: 'Reference' },
               items: [
                 {
                   label: 'JSON',
@@ -92,18 +122,21 @@ export default defineConfig({
         },
         {
           label: '関連Mod',
+          translations: { en: 'Related Mods' },
           autogenerate: {
             directory: 'mods/integrated',
           },
         },
         {
           label: '外部Mod',
+          translations: { en: 'External Mods' },
           autogenerate: {
             directory: 'mods/external',
           },
         },
         {
           label: 'RealTrainMod関連サイト',
+          translations: { en: 'Related Websites' },
           items: [
             {
               label: 'realtrainmodWiki',
@@ -130,6 +163,7 @@ export default defineConfig({
         },
         {
           label: 'RTM Wikiを編集する',
+          translations: { en: 'Edit RTM Wiki' },
           collapsed: true,
           autogenerate: {
             directory: 'edit/',

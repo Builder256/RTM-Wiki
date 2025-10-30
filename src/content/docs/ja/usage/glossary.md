@@ -1,8 +1,6 @@
 ---
 aliases: [用語集]
 title: 用語集
-sidebar:
-  order: 7
 ---
 このページでは、RealTrainMod (RTM)界隈でよく使用される専門用語の意味について説明します。
 ## あ行

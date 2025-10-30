@@ -2,9 +2,6 @@
 aliases:
   - RealTrainModの基本情報・魅力
 title: RealTrainModの基本情報・魅力
-sidebar: 
-  label: 基本情報・魅力
-  order: 1
 ---
 このカテゴリでは、RealTrainMod (RTM)のModとしての[概要](#realtrainmodの概要)や様々な[魅力](#realtrainmodの魅力)について説明します。
 ## RealTrainModの概要
