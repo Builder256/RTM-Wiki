@@ -1,14 +1,14 @@
 ---
-import RecipeSlot from './RecipeSlot.astro';
 import RecipeArrow from './RecipeArrow.astro';
+import RecipeSlot from './RecipeSlot.astro';
 
 import { isItemStack, type ItemStack } from '../scripts/util';
 import { InvalidComponentAttributeError } from '../scripts/error';
 
-type GridRow = [ItemStack, ItemStack, ItemStack];
+type GridRow = [ItemStack, ItemStack, ItemStack, ItemStack, ItemStack];
 
 interface Props {
-  ingredients: [GridRow, GridRow, GridRow];
+  ingredients: [GridRow, GridRow, GridRow, GridRow, GridRow];
   result: ItemStack;
 }
 
@@ -16,28 +16,33 @@ const { ingredients, result } = Astro.props;
 
 if (!ingredients.flat().every((item) => isItemStack(item) || item === null))
   throw new InvalidComponentAttributeError('属性: ingredientsの値が不正です。アイテム名以外の値が指定されています。', Astro.url);
-if (ingredients.length !== 3 || !ingredients.every((row) => row.length === 3))
-  throw new InvalidComponentAttributeError('属性: ingredientsの値が不正です。グリッドサイズが3x3になっていません。', Astro.url);
+if (ingredients.length !== 5 || !ingredients.every((row) => row.length === 5))
+  throw new InvalidComponentAttributeError('属性: ingredientsの値が不正です。グリッドサイズが5x5になっていません。', Astro.url);
 if (!isItemStack(result)) throw new InvalidComponentAttributeError('属性: resultの値が不正です。', Astro.url);
 ---
 
-<div class="crafting-table">
+<div class="rtm-workbench">
   <div class="crafting-grid__container">
     {ingredients.map((row) => row.map((slot) => <RecipeSlot item={slot} />))}
   </div>
-  <RecipeArrow />
-  {result ? <RecipeSlot item={result} size="large" /> : <RecipeSlot size="large" />}
+  <div class="arrow-wrapper">
+    <RecipeArrow />
+  </div>
+  <div class="target">
+    <RecipeSlot />
+    <RecipeSlot item={result} size="large" />
+  </div>
 </div>
 
 <style>
   div {
-    margin: 0;
+    margin-top: 0;
   }
-  .crafting-table {
+  .rtm-workbench {
     margin-top: 1rem;
 
-    width: var(--px-120);
-    height: var(--px-58);
+    width: var(--px-156);
+    height: var(--px-94);
     background-color: var(--gui-bg);
     display: flex;
     align-items: center;
@@ -45,7 +50,7 @@ if (!isItemStack(result)) throw new InvalidComponentAttributeError('属性: resu
     gap: var(--px-7);
   }
   .crafting-grid__container {
-    --items: 3;
+    --items: 5;
     --grid-size: calc(var(--px-18) * var(var(--items)));
 
     width: var(--grid-size);
@@ -53,5 +58,18 @@ if (!isItemStack(result)) throw new InvalidComponentAttributeError('属性: resu
     display: grid;
     grid-template-columns: repeat(var(--items), 1fr);
     grid-template-rows: repeat(var(--items), 1fr);
+  }
+  .arrow-wrapper {
+    margin-block: var(--px-29) auto;
+  }
+  .target {
+    width: var(--px-26);
+    height: var(--px-48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--px-4);
+
+    margin-block: var(--px-2) auto;
   }
 </style>

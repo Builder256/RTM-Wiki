@@ -1,0 +1,137 @@
+---
+import Image from 'astro/components/Image.astro';
+
+import Number1 from '../content/images/icons/1.svg';
+
+import Fallback from '../content/images/icons/fallback.svg';
+import CraftingTable from '../content/images/icons/minecraft/crafting-table.png';
+import Glass from '../content/images/icons/minecraft/glass.png';
+import RoseRed from '../content/images/icons/minecraft/rose-red.svg';
+import SteelIngot from '../content/images/icons/rtm/steel-ingot.svg';
+import Marker from '../content/images/icons/rtm/marker.svg';
+import RTMWorkBench from '../content/images/icons/rtm/rtm-workbench.png';
+import RailWorkBench from '../content/images/icons/rtm/rail-workbench.png';
+
+import type { ItemStack } from '../scripts/util';
+
+type SlotSize = 'normal' | 'large';
+
+interface Props {
+  item?: ItemStack;
+  size?: SlotSize;
+}
+
+const { item, size } = Astro.props;
+
+let slotSizeClass = 'slot--size18';
+
+if (size === 'large') {
+  slotSizeClass = 'slot--size26';
+}
+
+const itemMap: Record<string, ImageMetadata | undefined> = {
+  'Crafting Table': CraftingTable,
+  Glass: Glass,
+  'Rose Red': RoseRed,
+  'Steel Ingot': SteelIngot,
+  Marker: Marker,
+  'RTM WorkBench': RTMWorkBench,
+  'Rail WorkBench': RailWorkBench,
+};
+
+let slotItem: ImageMetadata | null = null;
+if (item) {
+  const key = Array.isArray(item) ? item[0] : item;
+  slotItem = itemMap[key] ?? Fallback;
+}
+---
+
+<div class:list={['slot', slotSizeClass]}>
+  {
+    slotItem && (
+      <div class="slot__item-wrapper">
+        <Image src={slotItem} alt="" class="slot__item" />
+        <div class="item__amount">
+          <Image src={Number1} alt="" class="amount__number" />
+          <Image src={Number1} alt="" class="amount__number" />
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  div,
+  img {
+    margin-top: 0;
+  }
+  .slot {
+    position: relative;
+    background-color: #8b8b8b;
+    border-width: var(--px);
+    border-style: solid;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+    display: grid;
+    place-items: center;
+  }
+  .slot::before {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    bottom: calc(var(--px) * -1);
+    left: calc(var(--px) * -1);
+  }
+  .slot::after {
+    content: '';
+    position: absolute;
+    width: var(--px);
+    height: var(--px);
+    background: #8b8b8b;
+    top: calc(var(--px) * -1);
+    right: calc(var(--px) * -1);
+  }
+  .slot.slot--size18 {
+    width: var(--px-18);
+    height: var(--px-18);
+  }
+  .slot.slot--size26 {
+    width: var(--px-26);
+    height: var(--px-26);
+  }
+
+  .slot__item-wrapper {
+    width: var(--px-16);
+    height: var(--px-16);
+
+    position: relative;
+  }
+
+  .slot__item {
+    width: var(--px-16);
+    height: var(--px-16);
+  }
+
+  .item__amount {
+    width: calc(var(--px) / 2 * 13);
+    height: calc(var(--px) / 2 * 11);
+    position: absolute;
+
+    display: flex;
+
+    bottom: calc(var(--px) / -2);
+    right: calc(var(--px) / -2 * 2);
+  }
+  .amount__number:nth-child(1) {
+    margin-right: calc(var(--px) / 2 * -1);
+  }
+
+  .amount__number {
+    width: calc(var(--px) / 2 * 7);
+    height: calc(var(--px) / 2 * 11);
+  }
+</style>

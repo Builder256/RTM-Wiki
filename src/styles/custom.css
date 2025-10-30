@@ -1,4 +1,35 @@
 @layer my-overrides {
+  /* スタイル設定 */
+  :root {
+    --px: clamp(0.1rem, calc(100cqw / 200), 0.175rem);
+    --gui-bg: #c6c6c6;
+  }
+  /* CSS変数計算 */
+  :root {
+    --px-2: calc(var(--px) * 2);
+    --px-3: calc(var(--px) * 3);
+    --px-4: calc(var(--px) * 4);
+    --px-5: calc(var(--px) * 5);
+    --px-7: calc(var(--px) * 7);
+    --px-8: calc(var(--px) * 8);
+    --px-9: calc(var(--px) * 9);
+    --px-11: calc(var(--px) * 11);
+    --px-13: calc(var(--px) * 13);
+    --px-14: calc(var(--px) * 14);
+    --px-15: calc(var(--px) * 15);
+    --px-16: calc(var(--px) * 16);
+    --px-18: calc(var(--px) * 18);
+    --px-22: calc(var(--px) * 22);
+    --px-24: calc(var(--px) * 24);
+    --px-26: calc(var(--px) * 26);
+    --px-29: calc(var(--px) * 29);
+    --px-48: calc(var(--px) * 48);
+    --px-58: calc(var(--px) * 58);
+    --px-94: calc(var(--px) * 94);
+    --px-120: calc(var(--px) * 120);
+    --px-156: calc(var(--px) * 156);
+  }
+
   /* Yu Gothic UIで括弧が貫通する不具合に対応 */
   /* Chromium 141で修正らしいのでそのうち外すかも */
   /* https://issues.chromium.org/issues/331123676 */
@@ -241,7 +272,8 @@
     margin: 0 3px;
     padding: 5px 9px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5),
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.5),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
