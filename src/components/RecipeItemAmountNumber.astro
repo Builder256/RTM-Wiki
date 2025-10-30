@@ -1,0 +1,22 @@
+---
+import Image from 'astro/components/Image.astro';
+
+import Number1 from '../content/images/icons/1.svg';
+import Number6 from '../content/images/icons/6.svg';
+import type { StackAmount } from '../scripts/util';
+
+interface Props {
+  num: StackAmount;
+}
+---
+
+<Image src={Number1} alt="" class="amount__number" />
+<style>
+  img {
+    margin-top: 0;
+  }
+  .amount__number {
+    width: calc(var(--px) / 2 * 7);
+    height: calc(var(--px) / 2 * 11);
+  }
+</style>

@@ -1,18 +1,16 @@
 ---
 import Image from 'astro/components/Image.astro';
 
-import Number1 from '../content/images/icons/1.svg';
+import Fallback from '../content/images/items/fallback.svg';
+import CraftingTable from '../content/images/items/minecraft/crafting-table.png';
+import Glass from '../content/images/items/minecraft/glass.png';
+import RoseRed from '../content/images/items/minecraft/rose-red.svg';
+import SteelIngot from '../content/images/items/rtm/steel-ingot.svg';
+import Marker from '../content/images/items/rtm/marker.svg';
+import RTMWorkBench from '../content/images/items/rtm/rtm-workbench.png';
+import RailWorkBench from '../content/images/items/rtm/rail-workbench.png';
 
-import Fallback from '../content/images/icons/fallback.svg';
-import CraftingTable from '../content/images/icons/minecraft/crafting-table.png';
-import Glass from '../content/images/icons/minecraft/glass.png';
-import RoseRed from '../content/images/icons/minecraft/rose-red.svg';
-import SteelIngot from '../content/images/icons/rtm/steel-ingot.svg';
-import Marker from '../content/images/icons/rtm/marker.svg';
-import RTMWorkBench from '../content/images/icons/rtm/rtm-workbench.png';
-import RailWorkBench from '../content/images/icons/rtm/rail-workbench.png';
-
-import type { ItemStack } from '../scripts/util';
+import { isItemStack, type ItemStack, type StackAmount } from '../scripts/util';
 
 type SlotSize = 'normal' | 'large';
 
@@ -40,22 +38,23 @@ const itemMap: Record<string, ImageMetadata | undefined> = {
 };
 
 let slotItem: ImageMetadata | null = null;
+let itemName: string = '';
 if (item) {
-  const key = Array.isArray(item) ? item[0] : item;
-  slotItem = itemMap[key] ?? Fallback;
+  itemName = Array.isArray(item) ? item[0] : item;
+  slotItem = itemMap[itemName] ?? Fallback;
 }
+let itemAmount: StackAmount = !isItemStack(item) ? 0 : Array.isArray(item) ? item[1] : 1;
 ---
 
 <div class:list={['slot', slotSizeClass]}>
   {
-    slotItem && (
+    slotItem ? (
       <div class="slot__item-wrapper">
-        <Image src={slotItem} alt="" class="slot__item" />
-        <div class="item__amount">
-          <Image src={Number1} alt="" class="amount__number" />
-          <Image src={Number1} alt="" class="amount__number" />
-        </div>
+        <Image src={slotItem} alt={itemName} class="slot__item" />
+        {itemAmount > 1 && <div class="item__amount" />}
       </div>
+    ) : (
+      <div aria-label="空のスロット" />
     )
   }
 </div>
@@ -117,21 +116,9 @@ if (item) {
   }
 
   .item__amount {
-    width: calc(var(--px) / 2 * 13);
-    height: calc(var(--px) / 2 * 11);
     position: absolute;
-
     display: flex;
-
     bottom: calc(var(--px) / -2);
-    right: calc(var(--px) / -2 * 2);
-  }
-  .amount__number:nth-child(1) {
-    margin-right: calc(var(--px) / 2 * -1);
-  }
-
-  .amount__number {
-    width: calc(var(--px) / 2 * 7);
-    height: calc(var(--px) / 2 * 11);
+    right: calc(var(--px) / -2);
   }
 </style>
