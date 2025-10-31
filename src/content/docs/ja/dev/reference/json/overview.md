@@ -50,4 +50,4 @@ sidebar:
 | 飛行機             | `ModelVehicle_`   | Plane           | VehicleConfig   |
 | 船                 | `ModelVehicle_`   | Ship            | VehicleConfig   |
 ## 各コンフィグクラスのリファレンス
-- [ResourceConfigクラス](../resource-config)
+- [ResourceConfigクラス](../resource-config/)

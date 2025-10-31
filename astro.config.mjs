@@ -33,8 +33,11 @@ export default defineConfig({
           label: 'RealTrainMod入門',
           translations: { en: 'Getting Started' },
           items: [
-            { label: 'はじめに', link: 'getting-started/overview' },
-            { label: '初心者向け導入方法', link: 'getting-started/installing' },
+            { label: 'はじめに', link: 'getting-started/overview/' },
+            {
+              label: '初心者向け導入方法',
+              link: 'getting-started/installing/',
+            },
           ],
         },
         {
@@ -71,14 +74,14 @@ export default defineConfig({
           label: 'アドオン制作',
           translations: { en: 'Develop Addon' },
           items: [
-            { label: 'アドオン制作概要', link: 'dev/overview' },
+            { label: 'アドオン制作概要', link: 'dev/overview/' },
             {
               label: 'ファイルとディレクトリ',
               translations: { en: 'Files and Directories' },
               items: [
                 {
                   label: 'ディレクトリ構成とファイル名',
-                  link: 'dev/file/directory-structure-and-file-name',
+                  link: 'dev/file/directory-structure-and-file-name/',
                 },
                 {
                   label: 'JSON',
@@ -86,11 +89,11 @@ export default defineConfig({
                   items: [
                     {
                       label: 'JSONファイルの概要',
-                      link: 'dev/file/json/overview',
+                      link: 'dev/file/json/overview/',
                     },
                     {
                       label: 'モデル設定用JSONファイル',
-                      link: 'dev/file/json/model',
+                      link: 'dev/file/json/model/',
                     },
                   ],
                 },
@@ -100,21 +103,21 @@ export default defineConfig({
                   items: [
                     {
                       label: 'スクリプトの概要',
-                      link: 'dev/file/script/overview',
+                      link: 'dev/file/script/overview/',
                     },
                   ],
                 },
               ],
             },
-            { label: '逆引きリファレンス', link: 'dev/reverse-reference' },
-            { label: 'トラブルシューティング', link: 'dev/troubleshooting' },
+            { label: '逆引きリファレンス', link: 'dev/reverse-reference/' },
+            { label: 'トラブルシューティング', link: 'dev/troubleshooting/' },
             {
               label: 'リファレンス',
               translations: { en: 'Reference' },
               items: [
                 {
                   label: 'JSON',
-                  autogenerate: { directory: 'dev/reference/json' },
+                  autogenerate: { directory: 'dev/reference/json/' },
                 },
               ],
             },
@@ -124,14 +127,14 @@ export default defineConfig({
           label: '関連Mod',
           translations: { en: 'Related Mods' },
           autogenerate: {
-            directory: 'mods/integrated',
+            directory: 'mods/integrated/',
           },
         },
         {
           label: '外部Mod',
           translations: { en: 'External Mods' },
           autogenerate: {
-            directory: 'mods/external',
+            directory: 'mods/external/',
           },
         },
         {

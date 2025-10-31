@@ -9,7 +9,7 @@ description: Minecraftの鉄道Mod『RealTrainMod（RTM）』の詳しい導入�
 
 :::note[補足]
 Mod経験者やアドオン開発者など、より簡潔な導入方法が知りたい方や、より高度な情報が欲しい方は、以下のページをご覧ください。  
-[RTMのインストール方法（Mod経験者向け）](../usage/installing)
+[RTMのインストール方法（Mod経験者向け）](../../usage/installing)
 :::
 
 ## RealTrainMod (RTM) ってなに？
@@ -32,7 +32,7 @@ RealTrainMod（RTM）は、Minecraft Java Edition（主にパソコンでプレ�
 
 :::note[補足]
 RealTrainMod（RTM）の機能や特徴について、さらに詳しく知りたい人は、こちらのページをご覧ください。  
-[RealTrainModとは](../usage/basic#realtrainmodの魅力)
+[RealTrainModとは](../../usage/basic#realtrainmodの魅力)
 :::
 
 ## はじめてModにふれる保護者の方へ
