@@ -63,6 +63,11 @@ export default defineConfig({
                 { label: 'マーカー（ブロック）', link: 'usage/blocks/marker/' },
               ],
             },
+            {
+              label: '列車',
+              translations: { en: 'Train' },
+              items: [{ label: '運転', link: 'usage/train/drive/' }],
+            },
             { label: '用語集', link: 'usage/glossary/' },
             { label: 'Tips', link: 'usage/tips/' },
             { label: 'よくある質問と回答', link: 'usage/faq/' },
