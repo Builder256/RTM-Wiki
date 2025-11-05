@@ -68,6 +68,7 @@ export default defineConfig({
             { label: 'よくある質問と回答', link: 'usage/faq/' },
             { label: '既知の不具合', link: 'usage/bugs/' },
             { label: '競合Mod', link: 'usage/incompatibility/' },
+            { label: '問題を報告する', link: 'usage/report-problem/' },
           ],
         },
         {
