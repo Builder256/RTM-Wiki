@@ -195,6 +195,11 @@ export default defineConfig({
       },
       social: [
         {
+          icon: 'discord',
+          label: 'Discord',
+          href: 'https://discord.gg/jStPTdmjpS',
+        },
+        {
           icon: 'github',
           label: 'GitHub',
           href: 'https://github.com/Builder256/RTM-Wiki',
