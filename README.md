@@ -1,105 +1,78 @@
-# Starlight Starter Kit: Basics
+# RTM Wiki: Starlight
+これは、RTM Wikiの開発中の新システムです。
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+メインのフレームワークには、静的サイトジェネレーターの[Astro](https://github.com/withastro/astro)と、同フレームワークのドキュメントサイト用テーマである、[Starlight](https://github.com/withastro/starlight)を採用しました。
 
-# Starlight スターターキット: 基本
+そのため、これまでのWiki.jsを使用した動的サイトよりも閲覧時のパフォーマンスの向上が見込めます。
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+## ディレクトリ構成
+### `.github/`
+GitHub Workflowsの設定が含まれています。触る必要はありません。
 
-```
-npm create astro@latest -- --template starlight
-```
+これにより、`starlight`ブランチへのpushによって即座にビルドが行われ、最新の変更がサイトに反映されます。
+### `.vscode/`
+VSCodeやその拡張機能用の設定が含まれます。触る必要はありません。
+### `public/`
+Astroでの処理を行わないアセットが配置されます。触る必要はありません。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+現在は、Astroで処理されないfaviconの画像が配置されています。
 
-> 🧑‍🚀 **ベテランの宇宙飛行士ですか？** このファイルを削除して、楽しんでください！
+将来的には各言語用のフォントファイルなどが配置されるかもしれません。
+### `src/assets/`
+サイトで使用する画像（各ページで使用するものではない）などが配置されます。触る必要はありません。
+### `src/components/`
+サイトで使用する各フレームワークのコンポーネントが配置されます。触る必要はありません。
+### `src/content/`
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ここから重要↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
-## 🚀 プロジェクト構造
+サイトの各ページの実際のソースが含まれます。基本的にこのディレクトリ以外を触る必要はありません。
+#### `src/content/docs/`
+各言語別のディレクトリと、ルートページであるグローバルトップページのファイル`index.mdx`が含まれます。
 
-Astro + Starlightプロジェクト内には、以下のフォルダとファイルがあります：
+`en`や`ja`などの言語コードのディレクトリ以下が、実際の各ページの原稿になります。
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+ここのファイルを編集することで、サイトに編集をすることができます。
+#### `src/content/i18n/` 
+現状使用していません。
+#### `src/content/images/` 
+サイトのページで使用する画像です。
 
-Starlightは `src/content/docs/` ディレクトリ内の `.md` または `.mdx` ファイルを探します。各ファイルはそのファイル名に基づいてルートとして公開されます。
+**画像の内容で**分類、整理しています。
+- `src/content/images/diagram`
+  図とか
+- `src/content/images/icons/`
+  アイコンとか
+- `src/content/images/items/`
+  アイテムの画像とか
+- `src/content/images/screenshots/`
+  スクリーンショットとか
 
-画像は `src/assets/` に追加でき、Markdownで相対リンクとして埋め込むことができます。
+↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ここまで重要↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+### `src/scripts/`
+サイトで使用するTypeScriptファイルが配置されます。触る必要はありません。
+### `src/styles/`
+サイトで使用するCSSファイルが配置されます。触る必要はありません。
+### `src/content.config.ts`
+AstroのContent Collectionの設定ファイルです。触る必要はありません。
+### `.gitignore`
+Gitで管理しないファイルの設定です。触る必要はありません。
+### `.prettierignore`
+Prettierでフォーマットしないファイルの設定です。触る必要はありません。
+### `.prettierrc`
+Prettierのフォーマット設定です。触る必要はありません。
+### `astro.config.mjs`
+AstroとStarlightの設定です。メニューバーを変更する際には、編集する必要があります。
+### `package-lock.json`
+npmパッケージのインストールに使用します。触る必要はありません。
+### `package.json`
+npmパッケージのインストールに使用します。触る必要はありません。
+### `README_STARLIGHT.md`
+Starlightがデフォルトで生成するREADMEファイルとその日本語訳です。
 
-faviconなどの静的アセットは `public/` ディレクトリに配置できます。
-
-## 🧞 コマンド
-
-すべてのコマンドは、プロジェクトのルートからターミナルで実行します：
-
-| コマンド                  | 動作                                                 |
-| :------------------------ | :--------------------------------------------------- |
-| `npm install`             | 依存関係をインストール                               |
-| `npm run dev`             | ローカル開発サーバーを `localhost:4321` で起動       |
-| `npm run build`           | 本番用サイトを `./dist/` にビルド                    |
-| `npm run preview`         | デプロイ前にビルドをローカルでプレビュー             |
-| `npm run astro ...`       | `astro add` や `astro check` などのCLIコマンドを実行 |
-| `npm run astro -- --help` | Astro CLIのヘルプを表示                              |
-
-## 👀 もっと学びたいですか？
-
-[Starlightのドキュメント](https://starlight.astro.build/)を確認したり、[Astroのドキュメント](https://docs.astro.build)を読んだり、[Astro Discordサーバー](https://astro.build/chat)に参加したりしてください。
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
-
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+気になる人は読んでみるのもいいかもしれません。
+### `README.md`
+このファイルです。
+### `svelte.config.js`
+Svelteの設定です。触る必要はありません。
+### `tsconfig.json`
+TypeScriptの設定です。触る必要はありません。
