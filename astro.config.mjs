@@ -64,9 +64,9 @@ export default defineConfig({
               ],
             },
             {
-              label: '列車',
-              translations: { en: 'Train' },
-              items: [{ label: '運転', link: 'usage/train/drive/' }],
+              label: '操作',
+              translations: { en: 'Operation' },
+              items: [{ label: '列車', link: 'usage/operation/train/' }],
             },
             { label: '用語集', link: 'usage/glossary/' },
             { label: 'Tips', link: 'usage/tips/' },
