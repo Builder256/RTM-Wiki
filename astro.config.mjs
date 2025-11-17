@@ -77,44 +77,21 @@ export default defineConfig({
           ],
         },
         {
-          label: 'アドオン制作',
-          translations: { en: 'Develop Addon' },
+          label: 'モデルパック制作',
+          translations: { en: 'Develop ModelPack' },
           items: [
-            { label: 'アドオン制作概要', link: 'dev/overview/' },
             {
-              label: 'ファイルとディレクトリ',
-              translations: { en: 'Files and Directories' },
-              items: [
-                {
-                  label: 'ディレクトリ構成とファイル名',
-                  link: 'dev/file/directory-structure-and-file-name/',
-                },
-                {
-                  label: 'JSON',
-                  translations: { en: 'JSON' },
-                  items: [
-                    {
-                      label: 'JSONファイルの概要',
-                      link: 'dev/file/json/overview/',
-                    },
-                    {
-                      label: 'モデル設定用JSONファイル',
-                      link: 'dev/file/json/model/',
-                    },
-                  ],
-                },
-                {
-                  label: 'スクリプト',
-                  translations: { en: 'Script' },
-                  items: [
-                    {
-                      label: 'スクリプトの概要',
-                      link: 'dev/file/script/overview/',
-                    },
-                  ],
-                },
-              ],
+              label: 'チュートリアル',
+              translations: { en: 'Tutorial' },
+              items: [],
             },
+            { label: '基礎', link: 'dev/basic/' },
+            { label: 'ディレクトリ構成とファイル名', link: 'dev/structure/' },
+            { label: 'モデルファイル', link: 'dev/file/model/' },
+            { label: 'テクスチャファイル', link: 'dev/file/texture/' },
+            { label: 'スクリプト', link: 'dev/file/script/' },
+            { label: 'JSONファイル', link: 'dev/file/json/' },
+            { label: 'モデル設定用JSONファイル', link: 'dev/file/json/model/' },
             { label: '逆引きリファレンス', link: 'dev/reverse-reference/' },
             { label: 'トラブルシューティング', link: 'dev/troubleshooting/' },
             {
@@ -124,6 +101,10 @@ export default defineConfig({
                 {
                   label: 'JSON',
                   autogenerate: { directory: 'dev/reference/json/' },
+                },
+                {
+                  label: 'スクリプト',
+                  autogenerate: { directory: 'dev/reference/script/' },
                 },
               ],
             },

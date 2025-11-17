@@ -1,7 +1,7 @@
 ---
 aliases:
-  - JSONファイルの設定内容
-title: JSONファイルの設定内容
+  - JSONファイル
+title: JSONファイル
 ---
 このページでは、RealTrainMod（RTM）のアドオン制作に使用するJSONファイルの種類と用途、そしてJSONの文法について説明します。
 ## JSONとは
