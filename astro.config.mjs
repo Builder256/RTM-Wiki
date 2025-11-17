@@ -89,7 +89,7 @@ export default defineConfig({
             { label: 'ディレクトリ構成とファイル名', link: 'dev/structure/' },
             { label: 'モデルファイル', link: 'dev/file/model/' },
             { label: 'テクスチャファイル', link: 'dev/file/texture/' },
-            { label: 'スクリプト', link: 'dev/file/script/' },
+            { label: 'スクリプトファイル', link: 'dev/file/script/' },
             { label: 'JSONファイル', link: 'dev/file/json/' },
             { label: 'モデル設定用JSONファイル', link: 'dev/file/json/model/' },
             { label: '逆引きリファレンス', link: 'dev/reverse-reference/' },
