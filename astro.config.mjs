@@ -44,7 +44,7 @@ export default defineConfig({
           label: 'RealTrainModの使い方',
           translations: { en: 'How to use RealTrainMod' },
           items: [
-            { label: '基本情報・魅力', link: 'usage/basic/' },
+            { label: 'RealTrainModをプレイする理由', link: 'usage/why/' },
             {
               label: 'インストール方法 Mod経験者向け',
               link: 'usage/installing/',
@@ -81,8 +81,8 @@ export default defineConfig({
           translations: { en: 'Develop ModelPack' },
           items: [
             {
-              label: 'チュートリアル',
-              translations: { en: 'Tutorial' },
+              label: '車両制作チュートリアル',
+              translations: { en: 'Developing Train Tutorial' },
               items: [],
             },
             { label: '基礎', link: 'dev/basic/' },
