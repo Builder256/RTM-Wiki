@@ -83,7 +83,7 @@ export default defineConfig({
             {
               label: '車両制作チュートリアル',
               translations: { en: 'Developing Train Tutorial' },
-              items: [],
+              autogenerate: { directory: 'dev/tutorial/' },
             },
             { label: '基礎', link: 'dev/basic/' },
             { label: 'ディレクトリ構成とファイル名', link: 'dev/structure/' },

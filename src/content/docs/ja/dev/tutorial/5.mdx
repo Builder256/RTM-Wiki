@@ -1,0 +1,22 @@
+---
+aliases:
+  - 車両制作チュートリアル：動作確認
+title: 車両制作チュートリアル：動作確認
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+
+## ゲームを起動する
+ゲームを起動し、「MinatoCommuterTrain Tc」を設置してみましょう！
+
+帯の色が赤くなっていれば成功です！
+## トラブルシューティング
+### 帯の色が変わらない
+先ほど編集したファイルの名前が、`mct_q_Tc.png`かどうか確認しましょう。
+
+設置した車両が、「MinatoCommuterTrain Tc」かどうか確認しましょう。
+「MinatoCommuterTrain Tc」は、モデル選択画面では4つのうち、一番下になります。
+### ゲームがクラッシュした
+`MCTq_Base`フォルダをzip圧縮していませんか？
+その中身の、`assets`フォルダと、`readme.txt`を選択して圧縮する必要があります。
