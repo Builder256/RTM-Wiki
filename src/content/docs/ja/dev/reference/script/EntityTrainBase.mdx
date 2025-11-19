@@ -1,0 +1,343 @@
+---
+aliases:
+  - リファレンス：EntityTrainBaseクラス
+title: リファレンス：EntityTrainBaseクラス
+
+package: jp.net.rtm.entity.train
+class: EntityTrainBase
+modifiers: 
+  - public
+  - abstract
+inheritance: 
+  superclasses:
+    - jp.ngt.rtm.entity.vehicle.EntityVehicleBase<TrainConfig>
+    - net.minecraft.entity.Entity
+  subclasses: 
+    - EntityFreightCar
+    - EntityTanker
+    - EntityTrain
+interfaces: 
+  implements: 
+    - IModelSelector
+    - IModelSelectorWithType
+    - IChunkLoader
+fields: 
+  - public static final short MAX_AIR_COUNT
+  - public static final short MIN_AIR_COUNT
+  - public static final float TRAIN_WIDTH
+  - public static final float TRAIN_HEIGHT
+methods: 
+  - 
+---
+
+## 概要
+- **パッケージ**：<code>{frontmatter.package}</code>
+- **完全修飾名**：<code>{frontmatter.package}.{frontmatter.class}</code>
+- **修飾子**：{frontmatter.modifiers.map(modifier=><code style="margin-right: 0.25rem">{modifier}</code>)}
+### 基底クラス
+`java.lang.Object`
+{frontmatter.inheritance.superclasses.toReversed().map((superClass, index) => <span style={`margin-left: ${index}rem`}>┗<code>{superClass}</code><br /></span>)}
+### 派生クラス
+<ul>
+{frontmatter.inheritance.subclasses.map(subClass=><li><code>{subClass}</code></li>)}
+</ul>
+### 実装しているインターフェース
+<ul>
+{frontmatter.interfaces.implements.map(implement=><li><code>{implement}</code></li>)}
+</ul>
+## 静的フィールド
+{frontmatter.fields.filter(field=>field.split(' ')[0] === 'public' && field.split(' ')[1] === 'static').map(field=><>
+  <h3>
+    <code>{field.split(' ').at(-1)}</code>
+  </h3>
+  <ul>
+    <li>
+      {/* spliceにしたら取り除かれた部分が返値になるのでtoSpliced */}
+      <strong>修飾子</strong>：{field.split(' ').toSpliced(-2, 2).map(modifier=><code style="margin-right: 0.25rem">{modifier}</code>)}
+    </li>
+    <li>
+      <strong>データ型</strong>：<code>{field.split(' ').at(-2)}</code>
+    </li>
+  </ul>
+  <p>詳細不明</p>
+</>)}
+## インスタンスフィールド
+## 静的メソッド
+## インスタンスメソッド
+:::danger
+メソッドの返値の型は、基本的にそのメソッドのシグネチャの定義を参照しているため、そのクラスのインスタンスまたはそのサブクラスのインスタンス、あるいは実装クラスのインスタンスが返ってくることになります。
+ですが、Javaでは参照型で`return null`することが認められているので、参照型が返値の場合には、暗黙的に`null`が返ってくる可能性があります。
+
+また、実装から`null`が返ってくることが明らかな場合には、返値の型に`null`も含めて記載しています。
+:::
+
+
+### `EntityTrainBase#getCollisionBox`
+```ts
+function getCollisionBox(par1: Entity): AxisAlignedBB {}
+```
+### `EntityTrainBase#setDead`
+```ts
+function func_70106_y(): void {}
+```
+### `EntityTrainBase#onVehicleUpdate`
+```ts
+function onVehicleUpdate(): void {}
+```
+### `EntityTrainBase#updateRoll`
+```ts
+function updateRoll(par1: float): void {}
+```
+### `EntityTrainBase#getPickedResult`
+Entityをホイールクリックしたときに取得するアイテム
+
+難読化後名不明
+Entityに返値が`ItemStack`で引数があるメソッドが見当たらない。
+```ts
+function getPickedResult(target: MovingObjectPosition): ItemStack {}
+```
+### `EntityTrainBase#setPositionAndRotation`
+```ts
+function func_70080_a(x: double, y: double, z: double, yaw: float, pitch: float): void {}
+```
+### `EntityTrainBase#setVelocity`
+```ts
+function func_70016_h(x: double, y: double, z: double): void {}
+```
+### `EntityTrainBase#moveEntity`
+```ts
+function func_70091_d(x: double, y: double, z: double): void {}
+```
+### `EntityTrainBase#addVelocity`
+```ts
+function func_70024_g(x: double, y: double, z: double ): void {}
+```
+### `EntityTrainBase#getDefaultDistanceToConnectedTrain`
+指定した列車との連結距離
+
+現在の列車と指定した列車が連結した際に、それぞれの車両中心間の距離（ブロック）を返す。取得できなかった場合は、`20.25`を返す。
+```ts
+function getDefaultDistanceToConnectedTrain(otherTrain: EntityTrainBase): double {}
+```
+### `EntityTrainBase#inConnectableRange`
+指定した列車が連結できる距離にあるか
+```ts
+function inConnectableRange(otherTrain: EntityTrainBase): boolean {}
+```
+### `EntityTrainBase#updateRiderPosition`
+```ts
+function func_70043_V(): void {}
+```
+### `EntityTrainBase#getMountedYOffset`
+```ts
+function func_70042_X(): double {}
+```
+### `EntityTrainBase#attackEntityFrom`
+```ts
+function func_70097_a(source: DamageSource, amount: float): boolean {}
+```
+### `EntityTrainBase#interactFirst`
+```ts
+function func_130002_c(player: EntityPlayer): boolean {}
+```
+### `EntityTrainBase#onModelChanged`
+```ts
+function onModelChanged(): void {}
+```
+### `EntityTrainBase#connectTrain`
+車両を連結する
+```ts
+function connectTrain(thisBogie: EntityBogie, targetBogie: EntityBogie): void {}
+```
+### `EntityTrainBase#getModelType`
+モデルタイプを取得する
+
+`"ModelTrain"`を返す。
+```ts
+function getModelType(): String {}
+```
+### `EntityTrainBase#getSubType`
+サブタイプを取得する
+
+JSONの`trainType`の値を返す。
+```ts
+function getSubType(): String {}
+```
+### `EntityTrainBase#getDefaultName`
+デフォルトの`trainType`を取得する
+
+`"kiha600"`を返す。
+```ts
+function getDefaultName(): String {}
+```
+### `EntityTrainBase#getSpeed`
+列車の現在の速度を取得する
+
+単位はブロック毎ティック。キロメートル毎時に変換するには72.0で乗算する。
+```ts
+function getSpeed(): float {}
+```
+### `EntityTrainBase#setSpeed`
+列車の速度を設定する
+```ts
+function setSpeed(speed: float): void {}
+```
+### `EntityTrainBase#setSpeed_NoSync`
+```ts
+function setSpeed_NoSync(speed: float): void {}
+```
+### `EntityTrainBase#stopTrain`
+列車を停止する
+
+非常ブレーキをかける。`changeSpeed`が`true`の場合は即座に停止する。
+```ts
+function stopTrain(changeSpeed: boolean): void {}
+```
+### `EntityTrainBase#isControlCar`
+制御車かどうか
+
+より厳密には、列車のインベントリのFormationタブでピンク色でマークされている列車かどうかを返す。
+```ts
+function isControlCar(): boolean {}
+```
+### `EntityTrainBase#existBogies`
+両台車が存在するかどうか
+```ts
+function existBogies(): boolean {}
+```
+### `EntityTrainBase#getBogie`
+台車を取得する
+
+車体前方の台車の場合は`0`、後方の台車の場合は`1`。
+```ts
+function getBogie(bogieId: int): EntityBogie {}
+```
+### `EntityTrainBase#setBogie`
+```ts
+function setBogie(id: int, bogie: EntityBogie): void {}
+```
+### `EntityTrainBase#getConnectedTrain`
+連結している車両を取得する
+
+`0`で車両前方、`1`で車両後方に連結している車両を取得する。車両が連結していない場合などに`null`を返す。
+```ts
+function getConnectedTrain(direction: 0 | 1): EntityTrainBase | null {}
+```
+### `EntityTrainBase#getFormation`
+車両のFormationを取得する
+
+`null`が返す場合があることが知られている。
+```ts
+function getFormation(): Formation | null {}
+```
+### `EntityTrainBase#setFormation`
+```ts
+function setFormation(formation: Formation): void {}
+```
+### `EntityTrainBase#getCabDirection`
+```ts
+function getCabDirection(): byte {}
+```
+### `EntityTrainBase#getTrainDirection`
+列車の進行方向
+
+前進は`0`、後進は`1`を返す。
+```ts
+function getTrainDirection(): 0 | 1 {}
+```
+### `EntityTrainBase#setTrainDirection`
+```ts
+function setTrainDirection(direction: int): void {}
+```
+### `EntityTrainBase#setTrainDirection`
+```ts
+function setTrainDirection(par1: byte): void {}
+```
+### `EntityTrainBase#syncNotch`
+```ts
+function syncNotch(notchInc: int): void {}
+```
+### `EntityTrainBase#getNotch`
+現在のノッチ段数を取得する
+```ts
+function getNotch(): -8 | -7 | -6 | -5 | -4 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 {}
+```
+### `EntityTrainBase#addNotch`
+ノッチを変更する
+
+引数はノッチの変化量。ノッチを上げるときは正数、下げるときは負数。ノッチを変更したら`true`、変更しなかったら`false`を返す。
+```ts
+function addNotch(driver: Entity, deltaNotch: int): boolean {}
+```
+### `EntityTrainBase#setNotch`
+ノッチを変更する
+
+引数は変更するノッチ段数。ノッチを変更したら`true`、変更しなかったら`false`を返す。
+```ts
+function setNotch(notch: int): boolean {}
+```
+### `EntityTrainBase#setEBNotch`
+ノッチを非常ブレーキに変更する
+```ts
+function setEBNotch(): void {}
+```
+### `EntityTrainBase#getSignal`
+```ts
+function getSignal(): int {}
+```
+### `EntityTrainBase#foo`
+```ts
+function setSignal(par1: int): void {}
+```
+### `EntityTrainBase#setSignal2`
+```ts
+function setSignal2(par1: int): void {}
+```
+### `EntityTrainBase#getTrainStateData`
+```ts
+function getTrainStateData(id: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10): byte {}
+```
+### `EntityTrainBase#getTrainState`
+```ts
+function getTrainState(id: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10): TrainState {}
+```
+### `EntityTrainBase#setTrainStateData`
+```ts
+function setTrainStateData(id: int, data: byte): void {}
+```
+### `EntityTrainBase#setTrainStateData_NoSync`
+```ts
+function setTrainStateData_NoSync(id: int, data: byte): void {}
+```
+### `EntityTrainBase#syncTrainStateData`
+```ts
+function syncTrainStateData(id: id, data: byte): void {}
+```
+### `EntityTrainBase#func_145781_i`
+```ts
+function func_145781_i(par1: int): void {}
+```
+### `EntityTrainBase#getRollsignAnimation`
+```ts
+function getRollsignAnimation(): float {}
+```
+### `EntityTrainBase#setRollsignAnimation`
+```ts
+function setRollsignAnimation(par1: int): void {}
+```
+### `EntityTrainBase#isChunkLoaderEnable`
+```ts
+function isChunkLoaderEnable(): boolean {}
+```
+### `EntityTrainBase#setChunkTicket`
+```ts
+function setChunkTicket(ticket: Ticket): void {}
+```
+### `EntityTrainBase#forceChunkLoading`
+```ts
+function forceChunkLoading(): void {}
+```
+### `EntityTrainBase#forceChunkLoading`
+```ts
+function forceChunkLoading(x: int, z: int): void {}
+```
