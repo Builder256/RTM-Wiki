@@ -1,0 +1,98 @@
+---
+title: 競合：ファイル名の変更
+sidebar:
+  order: 15
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+まずは、ファイルやフォルダの名前を変えて、他の車両と被らないようにします。
+
+## ファイル名とフォルダの変更
+<Steps>
+
+1. `my-modelpack`→`MCTq_Base`→`assets`→`minecraft`の順にフォルダをダブルクリックして開きます。
+2. `models`フォルダの中にある`org_mct_q_n`フォルダの名前を、あなたのオリジナルの名前に変えます。
+   この例では、`yamada_tarou_no_densha`とします。
+   **注意:** 半角英数字とアンダースコア(`_`)、ハイフン(`-`)のみを使ってください。日本語やスペースはNGです。
+3. 同様に、`textures`→`train`フォルダの中にある`org_mct_q_n`フォルダの名前も、同じ名前（`yamada_tarou_no_densha`）に変えます。
+4. `json`フォルダのJSONファイルの名前も、同様に変更します
+   この例では、以下のようになります。
+   `ModelTrain_org_mct_q_n1_Mc.json`を`ModelTrain_yamada_tarou_no_densha1_Mc.json`に変更します。
+   `ModelTrain_org_mct_q_n2_T.json`を`ModelTrain_yamada_tarou_no_densha_T.json`に変更します。
+   `ModelTrain_org_mct_q_n3_M.json`を`ModelTrain_yamada_tarou_no_densha_M.json`に変更します。
+   `ModelTrain_org_mct_q_n4_Tc.json`を`ModelTrain_yamada_tarou_no_densha_Tc.json`に変更します。
+   :::caution
+   `ModelTrain_`は、RTMの列車モデルであることを示すものなので、変更しないでください。
+   :::
+5. `sound_mctq_mi`フォルダの名前も、同様に変更します。
+   この例では、`sound_mctq_mi`を`sound_yamada_tarou_no_densha`に変更します。
+</Steps>
+
+## trainNameとファイルパスの変更
+JSONファイルを開き、trainNameとファイルパスをそれぞれ変更したフォルダ名に対応するように変更します。
+
+変更例は以下の通りです。
+
+```diff lang="json" title="ModelTrain_yamada_tarou_no_densha_Tc.json" 
+{
+- "trainName": "org_mct_q_n4_Tc",
++ "trainName": "yamada_tarou_no_densha_Tc",
+	"trainType": "EC",
+	
+	"trainModel2": {
+-	"modelFile": "org_mct_q_n/mct_q_n_Tc.mqo",
++ "modelFile": "yamada_tarou_no_densha/mct_q_n_Tc.mqo",
+		"textures": [
+-		["mat1","textures/train/org_mct_q_n/mct_q_n_Tc.png","Light"],
+-		["mat2","textures/train/org_mct_q_n/parts.png"],
+-		["mat3","textures/train/org_mct_q_n/alpha.png","AlphaBlend"]
++   ["mat1","textures/train/yamada_tarou_no_densha/mct_q_n_Tc.png","Light"],
++   ["mat2","textures/train/yamada_tarou_no_densha/parts.png"],
++   ["mat3","textures/train/yamada_tarou_no_densha/alpha.png","AlphaBlend"]
+		]
+	},
+	
+	"bogieModel3": [{
+-		"modelFile": "org_mct_q_n/bogie.mqo",
+-		"textures": [["default", "textures/train/org_mct_q_n/bogie.png"]]
++		"modelFile": "yamada_tarou_no_densha/bogie.mqo",
++		"textures": [["default", "textures/train/yamada_tarou_no_densha/bogie.png"]]
+	},{
+-		"modelFile": "org_mct_q_n/bogie.mqo",
+-		"textures": [["default", "textures/train/org_mct_q_n/bogie.png"]]
++		"modelFile": "yamada_tarou_no_densha/bogie.mqo",
++		"textures": [["default", "textures/train/yamada_tarou_no_densha/bogie.png"]]
+	}],
+	"bogiePos": [[0.0, 0.0, 6.8], [0.0, 0.0, -6.8]],
+	
+-	"buttonTexture": "textures/train/org_mct_q_n/button/Tc.png",
++	"buttonTexture": "textures/train/yamada_tarou_no_densha/button/Tc.png",
+	
+  // ...（省略）
+	
+	"sound_BrakeRelease": "rtm:sounds/train/rtm_223_release.ogg",
+	"sound_BrakeRelease2": "rtm:sounds/train/brakeR_w.ogg",
+	"soundScriptPath": "scripts/sound_223.js",
+	"sound_Horn": "train.rtm_wh_00l",
+-	"sound_DoorOpen": "sound_mctq_mi:train.rtm_mctq_doorclose_mi",
+-	"sound_DoorClose": "sound_mctq_mi:train.rtm_mctq_dooropen_mi",
++	"sound_DoorOpen": "sound_yamada_tarou_no_densha:train.rtm_mctq_doorclose_mi",
++	"sound_DoorClose": "sound_yamada_tarou_no_densha:train.rtm_mctq_dooropen_mi",
+	
+-	"rollsignTexture": "textures/train/org_mct_q_n/sign.png",
++	"rollsignTexture": "textures/train/yamada_tarou_no_densha/sign.png",
+
+  // ...（省略）
+
+}
+```
+
+これで、完全に独立した車両として認識されるようになりました！
+
+:::tip[やってみよう]
+同様に、他の車両のJSONファイルも編集して、全部の車両のtrainNameとファイルパスを変えてみましょう。
+:::
+<TutorialCheckBox title="trainNameとファイルパスを変更し、競合を回避できた！" id="5-2" />

@@ -1,0 +1,225 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  chapterId: number;
+}
+const { chapterId } = Astro.props;
+
+const collection = await getCollection('docs');
+const tutorialPages = collection.filter((file) =>
+  file.id.includes('/dev/tutorial/'),
+);
+const thisSectionPages = tutorialPages.filter((page) =>
+  page.id.split('/').at(-1)?.startsWith(chapterId.toString()),
+);
+---
+
+<div class="tutorial-progress" data-chapter-id={chapterId}>
+  <div class="progress-header">
+    <span class="progress-title">この章の進行状況</span>
+    <span class="progress-percentage">0%</span>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: 0%"></div>
+  </div>
+  <ul class="progress-list">
+    {
+      thisSectionPages.map((page) => {
+        const pageId = page.id.split('/').at(-1)?.replace('.mdx', '') || '';
+        const title = page.data.title.split('：')[1] || page.data.title;
+        return (
+          <li class="progress-item" data-page-id={pageId}>
+            <span class="item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="check-icon"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <div class="circle-icon" />
+            </span>
+            <a href={`./${pageId}`} class="item-link">
+              {title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>
+
+<style>
+  /* このスタイルはそれっぽく見えればいいやの精神で作られています。 */
+  /* 決して参考にしたりしないでください。 */
+  li::before {
+    all: unset;
+  }
+  div {
+    margin: 0;
+  }
+  .tutorial-progress {
+    background-color: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .progress-title {
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+
+  .progress-percentage {
+    font-weight: bold;
+    color: var(--sl-color-accent);
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--sl-color-gray-5);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background-color: var(--sl-color-accent);
+    transition: width 0.3s ease;
+  }
+
+  .progress-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .progress-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: var(--sl-color-gray-3);
+    transition: color 0.2s ease;
+  }
+
+  .progress-item.completed {
+    color: var(--sl-color-white);
+  }
+
+  .item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    position: relative;
+  }
+
+  .circle-icon {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--sl-color-gray-4);
+    transition: all 0.2s ease;
+  }
+
+  .progress-item.completed .circle-icon {
+    transform: scale(0);
+  }
+
+  .check-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    color: var(--sl-color-accent);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s ease;
+  }
+
+  .progress-item.completed .check-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .item-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+  }
+
+  .item-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  // このスクリプトは動けばいいやの精神で作られています
+  // 決して参考にしたりしないでください。
+
+  function initProgress() {
+    const progressContainers = document.querySelectorAll('.tutorial-progress');
+
+    progressContainers.forEach((container) => {
+      const items = container.querySelectorAll('.progress-item');
+      const progressBar =
+        container.querySelector<HTMLDivElement>('.progress-bar');
+      const percentageText = container.querySelector('.progress-percentage');
+
+      if (!progressBar || !percentageText) return;
+
+      const updateProgress = () => {
+        let completedCount = 0;
+
+        items.forEach((item) => {
+          const pageId = item.getAttribute('data-page-id');
+          if (!pageId) return;
+          console.log(pageId);
+
+          const storageKey = `tutorial-progress-${pageId.split('_')[0]}`;
+          const isChecked = localStorage.getItem(storageKey) === 'true';
+
+          if (isChecked) {
+            item.classList.add('completed');
+            completedCount++;
+          } else {
+            item.classList.remove('completed');
+          }
+        });
+
+        const total = items.length;
+        const percentage =
+          total === 0 ? 0 : Math.round((completedCount / total) * 100);
+
+        progressBar.style.width = `${percentage}%`;
+        percentageText.textContent = `${percentage}%`;
+      };
+
+      // Initial update
+      updateProgress();
+
+      // Listen for updates
+      window.addEventListener('tutorial-progress-update', updateProgress);
+    });
+  }
+
+  initProgress();
+  // document.addEventListener('astro:page-load', initProgress);
+</script>

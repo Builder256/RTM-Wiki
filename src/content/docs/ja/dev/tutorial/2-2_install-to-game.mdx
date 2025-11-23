@@ -1,0 +1,35 @@
+---
+title: 導入：ゲームへの導入
+sidebar:
+  order: 5
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+ダウンロードしたモデルパックが正常に動くか確認するために、ゲームに導入してみましょう。
+
+## modsフォルダへの配置
+<Steps>
+1. RealTrainModを導入したMinecraftの起動構成フォルダを開きます。
+2. `mods`フォルダを開きます。
+3. 先ほど作業用フォルダに移動した`MCTq_Base.zip`を、`mods`フォルダにコピーします。
+   展開後のフォルダ（`MCTq_Base`）は読み込まれないため、展開前のZIPファイルをそのまま入れてください。
+</Steps>
+{/*  メモ：
+- 「展開していない状態のZIP」と「作業用に展開したフォルダ」の区別がつかなくなる初心者が多いので、ここを強調する図解が必要。
+*/}
+
+## ゲームを起動して確認する
+<Steps>
+3. ゲーム内で、アイテム電車を手に持ちます。
+4. 空中に向かって右クリックし、モデル選択画面を開きます。
+5. 左側のリストの中に「MinatoCommuterTrain Tc」と記載されているボタンがあるか探します。
+6. 車両を選択してレールを右クリックし、車両が正常にスポーンすれば成功です！
+</Steps>
+{/*  メモ：
+- 正常に表示された状態のスクリーンショットを貼る。
+- よくあるミス（modsフォルダの場所間違い、前提Mod不足など）へのリンクを貼る。
+*/}
+<TutorialCheckBox title="ゲームへの導入方法を理解した！" id="2-2" />

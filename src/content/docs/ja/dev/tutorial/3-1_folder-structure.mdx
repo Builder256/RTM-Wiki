@@ -1,0 +1,118 @@
+---
+title: 編集：フォルダ構造を理解する
+sidebar:
+  order: 6
+prev: true
+next: true
+---
+import { Steps, FileTree } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+モデルパックの改造を始める前に、モデルパックの構造について理解しましょう。
+
+## モデルパックの構造
+モデルパックは、主に4つのフォルダで構成されています。
+
+<FileTree>
+
+- MCTQ_Base (zipファイル)
+  - assets
+    - minecraft
+      - **json/** 設定 JSONファイル
+      - **models/** 形 MQOファイル
+      - **textures/** 見た目 PNGファイル
+    - **sound_mctq_mi/** 音 JavaScriptとOGGファイル
+
+</FileTree>
+
+それぞれのフォルダには、以下の役割があります。
+
+1.  **json**: 車両の速度や加速力、座席の位置などを決めるファイルが入っています。
+2.  **models**: 車両の3Dモデル（形）のデータが入っています。
+3.  **textures**: 車両の色や模様（テクスチャ）の画像が入っています。
+4.  **sound_mctq_mi**: 走行音やドアの開閉音などの音声ファイルが入っています。
+
+このモデルパックでは、これら4つの要素が組み合わさって、1つの車両が構成されています。
+
+:::tip[ポイント]
+まずは「**json**」「**models**」「**textures**」「**sound_mctq_mi**」の4つがあることを覚えましょう！
+:::
+
+## 車両の種類
+このモデルパックでは、4種類の車両が実装されています。
+
+1. 制御動力車（クモハ）
+   ファイル名には、「`Mc`」と含まれています。
+   パンタグラフの付いている先頭車です。
+2. 中間車（サハ）
+   ファイル名には、「`T`」と含まれています。
+   中間車です。
+3. 動力車（モハ）
+   ファイル名には、「`M`」と含まれています。
+   パンタグラフの付いている中間車です。
+4. 制御車（クハ）
+   ファイル名には、「`Tc`」と含まれています。 
+   先頭車です。
+
+お気づきの方もいるかもしれませんが、`M`が動力車、`T`が付随車、`c`が制御車という意味になります。
+
+<details>
+<summary>詳細なフォルダ構造を見る</summary>
+実際のモデルパックの中身は、以下のようになっています。
+<FileTree>
+
+- MCTQ_Base (zipファイル)
+  - assets
+    - minecraft
+      - json 設定ファイル（JSON）の配置場所
+        - ModelTrain_org_mct_q_n1_Mc.json クモハの設定ファイル
+        - ModelTrain_org_mct_q_n2_T.json サハの設定ファイル
+        - ModelTrain_org_mct_q_n3_M.json モハの設定ファイル
+        - ModelTrain_org_mct_q_n4_Tc.json クハの設定ファイル
+      - models 3Dファイルの配置場所
+        - org_mct_q_n 車両形式名（`mct_q_n`）で分類→MCTのQ型、ベースモデル（非スクリプト搭載）
+          - bogie.mqo 台車の3Dファイル
+          - mct_q_n_M.mqo モハの3Dファイル
+          - mct_q_n_Mc.mqo クモハの3Dファイル
+          - mct_q_n_T.mqo サハの3Dファイル
+          - mct_q_n_Tc.mqo クハの3Dファイル
+      - textures テクスチャの配置場所
+        - train 列車モデルのテクスチャ配置場所
+          - org_mct_q_n
+            - alpha.png 半透明部分のテクスチャ
+            - bogie.png 台車のテクスチャ
+            - mct_q_n_M.png モハのテクスチャ
+            - mct_q_n_Mc.png クモハのテクスチャ
+            - mct_q_n_Mc_light0.png クモハのテクスチャ（ライト消灯時）
+            - mct_q_n_Mc_light1.png クモハのテクスチャ（ライト点灯時）
+            - mct_q_n_Mc_light2.png クモハのテクスチャ（ライト点灯時）
+            - mct_q_n_T.png サハのテクスチャ
+            - mct_q_n_Tc.png クハのテクスチャ
+            - mct_q_n_Tc_light0.png クハのテクスチャ（ライト消灯時）
+            - mct_q_n_Tc_light1.png クハのテクスチャ（ライト点灯時）
+            - mct_q_n_Tc_light2.png クハのテクスチャ（ライト点灯時）
+            - parts.png 部品のテクスチャ
+            - sign.png 車両の行先表示器のテクスチャ
+            - button ボタンテクスチャの配置場所
+              - M.png モハのボタンテクスチャ
+              - Mc.png クモハのボタンテクスチャ
+              - T.png サハのボタンテクスチャ
+              - Tc.png クハのボタンテクスチャ
+    - sound_mctq_mi 車両モデルのサウンド
+      - sounds.json サウンドイベントの設定ファイル
+      - sounds サウンドファイルの配置場所
+        - train 列車のサウンド
+          - rtm_mctq_doorclose_mi.ogg 開扉音声ファイル
+          - rtm_mctq_dooropen_mi.ogg 閉扉音声ファイル
+  - readme.txt モデルパックの説明文
+</FileTree>
+
+</details>
+
+<TutorialCheckBox title="フォルダ構造を理解できた！" id="3-1" />
+
+{/* アイコンはまだないのでコメントアウト */}
+{/*
+**権利表記**
+このページで使用しているファイルのアイコンは、[Icons8](https://icons8.com)によって提供されているものです。
+*/}

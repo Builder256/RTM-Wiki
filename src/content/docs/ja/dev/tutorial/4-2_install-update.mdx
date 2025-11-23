@@ -1,0 +1,28 @@
+---
+title: 反映：ゲームへの再導入
+sidebar:
+  order: 11
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+作成したZIPファイルを、ゲームのmodsフォルダに入れます。
+
+## ファイルを上書きする
+
+[チュートリアルの2-2](./2-2_install-to-game.mdx)と同様に、`MCTq_Base.zip`をゲームに導入します。
+<Steps>
+1. Minecraftの`mods`フォルダを開きます。
+2. `mods`フォルダの開いている場所に、先ほど作った`MCTq_Base.zip`のみを移動します。
+3. 「宛先には既に "MCTq_Base.zip" という名前のファイルが存在します」と表示されるので、「**ファイルを置き換える**」をクリックします。
+</Steps>
+これで、編集内容が反映されたモデルパックが導入されました。
+
+:::caution
+モデルパックの読み込みはゲームの起動時にのみ行われます。ゲームを起動中の場合は、再起動してから反映されます。
+
+モデルパックは、リソースパックやデータパックと違い、**RTMのModの一部として認識される**ため、リソースパックの再読み込みを行っても反映されません。
+:::
+<TutorialCheckBox title="モデルパックを更新できた！" id="4-2" />

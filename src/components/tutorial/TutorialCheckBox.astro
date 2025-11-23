@@ -1,0 +1,169 @@
+---
+interface Props {
+  title: string;
+  id: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<div class="tutorial-checkbox">
+  <input type="checkbox" id={id} class="checkbox-input" />
+  <label for={id} class="checkbox-label">
+    <span class="custom-checkbox">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="check-icon"
+      >
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </span>
+    <span class="label-text">{title}</span>
+  </label>
+</div>
+
+<style>
+  .tutorial-checkbox {
+    margin: 1rem 0;
+    background-color: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .tutorial-checkbox:hover {
+    border-color: var(--sl-color-gray-4);
+    background-color: var(--sl-color-gray-5);
+  }
+
+  .tutorial-checkbox:has(.checkbox-input:checked) {
+    border-color: var(--sl-color-accent);
+    background-color: var(--sl-color-accent-low);
+  }
+
+  .checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--sl-color-gray-4);
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+    background-color: var(--sl-color-black);
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .checkbox-input:checked + .checkbox-label .custom-checkbox {
+    background-color: var(--sl-color-accent);
+    border-color: var(--sl-color-accent);
+  }
+
+  .check-icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--sl-color-white);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s ease;
+  }
+
+  .checkbox-input:checked + .checkbox-label .check-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .label-text {
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+</style>
+
+<script>
+  // class TutorialCheckBox extends HTMLElement {
+  //   constructor() {
+  //     super();
+  //     const input = this.querySelector('input');
+  //     if (!input) return;
+
+  //     const id = input.id;
+  //     const storageKey = `tutorial-progress-${id}`;
+
+  //     // Restore state
+  //     const savedState = localStorage.getItem(storageKey);
+  //     if (savedState === 'true') {
+  //       input.checked = true;
+  //     }
+
+  //     // Save state on change
+  //     input.addEventListener('change', () => {
+  //       localStorage.setItem(storageKey, input.checked.toString());
+
+  //       // Dispatch event for progress tracking
+  //       window.dispatchEvent(
+  //         new CustomEvent('tutorial-progress-update', {
+  //           detail: { id, checked: input.checked },
+  //         }),
+  //       );
+  //     });
+  //   }
+  // }
+
+  // Wrap the component logic to run when the DOM is ready or when the component is hydrated
+  // Since we are not using a custom element wrapper in the HTML above, we can just run this logic.
+  // However, for better reusability and Astro compatibility (View Transitions), let's use a custom element or just a script that runs on page load.
+
+  // Simple script approach for now
+  function initCheckboxes() {
+    const inputs = document.querySelectorAll(
+      '.tutorial-checkbox .checkbox-input',
+    );
+
+    inputs.forEach((input) => {
+      if (!(input instanceof HTMLInputElement)) return;
+
+      const id = input.id;
+      const storageKey = `tutorial-progress-${id}`;
+
+      const savedState = localStorage.getItem(storageKey);
+      if (savedState === 'true') {
+        input.checked = true;
+      }
+
+      input.addEventListener('change', () => {
+        localStorage.setItem(storageKey, input.checked.toString());
+        window.dispatchEvent(new CustomEvent('tutorial-progress-update'));
+      });
+    });
+  }
+
+  initCheckboxes();
+
+  // Support View Transitions
+  // document.addEventListener('astro:page-load', initCheckboxes);
+</script>

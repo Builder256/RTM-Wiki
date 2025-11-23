@@ -1,0 +1,25 @@
+---
+title: 反映：ZIPファイルを作る
+sidebar:
+  order: 10
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+編集したファイルをゲームに読み込ませるために、もう一度モデルパック（ZIPファイル）の形に戻します。
+
+## フォルダを圧縮する
+
+<Steps>
+1. 作業用フォルダ(`my-modelpack`)の中の、`MCTq_Base`フォルダを開きます。
+2. 中にある`assets`フォルダと`readme.txt`ファイルを、**両方とも選択**します。
+   （何もないところをクリックし、そのまま2つのファイルにかぶさるようにドラッグすると複数選択できます）
+3. 選択した状態で選択したファイルを右クリックし、「送る」→「圧縮（zip 形式）フォルダー」をクリックします。
+4. 新しくできたZIPファイルの名前を「`MCTq_Base.zip`」に変更します。
+</Steps>
+:::caution
+`MCTq_Base`フォルダそのものを圧縮するのではなく、**フォルダの中身を直接選択して圧縮**してください。これをしていないとゲームで読み込まれません。（クラッシュします）
+:::
+<TutorialCheckBox title="ZIPファイルを作成できた！" id="4-1" />

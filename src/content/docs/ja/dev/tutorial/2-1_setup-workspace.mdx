@@ -1,0 +1,31 @@
+---
+title: 導入：作業フォルダの準備
+sidebar:
+  order: 4
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+モデルパックを編集するための専用のフォルダを用意して、改造をやりやすくします。
+## デスクトップに作業場所を作る
+<Steps>
+1. デスクトップに新しいフォルダーを作り、「`my-modelpack`」という名前にします。
+   これがあなたのモデルパック制作の作業場所になります。
+2. 先ほどダウンロードした`MCTq_Base.zip`を、この`my-modelpack`フォルダの中に移動します。
+</Steps>
+
+## モデルパックを展開する
+<Steps>
+1. `MCTq_Base.zip`を右クリックし、「すべて展開」をクリックします。
+2. 「圧縮（ZIP 形式）フォルダーの展開」ウィンドウが開いたら、「展開」をクリックします。
+   「完了時に展開されたファイルを表示する」のチェックは外しておくと混乱を防げます。
+3. 展開が終わると、`MCTq_Base`というフォルダが作成されます。
+4. `MCTq_Base`フォルダを開き、中に`assets`フォルダと`readme.txt`ファイルがあることを確認します。
+</Steps>
+{/*  メモ：
+- 拡張子を表示する設定になっていない場合、「.zip」が見えないことがあるため、Windowsのフォルダオプション設定についての注釈が必要かも。
+- フォルダ階層の図解（ツリー構造）を入れるとより分かりやすくなる。
+*/}
+<TutorialCheckBox title="作業フォルダの準備ができた！" id="2-1" />

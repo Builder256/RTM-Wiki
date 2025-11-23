@@ -1,0 +1,62 @@
+---
+title: 準備：ツールのインストール
+sidebar:
+  order: 2
+prev: true
+next: true
+---
+import { Steps } from '@astrojs/starlight/components';
+import TutorialCheckBox from '../../../../../components/tutorial/TutorialCheckBox.astro'
+
+必要なアプリケーションを実際にインストールしましょう。
+## Metasequoia 4
+Metasequoia 4のダウンロードは、公式サイトから行います。
+
+ダウンロードページ：[ダウンロード | metaseq.net](https://www.metaseq.net/jp/download/)
+
+「ダウンロード for Windows 64bit」と記載されているボタンをクリックして、インストーラーをダウンロードしてください。
+
+ダウンロードが完了したら、インストーラーを起動し、ウィザードの指示に従ってインストールを行ってください。
+:::note[エディション]
+Metasequoia 4には、以下の2つのエディションがあります。
+- Metasequoia 4 Standard: 無料
+- Metasequoia 4 EX: 有料 税込12100円（日本国内）
+このチュートリアルでは、Standard版の機能のみを活用するため、EX版のライセンスキーの購入は不要です。
+::: 
+## GIMP
+GIMPのダウンロードは、公式サイトから行います。
+
+ダウンロードページ：[GIMP - Downloads](https://www.gimp.org/downloads/)  
+
+「Download GIMP 3.○.○ for x86, x86_64 and ARM64 directly」と記載されているボタンをクリックして、インストーラーをダウンロードしてください。
+
+PhotoshopやPaint.NETなど、使い慣れたソフトがある場合はそちらでも構いませんが、必ず**アルファチャンネルをサポート**しているものを選んでください。
+
+ダウンロードが完了したら、インストーラーを起動し、ウィザードの指示に従ってインストールを行ってください。
+## Visual Studio Code
+VSCodeのダウンロードは、公式サイトから行います。
+
+ダウンロードページ：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/download)
+
+「Windows 10,11」と記載されているボタンをクリックして、インストーラーをダウンロードしてください。
+
+ダウンロードが完了したら、インストーラーを起動し、ウィザードの指示に従ってインストールを行ってください。
+
+### 日本語化
+インストールしたままの状態では英語のUIになっているため、必要な場合には日本語対応の**拡張機能**をインストールすることで日本語化することができます。
+
+<Steps>
+1. VSCodeを起動する
+2. [Japanese Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)を開く
+3. 「Install」をクリックして、拡張機能をインストールする
+   ブラウザにページをVSCodeで開くかと尋ねられたら、承認する
+4. VSCodeが開くので、インストールが進行していることを確認する
+5. 言語変更のための再起動を求められたら、承認する
+</Steps>
+
+{/*  メモ：
+- VSCodeの日本語化拡張機能のインストール手順を追加する。
+- JSONを見やすくする拡張機能などを紹介すると良い。
+*/}
+
+<TutorialCheckBox title="必要なソフトウエアをインストールできた！" id="1-2" />
