@@ -82,6 +82,7 @@ export default defineConfig({
           items: [
             {
               label: '車両制作チュートリアル',
+              collapsed: true,
               translations: { en: 'Developing Train Tutorial' },
               autogenerate: { directory: 'dev/tutorial/' },
             },
@@ -93,6 +94,7 @@ export default defineConfig({
             { label: 'JSONファイル', link: 'dev/file/json/' },
             { label: 'モデル設定用JSONファイル', link: 'dev/file/json/model/' },
             { label: '逆引きリファレンス', link: 'dev/reverse-reference/' },
+            { label: '方向幕', link: 'dev/rollsign/' },
             { label: 'トラブルシューティング', link: 'dev/troubleshooting/' },
             {
               label: 'リファレンス',
