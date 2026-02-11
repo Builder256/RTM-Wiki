@@ -36,6 +36,9 @@
 	"dependencies": {
 		"remark-breaks": "^4.0.0",
 		"remark-directive": "^4.0.0",
-		"svelte-exmarkdown": "^5.0.2"
+		"remark-frontmatter": "^5.0.0",
+		"svelte-exmarkdown": "^5.0.2",
+		"vfile": "^6.0.3",
+		"vfile-matter": "^5.0.1"
 	}
 }
