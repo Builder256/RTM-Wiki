@@ -13,7 +13,13 @@
   <meta name="darkreader-lock" />
 </svelte:head>
 
-{@render children()}
+<header class="flex h-18 items-center border-b border-border">
+  <a href="/" class="">RTM Wiki</a>
+</header>
+<main>
+  {@render children()}
+</main>
+
 <div style="display:none">
   {#each locales as locale}
     <a href={localizeHref(page.url.pathname, { locale })}>
