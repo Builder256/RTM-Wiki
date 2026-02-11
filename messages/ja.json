@@ -1,4 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from ja!"
+	"hello_world": "Hello, {name} from ja!",
+	"header_menu": "メニュー",
+	"header_edit": "編集"
 }
