@@ -1,26 +1,19 @@
 <script lang="ts">
   import MarkdownRenderer from '$lib/components/MarkdownRenderer.svelte';
-  import { parseMarkdown } from '$lib/utils/markdown';
+  import { resolveContent } from '$lib/utils/content';
 
-  interface Contents {
-    [key: string]: string;
-  }
-
-  /**
-   * `/content/`内のmdファイル
-   * ```typescript
-   * {
-   *   'ルート相対パス': 'ファイルの内容',
-   *   '/content/foo.md': 'foo.mdの内容',
-   * }
-   * ```
-   */
-  const allContent: Contents = import.meta.glob('/content/**/*.md', { eager: true, query: '?raw', import: 'default' });
-
-  const rawContent = allContent['/content/ja/index.md'];
-  const { content, metadata } = parseMarkdown(rawContent);
-
-  console.log(metadata);
+  const result = resolveContent('');
 </script>
 
-<MarkdownRenderer {content} />
+<svelte:head>
+  {#if result}
+    <title>{result.metadata.title ?? 'RTM Wiki'}</title>
+    {#if result.metadata.description}
+      <meta name="description" content={result.metadata.description} />
+    {/if}
+  {/if}
+</svelte:head>
+
+{#if result}
+  <MarkdownRenderer content={result.content} />
+{/if}
