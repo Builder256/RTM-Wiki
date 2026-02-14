@@ -82,7 +82,7 @@
 <header class="sticky top-0 z-50 border-b border-border bg-background/50 backdrop-blur-lg">
   <Container>
     <div class="flex h-(--header-content-height) items-center justify-between">
-      <Button variant="ghost" class="hidden text-xl lg:block" href="/">RTM Wiki</Button>
+      <Button variant="ghost" class="hidden text-xl lg:flex" href="/">RTM Wiki</Button>
 
       <!-- デスクトップ用メニュー -->
       <div class="hidden lg:block">
