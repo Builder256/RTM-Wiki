@@ -46,7 +46,6 @@
 
   /** モバイルサイドバー表示制御 */
   let isSidebarShown = $state(false);
-  $inspect(isSidebarShown);
 </script>
 
 <svelte:head>
