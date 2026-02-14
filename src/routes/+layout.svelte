@@ -106,6 +106,7 @@
 
       <!-- モバイル用ページタイトル -->
       <div class="lg:hidden">
+        <!-- TODO: ページタイトルを自動適用 -->
         <span>ページタイトル</span>
       </div>
 
@@ -152,7 +153,7 @@
     <div class="hidden w-xs shrink-0 border-s border-border lg:block">
       <div class="sticky top-(--header-height) w-full p-4">
         {#if currentContent}
-          <TableOfContents content={currentContent.content} />
+          <TableOfContents />
         {/if}
       </div>
     </div>

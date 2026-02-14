@@ -21,6 +21,7 @@ interface ContentMap {
 export const isSidebarCategory = (item: SidebarItem): item is SidebarCategory => item.type === 'category';
 export const isSidebarPage = (item: SidebarItem): item is SidebarPage => item.type === 'page';
 
+// TODO: 自動生成を検討
 /**
  * `/content/ja/` 内のMarkdownファイルからサイドバーツリーを構築する
  */

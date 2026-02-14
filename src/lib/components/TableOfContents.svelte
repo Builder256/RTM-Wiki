@@ -1,71 +1,72 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  // TODO: 目次の自動生成を検討
+  // import { onMount } from 'svelte';
 
-  interface Props {
-    content: string;
-  }
+  // interface Props {
+  //   content: string;
+  // }
 
-  interface TocItem {
-    id: string;
-    text: string;
-    level: number;
-  }
+  // interface TocItem {
+  //   id: string;
+  //   text: string;
+  //   level: number;
+  // }
 
-  const { content }: Props = $props();
+  // const { content }: Props = $props();
 
-  let tocItems = $state<TocItem[]>([]);
-  let activeId = $state('');
+  // let tocItems = $state<TocItem[]>([]);
+  // let activeId = $state('');
 
-  // Markdownコンテンツからh2, h3の見出しを抽出
-  $effect(() => {
-    const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-    const items: TocItem[] = [];
-    let match;
+  // // Markdownコンテンツからh2, h3の見出しを抽出
+  // $effect(() => {
+  //   const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  //   const items: TocItem[] = [];
+  //   let match;
 
-    while ((match = headingRegex.exec(content)) !== null) {
-      const level = match[1]!.length;
-      const text = match[2]!.trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^\p{L}\p{N}\s-]/gu, '')
-        .replace(/\s+/g, '-');
+  //   while ((match = headingRegex.exec(content)) !== null) {
+  //     const level = match[1]!.length;
+  //     const text = match[2]!.trim();
+  //     const id = text
+  //       .toLowerCase()
+  //       .replace(/[^\p{L}\p{N}\s-]/gu, '')
+  //       .replace(/\s+/g, '-');
 
-      items.push({ id, text, level });
-    }
+  //     items.push({ id, text, level });
+  //   }
 
-    tocItems = items;
-  });
+  //   tocItems = items;
+  // });
 
-  onMount(() => {
-    // IntersectionObserverで現在表示中の見出しを追跡
-    const observer = new IntersectionObserver(
-      entries => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            activeId = entry.target.id;
-          }
-        }
-      },
-      {
-        rootMargin: '-80px 0px -60% 0px',
-        threshold: 0,
-      },
-    );
+  // onMount(() => {
+  //   // IntersectionObserverで現在表示中の見出しを追跡
+  //   const observer = new IntersectionObserver(
+  //     entries => {
+  //       for (const entry of entries) {
+  //         if (entry.isIntersecting) {
+  //           activeId = entry.target.id;
+  //         }
+  //       }
+  //     },
+  //     {
+  //       rootMargin: '-80px 0px -60% 0px',
+  //       threshold: 0,
+  //     },
+  //   );
 
-    // DOMの見出し要素を監視
-    const observeHeadings = () => {
-      const headings = document.querySelectorAll('[data-md-content] h2, [data-md-content] h3');
-      headings.forEach(heading => observer.observe(heading));
-    };
+  //   // DOMの見出し要素を監視
+  //   const observeHeadings = () => {
+  //     const headings = document.querySelectorAll('[data-md-content] h2, [data-md-content] h3');
+  //     headings.forEach(heading => observer.observe(heading));
+  //   };
 
-    // Markdownがレンダリングされた後にobserve
-    const timer = setTimeout(observeHeadings, 100);
+  //   // Markdownがレンダリングされた後にobserve
+  //   const timer = setTimeout(observeHeadings, 100);
 
-    return () => {
-      clearTimeout(timer);
-      observer.disconnect();
-    };
-  });
+  //   return () => {
+  //     clearTimeout(timer);
+  //     observer.disconnect();
+  //   };
+  // });
 </script>
 
 <aside>
@@ -96,7 +97,7 @@
   </aside>
 {/if} -->
 
-<style>
+<!-- <style>
   .toc {
     position: sticky;
     top: 4rem;
@@ -154,4 +155,4 @@
     color: var(--accent);
     font-weight: 500;
   }
-</style>
+</style> -->
