@@ -1,18 +1,28 @@
 <script lang="ts">
-  import { page } from '$app/state';
-  import { locales, localizeHref } from '$lib/paraglide/runtime';
   import './layout.css';
-  import favicon from '$lib/assets/favicon.svg';
+  // sveltekit
+  import { page } from '$app/state';
+  // paraglide
   import { m } from '$lib/paraglide/messages';
+  import { locales, localizeHref } from '$lib/paraglide/runtime';
+  // lucide
+  import FilePenLine from '@lucide/svelte/icons/file-pen-line';
+  import Languages from '@lucide/svelte/icons/languages';
+  import X from '@lucide/svelte/icons/x';
+  import Menu from '@lucide/svelte/icons/menu';
+  import Search from '@lucide/svelte/icons/search';
+  // shadcn-svelte
+  import { Button } from '$lib/components/ui/button/index.js';
+  import { Separator } from '$lib/components/ui/separator/index.js';
+  import favicon from '$lib/assets/favicon.svg';
+  // custom components
   import Container from '$lib/components/Container.svelte';
   import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
   import TableOfContents from '$lib/components/TableOfContents.svelte';
+  // utils
   import { getAllContent } from '$lib/utils/content';
-  import type { SidebarItem } from '$lib/components/sidebar/sidebar';
   import { resolveContent } from '$lib/utils/content';
-  import { FilePenLine, Languages, Menu, Search, X } from '@lucide/svelte';
-  import { Button } from '$lib/components/ui/button/index.js';
-  import { Separator } from '$lib/components/ui/separator/index.js';
+  import type { SidebarItem } from '$lib/components/sidebar/sidebar';
 
   let { children } = $props();
 

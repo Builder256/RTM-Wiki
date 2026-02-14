@@ -1,17 +1,16 @@
 <script lang="ts">
+  // lucide
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
+  import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+  // shadcn-svelte
   import { buttonVariants } from '$lib/components/ui/button';
   import * as Collapsible from '$lib/components/ui/collapsible/index.js';
-  import { ChevronDown, ChevronLeft } from '@lucide/svelte';
-
-  import {
-    isSidebarCategory,
-    isSidebarPage,
-    type SidebarPage as SidebarPageType,
-    type SidebarCategory as SidebarCategoryType,
-  } from './sidebar';
+  import { cn } from '$lib/utils';
+  // custom components
   import SidebarPage from './SidebarPage.svelte';
   import SidebarCategory from './SidebarCategory.svelte';
-  import { cn } from '$lib/utils';
+  // utils
+  import { isSidebarCategory, isSidebarPage, type SidebarCategory as SidebarCategoryType } from './sidebar';
 
   interface Props {
     item: SidebarCategoryType;
