@@ -7,3 +7,5 @@ bun.lockb
 
 # Miscellaneous
 /static/
+/src/lib/components/ui
+**.md
