@@ -1,3 +1,4 @@
+// paradlideの仕様を理解できていないので介入させないためにコメントアウト
 // import type { Handle } from '@sveltejs/kit';
 // import { paraglideMiddleware } from '$lib/paraglide/server';
 

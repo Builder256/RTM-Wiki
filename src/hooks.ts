@@ -1,3 +1,4 @@
+// paradlideの仕様を理解できていないので介入させないためにコメントアウト
 // import { deLocalizeUrl } from '$lib/paraglide/runtime';
 
 // // アクセスされたパスの、SvelteKit内部での扱いを変更する
