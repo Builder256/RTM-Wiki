@@ -149,14 +149,6 @@
   </div>
 </Container>
 
-<!-- モバイルサイドバーオーバーレイ -->
-<!-- {#if sidebarOpen}
-  <div class="sidebar-overlay" onclick={() => (sidebarOpen = false)} role="presentation"></div>
-  <div class="sidebar-mobile">
-    <Sidebar items={sidebarItems} />
-  </div>
-{/if} -->
-
 <!-- フッター -->
 <footer class="border-t border-border">
   <Container>
