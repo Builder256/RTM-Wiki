@@ -17,12 +17,12 @@
   import favicon from '$lib/assets/favicon.svg';
   // custom components
   import Container from '$lib/components/Container.svelte';
-  import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
+  import MainMenu from '$lib/components/main-menu/MainMenu.svelte';
   import TableOfContents from '$lib/components/TableOfContents.svelte';
   // utils
   import { getAllContent } from '$lib/utils/content';
   import { resolveContent } from '$lib/utils/content';
-  import type { SidebarItem } from '$lib/components/sidebar/sidebar';
+  import type { MainMenuItem } from '$lib/components/main-menu/main-menu';
 
   let { children } = $props();
 
@@ -32,7 +32,7 @@
   const allContent = getAllContent();
   // const sidebarItems = buildSidebarTree(allContent);
 
-  const sidebarItems: SidebarItem[] = [
+  const sidebarItems: MainMenuItem[] = [
     {
       type: 'page',
       title: 'ホーム',
@@ -140,7 +140,7 @@
         <div class="mb-4 grid place-items-center lg:hidden">
           {@render headerMenu()}
         </div>
-        <Sidebar items={sidebarItems} />
+        <MainMenu items={sidebarItems} />
       </nav>
     </div>
 

@@ -1,25 +1,25 @@
 // import { parseMarkdown } from '../../utils/markdown';
 
-export interface SidebarCategory {
+export interface MainMenuItemCategory {
   type: 'category';
   title: string;
-  items: SidebarItem[];
+  items: MainMenuItem[];
 }
 
-export interface SidebarPage {
+export interface MainMenuItemPage {
   type: 'page';
   title: string;
   path: string;
 }
 
-export type SidebarItem = SidebarCategory | SidebarPage;
+export type MainMenuItem = MainMenuItemCategory | MainMenuItemPage;
 
 interface ContentMap {
   [key: string]: string;
 }
 
-export const isSidebarCategory = (item: SidebarItem): item is SidebarCategory => item.type === 'category';
-export const isSidebarPage = (item: SidebarItem): item is SidebarPage => item.type === 'page';
+export const isMainMenuItemCategory = (item: MainMenuItem): item is MainMenuItemCategory => item.type === 'category';
+export const isMainMenuItemPage = (item: MainMenuItem): item is MainMenuItemPage => item.type === 'page';
 
 // TODO: 自動生成を検討
 /**
