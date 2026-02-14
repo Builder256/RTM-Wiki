@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import MarkdownRenderer from '$lib/components/MarkdownRenderer.svelte';
   import { resolveContent } from '$lib/utils/content';
   import { page } from '$app/state';
@@ -22,4 +22,4 @@
   {/if}
 </svelte:head>
 
-<MarkdownRenderer content={result.content} />
+<MarkdownRenderer content={result.content} /> -->

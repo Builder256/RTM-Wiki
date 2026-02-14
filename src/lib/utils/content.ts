@@ -5,7 +5,7 @@ interface ContentMap {
 }
 
 /**
- * `/content/ja/` 内のすべてのMarkdownファイルを読み込む
+ * `/content/` 内のすべてのMarkdownファイルを読み込む
  */
 export function getAllContent(): ContentMap {
   return import.meta.glob('/content/**/*.md', { eager: true, query: '?raw', import: 'default' }) as ContentMap;

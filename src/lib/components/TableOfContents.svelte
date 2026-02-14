@@ -68,8 +68,23 @@
   });
 </script>
 
-{#if tocItems.length > 0}
-  <aside data-slot="toc" class="toc">
+<aside>
+  <p class="pb-2 font-bold">目次</p>
+  <ul class="">
+    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
+      <a href="#" class="block w-full p-1">見出し1</a>
+    </li>
+    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
+      <a href="#" class="block w-full p-1">見出し2</a>
+    </li>
+    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
+      <a href="#" class="block w-full p-1">見出し3</a>
+    </li>
+  </ul>
+</aside>
+
+<!-- {#if tocItems.length > 0}
+  <aside data-slot="table-of-contents" class="toc">
     <p class="toc-title">目次</p>
     <ul>
       {#each tocItems as item}
@@ -79,7 +94,7 @@
       {/each}
     </ul>
   </aside>
-{/if}
+{/if} -->
 
 <style>
   .toc {

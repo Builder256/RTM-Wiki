@@ -5,14 +5,14 @@
   import favicon from '$lib/assets/favicon.svg';
   import { m } from '$lib/paraglide/messages';
   import Container from '$lib/components/Container.svelte';
-  import Sidebar from '$lib/components/Sidebar.svelte';
+  import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
   import TableOfContents from '$lib/components/TableOfContents.svelte';
   import { getAllContent } from '$lib/utils/content';
-  import { buildSidebarTree } from '$lib/utils/sidebar';
+  import type { SidebarItem } from '$lib/components/sidebar/sidebar';
   import { resolveContent } from '$lib/utils/content';
-  import Search from '@lucide/svelte/icons/search';
-  import Menu from '@lucide/svelte/icons/menu';
-  import X from '@lucide/svelte/icons/x';
+  import { Book, BookOpen, BookOpenText, FilePenLine, FileText, Languages, Menu, Search, X } from '@lucide/svelte';
+  import { Button } from '$lib/components/ui/button/index.js';
+  import { Separator } from '$lib/components/ui/separator/index.js';
 
   let { children } = $props();
 
@@ -20,13 +20,33 @@
 
   // サイドバーデータ
   const allContent = getAllContent();
-  const sidebarItems = buildSidebarTree(allContent);
+  // const sidebarItems = buildSidebarTree(allContent);
+
+  const sidebarItems: SidebarItem[] = [
+    {
+      type: 'page',
+      title: 'ホーム',
+      path: '/',
+    },
+    {
+      type: 'category',
+      title: 'はじめに',
+      items: [
+        {
+          type: 'page',
+          title: 'ページ',
+          path: '/usage/basic',
+        },
+      ],
+    },
+  ];
 
   // 現在ページのコンテンツ（目次用）
   const currentContent = $derived(resolveContent(page.url.pathname));
 
-  // モバイルサイドバー表示制御
-  let sidebarOpen = $state(false);
+  /** モバイルサイドバー表示制御 */
+  let isSidebarShown = $state(false);
+  $inspect(isSidebarShown);
 </script>
 
 <svelte:head>
@@ -35,62 +55,113 @@
   <meta name="darkreader-lock" />
 </svelte:head>
 
-<!-- ヘッダ -->
-<header class="header">
+{#snippet headerMenu()}
+  <div class="flex flex-wrap items-center">
+    <Button variant="ghost" size="sm">
+      <Search class="hidden md:block" />{m.header_search()}
+    </Button>
+    <Separator orientation="vertical" class="h-8" />
+    <Button variant="ghost" size="sm">
+      <Book class="hidden md:block" />{m.header_wiki()}
+    </Button>
+    <Button variant="ghost" size="sm">
+      <BookOpenText class="hidden md:block" />{m.header_article()}
+    </Button>
+    <Button variant="ghost" size="sm">
+      <FileText class="hidden md:block" />{m.header_reference()}
+    </Button>
+    <Separator orientation="vertical" class="h-8" />
+    <Button variant="ghost" size="sm">
+      <Languages class="hidden md:block" />{m.header_language()}
+    </Button>
+    <Button variant="ghost" size="sm">
+      <FilePenLine class="hidden md:block" />{m.header_edit()}
+    </Button>
+  </div>
+{/snippet}
+
+<header class="sticky top-0 z-50 border-b border-border bg-background/50 backdrop-blur-lg">
   <Container>
-    <div class="header-inner">
-      <div class="header-left">
-        <button class="mobile-menu-btn" onclick={() => (sidebarOpen = !sidebarOpen)}>
-          {#if sidebarOpen}
-            <X size={20} />
-          {:else}
-            <Menu size={20} />
-          {/if}
-        </button>
-        <a href="/" class="site-title">{SITE_NAME}</a>
+    <div class="flex h-(--header-content-height) items-center justify-between">
+      <Button variant="ghost" class="hidden text-xl lg:block" href="/">RTM Wiki</Button>
+
+      <!-- デスクトップ用メニュー -->
+      <div class="hidden lg:block">
+        {@render headerMenu()}
       </div>
 
-      <div class="header-right">
-        <a href="edit/" class="header-link">{m.header_edit()}</a>
+      <!-- モバイル用目次 -->
+      <div class="px-4 lg:hidden">
+        <Button variant="outline" size="sm">目次</Button>
       </div>
+
+      <!-- モバイル用ページタイトル -->
+      <div class="lg:hidden">
+        <span>ページタイトル</span>
+      </div>
+
+      <!-- モバイル用ハンバーガーメニュー -->
+      <Button variant="ghost" onclick={() => (isSidebarShown = !isSidebarShown)} class="lg:hidden">
+        {#if isSidebarShown}
+          <X />
+          <span class="hidden sm:block">{m.header_close()}</span>
+        {:else}
+          <Menu />
+          <span class="hidden sm:block">{m.header_menu()}</span>
+        {/if}
+      </Button>
     </div>
   </Container>
 </header>
 
 <!-- メインコンテンツ -->
 <Container>
-  <div class="layout">
-    <!-- サイドバー（デスクトップ） -->
-    <div class="sidebar-desktop">
-      <Sidebar items={sidebarItems} />
+  <div class="flex">
+    <!-- サイドバー -->
+    <!-- モバイルではcontentsで場所を取らない(hiddenだと中身まで消える)、lg>で表示 -->
+    <div class="contents w-xs shrink-0 border-e border-border lg:block">
+      <!-- モバイルではfixedで全面固定、lg>でstickyにし、通常と同様にwidthを取らせる -->
+      <nav
+        class={[
+          'fixed top-(--header-height) bottom-0 z-50 hidden w-full bg-background/50 p-4 backdrop-blur-lg lg:sticky lg:block!',
+          { 'block!': isSidebarShown },
+        ]}
+      >
+        <div class="mb-4 grid place-items-center lg:hidden">
+          {@render headerMenu()}
+        </div>
+        <Sidebar items={sidebarItems} />
+      </nav>
     </div>
 
     <!-- メインコンテンツ -->
-    <main class="main-content">
+    <main class="w-full p-4">
       {@render children()}
     </main>
 
     <!-- 目次（デスクトップ） -->
-    <div class="toc-desktop">
-      {#if currentContent}
-        <TableOfContents content={currentContent.content} />
-      {/if}
+    <div class="hidden w-xs shrink-0 border-s border-border lg:block">
+      <div class="sticky top-(--header-height) w-full p-4">
+        {#if currentContent}
+          <TableOfContents content={currentContent.content} />
+        {/if}
+      </div>
     </div>
   </div>
 </Container>
 
 <!-- モバイルサイドバーオーバーレイ -->
-{#if sidebarOpen}
+<!-- {#if sidebarOpen}
   <div class="sidebar-overlay" onclick={() => (sidebarOpen = false)} role="presentation"></div>
   <div class="sidebar-mobile">
     <Sidebar items={sidebarItems} />
   </div>
-{/if}
+{/if} -->
 
 <!-- フッター -->
-<footer class="footer">
+<footer class="border-t border-border">
   <Container>
-    <div class="footer-inner">
+    <div class="py-4 text-center text-sm text-muted-foreground">
       <p>© {new Date().getFullYear()} {SITE_NAME}. MIT License.</p>
     </div>
   </Container>
@@ -106,153 +177,8 @@
 </div>
 
 <style>
-  /* ヘッダー */
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 40;
-    border-bottom: 1px solid var(--border);
-    background-color: color-mix(in oklab, var(--background) 80%, transparent);
-    backdrop-filter: blur(16px) saturate(180%);
-  }
-
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 3.5rem;
-    padding: 0 0.5rem;
-  }
-
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .site-title {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--foreground);
-    text-decoration: none;
-    transition: color 0.2s;
-    letter-spacing: -0.01em;
-  }
-
-  .site-title:hover {
-    color: var(--accent);
-  }
-
-  .header-link {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    text-decoration: none;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    transition:
-      color 0.2s,
-      background-color 0.2s;
-  }
-
-  .header-link:hover {
-    color: var(--foreground);
-    background-color: var(--accent);
-  }
-
-  .mobile-menu-btn {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0.375rem;
-    border: none;
-    background: none;
-    color: var(--muted-foreground);
-    cursor: pointer;
-    border-radius: 0.375rem;
-    transition:
-      color 0.2s,
-      background-color 0.2s;
-  }
-
-  .mobile-menu-btn:hover {
-    color: var(--foreground);
-    background-color: var(--accent);
-  }
-
-  /* 3カラムレイアウト */
-  .layout {
-    display: flex;
-    gap: 1.5rem;
-    min-height: calc(100vh - 3.5rem - 4rem);
-  }
-
-  .sidebar-desktop {
-    display: block;
-  }
-
-  .main-content {
-    flex: 1;
-    min-width: 0;
-    padding: 2rem 0;
-  }
-
-  .toc-desktop {
-    display: block;
-  }
-
-  /* モバイルサイドバー */
-  .sidebar-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 30;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .sidebar-mobile {
-    position: fixed;
-    top: 3.5rem;
-    left: 0;
-    bottom: 0;
-    z-index: 31;
-    width: 16rem;
-    background-color: var(--background);
-    border-right: 1px solid var(--border);
-    overflow-y: auto;
-    padding: 0.5rem;
-  }
-
-  /* フッター */
-  .footer {
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-inner {
-    padding: 1.5rem 0.5rem;
-    text-align: center;
-    font-size: 0.8125rem;
-    color: var(--muted-foreground);
-  }
-
-  /* レスポンシブ */
-  @media (max-width: 1024px) {
-    .toc-desktop {
-      display: none;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .sidebar-desktop {
-      display: none;
-    }
-
-    .mobile-menu-btn {
-      display: flex;
-    }
+  * {
+    --header-content-height: clamp(calc(var(--spacing) * 12), 6vw, calc(var(--spacing) * 18));
+    --header-height: calc(var(--header-content-height) + 1px);
   }
 </style>
