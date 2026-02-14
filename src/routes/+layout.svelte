@@ -10,7 +10,7 @@
   import { getAllContent } from '$lib/utils/content';
   import type { SidebarItem } from '$lib/components/sidebar/sidebar';
   import { resolveContent } from '$lib/utils/content';
-  import { Book, BookOpen, BookOpenText, FilePenLine, FileText, Languages, Menu, Search, X } from '@lucide/svelte';
+  import { FilePenLine, Languages, Menu, Search, X } from '@lucide/svelte';
   import { Button } from '$lib/components/ui/button/index.js';
   import { Separator } from '$lib/components/ui/separator/index.js';
 
@@ -61,13 +61,13 @@
     </Button>
     <Separator orientation="vertical" class="h-8" />
     <Button variant="ghost" size="sm">
-      <Book class="hidden md:block" />{m.header_wiki()}
+      {m.header_wiki()}
     </Button>
     <Button variant="ghost" size="sm">
-      <BookOpenText class="hidden md:block" />{m.header_article()}
+      {m.header_article()}
     </Button>
     <Button variant="ghost" size="sm">
-      <FileText class="hidden md:block" />{m.header_reference()}
+      {m.header_reference()}
     </Button>
     <Separator orientation="vertical" class="h-8" />
     <Button variant="ghost" size="sm">
