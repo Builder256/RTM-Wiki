@@ -114,7 +114,7 @@
           class="px-4!"
         >
           <List />
-          <span class="sr-only sm:not-sr-only">{m.header_toc()}</span>
+          <span class="sr-only xs:not-sr-only">{m.header_toc()}</span>
         </Button>
       </div>
 
@@ -135,10 +135,10 @@
       >
         {#if isSidebarShown}
           <X />
-          <span class="sr-only sm:not-sr-only">{m.header_close()}</span>
+          <span class="sr-only xs:not-sr-only">{m.header_close()}</span>
         {:else}
           <Menu />
-          <span class="sr-only sm:not-sr-only">{m.header_menu()}</span>
+          <span class="sr-only xs:not-sr-only">{m.header_menu()}</span>
         {/if}
       </Button>
     </div>
