@@ -11,6 +11,7 @@
   import X from '@lucide/svelte/icons/x';
   import Menu from '@lucide/svelte/icons/menu';
   import Search from '@lucide/svelte/icons/search';
+  import List from '@lucide/svelte/icons/list';
   // shadcn-svelte
   import { Button } from '$lib/components/ui/button/index.js';
   import { Separator } from '$lib/components/ui/separator/index.js';
@@ -56,6 +57,8 @@
 
   /** モバイルサイドバー表示制御 */
   let isSidebarShown = $state(false);
+  /** モバイル目次表示制御 */
+  let isTocShown = $state(false);
 </script>
 
 <svelte:head>
@@ -100,8 +103,19 @@
       </div>
 
       <!-- モバイル用目次 -->
-      <div class="px-4 lg:hidden">
-        <Button variant="outline" size="sm">目次</Button>
+      <div class="lg:hidden">
+        <Button
+          variant="ghost"
+          size="sm"
+          onclick={() => {
+            isTocShown = !isTocShown;
+            isSidebarShown = false;
+          }}
+          class="px-4!"
+        >
+          <List />
+          <span class="sr-only xs:not-sr-only">{m.header_toc()}</span>
+        </Button>
       </div>
 
       <!-- モバイル用ページタイトル -->
@@ -111,13 +125,20 @@
       </div>
 
       <!-- モバイル用ハンバーガーメニュー -->
-      <Button variant="ghost" onclick={() => (isSidebarShown = !isSidebarShown)} class="lg:hidden">
+      <Button
+        variant="ghost"
+        onclick={() => {
+          isSidebarShown = !isSidebarShown;
+          isTocShown = false;
+        }}
+        class="px-4! lg:hidden"
+      >
         {#if isSidebarShown}
           <X />
-          <span class="hidden sm:block">{m.header_close()}</span>
+          <span class="sr-only xs:not-sr-only">{m.header_close()}</span>
         {:else}
           <Menu />
-          <span class="hidden sm:block">{m.header_menu()}</span>
+          <span class="sr-only xs:not-sr-only">{m.header_menu()}</span>
         {/if}
       </Button>
     </div>
@@ -145,13 +166,18 @@
     </div>
 
     <!-- メインコンテンツ -->
-    <main class="w-full p-4">
+    <main class="w-full p-4 text-sm">
       {@render children()}
     </main>
 
     <!-- 目次（デスクトップ） -->
-    <div class="hidden w-xs shrink-0 border-s border-border lg:block">
-      <div class="sticky top-(--header-height) w-full p-4">
+    <div class="contents w-xs shrink-0 border-s border-border lg:block">
+      <div
+        class={[
+          'fixed top-(--header-height) bottom-0 z-50 hidden w-full bg-background/50 p-4 backdrop-blur-lg lg:sticky lg:block!',
+          { 'block!': isTocShown },
+        ]}
+      >
         {#if currentContent}
           <TableOfContents />
         {/if}
