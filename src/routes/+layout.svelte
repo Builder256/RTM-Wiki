@@ -166,7 +166,7 @@
     </div>
 
     <!-- メインコンテンツ -->
-    <main class="w-full p-4">
+    <main class="w-full p-4 text-sm">
       {@render children()}
     </main>
 
