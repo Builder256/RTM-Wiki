@@ -166,7 +166,7 @@
 
 /* リンク */
 [data-md-content] a {
-  color: var(--accent);
+  color: var(--accent-foreground);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition:
@@ -175,7 +175,7 @@
 }
 
 [data-md-content] a:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--accent-foreground);
 }
 
 /* リスト */
