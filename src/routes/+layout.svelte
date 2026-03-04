@@ -19,10 +19,7 @@
   // custom components
   import Container from '$lib/components/Container.svelte';
   import MainMenu from '$lib/components/main-menu/MainMenu.svelte';
-  import TableOfContents from '$lib/components/TableOfContents.svelte';
   // utils
-  import { getAllContent } from '$lib/utils/content';
-  import { resolveContent } from '$lib/utils/content';
   import type { MainMenuItem } from '$lib/components/main-menu/main-menu';
 
   let { children } = $props();
@@ -30,7 +27,7 @@
   const SITE_NAME = 'RTM Wiki';
 
   // サイドバーデータ
-  const allContent = getAllContent();
+  // const allContent = getAllContent();
   // const sidebarItems = buildSidebarTree(allContent);
 
   const sidebarItems: MainMenuItem[] = [
@@ -53,7 +50,7 @@
   ];
 
   // 現在ページのコンテンツ（目次用）
-  const currentContent = $derived(resolveContent(page.url.pathname));
+  // const currentContent = $derived(resolveContent(page.url.pathname));
 
   /** モバイルサイドバー表示制御 */
   let isSidebarShown = $state(false);
@@ -178,9 +175,9 @@
           { 'block!': isTocShown },
         ]}
       >
-        {#if currentContent}
+        <!-- {#if currentContent}
           <TableOfContents />
-        {/if}
+        {/if} -->
       </div>
     </div>
   </div>
