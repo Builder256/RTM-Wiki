@@ -1,4 +1,19 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "hello_world": "Hello, {name} from en!"
+  "hello_world": "Hello, {name} from ja!",
+  "header_menu": "Menu",
+  "header_edit": "Edit",
+  "header_search": "Search",
+  "header_language": "Language",
+  "header_article": "Article",
+  "header_wiki": "Wiki",
+  "header_reference": "Reference",
+  "header_close": "Close",
+  "header_toc": "Table of Contents",
+  "error_unknown_title": "Unknown Error",
+  "error_unknown_message": "An unknown error has occurred. Please report this to the administrator.",
+  "error_page_not_found_title": "Page Not Found",
+  "error_page_not_found_message": "The requested page does not exist.",
+  "error_language_not_found_title": "Language Version Not Found",
+  "error_language_not_found_message": "The requested language version of the page does not exist."
 }
