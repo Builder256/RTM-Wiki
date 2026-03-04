@@ -9,5 +9,11 @@
   "header_wiki": "Wiki",
   "header_reference": "リファレンス",
   "header_close": "閉じる",
-  "header_toc": "目次"
+  "header_toc": "目次",
+  "error_unknown_title": "不明なエラー",
+  "error_unknown_message": "不明なエラーが発生しました。管理人に報告してください。",
+  "error_page_not_found_title": "ページが見つかりません",
+  "error_page_not_found_message": "指定されたページは存在しません。",
+  "error_language_not_found_title": "言語版のページがありません",
+  "error_language_not_found_message": "指定された言語版のページは存在しません。"
 }
