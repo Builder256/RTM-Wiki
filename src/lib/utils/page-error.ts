@@ -39,8 +39,7 @@ const isLanguageNotFoundError = (error: PageError): error is LanguageNotFoundErr
 /**
  * PageErrorをPageNotFoundErrorとLanguageNotFoundErrorに分類する
  * @param error App.Error
- * @returns エラーの型名の文字列
- * @throws TypeError PageError以外のエラーオブジェクトが渡された場合
+ * @returns エラーオブジェクトの型の名前の文字列 'PageNotFoundError' | 'LanguageNotFoundError' | 'UnknownError'
  */
 export function getPageErrorType(error: PageNotFoundError): 'PageNotFoundError';
 export function getPageErrorType(error: LanguageNotFoundError): 'LanguageNotFoundError';
