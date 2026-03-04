@@ -9,6 +9,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import remarkFrontmatter from 'remark-frontmatter';
 import rehypeRaw from 'rehype-raw';
+import rehypeSanitize from 'rehype-sanitize';
 // other libraries
 import yaml from 'js-yaml';
 
@@ -35,7 +36,8 @@ export async function parseMarkdown(raw: string): Promise<MarkdownResult> {
     .use(remarkFrontmatter, { type: 'yaml', marker: '-' })
     .use(remarkMetadata)
     .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw);
+    .use(rehypeRaw)
+    .use(rehypeSanitize);
 
   const mdast = processor.parse(raw);
   // VFileを使ってメタデータを抽出
