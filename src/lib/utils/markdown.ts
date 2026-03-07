@@ -9,6 +9,8 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import remarkFrontmatter from 'remark-frontmatter';
 import rehypeRaw from 'rehype-raw';
+import rehypeSlug from 'rehype-slug';
+import rehypeExtractToc, { type Toc } from '@stefanprobst/rehype-extract-toc';
 import rehypeSanitize from 'rehype-sanitize';
 // other libraries
 import yaml from 'js-yaml';
@@ -16,6 +18,7 @@ import yaml from 'js-yaml';
 export interface MarkdownResult {
   hast: HastRoot;
   metadata: Record<string, any>;
+  toc: Toc;
 }
 
 /**
@@ -37,8 +40,9 @@ export async function parseMarkdown(raw: string): Promise<MarkdownResult> {
     .use(remarkMetadata)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeSlug)
+    .use(rehypeExtractToc)
     .use(rehypeSanitize);
-
   const mdast = processor.parse(raw);
   // VFileを使ってメタデータを抽出
   const file = new VFile(raw);
@@ -48,5 +52,6 @@ export async function parseMarkdown(raw: string): Promise<MarkdownResult> {
   return {
     hast: hast as HastRoot,
     metadata: (file.data.matter as Record<string, any>) ?? {},
+    toc: file.data.toc as Toc,
   };
 }

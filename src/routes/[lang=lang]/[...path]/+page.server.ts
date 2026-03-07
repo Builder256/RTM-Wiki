@@ -17,7 +17,6 @@ export const load: PageServerLoad = async ({ params }) => {
   return {
     hast: content.hast,
     metadata: content.metadata,
-    // TODO: 目次データを出力
-    // toc
+    toc: content.toc,
   };
 };
