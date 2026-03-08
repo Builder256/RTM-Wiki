@@ -68,7 +68,7 @@
 
             /** 画面中の見出し要素の中で、最も上にあるもの */
             const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
-            currentActiveId = headingIds[firstHeadingIndex] ?? null; // string | nullにundefinedが入るんだから型エラーになれよ！！！！！！！！！！！
+            currentActiveId = headingIds[firstHeadingIndex] ?? null; // どうして`?? null`がなかったときに型エラーにならなかったんですか？string | nullにundefinedの値を入れようとしているのに
             if (currentActiveId !== null) previousActiveId = currentActiveId;
           });
         },
@@ -93,7 +93,7 @@
       {@const fullId = getFullID(item.id)}
       {@const isActive = currentActiveId !== null ? currentActiveId === fullId : previousActiveId === fullId}
       {@const isHierarcyActive = isActiveOrParentOfActive(item, currentActiveId, previousActiveId)}
-      <!-- JSでクラスを制御すべき？それともisActiveなaにdata-active="true"を付けて、liにhas-[data-active=true]でスタイルを付けるべき？ -->
+      <!-- JSですべてのclass属性を制御してスタイリングしているが、それともisActiveなaに属性を付けて、祖先のliにhas-[属性=値]:～を指定することでスタイリングするべき？ -->
       <li class={['border-s ps-4 transition-colors', isHierarcyActive ? 'border-accent-foreground' : 'border-border']}>
         <a
           href={`#${fullId}`}
