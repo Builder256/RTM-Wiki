@@ -11,7 +11,10 @@
   const ID_PREFIX = 'user-content-';
   const getFullID = (id: string | undefined) => `${ID_PREFIX}${id}`;
 
-  let activeId = $state<string | null>(null);
+  /** 現在閲覧中の章のID */
+  let currentActiveId = $state<string | null>(null);
+  /** 最後に閲覧中だった章のID currentActiveIDがnullの場合に、こちらを参照する */
+  let previousActiveId = $state<string | null>(null);
 
   const getFlatIds = (entries: Toc): string[] => {
     return entries.flatMap(entry => [getFullID(entry.id), ...(entry.children ? getFlatIds(entry.children) : [])]);
@@ -22,13 +25,18 @@
   /**
    * 現在の目次、またはその子孫の目次にアクティブなIDが含まれているかどうか
    * @param entry
-   * @param activeId
+   * @param currentActiveId
    */
-  const isActiveOrParentOfActive = (entry: TocEntry, activeId: string | null): boolean => {
+  const isActiveOrParentOfActive = (
+    entry: TocEntry,
+    currentActiveId: string | null,
+    previousActiveId: string | null,
+  ): boolean => {
+    const activeId = currentActiveId ?? previousActiveId;
     if (activeId === null) return false;
     if (getFullID(entry.id) === activeId) return true;
     if (entry.children) {
-      return entry.children.some(child => isActiveOrParentOfActive(child, activeId));
+      return entry.children.some(child => isActiveOrParentOfActive(child, currentActiveId, previousActiveId));
     }
     return false;
   };
@@ -52,12 +60,12 @@
 
             /** 画面中の見出し要素の中で、最も上にあるもの */
             const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
-            activeId = headingIds[firstHeadingIndex];
+            currentActiveId = headingIds[firstHeadingIndex] ?? null; // string | nullにundefinedが入るんだから型エラーになれよ！！！！！！！！！！！
+            if (currentActiveId !== null) previousActiveId = currentActiveId;
           });
         },
         {
           rootMargin: `-80px 0px 0px 0px`, // ビューポート上部のヘッダー分の領域をカット
-          // ビューポート内に一個も見出しが表示されないときに、何もハイライトされなくなる。 どう実装すべき？
           threshold: 0.1,
         },
       );
@@ -75,8 +83,8 @@
   <ul>
     {#each items as item}
       {@const fullId = getFullID(item.id)}
-      {@const isActive = activeId === fullId}
-      {@const isHierarcyActive = isActiveOrParentOfActive(item, activeId)}
+      {@const isActive = currentActiveId !== null ? currentActiveId === fullId : previousActiveId === fullId}
+      {@const isHierarcyActive = isActiveOrParentOfActive(item, currentActiveId, previousActiveId)}
       <!-- JSでクラスを制御すべき？それともisActiveなaにdata-active="true"を付けて、liにhas-[data-active=true]でスタイルを付けるべき？ -->
       <li class={['border-s ps-4 transition-colors', isHierarcyActive ? 'border-accent-foreground' : 'border-border']}>
         <a
