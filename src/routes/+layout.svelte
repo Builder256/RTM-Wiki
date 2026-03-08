@@ -51,7 +51,7 @@
   ];
 
   // 現在ページのコンテンツ（目次用）
-  const toc = page.data.toc;
+  const toc = $derived(page.data.toc);
 
   /** モバイルサイドバー表示制御 */
   let isSidebarShown = $state(false);
