@@ -4,96 +4,90 @@
   import { onMount } from 'svelte';
 
   interface Props {
-    toc?: Toc;
+    toc: Toc;
   }
-
-  interface FlatToc {
-    depth: number;
-    value: string;
-    id: string;
-  }
-
-  const 名前考えるの面倒 = (child: TocEntry, 名前分からん: FlatToc[]) => {
-    const entry = {
-      depth: child.depth,
-      value: child.value,
-      id: `${ID_PREFIX}${child.id}`,
-    };
-    名前分からん.push(entry);
-    const children = child.children;
-    if (children) children.forEach(c => 名前考えるの面倒(c, 名前分からん));
-  };
-
-  const flattenToc = (toc: Toc) => {
-    const 名前分からん: FlatToc[] = [];
-    for (const t of toc) {
-      名前考えるの面倒(t, 名前分からん);
-    }
-    return 名前分からん;
-  };
-
-  const getTocLinkElement = (href: string) => {
-    // 本当は各a要素からbind:thisで取得するのがスマートな気がするが、ネストされたeachブロック内から取得するのは面倒そうなのでquerySelectorを使う
-    // Svelteの天才教えて
-    const [...anchors] = document.querySelectorAll<HTMLAnchorElement>('[data-slot="table-of-contents"] a[href]');
-    return anchors.find(anchor => anchor.getAttribute('href') === `#${href}`) ?? null;
-  };
 
   const { toc = [] }: Props = $props();
   const ID_PREFIX = 'user-content-';
+  const getFullID = (id: string | undefined) => `${ID_PREFIX}${id}`;
 
-  let flatToc: FlatToc[] = $derived(flattenToc(toc));
-  let headingIds = $derived(flatToc.map(entry => entry.id));
+  let activeId = $state<string | null>(null);
 
-  onMount(() => {
-    const headings = document.querySelectorAll<HTMLHeadingElement>('h2, h3, h4, h5, h6');
-    const intersectingHeadingIds = new Set<string>();
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const currentId = entry.target.id;
-          if (entry.isIntersecting) {
-            intersectingHeadingIds.add(currentId);
-          } else {
-            intersectingHeadingIds.delete(currentId);
-          }
+  const getFlatIds = (entries: Toc): string[] => {
+    return entries.flatMap(entry => [getFullID(entry.id), ...(entry.children ? getFlatIds(entry.children) : [])]);
+  };
 
-          /** 画面中の見出し要素の中で、最も上にあるもの */
-          const firstHeadingId = headingIds.find(id => intersectingHeadingIds.has(id));
-          if (!firstHeadingId) return;
+  const headingIds = $derived(getFlatIds(toc));
 
-          const correspondingTocLink = getTocLinkElement(firstHeadingId);
-          if (!correspondingTocLink) return;
+  /**
+   * 現在の目次、またはその子孫の目次にアクティブなIDが含まれているかどうか
+   * @param entry
+   * @param activeId
+   */
+  const isActiveOrParentOfActive = (entry: TocEntry, activeId: string | null): boolean => {
+    if (activeId === null) return false;
+    if (getFullID(entry.id) === activeId) return true;
+    if (entry.children) {
+      return entry.children.some(child => isActiveOrParentOfActive(child, activeId));
+    }
+    return false;
+  };
 
-          const allTocLinks = document.querySelectorAll<HTMLAnchorElement>('[data-slot="table-of-contents"] a[href]');
-          allTocLinks.forEach(link => (link.dataset.activate = 'false'));
-          correspondingTocLink.dataset.activate = 'true';
-        });
-      },
-      {
-        rootMargin: `-80px 0px 0px 0px`,
-        threshold: 1,
-      },
-    );
-    headings.forEach(heading => observer.observe(heading));
-    return () => observer.disconnect();
-  });
+  (() => {
+    // 見出しがなければonMountを実装しない 多分早くなる？
+    if (headingIds.length === 0) return;
+
+    onMount(() => {
+      const intersectingHeadingIndexes = new Set<number>();
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            const index = headingIds.indexOf(entry.target.id);
+            if (entry.isIntersecting) {
+              intersectingHeadingIndexes.add(index);
+            } else {
+              intersectingHeadingIndexes.delete(index);
+            }
+
+            /** 画面中の見出し要素の中で、最も上にあるもの */
+            const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
+            activeId = headingIds[firstHeadingIndex];
+          });
+        },
+        {
+          rootMargin: `-80px 0px 0px 0px`, // ビューポート上部のヘッダー分の領域をカット
+          // ビューポート内に一個も見出しが表示されないときに、何もハイライトされなくなる。 どう実装すべき？
+          threshold: 0.1,
+        },
+      );
+
+      headingIds.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) observer.observe(element);
+      });
+      return () => observer.disconnect();
+    });
+  })();
 </script>
 
-{#snippet tocList(items: TocEntry[])}
+{#snippet tocList(items: Toc)}
   <ul>
     {#each items as item}
-      <li class="border-s border-border ps-4 transition-colors has-[a[data-activate=true]]:border-accent-foreground">
+      {@const fullId = getFullID(item.id)}
+      {@const isActive = activeId === fullId}
+      {@const isHierarcyActive = isActiveOrParentOfActive(item, activeId)}
+      <!-- JSでクラスを制御すべき？それともisActiveなaにdata-active="true"を付けて、liにhas-[data-active=true]でスタイルを付けるべき？ -->
+      <li class={['border-s ps-4 transition-colors', isHierarcyActive ? 'border-accent-foreground' : 'border-border']}>
         <a
-          href={`#${ID_PREFIX}${item.id}`}
+          href={`#${fullId}`}
           class={[
-            '-ms-2 block w-full rounded-sm px-2 py-1.5 leading-none transition-colors hover:bg-accent hover:text-foreground data-[activate=true]:text-accent-foreground',
-            {
-              'py-1 text-sm font-bold': item.depth === 2,
-              'py-0.5 text-xs text-muted-foreground': item.depth >= 3,
-            },
+            '-ms-2 block w-full rounded-sm px-2 py-1.5 leading-none transition-colors hover:bg-accent hover:text-foreground',
+            isActive && 'text-accent-foreground',
+            item.depth === 2 && 'py-1 text-sm font-bold',
+            item.depth >= 3 && 'py-0.5 text-xs',
+            item.depth >= 3 && !isActive && 'text-muted-foreground',
           ]}
-          data-activate={false}
         >
           {item.value}
         </a>
