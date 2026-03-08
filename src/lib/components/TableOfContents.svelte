@@ -11,10 +11,16 @@
   const ID_PREFIX = 'user-content-';
   const getFullID = (id: string | undefined) => `${ID_PREFIX}${id}`;
 
-  /** 現在閲覧中の章のID */
+  /** 現在閲覧中の章のID ビューポート内に見出し要素がない場合にnullになる */
   let currentActiveId = $state<string | null>(null);
   /** 最後に閲覧中だった章のID currentActiveIDがnullの場合に、こちらを参照する */
   let previousActiveId = $state<string | null>(null);
+
+  // TODO: currentActiveIdがnullの場合のフォールバックの実装の改善
+  // 常にpreviousActivIdをフォールバックとする実装は、上から下に読んでいる場合には感覚的に正しい動作をするが、
+  // 下から上にさかのぼった場合には、読んでいる章の次の章がハイライトされる。
+  // IntersectionObserverEntry#isIntersectingでそのIntersectionObserverEntryが入ったのか出たかのが取得できるので、先頭要素が入るor末尾の要素が出た場合に上方向へのスクロール、
+  // またはその逆の場合に下方向のスクロールと判断して、適切なフォールバックの実装ができるはず。
 
   const getFlatIds = (entries: Toc): string[] => {
     return entries.flatMap(entry => [getFullID(entry.id), ...(entry.children ? getFlatIds(entry.children) : [])]);
