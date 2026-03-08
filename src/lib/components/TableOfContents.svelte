@@ -23,9 +23,11 @@
   // またはその逆の場合に下方向のスクロールと判断して、適切なフォールバックの実装ができるはず。
 
   const getFlatIds = (entries: Toc): string[] => {
-    return entries.flatMap(entry => [getFullID(entry.id), ...(entry.children ? getFlatIds(entry.children) : [])]);
+    return entries.flatMap(entry => {
+      const childrenIds = entry.children ? getFlatIds(entry.children) : [];
+      return entry.id ? [getFullID(entry.id), ...childrenIds] : childrenIds;
+    });
   };
-
   const headingIds = $derived(getFlatIds(toc));
 
   /**
