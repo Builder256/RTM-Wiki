@@ -22,8 +22,8 @@ const allContent: ContentMap = import.meta.glob('/content/**/*.md', {
 
 /**
  * 指定された言語のコンテンツを取得する
- * @param path - URLパス (例: "usage/basic", "", "addon")
- * @param lang - 言語コード（`/project.inlang/settings.json`の`locales`）
+ * @param path URLパス (例: "usage/basic", "", "addon")
+ * @param lang 言語コード（`/project.inlang/settings.json`の`locales`）
  * @returns Markdown文字列 なければnull
  */
 function getContentWithLang(path: string, lang: Locale): MarkdownString | null {
@@ -42,7 +42,7 @@ function getContentWithLang(path: string, lang: Locale): MarkdownString | null {
 // TODO: ページが存在するが指定された言語版がない場合、エラーページで他の言語版の選択肢を提示するようにする
 /**
  * 指定されたパスのコンテンツを利用可能なすべての言語を取得する
- * @param path - URLパス (例: "usage/basic", "", "addon")
+ * @param path URLパス (例: "usage/basic", "", "addon")
  * @returns コンテンツの情報を含むResolvedContent なければnull
  */
 // const getContentLocale = (path: string): Locale[] => {
@@ -65,8 +65,8 @@ function getContentWithLang(path: string, lang: Locale): MarkdownString | null {
 /**
  * URLパスから対応するMarkdownコンテンツを解決する
  *
- * @param path - URLパス (例: "usage/basic", "", "addon")
- * @param preferentialLang - 優先して試す言語
+ * @param path URLパス (例: "usage/basic", "", "addon")
+ * @param preferentialLang 優先して試す言語
  * @returns コンテンツの情報を含むResolvedContent なければnull
  */
 export function resolveContent(path: string, preferentialLang: Locale): ResolvedContent | null {
