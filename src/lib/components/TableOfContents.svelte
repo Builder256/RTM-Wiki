@@ -49,42 +49,38 @@
     return false;
   };
 
-  (() => {
-    // 見出しがなければonMountを実装しない 多分早くなる？
+  onMount(() => {
     if (headingIds.length === 0) return;
+    const intersectingHeadingIndexes = new Set<number>();
 
-    onMount(() => {
-      const intersectingHeadingIndexes = new Set<number>();
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const index = headingIds.indexOf(entry.target.id);
+          if (entry.isIntersecting) {
+            intersectingHeadingIndexes.add(index);
+          } else {
+            intersectingHeadingIndexes.delete(index);
+          }
 
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            const index = headingIds.indexOf(entry.target.id);
-            if (entry.isIntersecting) {
-              intersectingHeadingIndexes.add(index);
-            } else {
-              intersectingHeadingIndexes.delete(index);
-            }
+          /** 画面中の見出し要素の中で、最も上にあるもの */
+          const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
+          currentActiveId = headingIds[firstHeadingIndex] ?? null; // どうして`?? null`がなかったときに型エラーにならなかったんですか？string | nullにundefinedの値を入れようとしているのに
+          if (currentActiveId !== null) previousActiveId = currentActiveId;
+        });
+      },
+      {
+        rootMargin: `-80px 0px 0px 0px`, // ビューポート上部のヘッダー分の領域をカット
+        threshold: 0.1,
+      },
+    );
 
-            /** 画面中の見出し要素の中で、最も上にあるもの */
-            const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
-            currentActiveId = headingIds[firstHeadingIndex] ?? null; // どうして`?? null`がなかったときに型エラーにならなかったんですか？string | nullにundefinedの値を入れようとしているのに
-            if (currentActiveId !== null) previousActiveId = currentActiveId;
-          });
-        },
-        {
-          rootMargin: `-80px 0px 0px 0px`, // ビューポート上部のヘッダー分の領域をカット
-          threshold: 0.1,
-        },
-      );
-
-      headingIds.forEach(id => {
-        const element = document.getElementById(id);
-        if (element) observer.observe(element);
-      });
-      return () => observer.disconnect();
+    headingIds.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
     });
-  })();
+    return () => observer.disconnect();
+  });
 </script>
 
 {#snippet tocList(items: Toc)}
