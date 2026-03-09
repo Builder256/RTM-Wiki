@@ -1,158 +1,119 @@
 <script lang="ts">
-  // TODO: 目次の自動生成を検討
-  // import { onMount } from 'svelte';
+  import { m } from '$lib/paraglide/messages';
+  import type { Toc, TocEntry } from '@stefanprobst/rehype-extract-toc';
+  import { onMount } from 'svelte';
 
-  // interface Props {
-  //   content: string;
-  // }
+  interface Props {
+    toc: Toc;
+  }
 
-  // interface TocItem {
-  //   id: string;
-  //   text: string;
-  //   level: number;
-  // }
+  const { toc = [] }: Props = $props();
+  const ID_PREFIX = 'user-content-';
+  const getFullID = (id: string | undefined) => `${ID_PREFIX}${id}`;
 
-  // const { content }: Props = $props();
+  /** 現在閲覧中の章のID ビューポート内に見出し要素がない場合にnullになる */
+  let currentActiveId = $state<string | null>(null);
+  /** 最後に閲覧中だった章のID currentActiveIDがnullの場合に、こちらを参照する */
+  let previousActiveId = $state<string | null>(null);
 
-  // let tocItems = $state<TocItem[]>([]);
-  // let activeId = $state('');
+  // TODO: currentActiveIdがnullの場合のフォールバックの実装の改善
+  // 常にpreviousActivIdをフォールバックとする実装は、上から下に読んでいる場合には感覚的に正しい動作をするが、
+  // 下から上にさかのぼった場合には、読んでいる章の次の章がハイライトされる。
+  // IntersectionObserverEntry#isIntersectingでそのIntersectionObserverEntryが入ったのか出たかのが取得できるので、先頭要素が入るor末尾の要素が出た場合に上方向へのスクロール、
+  // またはその逆の場合に下方向のスクロールと判断して、適切なフォールバックの実装ができるはず。
 
-  // // Markdownコンテンツからh2, h3の見出しを抽出
-  // $effect(() => {
-  //   const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-  //   const items: TocItem[] = [];
-  //   let match;
+  const getFlatIds = (entries: Toc): string[] => {
+    return entries.flatMap(entry => {
+      const childrenIds = entry.children ? getFlatIds(entry.children) : [];
+      return entry.id ? [getFullID(entry.id), ...childrenIds] : childrenIds;
+    });
+  };
+  const headingIds = $derived(getFlatIds(toc));
 
-  //   while ((match = headingRegex.exec(content)) !== null) {
-  //     const level = match[1]!.length;
-  //     const text = match[2]!.trim();
-  //     const id = text
-  //       .toLowerCase()
-  //       .replace(/[^\p{L}\p{N}\s-]/gu, '')
-  //       .replace(/\s+/g, '-');
+  /**
+   * 現在の目次、またはその子孫の目次にアクティブなIDが含まれているかどうか
+   * @param entry
+   * @param currentActiveId
+   */
+  const isActiveOrParentOfActive = (
+    entry: TocEntry,
+    currentActiveId: string | null,
+    previousActiveId: string | null,
+  ): boolean => {
+    const activeId = currentActiveId ?? previousActiveId;
+    if (activeId === null) return false;
+    if (getFullID(entry.id) === activeId) return true;
+    if (entry.children) {
+      return entry.children.some(child => isActiveOrParentOfActive(child, currentActiveId, previousActiveId));
+    }
+    return false;
+  };
 
-  //     items.push({ id, text, level });
-  //   }
+  onMount(() => {
+    if (headingIds.length === 0) return;
+    const intersectingHeadingIndexes = new Set<number>();
 
-  //   tocItems = items;
-  // });
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const index = headingIds.indexOf(entry.target.id);
+          if (entry.isIntersecting) {
+            intersectingHeadingIndexes.add(index);
+          } else {
+            intersectingHeadingIndexes.delete(index);
+          }
 
-  // onMount(() => {
-  //   // IntersectionObserverで現在表示中の見出しを追跡
-  //   const observer = new IntersectionObserver(
-  //     entries => {
-  //       for (const entry of entries) {
-  //         if (entry.isIntersecting) {
-  //           activeId = entry.target.id;
-  //         }
-  //       }
-  //     },
-  //     {
-  //       rootMargin: '-80px 0px -60% 0px',
-  //       threshold: 0,
-  //     },
-  //   );
+          /** 画面中の見出し要素の中で、最も上にあるもの */
+          const firstHeadingIndex = Math.min(...intersectingHeadingIndexes);
+          currentActiveId = headingIds[firstHeadingIndex] ?? null; // どうして`?? null`がなかったときに型エラーにならなかったんですか？string | nullにundefinedの値を入れようとしているのに
+          if (currentActiveId !== null) previousActiveId = currentActiveId;
+        });
+      },
+      {
+        rootMargin: `-80px 0px 0px 0px`, // ビューポート上部のヘッダー分の領域をカット
+        threshold: 0.1,
+      },
+    );
 
-  //   // DOMの見出し要素を監視
-  //   const observeHeadings = () => {
-  //     const headings = document.querySelectorAll('[data-md-content] h2, [data-md-content] h3');
-  //     headings.forEach(heading => observer.observe(heading));
-  //   };
-
-  //   // Markdownがレンダリングされた後にobserve
-  //   const timer = setTimeout(observeHeadings, 100);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //     observer.disconnect();
-  //   };
-  // });
+    headingIds.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+    return () => observer.disconnect();
+  });
 </script>
 
-<aside>
-  <p class="pb-2 font-bold">目次</p>
-  <ul class="">
-    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
-      <a href="#" class="block w-full p-1">見出し1</a>
-    </li>
-    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
-      <a href="#" class="block w-full p-1">見出し2</a>
-    </li>
-    <li class="border-s border-border ps-4 hover:border-accent-foreground hover:text-accent-foreground">
-      <a href="#" class="block w-full p-1">見出し3</a>
-    </li>
+{#snippet tocList(items: Toc)}
+  <ul>
+    {#each items as item}
+      {@const fullId = getFullID(item.id)}
+      {@const isActive = currentActiveId !== null ? currentActiveId === fullId : previousActiveId === fullId}
+      {@const isHierarcyActive = isActiveOrParentOfActive(item, currentActiveId, previousActiveId)}
+      <!-- JSですべてのclass属性を制御してスタイリングしているが、それともisActiveなaに属性を付けて、祖先のliにhas-[属性=値]:～を指定することでスタイリングするべき？ -->
+      <li class={['border-s ps-4 transition-colors', isHierarcyActive ? 'border-accent-foreground' : 'border-border']}>
+        <a
+          href={`#${fullId}`}
+          class={[
+            '-ms-2 block w-full rounded-sm px-2 py-1.5 leading-none transition-colors hover:bg-accent hover:text-foreground',
+            isActive && 'text-accent-foreground',
+            item.depth === 2 && 'py-1 text-sm font-bold',
+            item.depth >= 3 && 'py-0.5 text-xs',
+            item.depth >= 3 && !isActive && 'text-muted-foreground',
+          ]}
+        >
+          {item.value}
+        </a>
+        {#if item.children && item.children.length > 0}
+          {@render tocList(item.children)}
+        {/if}
+      </li>
+    {/each}
   </ul>
-</aside>
+{/snippet}
 
-<!-- {#if tocItems.length > 0}
-  <aside data-slot="table-of-contents" class="toc">
-    <p class="toc-title">目次</p>
-    <ul>
-      {#each tocItems as item}
-        <li class="toc-item" class:active={activeId === item.id} style="padding-left: {(item.level - 2) * 0.75}rem">
-          <a href="#{item.id}">{item.text}</a>
-        </li>
-      {/each}
-    </ul>
+{#if toc && toc.length > 0}
+  <aside data-slot="table-of-contents">
+    <p class="pb-2 text-sm font-bold text-muted-foreground">{m.table_of_contents()}</p>
+    {@render tocList(toc)}
   </aside>
-{/if} -->
-
-<!-- <style>
-  .toc {
-    position: sticky;
-    top: 4rem;
-    max-height: calc(100vh - 5rem);
-    overflow-y: auto;
-    padding: 1rem 0;
-    width: 14rem;
-    flex-shrink: 0;
-    scrollbar-width: thin;
-  }
-
-  .toc-title {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted-foreground);
-    margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-left: 1px solid var(--border);
-  }
-
-  .toc-item {
-    font-size: 0.8125rem;
-    padding: 0.25rem 0.5rem;
-    border-left: 2px solid transparent;
-    margin-left: -1px;
-    transition:
-      color 0.2s,
-      border-color 0.2s;
-  }
-
-  .toc-item a {
-    color: var(--muted-foreground);
-    text-decoration: none;
-    display: block;
-    transition: color 0.2s;
-  }
-
-  .toc-item:hover a {
-    color: var(--foreground);
-  }
-
-  .toc-item.active {
-    border-left-color: var(--accent);
-  }
-
-  .toc-item.active a {
-    color: var(--accent);
-    font-weight: 500;
-  }
-</style> -->
+{/if}

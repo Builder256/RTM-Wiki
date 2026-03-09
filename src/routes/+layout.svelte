@@ -19,6 +19,7 @@
   // custom components
   import Container from '$lib/components/Container.svelte';
   import MainMenu from '$lib/components/main-menu/MainMenu.svelte';
+  import TableOfContents from '$lib/components/TableOfContents.svelte';
   // utils
   import type { MainMenuItem } from '$lib/components/main-menu/main-menu';
 
@@ -50,7 +51,7 @@
   ];
 
   // 現在ページのコンテンツ（目次用）
-  // const currentContent = $derived(resolveContent(page.url.pathname));
+  const toc = $derived(page.data.toc);
 
   /** モバイルサイドバー表示制御 */
   let isSidebarShown = $state(false);
@@ -175,9 +176,7 @@
           { 'block!': isTocShown },
         ]}
       >
-        <!-- {#if currentContent}
-          <TableOfContents />
-        {/if} -->
+        <TableOfContents {toc} />
       </div>
     </div>
   </div>
