@@ -24,7 +24,7 @@
 <li>
   <Collapsible.Root bind:open={isOpen}>
     <Collapsible.Trigger class={cn(buttonVariants({ variant: 'ghost', size: 'lg' }), 'flex w-full justify-between')}>
-      <span>{item.title}</span>
+      <span>{item.label}</span>
       {#if isOpen}
         <ChevronDown />
       {:else}

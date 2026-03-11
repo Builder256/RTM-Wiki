@@ -2,13 +2,13 @@
 
 export interface MainMenuItemCategory {
   type: 'category';
-  title: string;
+  label: string;
   items: MainMenuItem[];
 }
 
 export interface MainMenuItemPage {
   type: 'page';
-  title: string;
+  label: string;
   path: string;
 }
 
