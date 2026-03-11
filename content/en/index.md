@@ -1,9 +1,9 @@
 ---
-title: Home
+label: Home
 description: This site is a proposed system migration of the RTM Wiki. It is currently under development. Some pages may contain placeholder data, and pages may be moved or removed without notice.
 
 ---
-
+# Home
 ## Welcome to RTM Wiki
 RTM Wiki is a site that compiles information about playing and developing add-ons for RealTrainMod (RTM).
 
