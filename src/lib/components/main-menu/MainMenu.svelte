@@ -7,7 +7,7 @@
     items: MainMenuItem[];
   }
 
-  const { items }: Props = $props();
+  const { tree: items }: Props = $props();
 </script>
 
 <ul class="w-full">

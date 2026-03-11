@@ -16,7 +16,7 @@
     item: MainMenuItemCategory;
   }
 
-  let { item }: Props = $props();
+  const { item }: Props = $props();
 
   let isOpen = $state(true);
 </script>

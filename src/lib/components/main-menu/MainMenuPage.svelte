@@ -8,7 +8,7 @@
     item: MainMenuItemPage;
   }
 
-  let { item }: Props = $props();
+  const { item }: Props = $props();
 
   const isActive = $derived(item.path === page.url.pathname);
 </script>
