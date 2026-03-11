@@ -13,7 +13,7 @@
   const isActive = $derived(item.path === page.url.pathname);
 </script>
 
-<li>
+<li data-slot="main-menu-page">
   <Button
     variant={isActive ? 'default' : 'ghost'}
     size="lg"

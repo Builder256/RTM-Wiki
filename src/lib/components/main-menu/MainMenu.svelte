@@ -10,7 +10,7 @@
   const { tree: items }: Props = $props();
 </script>
 
-<ul class="w-full">
+<ul data-slot="main-menu" class="w-full">
   {#each items as item}
     {#if isMainMenuItemCategory(item)}
       <MainMenuCategory {item} />
