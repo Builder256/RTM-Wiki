@@ -36,6 +36,7 @@ export const createMainMenuItemPage = (label: string, path: string, locale: Loca
   locale,
 });
 
+// TODO: 自動生成を実装
 export const createMainMenuTree = (locale: Locale, allContent: ContentMap): MainMenuTree => {
   const result: MainMenuTree = [];
   // このasを取り除くことはできる？
