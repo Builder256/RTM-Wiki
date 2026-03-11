@@ -16,8 +16,10 @@
 <li data-slot="main-menu-page">
   <Button
     variant={isActive ? 'default' : 'ghost'}
-    size="lg"
-    class={['flex w-full justify-between px-4', { 'text-secondary-foreground': !isActive }]}
-    href={item.path}>{item.title}</Button
+    size="sm"
+    class={['flex w-full justify-start gap-2 px-4', !isActive && 'text-secondary-foreground']}
+    href={item.path}
   >
+    <span>{item.label}</span>
+  </Button>
 </li>
