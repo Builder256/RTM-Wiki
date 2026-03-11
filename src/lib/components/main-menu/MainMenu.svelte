@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { isMainMenuItemCategory, isMainMenuItemPage, type MainMenuItem } from '$lib/components/main-menu/main-menu';
+  import { isMainMenuItemCategory, isMainMenuItemPage, type MainMenuTree } from '$lib/components/main-menu/main-menu';
   import MainMenuPage from './MainMenuPage.svelte';
   import MainMenuCategory from './MainMenuCategory.svelte';
 
   interface Props {
-    items: MainMenuItem[];
+    tree: MainMenuTree;
   }
 
   const { tree: items }: Props = $props();

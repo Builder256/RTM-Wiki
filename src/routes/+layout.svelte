@@ -20,8 +20,7 @@
   import Container from '$lib/components/Container.svelte';
   import MainMenu from '$lib/components/main-menu/MainMenu.svelte';
   import TableOfContents from '$lib/components/TableOfContents.svelte';
-  // utils
-  import type { MainMenuItem } from '$lib/components/main-menu/main-menu';
+  import type { MainMenuTree } from '$lib/components/main-menu/main-menu';
 
   let { children } = $props();
 
@@ -53,6 +52,9 @@
 
   // 現在ページのコンテンツ（目次用）
   const toc = $derived(page.data.toc);
+
+  /** メインメニューの要素 */
+  const mainMenuTree: MainMenuTree = $derived(page.data.mainMenuTree);
 
   /** モバイルサイドバー表示制御 */
   let isMainMenuShown = $state(false);
@@ -160,7 +162,7 @@
         <div class="mb-4 grid place-items-center lg:hidden">
           {@render headerMenu()}
         </div>
-        <MainMenu items={mainMenuItems} />
+        <MainMenu tree={mainMenuTree} />
       </nav>
     </div>
 
