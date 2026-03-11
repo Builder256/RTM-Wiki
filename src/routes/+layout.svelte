@@ -27,29 +27,6 @@
   // TODO: サイト名、ライセンス名のハードコートをやめる
   const SITE_NAME = 'RTM Wiki';
 
-  // サイドバーデータ
-  // const allContent = getAllContent();
-  // const sidebarItems = buildSidebarTree(allContent);
-
-  const mainMenuItems: MainMenuItem[] = [
-    {
-      type: 'page',
-      title: 'ホーム',
-      path: '/',
-    },
-    {
-      type: 'category',
-      title: 'はじめに',
-      items: [
-        {
-          type: 'page',
-          title: 'ページ',
-          path: '/usage/basic',
-        },
-      ],
-    },
-  ];
-
   // 現在ページのコンテンツ（目次用）
   const toc = $derived(page.data.toc);
 
