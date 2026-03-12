@@ -28,7 +28,10 @@
       case 'zh-tw':
         return m['main-menu_alt-locale_zh-tw']();
       default:
-        return (locale as string).toUpperCase(); // localeの取り得る値を全てcaseで網羅しているので、ここでのlocaleはneverになるっぽい
+        // localeの取り得る値を全てcaseで網羅しているので、ここでのlocaleはneverになるっぽいため、stringに上書きする
+        const fallBackText = (locale as string).toUpperCase();
+        console.error('未知のロケール:', locale, 'が指定されました。フォールバックテキストで代替します。');
+        return fallBackText;
     }
   };
 </script>
