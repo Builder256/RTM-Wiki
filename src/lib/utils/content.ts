@@ -46,9 +46,9 @@ export const getLocaleFromContentPath = (path: ContentPath): Locale | null => {
 
 const isStringWithLeadingSlash = (str: string): str is StringWithLeadingSlash => str.startsWith('/');
 
-const removeLeadingSlash = (path: string): StringWithLeadingSlash => {
+const removeLeadingSlash = (path: string): StringWithoutLeadingSlash => {
   const isLeadingSlashPresent = isStringWithLeadingSlash(path);
-  return isLeadingSlashPresent ? (path.slice(1) as StringWithLeadingSlash) : (path as StringWithLeadingSlash); // このasを取り除くことはできる？
+  return isLeadingSlashPresent ? (path.slice(1) as StringWithoutLeadingSlash) : (path as StringWithoutLeadingSlash); // このasを取り除くことはできる？
 };
 
 const addLeadingSlash = (path: string): StringWithLeadingSlash => {
