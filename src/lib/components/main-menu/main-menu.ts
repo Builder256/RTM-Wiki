@@ -43,7 +43,6 @@ export const createMainMenuTree = (locale: Locale, allContent: ContentMap): Main
   for (const [contentPath, content] of Object.entries(allContent) as [ContentPath, MarkdownString][]) {
     const urlPath = getURLPathWithoutLocaleFromContentPath(contentPath);
     const [_, ...segments] = urlPath.split('/');
-    console.log(segments);
     for (let i = 0; i < segments.length; i++) {
       const segment = segments[i];
       const isPage = i === segments.length - 1; // 最後のセグメントはページ
@@ -52,8 +51,6 @@ export const createMainMenuTree = (locale: Locale, allContent: ContentMap): Main
       }
     }
   }
-
-  console.log(result);
 
   // return result;
   return [
