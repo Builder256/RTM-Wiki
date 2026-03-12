@@ -16,15 +16,15 @@
     item: MainMenuItemCategory;
   }
 
-  let { item }: Props = $props();
+  const { item }: Props = $props();
 
   let isOpen = $state(true);
 </script>
 
 <li>
   <Collapsible.Root bind:open={isOpen}>
-    <Collapsible.Trigger class={cn(buttonVariants({ variant: 'ghost', size: 'lg' }), 'flex w-full justify-between')}>
-      <span>{item.title}</span>
+    <Collapsible.Trigger class={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'flex w-full justify-between')}>
+      <span>{item.label}</span>
       {#if isOpen}
         <ChevronDown />
       {:else}

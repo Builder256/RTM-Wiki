@@ -20,41 +20,21 @@
   import Container from '$lib/components/Container.svelte';
   import MainMenu from '$lib/components/main-menu/MainMenu.svelte';
   import TableOfContents from '$lib/components/TableOfContents.svelte';
-  // utils
-  import type { MainMenuItem } from '$lib/components/main-menu/main-menu';
+  import type { MainMenuTree } from '$lib/components/main-menu/main-menu';
 
   let { children } = $props();
 
+  // TODO: サイト名、ライセンス名のハードコートをやめる
   const SITE_NAME = 'RTM Wiki';
-
-  // サイドバーデータ
-  // const allContent = getAllContent();
-  // const sidebarItems = buildSidebarTree(allContent);
-
-  const sidebarItems: MainMenuItem[] = [
-    {
-      type: 'page',
-      title: 'ホーム',
-      path: '/',
-    },
-    {
-      type: 'category',
-      title: 'はじめに',
-      items: [
-        {
-          type: 'page',
-          title: 'ページ',
-          path: '/usage/basic',
-        },
-      ],
-    },
-  ];
 
   // 現在ページのコンテンツ（目次用）
   const toc = $derived(page.data.toc);
 
+  /** メインメニューの要素 */
+  const mainMenuTree: MainMenuTree = $derived(page.data.mainMenuTree);
+
   /** モバイルサイドバー表示制御 */
-  let isSidebarShown = $state(false);
+  let isMainMenuShown = $state(false);
   /** モバイル目次表示制御 */
   let isTocShown = $state(false);
 </script>
@@ -107,7 +87,7 @@
           size="sm"
           onclick={() => {
             isTocShown = !isTocShown;
-            isSidebarShown = false;
+            isMainMenuShown = false;
           }}
           class="px-4!"
         >
@@ -126,12 +106,12 @@
       <Button
         variant="ghost"
         onclick={() => {
-          isSidebarShown = !isSidebarShown;
+          isMainMenuShown = !isMainMenuShown;
           isTocShown = false;
         }}
         class="px-4! lg:hidden"
       >
-        {#if isSidebarShown}
+        {#if isMainMenuShown}
           <X />
           <span class="sr-only xs:not-sr-only">{m.header_close()}</span>
         {:else}
@@ -146,20 +126,20 @@
 <!-- メインコンテンツ -->
 <Container>
   <div class="flex">
-    <!-- サイドバー -->
+    <!-- メインメニュー -->
     <!-- モバイルではcontentsで場所を取らない(hiddenだと中身まで消える)、lg>で表示 -->
     <div class="contents w-xs shrink-0 border-e border-border lg:block">
       <!-- モバイルではfixedで全面固定、lg>でstickyにし、通常と同様にwidthを取らせる -->
       <nav
         class={[
           'fixed top-(--header-height) bottom-0 z-50 hidden w-full bg-background/50 p-4 backdrop-blur-lg lg:sticky lg:block!',
-          { 'block!': isSidebarShown },
+          { 'block!': isMainMenuShown },
         ]}
       >
         <div class="mb-4 grid place-items-center lg:hidden">
           {@render headerMenu()}
         </div>
-        <MainMenu items={sidebarItems} />
+        <MainMenu tree={mainMenuTree} />
       </nav>
     </div>
 

@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { isMainMenuItemCategory, isMainMenuItemPage, type MainMenuItem } from '$lib/components/main-menu/main-menu';
+  import { isMainMenuItemCategory, isMainMenuItemPage, type MainMenuTree } from '$lib/components/main-menu/main-menu';
   import MainMenuPage from './MainMenuPage.svelte';
   import MainMenuCategory from './MainMenuCategory.svelte';
 
   interface Props {
-    items: MainMenuItem[];
+    tree: MainMenuTree;
   }
 
-  const { items }: Props = $props();
+  const { tree: items }: Props = $props();
 </script>
 
-<ul class="w-full">
+<ul data-slot="main-menu" class="w-full">
   {#each items as item}
     {#if isMainMenuItemCategory(item)}
       <MainMenuCategory {item} />

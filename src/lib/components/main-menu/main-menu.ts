@@ -1,98 +1,83 @@
-// import { parseMarkdown } from '../../utils/markdown';
+import type { Locale } from '$lib/paraglide/runtime';
+import {
+  getURLPathWithoutLocaleFromContentPath,
+  type ContentMap,
+  type ContentPath,
+  type MarkdownString,
+} from '$lib/utils/content';
 
 export interface MainMenuItemCategory {
   type: 'category';
-  title: string;
+  label: string;
   items: MainMenuItem[];
 }
-
 export interface MainMenuItemPage {
   type: 'page';
-  title: string;
+  label: string;
   path: string;
+  locale: Locale;
 }
-
-export type MainMenuItem = MainMenuItemCategory | MainMenuItemPage;
-
-interface ContentMap {
-  [key: string]: string;
-}
+type MainMenuItem = MainMenuItemCategory | MainMenuItemPage;
+export type MainMenuTree = MainMenuItem[];
 
 export const isMainMenuItemCategory = (item: MainMenuItem): item is MainMenuItemCategory => item.type === 'category';
 export const isMainMenuItemPage = (item: MainMenuItem): item is MainMenuItemPage => item.type === 'page';
 
-// TODO: 自動生成を検討
-/**
- * `/content/ja/` 内のMarkdownファイルからサイドバーツリーを構築する
- */
-// export function buildSidebarTree(allContent: ContentMap): SidebarItem[] {
-//   const items: Map<string, SidebarItem> = new Map();
+export const createMainMenuItemCategory = (label: string, items: MainMenuItem[]): MainMenuItemCategory => ({
+  type: 'category',
+  label,
+  items,
+});
 
-//   for (const [filePath, raw] of Object.entries(allContent)) {
-//     // /content/ja/usage/basic.md → usage/basic
-//     const match = filePath.match(/^\/content\/ja\/(.+)\.md$/);
-//     if (!match) continue;
+export const createMainMenuItemPage = (label: string, path: string, locale: Locale): MainMenuItemPage => ({
+  type: 'page',
+  label,
+  path,
+  locale,
+});
 
-//     const relativePath = match[1]!;
-//     const { metadata } = parseMarkdown(raw);
-//     const title = metadata.title || relativePath.split('/').pop() || '';
-//     const order = metadata.order ?? 999;
+// TODO: 自動生成を実装
+export const createMainMenuTree = (locale: Locale, allContent: ContentMap): MainMenuTree => {
+  const result: MainMenuTree = [];
+  // このasを取り除くことはできる？
+  for (const [contentPath, content] of Object.entries(allContent) as [ContentPath, MarkdownString][]) {
+    const urlPath = getURLPathWithoutLocaleFromContentPath(contentPath);
+    const [_, ...segments] = urlPath.split('/');
+    for (let i = 0; i < segments.length; i++) {
+      const segment = segments[i];
+      const isPage = i === segments.length - 1; // 最後のセグメントはページ
+      if (!isPage) {
+      } else {
+      }
+    }
+  }
 
-//     // URLパスを構築: index.md → 親パス, それ以外 → そのまま
-//     const urlPath = relativePath.endsWith('/index')
-//       ? '/' + relativePath.slice(0, -6) // /usage/index → /usage
-//       : relativePath === 'index'
-//         ? '/'
-//         : '/' + relativePath;
-
-//     const segments = relativePath.split('/');
-
-//     if (segments.length === 1) {
-//       // トップレベルページ (index.md, etc.)
-//       if (relativePath === 'index') {
-//         // トップページはサイドバーに表示しない
-//         continue;
-//       }
-//       items.set(relativePath, { title, path: urlPath, order, children: [] });
-//     } else {
-//       // ネストされたページ
-//       const category = segments[0]!;
-
-//       // カテゴリノードがなければ作成
-//       if (!items.has(category)) {
-//         items.set(category, {
-//           title: category,
-//           path: '',
-//           order: 999,
-//           children: [],
-//         });
-//       }
-
-//       const categoryNode = items.get(category)!;
-
-//       if (segments[segments.length - 1] === 'index') {
-//         // index.md → カテゴリ自体の情報を更新
-//         categoryNode.title = title;
-//         categoryNode.path = urlPath;
-//         categoryNode.order = order;
-//       } else {
-//         // 通常ページ → カテゴリの子に追加
-//         categoryNode.children.push({
-//           title,
-//           path: urlPath,
-//           order,
-//           children: [],
-//         });
-//       }
-//     }
-//   }
-
-//   // ソート
-//   const result = Array.from(items.values());
-//   result.sort((a, b) => a.order - b.order);
-//   for (const item of result) {
-//     item.children.sort((a, b) => a.order - b.order);
-//   }
-
-//   return result;
-// }
+  // return result;
+  return [
+    // test
+    {
+      type: 'page',
+      label: 'ホーム',
+      path: '/ja',
+      locale: 'ja',
+    },
+    {
+      type: 'category',
+      label: 'モデルパック制作',
+      items: [
+        {
+          type: 'page',
+          label: '基本',
+          path: '/ja/dev/basic',
+          locale: 'ja',
+        },
+      ],
+    },
+    {
+      type: 'page',
+      label: 'EN Only',
+      path: '/en/en-only',
+      locale: 'en', // 現在の言語版になければ、他のある言語版へのリンクを表示する
+    },
+  ];
+};
